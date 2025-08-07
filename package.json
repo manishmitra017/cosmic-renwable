@@ -1,0 +1,28 @@
+{
+  "name": "cosmic-renewable-energy",
+  "version": "1.0.0",
+  "description": "Cosmic Renewable Energy website with Next.js frontend and FastAPI backend",
+  "scripts": {
+    "dev": "./run_all.sh",
+    "start": "./run_all.sh",
+    "setup": "cd frontend && npm install && cd ../backend && uv sync",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && uv run python main.py",
+    "build": "cd frontend && npm run build",
+    "clean": "rm -rf frontend/node_modules frontend/.next backend/.venv backend/__pycache__ *.log"
+  },
+  "keywords": [
+    "solar",
+    "renewable-energy",
+    "nextjs",
+    "fastapi",
+    "typescript",
+    "python"
+  ],
+  "author": "Cosmic Renewable Energy",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cosmic-renewable-energy/website.git"
+  }
+}
