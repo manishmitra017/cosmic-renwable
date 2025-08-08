@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Cosmic Renewable Energy - Solar Solutions",
   description: "Leading provider of solar energy solutions for homes and businesses. Professional installation, consultation, and ongoing support.",
+  icons: {
+    icon: '/company-logo.png',
+    shortcut: '/company-logo.png',
+    apple: '/company-logo.png',
+  },
 };
 
 export default function RootLayout({

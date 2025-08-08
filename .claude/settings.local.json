@@ -18,7 +18,8 @@
       "Bash(true)",
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
-      "WebFetch(domain:solarbatterygroup.com.au)"
+      "WebFetch(domain:solarbatterygroup.com.au)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

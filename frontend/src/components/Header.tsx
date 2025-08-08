@@ -30,10 +30,10 @@ export default function Header() {
                 height={80}
                 className="w-auto h-14 sm:h-16 lg:h-20"
               />
-              <span className="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 hidden xs:block">
+              <span className="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 hidden sm:block">
                 Cosmic Renewable Energy
               </span>
-              <span className="text-sm font-bold text-gray-800 block xs:hidden">
+              <span className="text-sm font-bold text-gray-800 block sm:hidden">
                 Cosmic
               </span>
             </Link>

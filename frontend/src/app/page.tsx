@@ -3,10 +3,14 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import RebateBanner from '@/components/RebateBanner'
 
 export default function Home() {
   return (
     <div>
+      {/* Government Rebate Banner */}
+      <RebateBanner />
+      
       {/* Contact Banner */}
       <section className="py-4 bg-gradient-to-r from-orange-500 to-red-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

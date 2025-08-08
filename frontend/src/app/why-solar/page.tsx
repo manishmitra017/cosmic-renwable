@@ -209,26 +209,26 @@ export default function WhySolar() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Dramatic Cost Savings
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+              <p className="text-lg text-gray-900 mb-6 leading-relaxed">
                 Solar energy can dramatically reduce or even eliminate your electricity bills. 
                 With rising energy costs, solar provides predictable, stable energy costs for decades.
               </p>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-center">
                   <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Save 70-90% on electricity bills</span>
+                  <span className="text-gray-900">Save 70-90% on electricity bills</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Typical payback period of 4-7 years</span>
+                  <span className="text-gray-900">Typical payback period of 4-7 years</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>25+ years of free electricity after payback</span>
+                  <span className="text-gray-900">25+ years of free electricity after payback</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Protection against rising energy costs</span>
+                  <span className="text-gray-900">Protection against rising energy costs</span>
                 </li>
               </ul>
             </div>
