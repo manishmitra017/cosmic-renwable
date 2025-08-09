@@ -1,8 +1,9 @@
 #!/bin/sh
 set -e
 
-echo "=== Stopping existing PM2 processes ==="
-pm2 delete cosmic-renewable || true
+echo "=== Stopping existing Node processes ==="
+pkill -f "next" || true
+pkill -f "node.*3000" || true
 
 echo "=== Installing dependencies ==="
 cd ./frontend
@@ -11,15 +12,9 @@ npm install
 echo "=== Building application ==="
 npm run build
 
-echo "=== Starting application with PM2 on port 3000 ==="
+echo "=== Starting application on port 3000 ==="
+PORT=3000 nohup npm start > ../frontend.log 2>&1 &
 cd ..
-PORT=3000 pm2 start ecosystem.config.js
-
-echo "=== Saving PM2 state ==="
-pm2 save
-
-echo "=== Creating startup script ==="
-pm2 startup
 
 echo "=== Ensuring nginx is running ==="
 rc-service nginx status || rc-service nginx start
