@@ -164,15 +164,26 @@ export default function Home() {
                 </p>
               </div>
               
-              <div className="relative rounded-xl overflow-hidden shadow-lg">
-                <Image
-                  src="/cre-offer.jpeg"
-                  alt="Cosmic Renewable Energy Special Offer"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto object-contain"
-                  priority
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <div className="relative rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/survey1.png"
+                    alt="Cosmic Renewable Energy Offer Survey 1"
+                    width={600}
+                    height={800}
+                    className="w-full h-auto object-contain"
+                    priority
+                  />
+                </div>
+                <div className="relative rounded-xl overflow-hidden shadow-lg">
+                  <Image
+                    src="/survey2.png"
+                    alt="Cosmic Renewable Energy Offer Survey 2"
+                    width={600}
+                    height={800}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
               </div>
               
               <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">

@@ -8,12 +8,7 @@ export default function RebateBanner() {
       {/* Desktop Scrolling Banner */}
       <div className="hidden md:block">
         <div className="py-3 px-4">
-          <div 
-            className="whitespace-nowrap animate-scroll"
-            style={{
-              animation: 'scroll 15s linear infinite'
-            }}
-          >
+          <div className="whitespace-nowrap animate-marquee">
             <div className="inline-flex items-center space-x-12 text-white font-bold text-lg">
               <span className="flex items-center space-x-2">
                 🔥 <span>GOVERNMENT BATTERY REBATE PROGRAM LIVE NOW</span> 🔥
@@ -66,9 +61,15 @@ export default function RebateBanner() {
       </div>
       
       <style jsx>{`
-        @keyframes scroll {
+        @keyframes marquee {
           0% { transform: translateX(100%); }
           100% { transform: translateX(-100%); }
+        }
+        
+        .animate-marquee {
+          animation: marquee 15s linear infinite;
+          animation-play-state: running;
+          will-change: transform;
         }
       `}</style>
     </div>
