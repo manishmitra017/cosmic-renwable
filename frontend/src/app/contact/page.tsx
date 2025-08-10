@@ -183,7 +183,7 @@ export default function Contact() {
                 <span className="text-white text-2xl">📍</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-gray-600 mb-2">40 Frost Drive<br/>Delahey, Victoria 3037</p>
+              <p className="text-gray-600 mb-2">12 Galli Court<br/>Hillside, Victoria 3037</p>
               <p className="text-gray-600 text-sm">Free on-site consultations Australia-wide</p>
             </motion.div>
           </div>
@@ -213,7 +213,7 @@ export default function Contact() {
                     <span className="text-xl">🏆</span>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900">5000+ Happy Customers</h3>
+                    <h3 className="text-lg font-semibold text-gray-900">2000+ Happy Customers</h3>
                     <p className="text-gray-600">Trusted by families and businesses across Australia</p>
                   </div>
                 </div>
@@ -368,7 +368,7 @@ export default function Contact() {
                       <option value="">Select a service</option>
                       <option value="solar-panels">Solar Panels</option>
                       <option value="solar-batteries">Solar Batteries</option>
-                      <option value="heat-pumps">Heat Pumps</option>
+                      <option value="heat-pumps">Hot Water Heat Pump</option>
                       <option value="hvac-systems">HVAC Systems</option>
                       <option value="maintenance">Servicing & Maintenance</option>
                       <option value="consultation">General Consultation</option>
@@ -456,7 +456,7 @@ export default function Contact() {
                     <span className="text-green-600 mr-3 mt-1">📍</span>
                     <div>
                       <p className="font-semibold text-gray-900">Address</p>
-                      <p className="text-gray-600">40 Frost Drive<br/>Delahey, Victoria 3037</p>
+                      <p className="text-gray-600">12 Galli Court<br/>Hillside, Victoria 3037</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -492,14 +492,14 @@ export default function Contact() {
               className="rounded-xl overflow-hidden shadow-lg"
             >
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.073946894289!2d144.777123!3d-37.7344443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65f5c7b9b8b3b%3A0x5045675218ce6e0!2s40%20Frost%20Dr%2C%20Delahey%20VIC%203037%2C%20Australia!5e0!3m2!1sen!2sus!4v1691234567890!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.2!2d144.7435!3d-37.7299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s12%20Galli%20Ct%2C%20Hillside%20VIC%203037%2C%20Australia!5e0!3m2!1sen!2sau!4v1691234567890!5m2!1sen!2sau"
                 width="100%"
                 height="400"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Cosmic Renewable Energy Location"
+                title="Cosmic Renewable Energy Location - 12 Galli Court Hillside"
               ></iframe>
             </motion.div>
           </div>

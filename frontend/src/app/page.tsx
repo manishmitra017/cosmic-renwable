@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import RebateBanner from '@/components/RebateBanner'
+import CustomerReviews from '@/components/CustomerReviews'
 
 export default function Home() {
   return (
@@ -218,7 +219,7 @@ export default function Home() {
                 image: '/solarroof8.jpg'
               },
               {
-                title: 'Heat Pumps',
+                title: 'Hot Water Heat Pump',
                 icon: '🌡️',
                 description: 'Energy-efficient heating and cooling',
                 image: '/inverterimage2.jpg'
@@ -360,6 +361,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Customer Reviews */}
+      <CustomerReviews />
 
       {/* Our Work Portfolio */}
       <section className="py-20 bg-white">

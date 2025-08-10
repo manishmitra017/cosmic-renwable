@@ -41,7 +41,7 @@ export default function Services() {
     },
     {
       id: 3,
-      title: "Heat Pumps",
+      title: "Hot Water Heat Pump",
       description: "Energy-efficient heating and cooling solutions that can reduce your energy costs by up to 50% compared to traditional systems.",
       features: [
         "Up to 50% energy savings",

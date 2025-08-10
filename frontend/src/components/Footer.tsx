@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services" className="text-gray-300 hover:text-green-400">
-                  Heat Pumps
+                  Hot Water Heat Pump
                 </Link>
               </li>
               <li>
