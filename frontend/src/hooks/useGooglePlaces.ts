@@ -64,8 +64,10 @@ export const useGooglePlaces = (
         )
 
         autocompleteRef.current.addListener('place_changed', () => {
-          const place = autocompleteRef.current.getPlace()
-          onPlaceSelect(place)
+          const place = autocompleteRef.current?.getPlace()
+          if (place) {
+            onPlaceSelect(place)
+          }
         })
       }
     }
