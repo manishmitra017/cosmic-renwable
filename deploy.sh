@@ -13,8 +13,8 @@ echo "=== Building application ==="
 npm run build
 
 echo "=== Starting application on port 3000 ==="
-PORT=3000 nohup npm start > ../frontend.log 2>&1 &
 cd ..
+PORT=3000 nohup npm --prefix ./frontend start > frontend.log 2>&1 &
 
 echo "=== Ensuring nginx is running ==="
 rc-service nginx status || rc-service nginx start

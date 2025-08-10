@@ -30,12 +30,22 @@ export default function Quote() {
     setSubmitMessage('')
 
     try {
-      const response = await fetch('/api/quote', {
+      const formDataToSend = new FormData()
+      formDataToSend.append('access_key', '7d4e4c8b-e886-49df-ba29-d859ddcc7e55')
+      formDataToSend.append('name', formData.name)
+      formDataToSend.append('email', formData.email)
+      formDataToSend.append('phone', formData.phone)
+      formDataToSend.append('address', formData.address)
+      formDataToSend.append('property_type', formData.property_type)
+      formDataToSend.append('roof_type', formData.roof_type)
+      formDataToSend.append('energy_usage', formData.energy_usage)
+      formDataToSend.append('budget_range', formData.budget_range)
+      formDataToSend.append('message', formData.message)
+      formDataToSend.append('subject', 'New Quote Request - Cosmic Renewable Energy')
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formDataToSend
       })
 
       if (response.ok) {
