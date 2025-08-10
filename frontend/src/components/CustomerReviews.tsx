@@ -18,14 +18,18 @@ export default function CustomerReviews() {
   const [reviews, setReviews] = useState<Review[]>([])
   const [totalReviews, setTotalReviews] = useState(927)
   const [averageRating, setAverageRating] = useState(4.9)
-  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const fetchReviews = async () => {
       try {
         const data = await getGoogleReviews()
         if (data && data.reviews) {
-          const formattedReviews: Review[] = data.reviews.map((review: any) => ({
+          const formattedReviews: Review[] = data.reviews.map((review: {
+            reviewer: { displayName?: string }
+            starRating: string
+            comment?: string
+            createTime: string
+          }) => ({
             name: review.reviewer.displayName || 'Anonymous',
             location: 'Verified Customer',
             rating: convertStarRating(review.starRating),
@@ -40,8 +44,6 @@ export default function CustomerReviews() {
       } catch (error) {
         console.error('Failed to fetch reviews:', error)
         // Keep fallback reviews if API fails
-      } finally {
-        setIsLoading(false)
       }
     }
 
