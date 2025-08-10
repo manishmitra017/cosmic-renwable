@@ -110,20 +110,26 @@ export default function CustomerReviews() {
             <span className="text-gray-800">Customers</span>
           </h2>
           
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="flex items-center bg-white rounded-lg px-6 py-3 shadow-lg">
-              <span className="text-3xl font-bold text-gray-900 mr-2">{averageRating}</span>
-              <div className="flex mr-3">
-                {renderStars(Math.round(averageRating))}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-8">
+            <div className="bg-white rounded-xl px-6 py-4 shadow-xl border border-gray-100 w-full sm:w-auto">
+              <div className="flex items-center justify-center sm:justify-start gap-3">
+                <span className="text-4xl font-bold text-gray-900">{averageRating}</span>
+                <div className="flex flex-col">
+                  <div className="flex mb-1">
+                    {renderStars(Math.round(averageRating))}
+                  </div>
+                  <div className="text-center sm:text-left">
+                    <span className="text-gray-700 font-medium">{totalReviews} reviews on </span>
+                    <span className="font-bold text-blue-600">Google</span>
+                  </div>
+                </div>
               </div>
-              <span className="text-gray-600">{totalReviews} reviews on</span>
-              <span className="ml-2 font-bold text-blue-600">Google</span>
             </div>
             <a 
               href="https://g.page/r/CRMzlNKuDbEZEBM/review"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg"
+              className="bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 w-full sm:w-auto text-center"
             >
               Review us on Google
             </a>
