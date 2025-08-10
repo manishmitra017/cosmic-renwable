@@ -144,6 +144,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Special Offer Banner */}
+      <section className="py-12 bg-gradient-to-r from-green-500 to-emerald-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="text-center"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-8 max-w-4xl mx-auto">
+              <div className="mb-4">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-2">
+                  ⚡ EXCLUSIVE LIMITED TIME OFFER ⚡
+                </h2>
+                <p className="text-lg text-gray-600">
+                  Don't miss out on our latest solar and battery package deals!
+                </p>
+              </div>
+              
+              <div className="relative rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/cre-offer.jpeg"
+                  alt="Cosmic Renewable Energy Special Offer"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                  priority
+                />
+              </div>
+              
+              <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  href="/quote" 
+                  className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-700 transition-colors shadow-xl"
+                >
+                  Claim This Offer Now
+                </Link>
+                <a 
+                  href="tel:1300090984" 
+                  className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-600 hover:text-white transition-colors"
+                >
+                  📞 Call for Details
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Government Battery Rebate Section */}
       <section className="py-16 bg-green-600">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
