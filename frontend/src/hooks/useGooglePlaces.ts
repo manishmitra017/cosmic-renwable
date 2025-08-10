@@ -2,18 +2,50 @@
 
 import { useEffect, useRef } from 'react'
 
+interface GooglePlace {
+  formatted_address?: string
+  geometry?: {
+    location: {
+      lat: () => number
+      lng: () => number
+    }
+  }
+  place_id?: string
+}
+
+interface GoogleAutocompleteOptions {
+  componentRestrictions?: { country: string }
+  fields?: string[]
+  types?: string[]
+}
+
 declare global {
   interface Window {
-    google: any
+    google: {
+      maps: {
+        places: {
+          Autocomplete: new (
+            input: HTMLInputElement,
+            options?: GoogleAutocompleteOptions
+          ) => {
+            addListener: (event: string, callback: () => void) => void
+            getPlace: () => GooglePlace
+          }
+        }
+        event: {
+          clearInstanceListeners: (instance: unknown) => void
+        }
+      }
+    }
   }
 }
 
 export const useGooglePlaces = (
-  onPlaceSelect: (place: any) => void,
-  options: any = {}
+  onPlaceSelect: (place: GooglePlace) => void,
+  options: GoogleAutocompleteOptions = {}
 ) => {
   const inputRef = useRef<HTMLInputElement>(null)
-  const autocompleteRef = useRef<any>(null)
+  const autocompleteRef = useRef<InstanceType<typeof window.google.maps.places.Autocomplete> | null>(null)
 
   useEffect(() => {
     if (!inputRef.current) return

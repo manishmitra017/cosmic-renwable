@@ -18,7 +18,7 @@ export default function Quote() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
 
-  const handlePlaceSelect = (place: any) => {
+  const handlePlaceSelect = (place: { formatted_address?: string }) => {
     if (place.formatted_address) {
       setFormData({
         ...formData,
