@@ -51,7 +51,7 @@ export const useGooglePlaces = (
     if (!inputRef.current) return
 
     const initAutocomplete = () => {
-      if (window.google && window.google.maps && window.google.maps.places) {
+      if (window.google && window.google.maps && window.google.maps.places && inputRef.current) {
         const defaultOptions = {
           componentRestrictions: { country: 'AU' },
           fields: ['formatted_address', 'geometry', 'place_id'],
