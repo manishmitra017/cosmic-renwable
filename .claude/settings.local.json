@@ -19,7 +19,9 @@
       "Bash(npm install:*)",
       "Bash(npm run build:*)",
       "WebFetch(domain:solarbatterygroup.com.au)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "WebFetch(domain:www.dcceew.gov.au)",
+      "WebFetch(domain:www.energy.gov.au)"
     ],
     "deny": []
   }

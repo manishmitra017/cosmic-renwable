@@ -707,22 +707,25 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: 'Government Battery Rebates Extended',
-                description: 'New funding announced for home battery installations across Australia.',
+                title: '$2.3 Billion Cheaper Home Batteries Program Now Live',
+                description: 'Government launches massive battery rebate program offering up to 30% discounts on home battery systems.',
                 image: '/batteryImage3.jpg',
-                date: 'January 2024'
+                date: 'August 2025',
+                link: 'https://www.dcceew.gov.au/energy/programs/cheaper-home-batteries'
               },
               {
-                title: 'Solar Panel Efficiency Reaches New Heights',
-                description: 'Latest generation panels now achieving over 22% efficiency ratings.',
+                title: 'How Solar Households Can Maximize Government Benefits',
+                description: 'Complete guide to accessing federal and state solar incentives, rebates, and the new battery program.',
                 image: '/solarroof8.jpg',
-                date: 'December 2023'
+                date: 'August 2025',
+                link: 'https://www.energy.gov.au/solar/switch-solar-power/solar-households'
               },
               {
-                title: 'Energy Independence for Australian Homes',
-                description: 'How solar and battery systems are transforming household energy.',
-                image: '/solarroof10.jpg',
-                date: 'November 2023'
+                title: 'Battery Storage Revolution: 5kWh to 100kWh Systems Eligible',
+                description: 'New program covers batteries from small residential to large commercial installations with CEC approval.',
+                image: '/batteryImage2.jpg',
+                date: 'August 2025',
+                link: 'https://www.dcceew.gov.au/energy/programs/cheaper-home-batteries'
               }
             ].map((article, index) => (
               <motion.div
@@ -745,12 +748,14 @@ export default function Home() {
                   <div className="text-sm text-green-600 font-medium mb-2">{article.date}</div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{article.title}</h3>
                   <p className="text-gray-600 mb-4">{article.description}</p>
-                  <Link 
-                    href="/blog" 
+                  <a 
+                    href={article.link} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-green-600 font-medium hover:text-green-700 transition-colors"
                   >
                     Read More →
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             ))}

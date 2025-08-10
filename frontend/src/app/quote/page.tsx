@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useGooglePlaces } from '@/hooks/useGooglePlaces'
 
 export default function Quote() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,17 @@ export default function Quote() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+
+  const handlePlaceSelect = (place: any) => {
+    if (place.formatted_address) {
+      setFormData({
+        ...formData,
+        address: place.formatted_address
+      })
+    }
+  }
+
+  const addressInputRef = useGooglePlaces(handlePlaceSelect)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -230,6 +242,7 @@ export default function Quote() {
                           Property Address *
                         </label>
                         <input
+                          ref={addressInputRef}
                           type="text"
                           id="address"
                           name="address"
@@ -237,7 +250,7 @@ export default function Quote() {
                           value={formData.address}
                           onChange={handleChange}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                          placeholder="Property address"
+                          placeholder="Start typing your property address..."
                         />
                       </div>
                     </div>

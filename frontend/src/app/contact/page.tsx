@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useGooglePlaces } from '@/hooks/useGooglePlaces'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -16,6 +17,17 @@ export default function Contact() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState('')
+
+  const handlePlaceSelect = (place: any) => {
+    if (place.formatted_address) {
+      setFormData({
+        ...formData,
+        suburb: place.formatted_address
+      })
+    }
+  }
+
+  const suburbInputRef = useGooglePlaces(handlePlaceSelect)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -171,8 +183,8 @@ export default function Contact() {
                 <span className="text-white text-2xl">📍</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-gray-600 mb-2">Servicing All of Australia</p>
-              <p className="text-gray-600 text-sm">Free on-site consultations</p>
+              <p className="text-gray-600 mb-2">40 Frost Drive<br/>Delahey, Victoria 3037</p>
+              <p className="text-gray-600 text-sm">Free on-site consultations Australia-wide</p>
             </motion.div>
           </div>
         </div>
@@ -327,9 +339,10 @@ export default function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="suburb" className="block text-sm font-medium text-gray-700 mb-1">
-                      Suburb *
+                      Address *
                     </label>
                     <input
+                      ref={suburbInputRef}
                       type="text"
                       id="suburb"
                       name="suburb"
@@ -337,7 +350,7 @@ export default function Contact() {
                       value={formData.suburb}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-                      placeholder="Your suburb"
+                      placeholder="Start typing your address..."
                     />
                   </div>
 
@@ -411,8 +424,90 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Service Areas */}
+      {/* Google Maps Section */}
       <section className="py-16 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div 
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Find Our Location
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Visit our office or schedule a free on-site consultation anywhere in Australia.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="bg-green-50 rounded-xl p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Office</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">📍</span>
+                    <div>
+                      <p className="font-semibold text-gray-900">Address</p>
+                      <p className="text-gray-600">40 Frost Drive<br/>Delahey, Victoria 3037</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">🕐</span>
+                    <div>
+                      <p className="font-semibold text-gray-900">Business Hours</p>
+                      <p className="text-gray-600">Mon-Fri: 8:00 AM - 6:00 PM<br/>Saturday: 9:00 AM - 4:00 PM<br/>Sunday: Closed</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">📞</span>
+                    <div>
+                      <p className="font-semibold text-gray-900">Phone</p>
+                      <a href="tel:1300090984" className="text-green-600 hover:text-green-700 font-semibold">1300 09 09 84</a>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">✉️</span>
+                    <div>
+                      <p className="font-semibold text-gray-900">Email</p>
+                      <a href="mailto:info@cosmicrenewable.com.au" className="text-green-600 hover:text-green-700">info@cosmicrenewable.com.au</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="rounded-xl overflow-hidden shadow-lg"
+            >
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.073946894289!2d144.777123!3d-37.7344443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65f5c7b9b8b3b%3A0x5045675218ce6e0!2s40%20Frost%20Dr%2C%20Delahey%20VIC%203037%2C%20Australia!5e0!3m2!1sen!2sus!4v1691234567890!5m2!1sen!2sus"
+                width="100%"
+                height="400"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cosmic Renewable Energy Location"
+              ></iframe>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Areas */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"

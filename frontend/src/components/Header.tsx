@@ -30,12 +30,14 @@ export default function Header() {
                 height={80}
                 className="w-auto h-14 sm:h-16 lg:h-20"
               />
-              <span className="text-sm sm:text-lg lg:text-xl font-bold text-gray-800 hidden sm:block">
-                Cosmic Renewable Energy
-              </span>
-              <span className="text-sm font-bold text-gray-800 block sm:hidden">
-                Cosmic
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xs sm:text-lg lg:text-xl font-bold text-gray-800">
+                  Cosmic Renewable Energy
+                </span>
+                <span className="text-xs text-gray-600 hidden sm:block">
+                  The Solar Energy Pioneers
+                </span>
+              </div>
             </Link>
           </motion.div>
           
