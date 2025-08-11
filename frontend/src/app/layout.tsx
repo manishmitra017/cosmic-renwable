@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Solar Battery Systems Australia | Cosmic Renewable Energy | Government Rebates Available",
   description: "Australia's leading solar battery specialists. Save up to $8,000 with government rebates on premium solar battery systems. Free quotes, professional installation, 5-year warranty. Serving Melbourne, Sydney, Brisbane nationwide.",
-  keywords: "solar battery Australia, solar batteries Melbourne, solar battery installation, government rebates solar battery, home battery systems, solar energy storage, Tesla Powerwall, solar battery cost, renewable energy Australia",
+  keywords: "solar battery Australia, solar battery installation cost, Tesla Powerwall 3 Australia, government battery rebate 2025, solar battery Melbourne Sydney Brisbane, home battery systems, LG Chem battery, BYD battery, solar energy storage, battery backup power, solar battery rebate NSW Victoria, Powerwall installation Australia, solar battery price, off grid solar battery, residential battery storage, solar battery financing, CEC approved battery installer",
   authors: [{ name: "Cosmic Renewable Energy" }],
   creator: "Cosmic Renewable Energy",
   publisher: "Cosmic Renewable Energy",
