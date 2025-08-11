@@ -21,7 +21,8 @@
       "WebFetch(domain:solarbatterygroup.com.au)",
       "Bash(cp:*)",
       "WebFetch(domain:www.dcceew.gov.au)",
-      "WebFetch(domain:www.energy.gov.au)"
+      "WebFetch(domain:www.energy.gov.au)",
+      "WebFetch(domain:developers.google.com)"
     ],
     "deny": []
   }

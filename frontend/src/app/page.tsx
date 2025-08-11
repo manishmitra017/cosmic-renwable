@@ -7,8 +7,52 @@ import RebateBanner from '@/components/RebateBanner'
 import CustomerReviews from '@/components/CustomerReviews'
 
 export default function Home() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Cosmic Renewable Energy",
+    "description": "Australia's leading solar battery installation specialists. Premium solar battery systems with government rebates up to $8,000.",
+    "url": "https://cosmicrenewable.com.au",
+    "telephone": "1300090984",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 Galli Court",
+      "addressLocality": "Hillside",
+      "addressRegion": "Victoria",
+      "postalCode": "3037",
+      "addressCountry": "AU"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -37.7299,
+      "longitude": 144.7435
+    },
+    "openingHours": [
+      "Mo-Fr 08:00-18:00",
+      "Sa 09:00-16:00"
+    ],
+    "priceRange": "$$",
+    "areaServed": "Australia",
+    "serviceType": ["Solar Battery Installation", "Solar Panel Installation", "Hot Water Heat Pump", "HVAC Systems", "Solar Maintenance"],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "927"
+    },
+    "sameAs": [
+      "https://www.facebook.com/cosmicrenewableenergy",
+      "https://www.instagram.com/cosmicrenewableenergy/",
+      "https://x.com/CosmicRenewable",
+      "https://www.linkedin.com/in/cosmic-renewable-energy-46899a379"
+    ]
+  }
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       {/* Government Rebate Banner */}
       <RebateBanner />
       
@@ -52,7 +96,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <Image
             src="/solarroof9.jpg"
-            alt="Family enjoying solar powered home"
+            alt="Premium solar battery system installation on Australian home roof - Cosmic Renewable Energy"
             fill
             className="object-cover opacity-20"
             priority
@@ -67,9 +111,9 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Australia's Trusted
+              Premium Solar Battery Systems
               <span className="block text-green-600">
-                Solar & Battery Installer
+                Australia Wide Installation
               </span>
             </motion.h1>
             
@@ -88,8 +132,8 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Transform your property with premium solar and battery solutions. Professional installation, 
-              maximum savings, and a sustainable future for your family.
+              Australia's leading solar battery installation specialists. Save up to $8,000 with government rebates 
+              on premium home battery systems. Professional installation across Melbourne, Sydney, Brisbane and nationwide.
             </motion.p>
             
             <motion.div 
@@ -216,11 +260,11 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Government Battery Rebate Available
+              Solar Battery Rebates Australia - Save $8,000
             </h2>
             <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
-              Take advantage of the $2.3 Billion Cheaper Home Batteries Program. 
-              Get up to 30% discount on battery systems from participating retailers.
+              Take advantage of the $2.3 Billion Australian Government Home Battery Program. 
+              Save up to $8,000 on premium solar battery systems with professional installation across Australia.
             </p>
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 max-w-2xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">How It Works</h3>
