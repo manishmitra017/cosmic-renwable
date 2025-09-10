@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import RebateBanner from '@/components/RebateBanner'
 import CustomerReviews from '@/components/CustomerReviews'
+import PromotionsCarousel from '@/components/PromotionsCarousel'
 
 export default function Home() {
   const structuredData = {
@@ -187,6 +188,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Promotions Carousel */}
+      <PromotionsCarousel />
 
       {/* Special Offer Banner */}
       <section className="py-12 bg-gradient-to-r from-green-500 to-emerald-600">
