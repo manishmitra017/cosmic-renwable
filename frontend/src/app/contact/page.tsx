@@ -168,7 +168,7 @@ export default function Contact() {
                 <span className="text-white text-2xl">✉️</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
-              <p className="text-green-600 font-semibold mb-2">info@cosmicrenewable.com.au</p>
+              <p className="text-green-600 font-semibold mb-2">info@cosmicrenewableenergy.com.au</p>
               <p className="text-gray-600 text-sm">24/7 email support</p>
             </motion.div>
 
@@ -477,7 +477,7 @@ export default function Contact() {
                     <span className="text-green-600 mr-3 mt-1">✉️</span>
                     <div>
                       <p className="font-semibold text-gray-900">Email</p>
-                      <a href="mailto:info@cosmicrenewable.com.au" className="text-green-600 hover:text-green-700">info@cosmicrenewable.com.au</a>
+                      <a href="mailto:info@cosmicrenewableenergy.com.au" className="text-green-600 hover:text-green-700">info@cosmicrenewableenergy.com.au</a>
                     </div>
                   </div>
                 </div>

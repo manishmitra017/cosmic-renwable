@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Solar Battery Systems Australia | Government Rebates Up To $8,000",
     description: "Premium solar battery systems with professional installation across Australia. Government rebates available. Free consultation and 5-year warranty included.",
-    url: "https://cosmicrenewable.com.au",
+    url: "https://cosmicrenewableenergy.com.au",
     siteName: "Cosmic Renewable Energy",
     images: [
       {
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
     shortcut: '/company-logo.png',
     apple: '/company-logo.png',
   },
-  metadataBase: new URL('https://cosmicrenewable.com.au'),
+  metadataBase: new URL('https://cosmicrenewableenergy.com.au'),
   alternates: {
-    canonical: "https://cosmicrenewable.com.au",
+    canonical: "https://cosmicrenewableenergy.com.au",
   },
 };
 

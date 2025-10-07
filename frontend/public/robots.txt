@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://cosmicrenewable.com.au/sitemap.xml
+Sitemap: https://cosmicrenewableenergy.com.au/sitemap.xml
 
 # Important pages for solar battery searches
 Allow: /

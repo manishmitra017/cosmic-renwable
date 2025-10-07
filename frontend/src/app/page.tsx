@@ -13,7 +13,7 @@ export default function Home() {
     "@type": "LocalBusiness",
     "name": "Cosmic Renewable Energy",
     "description": "Australia's leading solar battery installation specialists. Premium solar battery systems with government rebates up to $8,000.",
-    "url": "https://cosmicrenewable.com.au",
+    "url": "https://cosmicrenewableenergy.com.au",
     "telephone": "1300090984",
     "address": {
       "@type": "PostalAddress",
