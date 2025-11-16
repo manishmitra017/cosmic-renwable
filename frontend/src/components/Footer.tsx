@@ -104,10 +104,10 @@ export default function Footer() {
             © 2024 Cosmic Renewable Energy. All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-green-400 text-sm">
+            <Link href="/privacy-policy" className="text-gray-400 hover:text-green-400 text-sm">
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-green-400 text-sm">
+            <Link href="/terms-of-service" className="text-gray-400 hover:text-green-400 text-sm">
               Terms of Service
             </Link>
           </div>

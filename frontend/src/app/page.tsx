@@ -6,6 +6,8 @@ import { motion } from 'framer-motion'
 import RebateBanner from '@/components/RebateBanner'
 import CustomerReviews from '@/components/CustomerReviews'
 import PromotionsCarousel from '@/components/PromotionsCarousel'
+import CountdownBanner from '@/components/CountdownBanner'
+import BestPriceGuarantee from '@/components/BestPriceGuarantee'
 
 export default function Home() {
   const structuredData = {
@@ -54,9 +56,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      {/* Countdown Timer Banner */}
+      <CountdownBanner />
+
       {/* Government Rebate Banner */}
       <RebateBanner />
-      
+
       {/* Contact Banner */}
       <section className="py-4 bg-gradient-to-r from-orange-500 to-red-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

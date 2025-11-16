@@ -198,7 +198,7 @@ export default function Quote() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                           placeholder="Your full name"
                         />
                       </div>
@@ -214,7 +214,7 @@ export default function Quote() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -232,7 +232,7 @@ export default function Quote() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                           placeholder="Your phone number"
                         />
                       </div>
@@ -249,7 +249,7 @@ export default function Quote() {
                           required
                           value={formData.address}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                           placeholder="Start typing your property address..."
                         />
                       </div>
@@ -266,7 +266,7 @@ export default function Quote() {
                           required
                           value={formData.property_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         >
                           <option value="">Select property type</option>
                           <option value="house">House</option>
@@ -287,7 +287,7 @@ export default function Quote() {
                           required
                           value={formData.roof_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         >
                           <option value="">Select roof type</option>
                           <option value="tile">Tile</option>
@@ -309,7 +309,7 @@ export default function Quote() {
                           name="energy_usage"
                           value={formData.energy_usage}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         >
                           <option value="">Select your bill range</option>
                           <option value="under-300">Under $300</option>
@@ -329,7 +329,7 @@ export default function Quote() {
                           name="budget_range"
                           value={formData.budget_range}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                          className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         >
                           <option value="">Select budget range</option>
                           <option value="under-5k">Under $5,000</option>
@@ -351,7 +351,7 @@ export default function Quote() {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent text-gray-900"
                         placeholder="Any additional information about your requirements..."
                       />
                     </div>

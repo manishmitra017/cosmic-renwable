@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
-export default function SolarBatteryMelbourne() {
+export default function SolarBatteryTasmania() {
   return (
     <div>
       {/* Hero Section */}
@@ -12,7 +12,7 @@ export default function SolarBatteryMelbourne() {
         <div className="absolute inset-0">
           <Image
             src="/batteryImage1.jpg"
-            alt="Solar Battery Installation Melbourne"
+            alt="Solar Battery Installation Tasmania"
             fill
             className="object-cover opacity-20"
             priority
@@ -27,17 +27,17 @@ export default function SolarBatteryMelbourne() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Solar Battery Installation Melbourne
+              Solar Battery Installation Tasmania
             </h1>
             <p className="text-xl sm:text-2xl text-blue-100 mb-8">
-              Victoria's #1 Choice for Solar Battery Systems | Government Rebates Up to $3,500
+              Tasmania's #1 Choice for Solar Battery Systems | Government Rebates Available
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
                 className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-xl"
               >
-                Get Free Melbourne Quote
+                Get Free Tasmania Quote
               </Link>
               <a
                 href="tel:1300090984"
@@ -50,11 +50,11 @@ export default function SolarBatteryMelbourne() {
         </div>
       </section>
 
-      {/* Melbourne-Specific Benefits */}
+      {/* Tasmania-Specific Benefits */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Why Melbourne Homes Need Solar Batteries
+            Why Tasmania Homes Need Solar Batteries
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -68,9 +68,9 @@ export default function SolarBatteryMelbourne() {
               <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">☀️</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Year-Round Solar Potential</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Clean Energy State</h3>
               <p className="text-gray-600">
-                Melbourne receives excellent solar radiation year-round. Even in winter, solar batteries capture and store valuable energy.
+                Tasmania has excellent solar potential year-round. Batteries maximize renewable energy self-sufficiency in Australia's clean energy state.
               </p>
             </motion.div>
 
@@ -84,9 +84,9 @@ export default function SolarBatteryMelbourne() {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">💰</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">VIC Energy Costs</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">TAS Energy Costs</h3>
               <p className="text-gray-600">
-                Victoria electricity prices are 25-30c/kWh and rising. Batteries help you avoid peak rates and maximize savings.
+                Tasmanian electricity prices are 24-29c/kWh. Solar batteries reduce dependence on grid power and lower energy bills.
               </p>
             </motion.div>
 
@@ -100,31 +100,31 @@ export default function SolarBatteryMelbourne() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-3xl">⚡</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Extreme Weather Backup</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Remote Area Security</h3>
               <p className="text-gray-600">
-                Melbourne's unpredictable weather and summer heatwaves strain the grid. Batteries provide reliable backup power.
+                Tasmania's rural areas benefit from battery backup during weather events. Energy independence for remote properties.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Melbourne Pricing */}
+      {/* Tasmania Pricing */}
       <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Melbourne Solar Battery Pricing (After Rebates)
+              Tasmania Solar Battery Pricing
             </h2>
             <p className="text-xl text-gray-600 mb-12 text-center">
-              Victorian residents can access up to $3,500 in government rebates
+              Competitive pricing for Tasmanian residents
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Essential</h3>
-                  <div className="text-4xl font-bold text-green-600 mb-2">From $4,800</div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">From $5,500</div>
                   <p className="text-gray-600 mb-6">5kWh Battery System</p>
                   <ul className="text-left space-y-3 mb-8">
                     <li className="flex items-start">
@@ -145,7 +145,7 @@ export default function SolarBatteryMelbourne() {
                     </li>
                   </ul>
                   <Link href="/quote" className="block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                    Get Melbourne Quote
+                    Get Tasmania Quote
                   </Link>
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function SolarBatteryMelbourne() {
                     MOST POPULAR
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Standard</h3>
-                  <div className="text-4xl font-bold mb-2">From $8,300</div>
+                  <div className="text-4xl font-bold mb-2">From $9,400</div>
                   <p className="text-blue-100 mb-6">10kWh Battery System</p>
                   <ul className="text-left space-y-3 mb-8">
                     <li className="flex items-start">
@@ -181,7 +181,7 @@ export default function SolarBatteryMelbourne() {
                     </li>
                   </ul>
                   <Link href="/quote" className="block bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
-                    Get Melbourne Quote
+                    Get Tasmania Quote
                   </Link>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function SolarBatteryMelbourne() {
               <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Premium</h3>
-                  <div className="text-4xl font-bold text-green-600 mb-2">From $13,800</div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">From $14,700</div>
                   <p className="text-gray-600 mb-6">13.5kWh Tesla Powerwall</p>
                   <ul className="text-left space-y-3 mb-8">
                     <li className="flex items-start">
@@ -210,37 +210,37 @@ export default function SolarBatteryMelbourne() {
                     </li>
                   </ul>
                   <Link href="/quote" className="block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                    Get Melbourne Quote
+                    Get Tasmania Quote
                   </Link>
                 </div>
               </div>
             </div>
 
             <p className="text-center text-gray-600 mt-8">
-              *Prices include installation and VIC rebates. Final price depends on site assessment and system selection.
+              *Prices include installation. Final price depends on site assessment and system selection.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Melbourne Service Areas */}
+      {/* Tasmania Service Areas */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Melbourne Suburbs We Service
+            Tasmania Areas We Service
           </h2>
           <p className="text-xl text-gray-600 mb-12 text-center">
-            Professional solar battery installation across Greater Melbourne
+            Professional solar battery installation across Tasmania
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {[
-              'Melbourne CBD', 'South Yarra', 'Richmond', 'Fitzroy', 'Carlton', 'Brunswick',
-              'Glen Waverley', 'Box Hill', 'Doncaster', 'Ringwood', 'Croydon', 'Mitcham',
-              'Brighton', 'Caulfield', 'Elwood', 'St Kilda', 'Port Melbourne', 'Williamstown',
-              'Frankston', 'Dandenong', 'Cranbourne', 'Berwick', 'Pakenham', 'Narre Warren',
-              'Werribee', 'Point Cook', 'Hoppers Crossing', 'Tarneit', 'Truganina', 'Melton',
-              'Geelong', 'Belmont', 'Grovedale', 'Torquay', 'Ocean Grove', 'Lara'
+              'Hobart', 'Battery Point', 'Sandy Bay', 'South Hobart', 'West Hobart', 'North Hobart',
+              'Launceston', 'Riverside', 'Mowbray', 'Newstead', 'Trevallyn', 'Kings Meadows',
+              'Devonport', 'East Devonport', 'Spreyton', 'Miandetta', 'Forth', 'Don',
+              'Burnie', 'Somerset', 'Parklands', 'Shorewell Park', 'South Burnie', 'Cooee',
+              'Kingston', 'Blackmans Bay', 'Howrah', 'Bellerive', 'Lindisfarne', 'Rosny',
+              'Glenorchy', 'Moonah', 'Claremont', 'Lenah Valley', 'New Norfolk', 'Bridgewater'
             ].map((suburb, index) => (
               <motion.div
                 key={suburb}
@@ -256,7 +256,7 @@ export default function SolarBatteryMelbourne() {
           </div>
 
           <p className="text-center text-gray-600 mt-8">
-            Don't see your suburb? We service all Greater Melbourne areas. <Link href="/contact" className="text-green-600 font-semibold hover:underline">Contact us</Link> to confirm.
+            Don't see your area? We service all Tasmania regions. <Link href="/contact" className="text-green-600 font-semibold hover:underline">Contact us</Link> to confirm.
           </p>
         </div>
       </section>
@@ -265,17 +265,17 @@ export default function SolarBatteryMelbourne() {
       <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Save on Melbourne Electricity Bills?
+            Ready to Save on Tasmania Electricity Bills?
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join 2500+ Melbourne households already saving with solar batteries
+            Join 600+ Tasmanian households already saving with solar batteries
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
               className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-50 transition-colors shadow-xl"
             >
-              Get Free Melbourne Quote
+              Get Free Tasmania Quote
             </Link>
             <a
               href="tel:1300090984"
