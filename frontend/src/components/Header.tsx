@@ -28,7 +28,8 @@ export default function Header() {
                 alt="Cosmic Renewable Energy"
                 width={80}
                 height={80}
-                className="w-auto h-14 sm:h-16 lg:h-20"
+                className="w-auto h-14 sm:h-16 lg:h-20 object-contain"
+                priority
               />
               <div className="flex flex-col">
                 <span className="text-xs sm:text-lg lg:text-xl font-bold text-gray-800">
