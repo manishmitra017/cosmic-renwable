@@ -75,3 +75,21 @@ package-lock.json
 .claude/
 
 .env.local
+
+# AWS CDK
+cdk/cdk.out/
+cdk/node_modules/
+cdk/*.js
+cdk/*.d.ts
+!cdk/jest.config.js
+cdk/outputs.json
+
+# AWS Credentials (NEVER commit these)
+.aws/
+credentials
+*.pem
+*.key
+
+# Secrets
+*.secret
+secrets.json

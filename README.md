@@ -1,167 +1,181 @@
 # Cosmic Renewable Energy Website
 
-A modern, responsive website for Cosmic Renewable Energy built with Next.js (frontend) and FastAPI (backend).
+A modern, responsive website for Cosmic Renewable Energy built with Next.js and hosted on AWS.
+
+**Live Site:** https://cosmicrenewableenergy.com.au
+
+## Architecture
+
+```
+                    ┌─────────────────┐
+                    │   Route 53      │
+                    │  (DNS + SSL)    │
+                    └────────┬────────┘
+                             │
+                    ┌────────▼────────┐
+                    │   CloudFront    │
+                    │     (CDN)       │
+                    └────────┬────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+     ┌────────▼────────┐     │     ┌────────▼────────┐
+     │   S3 Bucket     │     │     │  API Gateway    │
+     │ (Static Files)  │     │     │                 │
+     └─────────────────┘     │     └────────┬────────┘
+                             │              │
+                             │     ┌────────▼────────┐
+                             │     │    Lambda       │
+                             │     │  (Contact/Quote)│
+                             │     └─────────────────┘
+                             │
+                    ┌────────▼────────┐
+                    │     AWS SES     │
+                    │    (Email)      │
+                    └─────────────────┘
+```
 
 ## Project Structure
 
 ```
 cosmicweb/
-├── frontend/          # Next.js frontend application
+├── frontend/              # Next.js frontend (static export)
 │   ├── src/
-│   │   ├── app/       # App router pages
-│   │   └── components/ # Reusable components
-│   └── package.json
-├── backend/           # FastAPI backend application
-│   ├── main.py        # Main FastAPI application
-│   └── requirements.txt
-└── README.md
+│   │   ├── app/           # App router pages
+│   │   ├── components/    # React components
+│   │   └── lib/           # Utilities
+│   └── out/               # Built static files
+├── cdk/                   # AWS CDK infrastructure
+│   ├── bin/               # CDK app entry point
+│   └── lib/               # Stack definitions
+├── lambda/                # Lambda functions
+│   ├── contact/           # Contact form handler
+│   ├── quote/             # Quote form handler
+│   └── google-reviews/    # Reviews API
+├── .github/workflows/     # GitHub Actions CI/CD
+└── DNS_MIGRATION_GUIDE.md # DNS setup documentation
 ```
-
-## Features
-
-- **Modern Design**: Clean, professional design similar to leading solar companies
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Contact Forms**: Integrated contact and quote request forms
-- **Service Pages**: Comprehensive information about solar services
-- **FAQ Section**: Interactive accordion-style FAQ section
-- **SEO Optimized**: Proper meta tags and semantic HTML structure
 
 ## Tech Stack
 
-### Frontend
-- **Next.js 15** with App Router
-- **TypeScript** for type safety
-- **Tailwind CSS** for styling
-- **React** for UI components
+- **Frontend:** Next.js 15, TypeScript, Tailwind CSS
+- **Hosting:** AWS S3 + CloudFront
+- **DNS/SSL:** AWS Route 53 + ACM
+- **API:** AWS Lambda + API Gateway
+- **Email:** AWS SES
+- **Infrastructure:** AWS CDK (TypeScript)
+- **CI/CD:** GitHub Actions
 
-### Backend
-- **FastAPI** for API endpoints
-- **Pydantic** for data validation
-- **SQLAlchemy** for database operations (ready for future database integration)
-- **Python 3.8+**
+## Features
+
+- Static site generation for optimal performance
+- Global CDN distribution via CloudFront
+- HTTPS with auto-renewed SSL certificate
+- Serverless contact and quote forms
+- Automatic deployment on push to main
 
 ## Quick Start
 
 ### Prerequisites
-- Node.js 18+ and npm
-- Python 3.8+ and pip
 
-### Run Both Servers (Recommended)
+- Node.js 20+
+- AWS CLI configured
+- AWS CDK CLI (`npm install -g aws-cdk`)
 
-**Option 1: Using the run script**
+### Local Development
+
 ```bash
-./run_all.sh
-```
+# Install dependencies
+cd frontend && npm install
 
-**Option 2: Using npm**
-```bash
+# Run development server
 npm run dev
 ```
 
-This will start both the frontend (http://localhost:3000) and backend (http://localhost:8000) servers automatically.
+Visit http://localhost:3000
 
-### Manual Setup
+### Build for Production
 
-If you prefer to run servers individually:
-
-**Frontend Setup:**
 ```bash
-cd frontend
-npm install
-npm run dev
+# Build static site
+cd frontend && npm run build
+
+# Output in frontend/out/
 ```
-
-**Backend Setup:**
-```bash
-cd backend
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-python main.py
-```
-
-### Available Scripts
-
-- `./run_all.sh` - Start both frontend and backend servers
-- `npm run dev` - Start both servers using npm
-- `npm run setup` - Install all dependencies for both frontend and backend
-- `npm run frontend` - Start only the frontend server
-- `npm run backend` - Start only the backend server
-- `npm run build` - Build the frontend for production
-- `npm run clean` - Clean all dependencies and build files
-
-## API Endpoints
-
-- `GET /` - API health check
-- `POST /contact` - Submit contact form
-- `POST /quote` - Submit quote request
-- `GET /services` - Get available services
-
-## Pages
-
-- `/` - Homepage with hero section and company overview
-- `/services` - Detailed service offerings
-- `/about` - Company information and mission
-- `/why-solar` - Benefits of solar energy
-- `/contact` - Contact form and company details
-- `/quote` - Quote request form
-- `/faq` - Frequently asked questions
-
-## Customization
-
-### Adding Photos
-Replace the placeholder content in the components with your actual photos:
-1. Add images to `frontend/public/` directory
-2. Update image references in the React components
-3. Replace placeholder gradient backgrounds with actual images
-
-### Content Updates
-- Update company information in components
-- Modify service offerings in `/services` page
-- Customize FAQ content in `/faq` page
-- Update contact information in `/contact` page
-
-### Styling
-- Tailwind CSS classes can be modified throughout the components
-- Color scheme uses green and blue tones - update in `tailwind.config.js` if needed
 
 ## Deployment
 
-### Frontend (Vercel recommended)
+### Automatic (GitHub Actions)
+
+Push to `main` branch triggers automatic deployment:
+1. Builds Next.js static site
+2. Deploys CDK infrastructure
+3. Syncs files to S3
+4. Invalidates CloudFront cache
+
+### Manual Deployment
+
 ```bash
-cd frontend
-npm run build
+# Set environment variables
+export AWS_PROFILE=my-resume
+export CDK_DEFAULT_ACCOUNT=147845228831
+export CERTIFICATE_ARN=arn:aws:acm:us-east-1:147845228831:certificate/a177133a-ab86-405f-8f29-83a0c7903555
+
+# Deploy infrastructure
+cd cdk && npm run build && npx cdk deploy
+
+# Sync static files
+aws s3 sync frontend/out s3://cosmic-renewable-energy-static-147845228831 --delete
+
+# Invalidate cache
+aws cloudfront create-invalidation --distribution-id EXT7U0BLVG4DB --paths "/*"
 ```
 
-### Backend (Railway, Heroku, or similar)
-```bash
-cd backend
-# Follow your hosting provider's deployment instructions
-```
+## GitHub Secrets Required
 
-## Environment Variables
+| Secret | Description |
+|--------|-------------|
+| `AWS_ACCESS_KEY_ID` | AWS access key |
+| `AWS_SECRET_ACCESS_KEY` | AWS secret key |
+| `AWS_ACCOUNT_ID` | AWS account ID (147845228831) |
+| `CERTIFICATE_ARN` | ACM certificate ARN |
 
-Create `.env` files for both frontend and backend as needed:
+## AWS Resources
 
-**Frontend** (.env.local):
-```
-NEXT_PUBLIC_API_URL=http://localhost:8000
-```
+| Resource | Value |
+|----------|-------|
+| S3 Bucket | `cosmic-renewable-energy-static-147845228831` |
+| CloudFront Distribution | `EXT7U0BLVG4DB` |
+| API Gateway | `hh6yv1miw1.execute-api.ap-southeast-2.amazonaws.com` |
+| Hosted Zone | `Z06525221GNMP21TRKHK4` |
 
-**Backend** (.env):
-```
-DATABASE_URL=your_database_url_here
-SECRET_KEY=your_secret_key_here
-```
+## API Endpoints
 
-## Contributing
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/contact` | POST | Submit contact form |
+| `/api/quote` | POST | Submit quote request |
+| `/api/google-reviews` | GET | Get Google reviews |
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+## Pages
+
+- `/` - Homepage with hero and services
+- `/services` - Service offerings
+- `/about` - Company information
+- `/why-solar` - Benefits of solar
+- `/contact` - Contact form
+- `/quote` - Quote request form
+- `/faq` - Frequently asked questions
+
+## Cost Estimate
+
+~$3-6/month for low traffic:
+- Route 53: $0.50/month (hosted zone)
+- S3: ~$0.50/month (storage + requests)
+- CloudFront: ~$1-3/month (data transfer)
+- Lambda: Free tier (1M requests/month)
+- API Gateway: Free tier (1M requests/month)
 
 ## License
 
-This project is proprietary software for Cosmic Renewable Energy.
+Proprietary software for Cosmic Renewable Energy.

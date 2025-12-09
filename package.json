@@ -1,0 +1,21 @@
+{
+  "name": "cosmicweb",
+  "version": "2.0.0",
+  "description": "Cosmic Renewable Energy Website - AWS Static Hosting",
+  "scripts": {
+    "dev": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "start": "cd frontend && npm start",
+    "lint": "cd frontend && npm run lint",
+    "deploy": "cd cdk && npm run build && npx cdk deploy --require-approval never",
+    "deploy:cdk": "cd cdk && npm run build && npx cdk deploy --require-approval never",
+    "destroy": "cd cdk && npx cdk destroy",
+    "cdk:diff": "cd cdk && npx cdk diff",
+    "cdk:synth": "cd cdk && npx cdk synth",
+    "s3:sync": "aws s3 sync frontend/out s3://cosmic-renewable-energy-static-147845228831 --delete",
+    "cf:invalidate": "aws cloudfront create-invalidation --distribution-id EXT7U0BLVG4DB --paths '/*'"
+  },
+  "keywords": ["nextjs", "aws", "s3", "cloudfront", "cdk", "lambda"],
+  "author": "Manish Mitra",
+  "license": "ISC"
+}

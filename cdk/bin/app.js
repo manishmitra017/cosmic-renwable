@@ -1,0 +1,55 @@
+#!/usr/bin/env node
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+require("source-map-support/register");
+const cdk = require("aws-cdk-lib");
+const cosmicweb_stack_1 = require("../lib/cosmicweb-stack");
+const app = new cdk.App();
+// AWS account from environment variable (set via GitHub secrets or local env)
+const account = process.env.CDK_DEFAULT_ACCOUNT;
+if (!account) {
+    throw new Error('CDK_DEFAULT_ACCOUNT environment variable must be set');
+}
+const domainName = 'cosmicrenewableenergy.com.au';
+// STEP 1: First deploy without certificate to get Route53 hosted zone
+// Then update Hostinger nameservers
+// STEP 2: Create certificate (uncomment below after nameserver update)
+// STEP 3: Add certificate ARN and redeploy
+// Certificate ARN - will be populated after Step 2 (set via environment variable)
+// const certificateArn = process.env.CERTIFICATE_ARN;
+// Create main stack in ap-southeast-2
+const cosmicWebStack = new cosmicweb_stack_1.CosmicWebStack(app, 'CosmicRenewableEnergyStack', {
+    env: {
+        account: account,
+        region: 'ap-southeast-2',
+    },
+    crossRegionReferences: true,
+    // certificateArn: certificateArn, // Uncomment after certificate is created
+    description: 'Cosmic Renewable Energy - Route53 + S3 + CloudFront Static Website',
+    tags: {
+        Project: 'CosmicRenewableEnergy',
+        Owner: 'Manish Mitra',
+        Environment: 'Production',
+    },
+});
+// Certificate stack in us-east-1 (required for CloudFront)
+// Uncomment after updating Hostinger nameservers to use Route53
+/*
+const certificateStack = new CertificateStack(app, 'CosmicWebCertificateStack', {
+  env: {
+    account: account,
+    region: 'us-east-1', // Required for CloudFront
+  },
+  crossRegionReferences: true,
+  hostedZone: cosmicWebStack.hostedZone,
+  description: 'ACM Certificate for Cosmic Renewable Energy',
+  tags: {
+    Project: 'CosmicRenewableEnergy',
+    Owner: 'Manish Mitra',
+    Environment: 'Production',
+  },
+});
+certificateStack.addDependency(cosmicWebStack);
+*/
+app.synth();
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiYXBwLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7OztBQUNBLHVDQUFxQztBQUNyQyxtQ0FBbUM7QUFDbkMsNERBQXdEO0FBR3hELE1BQU0sR0FBRyxHQUFHLElBQUksR0FBRyxDQUFDLEdBQUcsRUFBRSxDQUFDO0FBRTFCLDhFQUE4RTtBQUM5RSxNQUFNLE9BQU8sR0FBRyxPQUFPLENBQUMsR0FBRyxDQUFDLG1CQUFtQixDQUFDO0FBQ2hELElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztJQUNiLE1BQU0sSUFBSSxLQUFLLENBQUMsc0RBQXNELENBQUMsQ0FBQztBQUMxRSxDQUFDO0FBQ0QsTUFBTSxVQUFVLEdBQUcsOEJBQThCLENBQUM7QUFFbEQsc0VBQXNFO0FBQ3RFLG9DQUFvQztBQUNwQyx1RUFBdUU7QUFDdkUsMkNBQTJDO0FBRTNDLGtGQUFrRjtBQUNsRixzREFBc0Q7QUFFdEQsc0NBQXNDO0FBQ3RDLE1BQU0sY0FBYyxHQUFHLElBQUksZ0NBQWMsQ0FBQyxHQUFHLEVBQUUsNEJBQTRCLEVBQUU7SUFDM0UsR0FBRyxFQUFFO1FBQ0gsT0FBTyxFQUFFLE9BQU87UUFDaEIsTUFBTSxFQUFFLGdCQUFnQjtLQUN6QjtJQUNELHFCQUFxQixFQUFFLElBQUk7SUFDM0IsNEVBQTRFO0lBQzVFLFdBQVcsRUFBRSxvRUFBb0U7SUFDakYsSUFBSSxFQUFFO1FBQ0osT0FBTyxFQUFFLHVCQUF1QjtRQUNoQyxLQUFLLEVBQUUsY0FBYztRQUNyQixXQUFXLEVBQUUsWUFBWTtLQUMxQjtDQUNGLENBQUMsQ0FBQztBQUVILDJEQUEyRDtBQUMzRCxnRUFBZ0U7QUFDaEU7Ozs7Ozs7Ozs7Ozs7Ozs7RUFnQkU7QUFFRixHQUFHLENBQUMsS0FBSyxFQUFFLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIjIS91c3IvYmluL2VudiBub2RlXG5pbXBvcnQgJ3NvdXJjZS1tYXAtc3VwcG9ydC9yZWdpc3Rlcic7XG5pbXBvcnQgKiBhcyBjZGsgZnJvbSAnYXdzLWNkay1saWInO1xuaW1wb3J0IHsgQ29zbWljV2ViU3RhY2sgfSBmcm9tICcuLi9saWIvY29zbWljd2ViLXN0YWNrJztcbmltcG9ydCB7IENlcnRpZmljYXRlU3RhY2sgfSBmcm9tICcuLi9saWIvY2VydGlmaWNhdGUtc3RhY2snO1xuXG5jb25zdCBhcHAgPSBuZXcgY2RrLkFwcCgpO1xuXG4vLyBBV1MgYWNjb3VudCBmcm9tIGVudmlyb25tZW50IHZhcmlhYmxlIChzZXQgdmlhIEdpdEh1YiBzZWNyZXRzIG9yIGxvY2FsIGVudilcbmNvbnN0IGFjY291bnQgPSBwcm9jZXNzLmVudi5DREtfREVGQVVMVF9BQ0NPVU5UO1xuaWYgKCFhY2NvdW50KSB7XG4gIHRocm93IG5ldyBFcnJvcignQ0RLX0RFRkFVTFRfQUNDT1VOVCBlbnZpcm9ubWVudCB2YXJpYWJsZSBtdXN0IGJlIHNldCcpO1xufVxuY29uc3QgZG9tYWluTmFtZSA9ICdjb3NtaWNyZW5ld2FibGVlbmVyZ3kuY29tLmF1JztcblxuLy8gU1RFUCAxOiBGaXJzdCBkZXBsb3kgd2l0aG91dCBjZXJ0aWZpY2F0ZSB0byBnZXQgUm91dGU1MyBob3N0ZWQgem9uZVxuLy8gVGhlbiB1cGRhdGUgSG9zdGluZ2VyIG5hbWVzZXJ2ZXJzXG4vLyBTVEVQIDI6IENyZWF0ZSBjZXJ0aWZpY2F0ZSAodW5jb21tZW50IGJlbG93IGFmdGVyIG5hbWVzZXJ2ZXIgdXBkYXRlKVxuLy8gU1RFUCAzOiBBZGQgY2VydGlmaWNhdGUgQVJOIGFuZCByZWRlcGxveVxuXG4vLyBDZXJ0aWZpY2F0ZSBBUk4gLSB3aWxsIGJlIHBvcHVsYXRlZCBhZnRlciBTdGVwIDIgKHNldCB2aWEgZW52aXJvbm1lbnQgdmFyaWFibGUpXG4vLyBjb25zdCBjZXJ0aWZpY2F0ZUFybiA9IHByb2Nlc3MuZW52LkNFUlRJRklDQVRFX0FSTjtcblxuLy8gQ3JlYXRlIG1haW4gc3RhY2sgaW4gYXAtc291dGhlYXN0LTJcbmNvbnN0IGNvc21pY1dlYlN0YWNrID0gbmV3IENvc21pY1dlYlN0YWNrKGFwcCwgJ0Nvc21pY1JlbmV3YWJsZUVuZXJneVN0YWNrJywge1xuICBlbnY6IHtcbiAgICBhY2NvdW50OiBhY2NvdW50LFxuICAgIHJlZ2lvbjogJ2FwLXNvdXRoZWFzdC0yJyxcbiAgfSxcbiAgY3Jvc3NSZWdpb25SZWZlcmVuY2VzOiB0cnVlLFxuICAvLyBjZXJ0aWZpY2F0ZUFybjogY2VydGlmaWNhdGVBcm4sIC8vIFVuY29tbWVudCBhZnRlciBjZXJ0aWZpY2F0ZSBpcyBjcmVhdGVkXG4gIGRlc2NyaXB0aW9uOiAnQ29zbWljIFJlbmV3YWJsZSBFbmVyZ3kgLSBSb3V0ZTUzICsgUzMgKyBDbG91ZEZyb250IFN0YXRpYyBXZWJzaXRlJyxcbiAgdGFnczoge1xuICAgIFByb2plY3Q6ICdDb3NtaWNSZW5ld2FibGVFbmVyZ3knLFxuICAgIE93bmVyOiAnTWFuaXNoIE1pdHJhJyxcbiAgICBFbnZpcm9ubWVudDogJ1Byb2R1Y3Rpb24nLFxuICB9LFxufSk7XG5cbi8vIENlcnRpZmljYXRlIHN0YWNrIGluIHVzLWVhc3QtMSAocmVxdWlyZWQgZm9yIENsb3VkRnJvbnQpXG4vLyBVbmNvbW1lbnQgYWZ0ZXIgdXBkYXRpbmcgSG9zdGluZ2VyIG5hbWVzZXJ2ZXJzIHRvIHVzZSBSb3V0ZTUzXG4vKlxuY29uc3QgY2VydGlmaWNhdGVTdGFjayA9IG5ldyBDZXJ0aWZpY2F0ZVN0YWNrKGFwcCwgJ0Nvc21pY1dlYkNlcnRpZmljYXRlU3RhY2snLCB7XG4gIGVudjoge1xuICAgIGFjY291bnQ6IGFjY291bnQsXG4gICAgcmVnaW9uOiAndXMtZWFzdC0xJywgLy8gUmVxdWlyZWQgZm9yIENsb3VkRnJvbnRcbiAgfSxcbiAgY3Jvc3NSZWdpb25SZWZlcmVuY2VzOiB0cnVlLFxuICBob3N0ZWRab25lOiBjb3NtaWNXZWJTdGFjay5ob3N0ZWRab25lLFxuICBkZXNjcmlwdGlvbjogJ0FDTSBDZXJ0aWZpY2F0ZSBmb3IgQ29zbWljIFJlbmV3YWJsZSBFbmVyZ3knLFxuICB0YWdzOiB7XG4gICAgUHJvamVjdDogJ0Nvc21pY1JlbmV3YWJsZUVuZXJneScsXG4gICAgT3duZXI6ICdNYW5pc2ggTWl0cmEnLFxuICAgIEVudmlyb25tZW50OiAnUHJvZHVjdGlvbicsXG4gIH0sXG59KTtcbmNlcnRpZmljYXRlU3RhY2suYWRkRGVwZW5kZW5jeShjb3NtaWNXZWJTdGFjayk7XG4qL1xuXG5hcHAuc3ludGgoKTtcbiJdfQ==

@@ -1,0 +1,114 @@
+name: Deploy Cosmic Renewable Energy to AWS
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  AWS_REGION: ap-southeast-2
+  NODE_VERSION: '20'
+
+jobs:
+  deploy:
+    name: Deploy S3 + CloudFront
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install frontend dependencies
+        working-directory: ./frontend
+        run: npm install
+
+      - name: Build Next.js static site
+        working-directory: ./frontend
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Install CDK dependencies
+        working-directory: ./cdk
+        run: npm install
+
+      - name: Build CDK
+        working-directory: ./cdk
+        run: npm run build
+
+      - name: Deploy CDK Stack
+        working-directory: ./cdk
+        env:
+          CDK_DEFAULT_ACCOUNT: ${{ secrets.AWS_ACCOUNT_ID }}
+          CERTIFICATE_ARN: ${{ secrets.CERTIFICATE_ARN }}
+        run: npx cdk deploy --require-approval never --outputs-file outputs.json
+
+      - name: Get Stack Outputs
+        id: stack-outputs
+        working-directory: ./cdk
+        run: |
+          BUCKET_NAME=$(cat outputs.json | grep -o '"BucketName": "[^"]*"' | cut -d'"' -f4)
+          DISTRIBUTION_ID=$(cat outputs.json | grep -o '"DistributionId": "[^"]*"' | cut -d'"' -f4)
+
+          echo "bucket_name=$BUCKET_NAME" >> $GITHUB_OUTPUT
+          echo "distribution_id=$DISTRIBUTION_ID" >> $GITHUB_OUTPUT
+
+      - name: Sync static site to S3
+        env:
+          BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
+        run: |
+          aws s3 sync frontend/out "s3://${BUCKET_NAME}" \
+            --delete \
+            --cache-control "public, max-age=3600"
+
+      - name: Invalidate CloudFront cache
+        if: steps.stack-outputs.outputs.distribution_id != ''
+        env:
+          DISTRIBUTION_ID: ${{ steps.stack-outputs.outputs.distribution_id }}
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${DISTRIBUTION_ID}" \
+            --paths "/*" \
+            --no-cli-pager
+
+      - name: Upload deployment outputs
+        uses: actions/upload-artifact@v4
+        with:
+          name: cdk-outputs
+          path: cdk/outputs.json
+          retention-days: 30
+
+      - name: Print deployment summary
+        working-directory: ./cdk
+        env:
+          BUCKET_NAME: ${{ steps.stack-outputs.outputs.bucket_name }}
+          DISTRIBUTION_ID: ${{ steps.stack-outputs.outputs.distribution_id }}
+        run: |
+          echo "Deployment successful!"
+          echo ""
+          echo "Resources deployed:"
+          echo "  - S3 Bucket: ${BUCKET_NAME}"
+          echo "  - CloudFront Distribution: ${DISTRIBUTION_ID}"
+          echo ""
+          echo "Website URL:"
+          cat outputs.json | grep -o '"WebsiteURL": "[^"]*"' | cut -d'"' -f4
+          echo ""
+          echo "CloudFront URL:"
+          cat outputs.json | grep -o '"CloudFrontURL": "[^"]*"' | cut -d'"' -f4
