@@ -93,3 +93,5 @@ credentials
 # Secrets
 *.secret
 secrets.json
+# Claude Code local settings
+.claude/
