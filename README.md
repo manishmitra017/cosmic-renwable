@@ -116,19 +116,19 @@ Push to `main` branch triggers automatic deployment:
 ### Manual Deployment
 
 ```bash
-# Set environment variables
-export AWS_PROFILE=my-resume
-export CDK_DEFAULT_ACCOUNT=147845228831
-export CERTIFICATE_ARN=arn:aws:acm:us-east-1:147845228831:certificate/a177133a-ab86-405f-8f29-83a0c7903555
+# Set environment variables (get values from AWS Console or team)
+export AWS_PROFILE=your-profile
+export CDK_DEFAULT_ACCOUNT=your-account-id
+export CERTIFICATE_ARN=your-certificate-arn
 
 # Deploy infrastructure
 cd cdk && npm run build && npx cdk deploy
 
-# Sync static files
-aws s3 sync frontend/out s3://cosmic-renewable-energy-static-147845228831 --delete
+# Sync static files (bucket name from CDK outputs)
+aws s3 sync frontend/out s3://your-bucket-name --delete
 
-# Invalidate cache
-aws cloudfront create-invalidation --distribution-id EXT7U0BLVG4DB --paths "/*"
+# Invalidate cache (distribution ID from CDK outputs)
+aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
 ```
 
 ## GitHub Secrets Required
@@ -137,17 +137,8 @@ aws cloudfront create-invalidation --distribution-id EXT7U0BLVG4DB --paths "/*"
 |--------|-------------|
 | `AWS_ACCESS_KEY_ID` | AWS access key |
 | `AWS_SECRET_ACCESS_KEY` | AWS secret key |
-| `AWS_ACCOUNT_ID` | AWS account ID (147845228831) |
-| `CERTIFICATE_ARN` | ACM certificate ARN |
-
-## AWS Resources
-
-| Resource | Value |
-|----------|-------|
-| S3 Bucket | `cosmic-renewable-energy-static-147845228831` |
-| CloudFront Distribution | `EXT7U0BLVG4DB` |
-| API Gateway | `hh6yv1miw1.execute-api.ap-southeast-2.amazonaws.com` |
-| Hosted Zone | `Z06525221GNMP21TRKHK4` |
+| `AWS_ACCOUNT_ID` | AWS account ID |
+| `CERTIFICATE_ARN` | ACM certificate ARN (us-east-1) |
 
 ## API Endpoints
 

@@ -12,8 +12,8 @@
     "destroy": "cd cdk && npx cdk destroy",
     "cdk:diff": "cd cdk && npx cdk diff",
     "cdk:synth": "cd cdk && npx cdk synth",
-    "s3:sync": "aws s3 sync frontend/out s3://cosmic-renewable-energy-static-147845228831 --delete",
-    "cf:invalidate": "aws cloudfront create-invalidation --distribution-id EXT7U0BLVG4DB --paths '/*'"
+    "s3:sync": "echo 'Use: aws s3 sync frontend/out s3://YOUR_BUCKET --delete'",
+    "cf:invalidate": "echo 'Use: aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths /*'"
   },
   "keywords": ["nextjs", "aws", "s3", "cloudfront", "cdk", "lambda"],
   "author": "Manish Mitra",
