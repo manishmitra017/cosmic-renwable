@@ -63,33 +63,68 @@ export default function Home() {
       <RebateBanner />
 
       {/* Contact Banner */}
-      <section className="py-4 bg-gradient-to-r from-orange-500 to-red-500">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+      <section className="py-3 sm:py-4 bg-gradient-to-r from-orange-500 via-red-500 to-rose-500 relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-yellow-400 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-red-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
             className="text-center"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
-              <div className="text-white font-bold text-lg sm:text-xl">
-                🚀 Australia's #1 Solar & Battery Experts
+            {/* Mobile Layout */}
+            <div className="flex flex-col items-center gap-2.5 sm:hidden">
+              <div className="flex items-center gap-2 text-white font-bold text-sm">
+                <span>🚀</span>
+                <span>Australia's #1 Solar Experts</span>
               </div>
-              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-                <a 
+              <div className="flex items-center gap-2 w-full max-w-xs">
+                <a
                   href="tel:1300090984"
-                  className="bg-white text-orange-600 px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-orange-50 transition-colors shadow-lg flex items-center gap-2"
+                  className="flex-1 bg-white/95 backdrop-blur-sm text-orange-600 px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
+                >
+                  <span>📞</span>
+                  <span>1300 09 09 84</span>
+                </a>
+                <a
+                  href="tel:+61422786100"
+                  className="flex-1 bg-white/95 backdrop-blur-sm text-red-600 px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
+                >
+                  <span>📱</span>
+                  <span>+61 422 786 100</span>
+                </a>
+              </div>
+              <div className="text-white/90 font-medium text-xs">
+                Call Now for Instant Quote!
+              </div>
+            </div>
+
+            {/* Desktop Layout */}
+            <div className="hidden sm:flex items-center justify-center gap-4 md:gap-6">
+              <div className="text-white font-bold text-base md:text-xl flex items-center gap-2">
+                <span>🚀</span>
+                <span>Australia's #1 Solar & Battery Experts</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <a
+                  href="tel:1300090984"
+                  className="bg-white text-orange-600 px-4 py-2 rounded-full font-bold text-sm hover:bg-orange-50 transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   📞 1300 09 09 84
                 </a>
-                <a 
+                <a
                   href="tel:+61422786100"
-                  className="bg-white text-red-600 px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-red-50 transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-white text-red-600 px-4 py-2 rounded-full font-bold text-sm hover:bg-red-50 transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   📱 +61 422 786 100
                 </a>
               </div>
-              <div className="text-white font-semibold text-sm sm:text-base">
+              <div className="text-white font-semibold text-sm md:text-base">
                 Call Now for Instant Quote!
               </div>
             </div>
@@ -98,7 +133,7 @@ export default function Home() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100">
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100">
         <div className="absolute inset-0">
           <Image
             src="/solarroof9.jpg"
@@ -107,24 +142,26 @@ export default function Home() {
             className="object-cover opacity-20"
             priority
           />
+          {/* Enhanced gradient overlay for mobile readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-green-50/50 via-transparent to-emerald-100/80 sm:hidden"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-0">
           <div className="max-w-4xl">
-            <motion.h1 
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-green-800 mb-4 sm:mb-6 leading-tight"
+            <motion.h1
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-green-800 mb-3 sm:mb-6 leading-tight"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               Premium Solar Battery Systems
-              <span className="block text-green-600">
+              <span className="block text-green-600 text-xl sm:text-3xl md:text-4xl lg:text-6xl mt-1 sm:mt-2">
                 Australia Wide Installation
               </span>
             </motion.h1>
-            
-            <motion.div 
-              className="bg-green-600 text-white text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 sm:px-6 py-3 sm:py-4 rounded-lg mb-4 sm:mb-6 inline-block"
+
+            <motion.div
+              className="bg-gradient-to-r from-green-600 to-emerald-600 text-white text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl mb-3 sm:mb-6 inline-block shadow-lg shadow-green-600/30"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -132,34 +169,35 @@ export default function Home() {
               Starting from $2,480
             </motion.div>
 
-            <motion.p 
-              className="text-lg sm:text-xl text-green-700 mb-6 sm:mb-8 leading-relaxed"
+            <motion.p
+              className="text-sm sm:text-lg md:text-xl text-green-700 mb-5 sm:mb-8 leading-relaxed max-w-2xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Australia's leading solar battery installation specialists. Save up to $8,000 with government rebates 
-              on premium home battery systems. Professional installation across Melbourne, Sydney, Brisbane and nationwide.
+              Australia's leading solar battery installation specialists. Save up to $8,000 with government rebates
+              on premium home battery systems.
+              <span className="hidden sm:inline"> Professional installation across Melbourne, Sydney, Brisbane and nationwide.</span>
             </motion.p>
-            
-            <motion.div 
-              className="flex flex-col gap-3 sm:gap-4 mb-8 sm:mb-12"
+
+            <motion.div
+              className="flex flex-col gap-2.5 sm:gap-4 mb-6 sm:mb-12"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <Link 
-                  href="/quote" 
-                  className="w-full sm:w-auto bg-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-green-700 transition-all duration-200 text-center block sm:inline-block shadow-xl"
+                <Link
+                  href="/quote"
+                  className="w-full sm:w-auto bg-gradient-to-r from-green-600 to-emerald-600 text-white px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 text-center block sm:inline-block shadow-xl shadow-green-600/30"
                 >
                   Book Free Consultation
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <a 
-                  href="tel:1300090984" 
-                  className="w-full sm:w-auto border-2 border-green-600 text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-200 text-center block sm:inline-block"
+                <a
+                  href="tel:1300090984"
+                  className="w-full sm:w-auto border-2 border-green-600 text-green-600 bg-white/80 backdrop-blur-sm px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-semibold hover:bg-green-600 hover:text-white transition-all duration-200 text-center block sm:inline-block"
                 >
                   📞 Call Now: 1300 09 09 84
                 </a>
@@ -167,28 +205,23 @@ export default function Home() {
             </motion.div>
 
             {/* Stats */}
-            <motion.div 
-              className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:gap-6 bg-white/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 shadow-lg"
+            <motion.div
+              className="grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-4 md:gap-6 bg-white/95 backdrop-blur-sm rounded-xl p-3 sm:p-6 shadow-xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">10+</div>
-                <div className="text-green-700 text-xs sm:text-sm">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">5000+</div>
-                <div className="text-green-700 text-xs sm:text-sm">Homes Powered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">5 Years</div>
-                <div className="text-green-700 text-xs sm:text-sm">Warranty</div>
-              </div>
-              <div className="text-center">
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-green-600">90%</div>
-                <div className="text-green-700 text-xs sm:text-sm">Bill Reduction</div>
-              </div>
+              {[
+                { value: '10+', label: 'Years Experience' },
+                { value: '5000+', label: 'Homes Powered' },
+                { value: '5 Years', label: 'Warranty' },
+                { value: '90%', label: 'Bill Reduction' }
+              ].map((stat, index) => (
+                <div key={index} className="text-center p-2 sm:p-0">
+                  <div className="text-lg sm:text-2xl md:text-3xl font-extrabold text-green-600">{stat.value}</div>
+                  <div className="text-green-700 text-[10px] sm:text-sm font-medium">{stat.label}</div>
+                </div>
+              ))}
             </motion.div>
           </div>
         </div>

@@ -83,27 +83,27 @@ export default function PromotionsCarousel() {
   }
 
   return (
-    <section className="py-16 bg-gradient-to-br from-green-50 to-emerald-100">
+    <section className="py-10 sm:py-16 bg-gradient-to-br from-green-50 to-emerald-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center mb-12"
+        <motion.div
+          className="text-center mb-8 sm:mb-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-6">
             🔥 Hot Deals & Special Promotions
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Limited time offers on solar panels, battery storage, and air conditioning systems. 
-            Save thousands with government rebates and our exclusive deals!
+          <p className="text-sm sm:text-xl text-gray-600 max-w-3xl mx-auto">
+            Limited time offers on solar panels, battery storage, and air conditioning systems.
+            <span className="hidden sm:inline"> Save thousands with government rebates and our exclusive deals!</span>
           </p>
         </motion.div>
 
         <div className="relative max-w-6xl mx-auto">
           {/* Main Carousel Container */}
-          <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-white">
+          <div className="relative overflow-hidden rounded-xl sm:rounded-2xl shadow-xl sm:shadow-2xl bg-white">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -114,7 +114,7 @@ export default function PromotionsCarousel() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-0"
               >
                 {/* Image Section */}
-                <div className="relative h-[400px] sm:h-[500px] lg:h-[600px]">
+                <div className="relative h-[280px] sm:h-[400px] lg:h-[600px]">
                   <Image
                     src={promotions[currentIndex].image}
                     alt={promotions[currentIndex].title}
@@ -124,71 +124,71 @@ export default function PromotionsCarousel() {
                   />
                   {/* Highlight Badge */}
                   {promotions[currentIndex].highlight && (
-                    <div className="absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-red-500 text-white px-2.5 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse max-w-[200px] sm:max-w-none truncate">
                       {promotions[currentIndex].highlight}
                     </div>
                   )}
                 </div>
 
                 {/* Content Section */}
-                <div className="flex flex-col justify-center p-8 lg:p-12">
-                  <div className="space-y-4">
-                    <div className="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-12">
+                  <div className="space-y-3 sm:space-y-4">
+                    <div className="inline-block bg-green-100 text-green-800 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold">
                       LIMITED TIME OFFER
                     </div>
-                    
-                    <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+
+                    <h3 className="text-lg sm:text-2xl lg:text-4xl font-bold text-gray-900 leading-tight">
                       {promotions[currentIndex].title}
                     </h3>
-                    
-                    <p className="text-lg text-green-600 font-semibold">
+
+                    <p className="text-sm sm:text-lg text-green-600 font-semibold">
                       {promotions[currentIndex].subtitle}
                     </p>
-                    
-                    <p className="text-gray-600 text-lg">
+
+                    <p className="text-gray-600 text-sm sm:text-lg hidden sm:block">
                       {promotions[currentIndex].description}
                     </p>
 
-                    {/* Features List */}
-                    <ul className="space-y-2 text-gray-700">
+                    {/* Features List - Condensed on mobile */}
+                    <ul className="space-y-1.5 sm:space-y-2 text-gray-700 text-sm sm:text-base">
                       <li className="flex items-center">
                         <span className="text-green-500 mr-2">✓</span>
-                        Professional Installation Included
+                        Professional Installation
                       </li>
                       <li className="flex items-center">
                         <span className="text-green-500 mr-2">✓</span>
                         Government Rebates Applied
                       </li>
-                      <li className="flex items-center">
+                      <li className="hidden sm:flex items-center">
                         <span className="text-green-500 mr-2">✓</span>
                         5 Year Warranty
                       </li>
-                      <li className="flex items-center">
+                      <li className="hidden sm:flex items-center">
                         <span className="text-green-500 mr-2">✓</span>
                         CEC Approved Products
                       </li>
                     </ul>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-6">
-                      <Link 
-                        href="/quote" 
-                        className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-700 transition-all duration-200 text-center shadow-xl transform hover:scale-105"
+                    <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-4 pt-3 sm:pt-6">
+                      <Link
+                        href="/quote"
+                        className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-5 py-3 sm:px-8 sm:py-4 rounded-xl text-sm sm:text-lg font-bold hover:from-green-700 hover:to-emerald-700 transition-all duration-200 text-center shadow-xl shadow-green-600/30 hover:scale-105"
                       >
                         {promotions[currentIndex].cta}
                       </Link>
-                      <a 
-                        href="tel:1300090984" 
-                        className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg text-lg font-bold hover:bg-green-600 hover:text-white transition-all duration-200 text-center"
+                      <a
+                        href="tel:1300090984"
+                        className="border-2 border-green-600 text-green-600 px-5 py-3 sm:px-8 sm:py-4 rounded-xl text-sm sm:text-lg font-bold hover:bg-green-600 hover:text-white transition-all duration-200 text-center"
                       >
                         📞 1300 09 09 84
                       </a>
                     </div>
 
                     {/* Urgency Message */}
-                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded">
-                      <p className="text-yellow-800 font-semibold">
-                        ⏰ Offer expires soon! Limited spots available for this month.
+                    <div className="bg-yellow-50 border-l-4 border-yellow-400 p-3 sm:p-4 rounded">
+                      <p className="text-yellow-800 font-semibold text-xs sm:text-base">
+                        ⏰ Offer expires soon! Limited spots available.
                       </p>
                     </div>
                   </div>
@@ -200,34 +200,34 @@ export default function PromotionsCarousel() {
           {/* Navigation Arrows */}
           <button
             onClick={handlePrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            className="absolute left-2 sm:left-4 top-[140px] sm:top-1/2 sm:-translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
             aria-label="Previous promotion"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          
+
           <button
             onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+            className="absolute right-2 sm:right-4 top-[140px] sm:top-1/2 sm:-translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 sm:p-3 rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
             aria-label="Next promotion"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-1.5 sm:gap-2 mt-4 sm:mt-6">
             {promotions.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
                 className={`transition-all duration-200 ${
                   index === currentIndex
-                    ? 'w-12 h-3 bg-green-600 rounded-full'
-                    : 'w-3 h-3 bg-gray-300 rounded-full hover:bg-gray-400'
+                    ? 'w-8 sm:w-12 h-2 sm:h-3 bg-green-600 rounded-full'
+                    : 'w-2 sm:w-3 h-2 sm:h-3 bg-gray-300 rounded-full hover:bg-gray-400'
                 }`}
                 aria-label={`Go to promotion ${index + 1}`}
               />
@@ -236,32 +236,32 @@ export default function PromotionsCarousel() {
         </div>
 
         {/* Additional Info Banner */}
-        <motion.div 
-          className="mt-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl p-8 text-white text-center"
+        <motion.div
+          className="mt-8 sm:mt-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl sm:rounded-2xl p-5 sm:p-8 text-white text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-2xl font-bold mb-4">
+          <h3 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4">
             🎯 Why Choose Cosmic Renewable Energy?
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold">5000+</div>
-              <div className="text-orange-100">Happy Customers</div>
+              <div className="text-xl sm:text-3xl font-bold">5000+</div>
+              <div className="text-orange-100 text-xs sm:text-base">Happy Customers</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">10+</div>
-              <div className="text-orange-100">Years Experience</div>
+              <div className="text-xl sm:text-3xl font-bold">10+</div>
+              <div className="text-orange-100 text-xs sm:text-base">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">$8000</div>
-              <div className="text-orange-100">Max Rebates</div>
+              <div className="text-xl sm:text-3xl font-bold">$8000</div>
+              <div className="text-orange-100 text-xs sm:text-base">Max Rebates</div>
             </div>
             <div>
-              <div className="text-3xl font-bold">5★</div>
-              <div className="text-orange-100">Google Reviews</div>
+              <div className="text-xl sm:text-3xl font-bold">5★</div>
+              <div className="text-orange-100 text-xs sm:text-base">Google Reviews</div>
             </div>
           </div>
         </motion.div>
