@@ -42,19 +42,19 @@ export default function Contact() {
     setSubmitMessage('')
 
     try {
-      const formDataToSend = new FormData()
-      formDataToSend.append('access_key', '7d4e4c8b-e886-49df-ba29-d859ddcc7e55')
-      formDataToSend.append('name', formData.name)
-      formDataToSend.append('email', formData.email)
-      formDataToSend.append('phone', formData.phone)
-      formDataToSend.append('suburb', formData.suburb)
-      formDataToSend.append('service_interest', formData.serviceInterest)
-      formDataToSend.append('message', formData.message)
-      formDataToSend.append('subject', 'New Contact Form Submission - Cosmic Renewable Energy')
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://hh6yv1miw1.execute-api.ap-southeast-2.amazonaws.com/prod/api/contact', {
         method: 'POST',
-        body: formDataToSend
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.suburb,
+          service_interest: formData.serviceInterest,
+          message: formData.message
+        })
       })
 
       if (response.ok) {
