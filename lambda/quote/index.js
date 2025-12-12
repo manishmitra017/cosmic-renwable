@@ -3,6 +3,7 @@ const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
 const ses = new SESClient({ region: process.env.AWS_REGION || 'ap-southeast-2' });
 
 const RECIPIENT_EMAIL = 'ceejay@cosmicrenewableenergy.com.au';
+const CC_EMAIL = 'manish.bvc@gmail.com';
 const SENDER_EMAIL = process.env.SENDER_EMAIL || 'noreply@cosmicrenewableenergy.com.au';
 
 exports.handler = async (event) => {
@@ -53,6 +54,7 @@ This email was sent from the Cosmic Renewable Energy website quote form.
       Source: SENDER_EMAIL,
       Destination: {
         ToAddresses: [RECIPIENT_EMAIL],
+        CcAddresses: [CC_EMAIL],
       },
       Message: {
         Subject: {
