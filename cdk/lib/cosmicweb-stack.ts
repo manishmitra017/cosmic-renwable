@@ -102,7 +102,7 @@ export class CosmicWebStack extends cdk.Stack {
     });
 
     // ============================================
-    // API Gateway
+    // API Gateway with Rate Limiting
     // ============================================
 
     const api = new apigateway.RestApi(this, 'CosmicWebApi', {
@@ -113,6 +113,29 @@ export class CosmicWebStack extends cdk.Stack {
         allowMethods: apigateway.Cors.ALL_METHODS,
         allowHeaders: ['Content-Type', 'Authorization'],
       },
+      deployOptions: {
+        // Rate limiting: 10 requests per second, burst of 20
+        throttlingRateLimit: 10,
+        throttlingBurstLimit: 20,
+      },
+    });
+
+    // Usage plan with stricter limits for form submissions
+    const usagePlan = api.addUsagePlan('FormSubmissionPlan', {
+      name: 'FormSubmissionPlan',
+      description: 'Rate limiting for contact and quote forms',
+      throttle: {
+        rateLimit: 5,    // 5 requests per second
+        burstLimit: 10,  // Allow burst of 10
+      },
+      quota: {
+        limit: 100,      // 100 requests per day
+        period: apigateway.Period.DAY,
+      },
+    });
+
+    usagePlan.addApiStage({
+      stage: api.deploymentStage,
     });
 
     // API endpoints
