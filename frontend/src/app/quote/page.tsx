@@ -42,22 +42,22 @@ export default function Quote() {
     setSubmitMessage('')
 
     try {
-      const formDataToSend = new FormData()
-      formDataToSend.append('access_key', '7d4e4c8b-e886-49df-ba29-d859ddcc7e55')
-      formDataToSend.append('name', formData.name)
-      formDataToSend.append('email', formData.email)
-      formDataToSend.append('phone', formData.phone)
-      formDataToSend.append('address', formData.address)
-      formDataToSend.append('property_type', formData.property_type)
-      formDataToSend.append('roof_type', formData.roof_type)
-      formDataToSend.append('energy_usage', formData.energy_usage)
-      formDataToSend.append('budget_range', formData.budget_range)
-      formDataToSend.append('message', formData.message)
-      formDataToSend.append('subject', 'New Quote Request - Cosmic Renewable Energy')
-
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('https://hh6yv1miw1.execute-api.ap-southeast-2.amazonaws.com/prod/api/quote', {
         method: 'POST',
-        body: formDataToSend
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          address: formData.address,
+          property_type: formData.property_type,
+          roof_type: formData.roof_type,
+          energy_usage: formData.energy_usage,
+          budget_range: formData.budget_range,
+          message: formData.message
+        })
       })
 
       if (response.ok) {
@@ -74,7 +74,8 @@ export default function Quote() {
           message: ''
         })
       } else {
-        setSubmitMessage('Sorry, there was an error submitting your request. Please try again.')
+        const errorData = await response.json().catch(() => ({}))
+        setSubmitMessage(errorData.error || 'Sorry, there was an error submitting your request. Please try again.')
       }
     } catch {
       setSubmitMessage('Sorry, there was an error submitting your request. Please try again.')
