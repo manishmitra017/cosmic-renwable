@@ -4,89 +4,188 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 
+// SVG Icon Components
+const BoltIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+  </svg>
+)
+
+const CurrencyDollarIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+)
+
+const HomeIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+  </svg>
+)
+
+const GlobeAltIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+  </svg>
+)
+
+const LockClosedIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+  </svg>
+)
+
+const WrenchIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75a4.5 4.5 0 01-4.884 4.484c-1.076-.091-2.264.071-2.95.904l-7.152 8.684a2.548 2.548 0 11-3.586-3.586l8.684-7.152c.833-.686.995-1.874.904-2.95a4.5 4.5 0 016.336-4.486l-3.276 3.276a3.004 3.004 0 002.25 2.25l3.276-3.276c.256.565.398 1.192.398 1.852z" />
+  </svg>
+)
+
+const AdjustmentsHorizontalIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+  </svg>
+)
+
+const BriefcaseIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+  </svg>
+)
+
+const ChartBarIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+  </svg>
+)
+
+const BatteryIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M21 10.5h.375c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125H21M4.5 10.5H18V15H4.5v-4.5zM3.75 18h15A2.25 2.25 0 0021 15.75v-6a2.25 2.25 0 00-2.25-2.25h-15A2.25 2.25 0 001.5 9.75v6A2.25 2.25 0 003.75 18z" />
+  </svg>
+)
+
+const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+  </svg>
+)
+
+const XMarkIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+)
+
+const ArrowRightIcon = ({ className = "w-4 h-4" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+  </svg>
+)
+
+const PhoneIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+  </svg>
+)
+
+const SunIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+  </svg>
+)
+
 export default function WhySolar() {
+  const heroStats = [
+    {
+      icon: CurrencyDollarIcon,
+      title: 'Save $2,000+ Annually',
+      description: 'Average household savings on electricity bills',
+      color: 'from-[#f5a623] to-[#ff6b00]'
+    },
+    {
+      icon: HomeIcon,
+      title: 'Increase Property Value',
+      description: 'Add $6,000+ per kW to your home value',
+      color: 'from-[#00d4ff] to-[#0066ff]'
+    },
+    {
+      icon: GlobeAltIcon,
+      title: 'Reduce Carbon Footprint',
+      description: 'Equivalent to planting 2,500 trees per system',
+      color: 'from-[#00ff88] to-[#00d4ff]'
+    }
+  ]
+
+  const additionalBenefits = [
+    {
+      icon: LockClosedIcon,
+      title: 'Energy Independence',
+      description: 'Generate your own electricity and reduce dependence on the grid and volatile energy prices.'
+    },
+    {
+      icon: WrenchIcon,
+      title: 'Low Maintenance',
+      description: 'Solar panels require minimal maintenance with no moving parts and 25+ year lifespans.'
+    },
+    {
+      icon: AdjustmentsHorizontalIcon,
+      title: 'Proven Technology',
+      description: 'Decades of proven performance with continuously improving efficiency and reliability.'
+    },
+    {
+      icon: BriefcaseIcon,
+      title: 'Government Incentives',
+      description: 'Take advantage of rebates, tax credits, and feed-in tariffs to reduce installation costs.'
+    },
+    {
+      icon: ChartBarIcon,
+      title: 'Performance Monitoring',
+      description: 'Real-time monitoring helps optimize performance and identify issues quickly.'
+    },
+    {
+      icon: BatteryIcon,
+      title: 'Battery Storage Options',
+      description: 'Store excess energy for use during peak hours or power outages for complete energy security.'
+    }
+  ]
+
+  const myths = [
+    {
+      myth: "Solar doesn't work in cloudy weather",
+      fact: "Solar panels generate electricity from daylight, not just direct sunlight, and work efficiently even on cloudy days."
+    },
+    {
+      myth: "Solar panels are too expensive",
+      fact: "With government incentives and falling prices, solar provides excellent ROI and 20+ years of free electricity."
+    },
+    {
+      myth: "Solar panels require constant maintenance",
+      fact: "Solar panels have no moving parts and require only periodic cleaning and annual inspections."
+    }
+  ]
+
   return (
-    <div>
-      {/* Contact Banner */}
-      <section className="py-4 bg-gradient-to-r from-orange-500 to-red-500">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
-              <div className="text-white font-bold text-lg sm:text-xl">
-                🚀 Australia's #1 Solar & Battery Experts
-              </div>
-              <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
-                <a 
-                  href="tel:1300090984"
-                  className="bg-white text-orange-600 px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-orange-50 transition-colors shadow-lg flex items-center gap-2"
-                >
-                  📞 1300 09 09 84
-                </a>
-                <a 
-                  href="tel:+61422786100"
-                  className="bg-white text-red-600 px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-red-50 transition-colors shadow-lg flex items-center gap-2"
-                >
-                  📱 +61 422 786 100
-                </a>
-              </div>
-              <div className="text-white font-semibold text-sm sm:text-base">
-                Call Now for Instant Quote!
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+    <div className="cosmic-bg">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
+        {/* Star field background */}
+        <div className="absolute inset-0 star-field opacity-40"></div>
 
-      {/* Hero Section with Split Layout */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background image */}
         <div className="absolute inset-0">
-          <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
-            <div className="relative">
-              <Image
-                src="/solarroof7.jpg"
-                alt="Solar Energy Benefits"
-                fill
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-green-900/80"></div>
-            </div>
-            <div className="bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600"></div>
-          </div>
-        </div>
-
-        {/* Floating Elements */}
-        <div className="absolute inset-0">
-          <motion.div
-            animate={{ 
-              y: [0, -20, 0],
-              rotate: [0, 5, 0]
-            }}
-            transition={{ 
-              duration: 6, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute top-1/4 left-1/4 w-32 h-32 bg-yellow-400/20 rounded-full blur-2xl"
-          />
-          <motion.div
-            animate={{ 
-              y: [0, 20, 0],
-              rotate: [0, -5, 0]
-            }}
-            transition={{ 
-              duration: 8, 
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-blue-400/20 rounded-full blur-2xl"
+          <Image
+            src="/solarroof7.jpg"
+            alt="Solar Energy Benefits"
+            fill
+            className="object-cover opacity-20"
+            priority
           />
         </div>
+
+        {/* Animated gradient orbs */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
@@ -95,56 +194,54 @@ export default function WhySolar() {
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-white"
             >
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center bg-white/10 backdrop-blur-md rounded-full px-6 py-3 mb-6 border border-white/20"
+                className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20"
               >
-                <span className="text-yellow-300 mr-2">⚡</span>
-                <span className="text-sm font-medium">Clean Energy Revolution</span>
+                <BoltIcon className="w-5 h-5 text-[#f5a623]" />
+                <span className="text-[#f5a623] font-semibold text-sm">Clean Energy Revolution</span>
               </motion.div>
 
-              <motion.h1 
-                className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              <motion.h1
+                className="text-5xl md:text-7xl font-display font-bold text-white mb-6 leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                Why Solar?
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-                  Why Now?
-                </span>
+                Why <span className="text-gradient-solar">Solar?</span>
+                <span className="block text-gradient-energy">Why Now?</span>
               </motion.h1>
 
-              <motion.p 
-                className="text-xl text-green-100 mb-8 leading-relaxed"
+              <motion.p
+                className="text-xl text-[#b0b0b0] mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
-                Join millions of Australians who have already made the switch to clean, 
-                renewable solar energy. Save money, increase property value, and help create 
+                Join millions of Australians who have already made the switch to clean,
+                renewable solar energy. Save money, increase property value, and help create
                 a sustainable future.
               </motion.p>
 
-              <motion.div 
+              <motion.div
                 className="flex flex-col sm:flex-row gap-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
               >
-                <Link 
-                  href="/quote" 
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-full text-lg font-semibold hover:from-yellow-500 hover:to-orange-600 transition-all duration-200 text-center shadow-xl"
+                <Link
+                  href="/quote"
+                  className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold text-center inline-flex items-center justify-center gap-2"
                 >
                   Calculate My Savings
+                  <ArrowRightIcon className="w-5 h-5" />
                 </Link>
-                <Link 
-                  href="/contact" 
-                  className="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-green-600 transition-all duration-200 text-center"
+                <Link
+                  href="/contact"
+                  className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold text-center"
                 >
                   Learn More
                 </Link>
@@ -152,47 +249,28 @@ export default function WhySolar() {
             </motion.div>
 
             {/* Right Content - Benefits Cards */}
-            <motion.div 
+            <motion.div
               className="space-y-6"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              {[
-                {
-                  icon: '💰',
-                  title: 'Save $2,000+ Annually',
-                  description: 'Average household savings on electricity bills',
-                  color: 'from-green-400 to-emerald-500'
-                },
-                {
-                  icon: '🏠',
-                  title: 'Increase Property Value',
-                  description: 'Add $6,000+ per kW to your home value',
-                  color: 'from-blue-400 to-cyan-500'
-                },
-                {
-                  icon: '🌱',
-                  title: 'Reduce Carbon Footprint',
-                  description: 'Equivalent to planting 2,500 trees per system',
-                  color: 'from-emerald-400 to-teal-500'
-                }
-              ].map((benefit, index) => (
+              {heroStats.map((benefit, index) => (
                 <motion.div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
+                  className="glass rounded-2xl p-6 border border-white/10"
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.2 }}
                   whileHover={{ scale: 1.05, x: 10 }}
                 >
                   <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center text-2xl`}>
-                      {benefit.icon}
+                    <div className={`w-12 h-12 bg-gradient-to-br ${benefit.color} rounded-xl flex items-center justify-center`}>
+                      <benefit.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-green-100">{benefit.description}</p>
+                      <p className="text-[#b0b0b0]">{benefit.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -202,37 +280,44 @@ export default function WhySolar() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* Cost Savings Section */}
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Dramatic Cost Savings
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Dramatic <span className="text-gradient-solar">Cost Savings</span>
               </h2>
-              <p className="text-lg text-gray-900 mb-6 leading-relaxed">
-                Solar energy can dramatically reduce or even eliminate your electricity bills. 
+              <p className="text-lg text-[#b0b0b0] mb-6 leading-relaxed">
+                Solar energy can dramatically reduce or even eliminate your electricity bills.
                 With rising energy costs, solar provides predictable, stable energy costs for decades.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span className="text-gray-900">Save 70-90% on electricity bills</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span className="text-gray-900">Typical payback period of 4-7 years</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span className="text-gray-900">25+ years of free electricity after payback</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span className="text-gray-900">Protection against rising energy costs</span>
-                </li>
+                {[
+                  'Save 70-90% on electricity bills',
+                  'Typical payback period of 4-7 years',
+                  '25+ years of free electricity after payback',
+                  'Protection against rising energy costs'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
+                    <span className="text-white">{item}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="card-cosmic overflow-hidden"
+            >
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src="/solarroof4.jpg"
@@ -240,97 +325,108 @@ export default function WhySolar() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="bg-green-600 text-white text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block">
+                  <div className="glass text-[#f5a623] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#f5a623]/30">
                     90% Savings
                   </div>
                   <h3 className="text-xl font-semibold">Dramatic Cost Reduction</h3>
-                  <p className="text-green-200 text-sm">Real customer installation</p>
+                  <p className="text-[#b0b0b0] text-sm">Real customer installation</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-            <div className="lg:order-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Environmental Benefits
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:order-2"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Environmental <span className="text-gradient-energy">Benefits</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Solar energy is clean, renewable, and helps reduce greenhouse gas emissions. 
-                By choosing solar, you're making a positive impact on the environment.
+              <p className="text-lg text-[#b0b0b0] mb-6 leading-relaxed">
+                Solar energy is clean, renewable, and helps reduce greenhouse gas emissions.
+                By choosing solar, you&apos;re making a positive impact on the environment.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Zero emissions during operation</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Reduces dependence on fossil fuels</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Average system prevents 100,000+ lbs CO₂ over lifetime</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Equivalent to planting 2,500 trees</span>
-                </li>
+                {[
+                  'Zero emissions during operation',
+                  'Reduces dependence on fossil fuels',
+                  'Average system prevents 100,000+ lbs CO₂ over lifetime',
+                  'Equivalent to planting 2,500 trees'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
+                    <span className="text-white">{item}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div className="lg:order-1">
-              <div className="bg-white rounded-lg shadow-xl overflow-hidden">
-                <div className="relative h-64 overflow-hidden">
-                  <Image
-                    src="/solarroof6.jpg"
-                    alt="Environmental impact of solar installation"
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent"></div>
-                  <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <div className="bg-green-600 text-white text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block">
-                      Zero Emissions
-                    </div>
-                    <h3 className="text-xl font-semibold">Environmental Protection</h3>
-                    <p className="text-green-200 text-sm">Clean energy installation</p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:order-1 card-cosmic overflow-hidden"
+            >
+              <div className="relative h-64 overflow-hidden">
+                <Image
+                  src="/solarroof6.jpg"
+                  alt="Environmental impact of solar installation"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
+                <div className="absolute bottom-6 left-6 right-6 text-white">
+                  <div className="glass text-[#00d4ff] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#00d4ff]/30">
+                    Zero Emissions
                   </div>
+                  <h3 className="text-xl font-semibold">Environmental Protection</h3>
+                  <p className="text-[#b0b0b0] text-sm">Clean energy installation</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Increase Property Value
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Increase <span className="text-gradient-solar">Property Value</span>
               </h2>
-              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Solar installations consistently increase property values. Studies show that 
+              <p className="text-lg text-[#b0b0b0] mb-6 leading-relaxed">
+                Solar installations consistently increase property values. Studies show that
                 homes with solar panels sell faster and for higher prices than comparable homes without solar.
               </p>
               <ul className="space-y-3 mb-6">
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Average increase of $6,000 per kW installed</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Homes sell 20% faster than non-solar homes</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Property tax exemptions in many areas</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-green-600 font-bold mr-3">✓</span>
-                  <span>Appeal to environmentally conscious buyers</span>
-                </li>
+                {[
+                  'Average increase of $6,000 per kW installed',
+                  'Homes sell 20% faster than non-solar homes',
+                  'Property tax exemptions in many areas',
+                  'Appeal to environmentally conscious buyers'
+                ].map((item, index) => (
+                  <li key={index} className="flex items-center">
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
+                    <span className="text-white">{item}</span>
+                  </li>
+                ))}
               </ul>
-            </div>
-            <div className="bg-white rounded-lg shadow-xl overflow-hidden">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="card-cosmic overflow-hidden"
+            >
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src="/solarroof9.jpg"
@@ -338,163 +434,150 @@ export default function WhySolar() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-green-600/80 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="bg-green-600 text-white text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block">
+                  <div className="glass text-[#f5a623] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#f5a623]/30">
                     +$15,000 Value
                   </div>
                   <h3 className="text-xl font-semibold">Property Enhancement</h3>
-                  <p className="text-green-200 text-sm">Premium home upgrade</p>
+                  <p className="text-[#b0b0b0] text-sm">Premium home upgrade</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Additional Solar Benefits
+      {/* Additional Benefits */}
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
+        <div className="absolute inset-0 star-field opacity-20"></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Additional <span className="text-gradient-energy">Solar Benefits</span>
             </h2>
-          </div>
+          </motion.div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔒</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Energy Independence</h3>
-              <p className="text-gray-600">
-                Generate your own electricity and reduce dependence on the grid and volatile energy prices.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🛠️</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Low Maintenance</h3>
-              <p className="text-gray-600">
-                Solar panels require minimal maintenance with no moving parts and 25+ year lifespans.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🎯</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Technology</h3>
-              <p className="text-gray-600">
-                Decades of proven performance with continuously improving efficiency and reliability.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">💼</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Government Incentives</h3>
-              <p className="text-gray-600">
-                Take advantage of rebates, tax credits, and feed-in tariffs to reduce installation costs.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📊</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Performance Monitoring</h3>
-              <p className="text-gray-600">
-                Real-time monitoring helps optimize performance and identify issues quickly.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6 text-center">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🔋</span>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Battery Storage Options</h3>
-              <p className="text-gray-600">
-                Store excess energy for use during peak hours or power outages for complete energy security.
-              </p>
-            </div>
+            {additionalBenefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                className="card-cosmic p-6 text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-[#00d4ff]/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#00d4ff]/30">
+                  <benefit.icon className="w-8 h-8 text-[#00d4ff]" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
+                <p className="text-[#b0b0b0]">{benefit.description}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* Myths vs Facts */}
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Solar Energy Myths vs Facts
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Solar Energy <span className="text-gradient-solar">Myths</span> vs <span className="text-gradient-energy">Facts</span>
             </h2>
-          </div>
+          </motion.div>
+
           <div className="max-w-4xl mx-auto space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-red-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-red-800 mb-3">❌ Myth: Solar doesn't work in cloudy weather</h3>
-                <p className="text-red-700">
-                  Many people believe solar panels are ineffective on cloudy days.
-                </p>
-              </div>
-              <div className="bg-green-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-800 mb-3">✅ Fact: Solar works in all weather conditions</h3>
-                <p className="text-green-700">
-                  Solar panels generate electricity from daylight, not just direct sunlight, and work efficiently even on cloudy days.
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-red-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-red-800 mb-3">❌ Myth: Solar panels are too expensive</h3>
-                <p className="text-red-700">
-                  Solar is often perceived as an expensive investment with poor returns.
-                </p>
-              </div>
-              <div className="bg-green-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-800 mb-3">✅ Fact: Solar pays for itself in 4-7 years</h3>
-                <p className="text-green-700">
-                  With government incentives and falling prices, solar provides excellent ROI and 20+ years of free electricity.
-                </p>
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-red-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-red-800 mb-3">❌ Myth: Solar panels require constant maintenance</h3>
-                <p className="text-red-700">
-                  Some believe solar systems need frequent repairs and maintenance.
-                </p>
-              </div>
-              <div className="bg-green-50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-green-800 mb-3">✅ Fact: Solar panels are virtually maintenance-free</h3>
-                <p className="text-green-700">
-                  Solar panels have no moving parts and require only periodic cleaning and annual inspections.
-                </p>
-              </div>
-            </div>
+            {myths.map((item, index) => (
+              <motion.div
+                key={index}
+                className="grid grid-cols-1 md:grid-cols-2 gap-8"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <div className="glass rounded-lg p-6 border border-red-500/30">
+                  <div className="flex items-start gap-3">
+                    <XMarkIcon className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-red-400 mb-2">Myth</h3>
+                      <p className="text-[#b0b0b0]">{item.myth}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="glass rounded-lg p-6 border border-[#00d4ff]/30">
+                  <div className="flex items-start gap-3">
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-1" />
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#00d4ff] mb-2">Fact</h3>
+                      <p className="text-[#b0b0b0]">{item.fact}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-green-600">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Make the Switch to Solar?
-          </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied customers who are saving money and helping the environment 
-            with clean solar energy.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              href="/quote" 
-              className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-50 transition-colors"
-            >
-              Get Free Quote
-            </Link>
-            <Link 
-              href="/contact" 
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-            >
-              Contact Us
-            </Link>
-          </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <SunIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold text-sm">Start Your Solar Journey</span>
+            </div>
+
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Make the Switch to <span className="text-gradient-solar">Solar?</span>
+            </h2>
+            <p className="text-xl text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+              Join thousands of satisfied customers who are saving money and helping the environment
+              with clean solar energy.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/quote"
+                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+              >
+                Get Free Quote
+                <ArrowRightIcon className="w-5 h-5" />
+              </Link>
+              <Link
+                href="/contact"
+                className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+              >
+                <PhoneIcon className="w-5 h-5" />
+                Contact Us
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
