@@ -71,8 +71,8 @@ export default function Header() {
       <header
         className={`fixed w-full z-40 bg-white transition-all duration-300 overflow-hidden ${
           scrolled
-            ? 'top-8 md:top-0 shadow-lg'
-            : 'top-8 md:top-10 shadow-md'
+            ? 'top-14 md:top-0 shadow-lg'
+            : 'top-14 md:top-10 shadow-md'
         }`}
       >
         <nav className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6">
@@ -219,7 +219,7 @@ export default function Header() {
       </header>
 
       {/* Spacer for fixed header */}
-      <div className={`transition-all duration-300 ${scrolled ? 'h-[88px] md:h-16 lg:h-20' : 'h-[88px] md:h-24 lg:h-28'}`} />
+      <div className={`transition-all duration-300 ${scrolled ? 'h-[112px] md:h-16 lg:h-20' : 'h-[112px] md:h-24 lg:h-28'}`} />
     </>
   )
 }
