@@ -21,6 +21,7 @@ export default function Header() {
     { href: '/services', label: 'Services' },
     { href: '/about', label: 'About' },
     { href: '/why-solar', label: 'Why Solar' },
+    { href: '/articles', label: 'Articles' },
     { href: '/faq', label: 'FAQ' },
     { href: '/contact', label: 'Contact' }
   ]
