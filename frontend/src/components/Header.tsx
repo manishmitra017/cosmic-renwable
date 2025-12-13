@@ -198,12 +198,12 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative px-4 py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors group"
+                  className="relative py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#f5a623] to-[#00d4ff] group-hover:w-full transition-all duration-300" />
@@ -212,14 +212,14 @@ export default function Header() {
             </div>
 
             {/* CTA Section */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               {/* Phone - Desktop */}
               <a
                 href="tel:1300090984"
                 className="hidden xl:flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#f5a623]/20 to-[#f5a623]/5 border border-[#f5a623]/20 flex items-center justify-center group-hover:border-[#f5a623]/40 transition-colors">
-                  <PhoneIcon className="w-5 h-5 text-[#f5a623]" />
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00d4ff]/20 to-[#00d4ff]/5 border border-[#00d4ff]/30 flex items-center justify-center group-hover:border-[#00d4ff]/50 transition-colors">
+                  <PhoneIcon className="w-5 h-5 text-[#00d4ff]" />
                 </div>
                 <div className="text-left">
                   <p className="text-xs text-gray-500">Call Now</p>
@@ -230,7 +230,7 @@ export default function Header() {
               {/* Quote Button */}
               <Link
                 href="/quote"
-                className="btn-solar flex items-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-xl"
+                className="btn-energy flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg"
               >
                 <BoltIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">Free Quote</span>
