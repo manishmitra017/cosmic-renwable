@@ -13,6 +13,36 @@ const articles = [
     date: 'December 2025',
     category: 'Government Rebates',
     featured: true
+  },
+  {
+    slug: 'cheaper-home-batteries-program',
+    title: '$2.3 Billion Cheaper Home Batteries Program Now Live',
+    description: 'Government launches massive battery rebate program offering up to 30% discounts on home battery systems. Learn how to take advantage of this unprecedented opportunity.',
+    image: '/batteryImage2.jpg',
+    date: 'August 2025',
+    category: 'Government Rebates',
+    featured: false,
+    externalLink: 'https://www.dcceew.gov.au/energy/programs/cheaper-home-batteries'
+  },
+  {
+    slug: 'maximize-government-benefits',
+    title: 'How Solar Households Can Maximize Government Benefits',
+    description: 'Complete guide to accessing federal and state solar incentives, rebates, and the new battery program. Everything you need to know to get the best value.',
+    image: '/solarroof8.jpg',
+    date: 'August 2025',
+    category: 'Guides',
+    featured: false,
+    externalLink: 'https://www.energy.gov.au/solar/switch-solar-power/solar-households'
+  },
+  {
+    slug: 'battery-storage-revolution',
+    title: 'Battery Storage Revolution: 5kWh to 100kWh Systems Eligible',
+    description: 'New program covers batteries from small residential to large commercial installations with CEC approval. Find out if your system qualifies.',
+    image: '/batteryImage1.jpg',
+    date: 'August 2025',
+    category: 'Industry News',
+    featured: false,
+    externalLink: 'https://www.dcceew.gov.au/energy/programs/cheaper-home-batteries'
   }
 ]
 
@@ -144,46 +174,71 @@ export default function ArticlesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.map((article, index) => (
-              <motion.div
-                key={article.slug}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <Link href={`/articles/${article.slug}`} className="block group">
-                  <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
-                    <div className="relative h-48">
-                      <Image
-                        src={article.image}
-                        alt={article.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                          {article.category}
+            {articles.map((article, index) => {
+              const CardContent = (
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 h-full">
+                  <div className="relative h-48">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute top-4 left-4 flex items-center gap-2">
+                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                        {article.category}
+                      </span>
+                      {'externalLink' in article && (
+                        <span className="bg-gray-800 text-white px-2 py-1 rounded-full text-xs font-semibold flex items-center gap-1">
+                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                          </svg>
+                          External
                         </span>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <div className="text-sm text-green-600 font-medium mb-2">{article.date}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors line-clamp-2">
-                        {article.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 line-clamp-3">{article.description}</p>
-                      <div className="flex items-center text-green-600 font-medium group-hover:gap-3 gap-1 transition-all">
-                        Read More
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
+                      )}
                     </div>
                   </div>
-                </Link>
-              </motion.div>
-            ))}
+                  <div className="p-6">
+                    <div className="text-sm text-green-600 font-medium mb-2">{article.date}</div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-green-600 transition-colors line-clamp-2">
+                      {article.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 line-clamp-3">{article.description}</p>
+                    <div className="flex items-center text-green-600 font-medium group-hover:gap-3 gap-1 transition-all">
+                      Read More
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              )
+
+              return (
+                <motion.div
+                  key={article.slug}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  {'externalLink' in article ? (
+                    <a
+                      href={article.externalLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group"
+                    >
+                      {CardContent}
+                    </a>
+                  ) : (
+                    <Link href={`/articles/${article.slug}`} className="block group">
+                      {CardContent}
+                    </Link>
+                  )}
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
