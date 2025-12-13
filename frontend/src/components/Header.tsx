@@ -187,11 +187,11 @@ export default function Header() {
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-[#f5a623]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="hidden sm:block">
-                <h1 className="text-lg lg:text-xl font-bold text-white leading-tight tracking-tight">
+              <div className="hidden sm:block whitespace-nowrap">
+                <h1 className="text-lg lg:text-xl font-bold text-white leading-tight">
                   Cosmic <span className="text-gradient-solar">Renewable</span> Energy
                 </h1>
-                <p className="text-xs text-[#00d4ff] font-medium tracking-wider uppercase">
+                <p className="text-xs text-[#00d4ff] font-medium">
                   The Solar Energy Pioneers
                 </p>
               </div>
@@ -216,21 +216,21 @@ export default function Header() {
               {/* Phone - Desktop */}
               <a
                 href="tel:1300090984"
-                className="hidden xl:flex items-center gap-3 text-gray-300 hover:text-white transition-colors group"
+                className="hidden xl:flex items-center gap-3 text-gray-300 hover:text-white transition-colors group whitespace-nowrap"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00d4ff]/20 to-[#00d4ff]/5 border border-[#00d4ff]/30 flex items-center justify-center group-hover:border-[#00d4ff]/50 transition-colors">
+                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-br from-[#00d4ff]/20 to-[#00d4ff]/5 border border-[#00d4ff]/30 flex items-center justify-center group-hover:border-[#00d4ff]/50 transition-colors">
                   <PhoneIcon className="w-5 h-5 text-[#00d4ff]" />
                 </div>
                 <div className="text-left">
                   <p className="text-xs text-gray-500">Call Now</p>
-                  <p className="text-sm font-bold text-white">1300 09 09 84</p>
+                  <p className="text-sm font-bold text-white whitespace-nowrap">1300 09 09 84</p>
                 </div>
               </a>
 
               {/* Quote Button */}
               <Link
                 href="/quote"
-                className="btn-energy flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg"
+                className="btn-energy flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg whitespace-nowrap flex-shrink-0"
               >
                 <BoltIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">Free Quote</span>
