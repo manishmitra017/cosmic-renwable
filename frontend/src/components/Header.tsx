@@ -187,11 +187,11 @@ export default function Header() {
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-[#f5a623]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="hidden sm:block whitespace-nowrap">
-                <h1 className="text-lg lg:text-xl font-bold text-white leading-tight">
+              <div className="whitespace-nowrap">
+                <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">
                   Cosmic <span className="text-gradient-solar">Renewable</span> Energy
                 </h1>
-                <p className="text-xs text-[#00d4ff] font-medium">
+                <p className="text-[10px] sm:text-xs text-[#00d4ff] font-medium hidden sm:block">
                   The Solar Energy Pioneers
                 </p>
               </div>
