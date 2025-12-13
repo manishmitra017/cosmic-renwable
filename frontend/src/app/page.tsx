@@ -1,8 +1,9 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import RebateBanner from '@/components/RebateBanner'
 import CustomerReviews from '@/components/CustomerReviews'
 import PromotionsCarousel from '@/components/PromotionsCarousel'
@@ -160,6 +161,9 @@ export default function Home() {
       "https://www.linkedin.com/in/cosmic-renewable-energy-46899a379"
     ]
   }
+
+  // Lightbox state for project images
+  const [lightboxImage, setLightboxImage] = useState<{image: string, title: string} | null>(null)
 
   return (
     <div className="cosmic-bg">
@@ -757,12 +761,13 @@ export default function Home() {
             ].map((project, index) => (
               <motion.div
                 key={index}
-                className="group card-cosmic overflow-hidden"
+                className="group card-cosmic overflow-hidden cursor-pointer"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
+                onClick={() => setLightboxImage({ image: project.image, title: project.title })}
               >
                 <div className="relative h-48 sm:h-56 lg:h-64 overflow-hidden">
                   <Image
@@ -1122,6 +1127,57 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Lightbox Modal for Project Images */}
+      <AnimatePresence>
+        {lightboxImage && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setLightboxImage(null)}
+          >
+            {/* Close button */}
+            <button
+              className="absolute top-4 right-4 z-10 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+              onClick={() => setLightboxImage(null)}
+            >
+              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Image container */}
+            <motion.div
+              className="relative w-full max-w-5xl max-h-[85vh] aspect-video"
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={lightboxImage.image}
+                alt={lightboxImage.title}
+                fill
+                className="object-contain rounded-lg"
+                sizes="(max-width: 1280px) 100vw, 1280px"
+                priority
+              />
+              {/* Title overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent rounded-b-lg">
+                <h3 className="text-xl font-bold text-white">{lightboxImage.title}</h3>
+              </div>
+            </motion.div>
+
+            {/* Click hint */}
+            <p className="absolute bottom-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
+              Click anywhere to close
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
