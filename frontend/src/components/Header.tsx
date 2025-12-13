@@ -189,10 +189,10 @@ export default function Header() {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-lg lg:text-xl font-bold text-white leading-tight tracking-tight">
-                  Cosmic <span className="text-gradient-solar">Renewable</span>
+                  Cosmic <span className="text-gradient-solar">Renewable</span> Energy
                 </h1>
                 <p className="text-xs text-[#00d4ff] font-medium tracking-wider uppercase">
-                  Solar Battery Pioneers
+                  The Solar Energy Pioneers
                 </p>
               </div>
             </Link>
