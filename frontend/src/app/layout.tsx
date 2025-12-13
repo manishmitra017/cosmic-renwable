@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Syne } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+// Premium body font - clean, modern, highly readable
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+// Display font - bold, distinctive headlines
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -57,15 +67,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-AU">
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en-AU" className={`${plusJakarta.variable} ${syne.variable}`}>
+      <body className="antialiased min-h-screen">
         <Script
           id="google-maps"
           strategy="lazyOnload"
           src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}&libraries=places`}
         />
         <Header />
-        <main className="min-h-screen" role="main">
+        <main role="main">
           {children}
         </main>
         <Footer />

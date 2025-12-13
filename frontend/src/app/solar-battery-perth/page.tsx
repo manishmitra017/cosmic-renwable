@@ -1,289 +1,400 @@
 'use client'
 
-import Link from 'next/link'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
+
+// SVG Icons
+const SunIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+  </svg>
+)
+
+const CurrencyIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+  </svg>
+)
+
+const BoltIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+  </svg>
+)
+
+const PhoneIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+  </svg>
+)
+
+const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+  </svg>
+)
+
+const SparklesIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+  </svg>
+)
+
+const ArrowRightIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+  </svg>
+)
+
+const StarIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+  </svg>
+)
+
+const BatteryIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h14a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V9a2 2 0 012-2zm18 4v2" />
+  </svg>
+)
+
+const ShieldIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+  </svg>
+)
+
+const MapPinIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+)
+
+const perthSuburbs = [
+  'Perth CBD', 'Northbridge', 'Subiaco', 'Leederville', 'West Perth', 'East Perth',
+  'Joondalup', 'Clarkson', 'Mindarie', 'Quinns Rocks', 'Burns Beach', 'Kinross',
+  'Fremantle', 'South Fremantle', 'White Gum Valley', 'Beaconsfield', 'Cockburn', 'Spearwood',
+  'Cannington', 'Bentley', 'Victoria Park', 'Kensington', 'Como', 'Manning',
+  'Morley', 'Dianella', 'Noranda', 'Beechboro', 'Lockridge', 'Eden Hill',
+  'Rockingham', 'Baldivis', 'Secret Harbour', 'Warnbro', 'Safety Bay', 'Kwinana'
+]
 
 export default function SolarBatteryPerth() {
   return (
-    <div>
+    <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-700">
-        <div className="absolute inset-0">
-          <Image
-            src="/batteryImage1.jpg"
-            alt="Solar Battery Installation Perth"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
-        </div>
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0a0a0f]">
+        {/* Background Effects */}
+        <div className="absolute inset-0 star-field opacity-40"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
-            className="text-center max-w-4xl mx-auto text-white"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-center"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Solar Battery Installation Perth
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <SunIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold">Australia&apos;s Sunniest City - 3,200+ Hours Annually</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-white">Solar Battery Installation</span>
+              <br />
+              <span className="text-gradient-solar">Perth, WA</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-blue-100 mb-8">
-              WA's #1 Choice for Solar Battery Systems | Government Rebates Available
+
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Perth&apos;s isolated grid and abundant sunshine make battery storage essential for maximizing your solar investment. Join 1,800+ Perth households already saving with Cosmic Renewable Energy.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/quote"
-                className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-xl"
+                className="btn-solar inline-flex items-center gap-2 text-lg px-8 py-4"
               >
-                Get Free Perth Quote
+                Get Your Free Perth Quote
+                <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                className="btn-energy inline-flex items-center gap-2 text-lg px-8 py-4"
               >
-                📞 1300 09 09 84
+                <PhoneIcon className="w-5 h-5" />
+                1300 09 09 84
               </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Perth-Specific Benefits */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Why Perth Homes Need Solar Batteries
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div
-              className="text-center p-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">☀️</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Australia's Sunniest City</h3>
-              <p className="text-gray-600">
-                Perth enjoys more sunshine than any Australian capital - over 3,200 hours annually. Perfect for maximizing solar battery storage.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">💰</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">WA Energy Costs</h3>
-              <p className="text-gray-600">
-                Western Australia electricity prices are 27-32c/kWh. Solar batteries help Perth families save thousands on power bills.
-              </p>
-            </motion.div>
-
-            <motion.div
-              className="text-center p-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Grid Independence</h3>
-              <p className="text-gray-600">
-                Perth's isolated grid means local backup power is crucial. Batteries provide energy security during outages.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Perth Pricing */}
-      <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-              Perth Solar Battery Pricing
+      {/* Why Perth Needs Batteries */}
+      <section className="relative py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Why Perth Homes Need <span className="text-gradient-energy">Battery Storage</span>
             </h2>
-            <p className="text-xl text-gray-600 mb-12 text-center">
-              Competitive pricing for Western Australian residents
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Western Australia&apos;s unique energy landscape makes solar batteries a smart investment for Perth homeowners
             </p>
+          </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Essential</h3>
-                  <div className="text-4xl font-bold text-green-600 mb-2">From $5,400</div>
-                  <p className="text-gray-600 mb-6">5kWh Battery System</p>
-                  <ul className="text-left space-y-3 mb-8">
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">5kWh usable capacity</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">10-year warranty</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Backup power ready</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Full installation included</span>
-                    </li>
-                  </ul>
-                  <Link href="/quote" className="block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                    Get Perth Quote
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-600 to-indigo-700 text-white rounded-xl p-8 shadow-2xl transform scale-105">
-                <div className="text-center">
-                  <div className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-bold mb-4 inline-block">
-                    MOST POPULAR
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Standard</h3>
-                  <div className="text-4xl font-bold mb-2">From $9,200</div>
-                  <p className="text-blue-100 mb-6">10kWh Battery System</p>
-                  <ul className="text-left space-y-3 mb-8">
-                    <li className="flex items-start">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      <span>10kWh usable capacity</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      <span>10-year warranty</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      <span>Full backup power</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      <span>Modular expansion ready</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      <span>Smart monitoring app</span>
-                    </li>
-                  </ul>
-                  <Link href="/quote" className="block bg-yellow-400 text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-yellow-500 transition-colors">
-                    Get Perth Quote
-                  </Link>
-                </div>
-              </div>
-
-              <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-shadow">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">Premium</h3>
-                  <div className="text-4xl font-bold text-green-600 mb-2">From $14,500</div>
-                  <p className="text-gray-600 mb-6">13.5kWh Tesla Powerwall</p>
-                  <ul className="text-left space-y-3 mb-8">
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">13.5kWh capacity</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">10-year warranty</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Tesla app monitoring</span>
-                    </li>
-                    <li className="flex items-start">
-                      <span className="text-green-600 mr-2">✓</span>
-                      <span className="text-gray-700">Premium installation</span>
-                    </li>
-                  </ul>
-                  <Link href="/quote" className="block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors">
-                    Get Perth Quote
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <p className="text-center text-gray-600 mt-8">
-              *Prices include installation. Final price depends on site assessment and system selection.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Perth Service Areas */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
-            Perth Suburbs We Service
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 text-center">
-            Professional solar battery installation across Greater Perth
-          </p>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              'Perth CBD', 'Northbridge', 'Subiaco', 'Leederville', 'West Perth', 'East Perth',
-              'Joondalup', 'Clarkson', 'Mindarie', 'Quinns Rocks', 'Burns Beach', 'Kinross',
-              'Fremantle', 'South Fremantle', 'White Gum Valley', 'Beaconsfield', 'Cockburn', 'Spearwood',
-              'Cannington', 'Bentley', 'Victoria Park', 'Kensington', 'Como', 'Manning',
-              'Morley', 'Dianella', 'Noranda', 'Beechboro', 'Lockridge', 'Eden Hill',
-              'Rockingham', 'Baldivis', 'Secret Harbour', 'Warnbro', 'Safety Bay', 'Kwinana'
-            ].map((suburb, index) => (
+              {
+                icon: SunIcon,
+                title: "Maximum Sunshine",
+                description: "Perth enjoys 3,200+ hours of sunshine annually - more than any other Australian capital",
+                color: "text-[#f5a623]"
+              },
+              {
+                icon: BoltIcon,
+                title: "Isolated Grid",
+                description: "WA's standalone grid means storing your own power provides ultimate energy security",
+                color: "text-[#00d4ff]"
+              },
+              {
+                icon: CurrencyIcon,
+                title: "Peak Rate Savings",
+                description: "Avoid expensive peak electricity rates (27-32c/kWh) by using stored solar power in the evenings",
+                color: "text-[#f5a623]"
+              },
+              {
+                icon: ShieldIcon,
+                title: "Blackout Protection",
+                description: "Keep your home powered during outages with reliable battery backup systems",
+                color: "text-[#00d4ff]"
+              }
+            ].map((benefit, index) => (
               <motion.div
-                key={suburb}
-                className="bg-green-50 rounded-lg p-3 text-center hover:bg-green-100 transition-colors"
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.02 }}
+                transition={{ delay: index * 0.1 }}
+                className="card-cosmic p-6 text-center"
               >
-                <span className="text-gray-800 font-medium text-sm">{suburb}</span>
+                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 mb-4 ${benefit.color}`}>
+                  <benefit.icon className="w-7 h-7" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
+                <p className="text-gray-400 text-sm">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
 
-          <p className="text-center text-gray-600 mt-8">
-            Don't see your suburb? We service all Greater Perth areas. <Link href="/contact" className="text-green-600 font-semibold hover:underline">Contact us</Link> to confirm.
+      {/* Pricing Section */}
+      <section className="relative py-20 bg-[#0a0a0f]">
+        <div className="absolute inset-0 star-field opacity-20"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Perth Battery <span className="text-gradient-solar">Packages</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Competitive pricing for Western Australian homeowners with full installation included
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Starter Package */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="glass rounded-2xl p-8 border border-white/10"
+            >
+              <div className="text-center mb-6">
+                <BatteryIcon className="w-12 h-12 text-[#00d4ff] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">Essential</h3>
+                <p className="text-gray-400 text-sm">Perfect for smaller Perth homes</p>
+              </div>
+              <div className="text-center mb-6">
+                <span className="text-4xl font-bold text-white">$5,400</span>
+                <span className="text-gray-400 ml-2">installed</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {['5kWh capacity', 'Single phase', '10-year warranty', 'Backup power ready', 'Full installation'].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3 text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/quote" className="btn-energy w-full text-center block py-3">
+                Get Perth Quote
+              </Link>
+            </motion.div>
+
+            {/* Standard Package - Featured */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="relative glass rounded-2xl p-8 border-2 border-[#f5a623]/50 transform md:scale-105 shadow-2xl shadow-[#f5a623]/10"
+            >
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                <div className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                  <StarIcon className="w-4 h-4" />
+                  MOST POPULAR
+                </div>
+              </div>
+              <div className="text-center mb-6">
+                <BatteryIcon className="w-12 h-12 text-[#f5a623] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">Standard</h3>
+                <p className="text-gray-400 text-sm">Ideal for average Perth households</p>
+              </div>
+              <div className="text-center mb-6">
+                <span className="text-4xl font-bold text-white">$9,200</span>
+                <span className="text-gray-400 ml-2">installed</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {['10kWh capacity', 'Single/Three phase', '10-year warranty', 'Full backup power', 'Modular expansion ready', 'Smart monitoring app'].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3 text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-[#f5a623] flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/quote" className="btn-solar w-full text-center block py-3">
+                Get Perth Quote
+              </Link>
+            </motion.div>
+
+            {/* Premium Package */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="glass rounded-2xl p-8 border border-white/10"
+            >
+              <div className="text-center mb-6">
+                <BatteryIcon className="w-12 h-12 text-[#00d4ff] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
+                <p className="text-gray-400 text-sm">Maximum independence for larger homes</p>
+              </div>
+              <div className="text-center mb-6">
+                <span className="text-4xl font-bold text-white">$14,500</span>
+                <span className="text-gray-400 ml-2">installed</span>
+              </div>
+              <ul className="space-y-3 mb-8">
+                {['13.5kWh Tesla Powerwall', 'Three phase', '10-year warranty', 'Tesla app monitoring', 'Full home backup', 'Premium installation'].map((feature, index) => (
+                  <li key={index} className="flex items-center gap-3 text-gray-300">
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/quote" className="btn-energy w-full text-center block py-3">
+                Get Perth Quote
+              </Link>
+            </motion.div>
+          </div>
+
+          <p className="text-center text-gray-500 mt-8 text-sm">
+            *Prices include installation. Final price depends on site assessment and system selection.
           </p>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Save on Perth Electricity Bills?
-          </h2>
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Join 1800+ Perth households already saving with solar batteries
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/quote"
-              className="bg-white text-green-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-50 transition-colors shadow-xl"
-            >
-              Get Free Perth Quote
-            </Link>
-            <a
-              href="tel:1300090984"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
-            >
-              📞 1300 09 09 84
-            </a>
-          </div>
+      {/* Service Areas */}
+      <section className="relative py-20 bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0f]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <div className="inline-flex items-center gap-2 mb-4">
+              <MapPinIcon className="w-6 h-6 text-[#f5a623]" />
+              <h2 className="text-3xl sm:text-4xl font-bold text-white">
+                Perth <span className="text-gradient-energy">Service Areas</span>
+              </h2>
+            </div>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              We install solar batteries across the entire Perth metropolitan area and surrounding regions
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="glass rounded-2xl p-8 border border-white/10"
+          >
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+              {perthSuburbs.map((suburb, index) => (
+                <div
+                  key={index}
+                  className="text-center py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                >
+                  <span className="text-gray-300 text-sm">{suburb}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-gray-500 mt-6 text-sm">
+              Don&apos;t see your suburb? We service all Greater Perth areas. <Link href="/contact" className="text-[#00d4ff] hover:underline">Contact us</Link> to confirm.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative py-20 bg-[#0a0a0f]">
+        <div className="absolute inset-0 star-field opacity-30"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#f5a623]/5 rounded-full blur-[150px]"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <SparklesIcon className="w-12 h-12 text-[#f5a623] mx-auto mb-6" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Ready to Harness Perth&apos;s <span className="text-gradient-solar">Sunshine</span>?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join 1,800+ Perth homeowners who have made the switch to solar battery storage. Get your free, no-obligation quote today.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/quote"
+                className="btn-solar inline-flex items-center gap-2 text-lg px-8 py-4"
+              >
+                Get Free Perth Quote
+                <ArrowRightIcon className="w-5 h-5" />
+              </Link>
+              <a
+                href="tel:1300090984"
+                className="btn-energy inline-flex items-center gap-2 text-lg px-8 py-4"
+              >
+                <PhoneIcon className="w-5 h-5" />
+                Call 1300 09 09 84
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
