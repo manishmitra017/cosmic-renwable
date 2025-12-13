@@ -198,7 +198,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-8 mx-8 xl:mx-12">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
