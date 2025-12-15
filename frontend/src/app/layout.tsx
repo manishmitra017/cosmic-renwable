@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // Premium body font - clean, modern, highly readable
 const plusJakarta = Plus_Jakarta_Sans({
@@ -68,6 +69,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU" className={`${plusJakarta.variable} ${syne.variable}`}>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className="antialiased min-h-screen">
         <Script
           id="google-maps"
