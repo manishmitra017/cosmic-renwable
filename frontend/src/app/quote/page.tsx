@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useGooglePlaces } from '@/hooks/useGooglePlaces'
+import { trackEvent } from '@/components/GoogleAnalytics'
 
 // SVG Icon Components
 const RocketIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
@@ -123,6 +124,8 @@ export default function Quote() {
       })
 
       if (response.ok) {
+        // Track successful quote form submission in GA4 (primary conversion)
+        trackEvent('generate_lead', 'Quote', formData.property_type || 'Unknown')
         setSubmitMessage('Thank you for your quote request! Our team will contact you within 24 hours.')
         setFormData({
           name: '',

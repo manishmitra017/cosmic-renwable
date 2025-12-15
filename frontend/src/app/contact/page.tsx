@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useGooglePlaces } from '@/hooks/useGooglePlaces'
+import { trackEvent } from '@/components/GoogleAnalytics'
 
 // SVG Icon Components
 const RocketIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
@@ -138,6 +139,8 @@ export default function Contact() {
       })
 
       if (response.ok) {
+        // Track successful contact form submission in GA4
+        trackEvent('form_submit', 'Contact', formData.serviceInterest || 'General Inquiry')
         setSubmitMessage('Thank you for your message! We will get back to you within 24 hours.')
         setFormData({ name: '', email: '', phone: '', suburb: '', serviceInterest: '', message: '' })
       } else {
