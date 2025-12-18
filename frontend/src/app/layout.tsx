@@ -69,10 +69,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-AU" className={`${plusJakarta.variable} ${syne.variable}`}>
-      <head>
-        <GoogleAnalytics />
-      </head>
       <body className="antialiased min-h-screen">
+        <GoogleAnalytics />
         <Script
           id="google-maps"
           strategy="lazyOnload"
