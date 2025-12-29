@@ -74,6 +74,8 @@ export default function Quote() {
     address: '',
     property_type: '',
     roof_type: '',
+    storey_type: '',
+    meter_phase: '',
     energy_usage: '',
     budget_range: '',
     message: ''
@@ -117,6 +119,8 @@ export default function Quote() {
           address: formData.address,
           property_type: formData.property_type,
           roof_type: formData.roof_type,
+          storey_type: formData.storey_type,
+          meter_phase: formData.meter_phase,
           energy_usage: formData.energy_usage,
           budget_range: formData.budget_range,
           message: formData.message
@@ -134,6 +138,8 @@ export default function Quote() {
           address: '',
           property_type: '',
           roof_type: '',
+          storey_type: '',
+          meter_phase: '',
           energy_usage: '',
           budget_range: '',
           message: ''
@@ -405,6 +411,45 @@ export default function Quote() {
                           <option value="flat" className="bg-[#1a1a2e]">Flat</option>
                           <option value="slate" className="bg-[#1a1a2e]">Slate</option>
                           <option value="other" className="bg-[#1a1a2e]">Other</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <label htmlFor="storey_type" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                          Storey Type *
+                        </label>
+                        <select
+                          id="storey_type"
+                          name="storey_type"
+                          required
+                          value={formData.storey_type}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                        >
+                          <option value="" className="bg-[#1a1a2e]">Select storey type</option>
+                          <option value="single" className="bg-[#1a1a2e]">Single Storey</option>
+                          <option value="double" className="bg-[#1a1a2e]">Double Storey</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label htmlFor="meter_phase" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                          Meter Phase *
+                        </label>
+                        <select
+                          id="meter_phase"
+                          name="meter_phase"
+                          required
+                          value={formData.meter_phase}
+                          onChange={handleChange}
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                        >
+                          <option value="" className="bg-[#1a1a2e]">Select meter phase</option>
+                          <option value="single" className="bg-[#1a1a2e]">Single Phase Meter</option>
+                          <option value="three" className="bg-[#1a1a2e]">Three Phase Meter</option>
+                          <option value="unknown" className="bg-[#1a1a2e]">Don&apos;t know</option>
                         </select>
                       </div>
                     </div>

@@ -22,7 +22,7 @@ exports.handler = async (event) => {
   try {
     const data = JSON.parse(event.body);
 
-    const { name, email, phone, address, property_type, roof_type, energy_usage, budget_range, message } = data;
+    const { name, email, phone, address, property_type, roof_type, storey_type, meter_phase, energy_usage, budget_range, message } = data;
 
     if (!name || !email || !phone || !address) {
       return {
@@ -41,6 +41,8 @@ Phone: ${phone}
 Property Address: ${address}
 Property Type: ${property_type || 'Not specified'}
 Roof Type: ${roof_type || 'Not specified'}
+Storey Type: ${storey_type || 'Not specified'}
+Meter Phase: ${meter_phase || 'Not specified'}
 Energy Usage: ${energy_usage || 'Not provided'}
 Budget Range: ${budget_range || 'Not provided'}
 Message: ${message || 'No additional message'}
