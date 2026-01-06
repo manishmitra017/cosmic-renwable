@@ -78,7 +78,7 @@ cosmicweb/
 
 ### Prerequisites
 
-- Node.js 20+
+- Node.js 22+
 - AWS CLI configured
 - AWS CDK CLI (`npm install -g aws-cdk`)
 
