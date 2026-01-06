@@ -31,7 +31,7 @@ export default function CountdownBanner() {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2026-01-01T00:00:00').getTime()
+    const targetDate = new Date('2026-05-01T00:00:00').getTime()
 
     const updateCountdown = () => {
       const now = new Date().getTime()
@@ -81,7 +81,7 @@ export default function CountdownBanner() {
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight font-display">
               <span className="text-white">Solar Battery Rebate </span>
-              <span className="text-gradient-solar">reduces on 1 Jan 2026</span>
+              <span className="text-gradient-solar">reduces on 1 May 2026</span>
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-xl mx-auto">
               Don&apos;t miss your highest rebate! Install before the deadline.
