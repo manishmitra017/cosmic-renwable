@@ -65,7 +65,7 @@ export class CosmicWebStack extends cdk.Stack {
 
     // Contact Form Lambda
     const contactLambda = new lambda.Function(this, 'ContactLambda', {
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       handler: 'index.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../../lambda/contact')),
       role: lambdaRole,
@@ -77,7 +77,7 @@ export class CosmicWebStack extends cdk.Stack {
 
     // Quote Form Lambda
     const quoteLambda = new lambda.Function(this, 'QuoteLambda', {
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       handler: 'index.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../../lambda/quote')),
       role: lambdaRole,
@@ -89,7 +89,7 @@ export class CosmicWebStack extends cdk.Stack {
 
     // Google Reviews Lambda
     const reviewsLambda = new lambda.Function(this, 'ReviewsLambda', {
-      runtime: lambda.Runtime.NODEJS_20_X,
+      runtime: lambda.Runtime.NODEJS_22_X,
       handler: 'index.handler',
       code: lambda.Code.fromAsset(path.join(__dirname, '../../lambda/google-reviews')),
       timeout: cdk.Duration.seconds(30),
