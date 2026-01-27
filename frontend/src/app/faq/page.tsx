@@ -106,13 +106,13 @@ export default function FAQ() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
+      <section className="relative py-16 sm:py-24 bg-[#0072CE] overflow-hidden">
         {/* Star field background */}
         <div className="absolute inset-0 star-field opacity-40"></div>
 
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -121,9 +121,9 @@ export default function FAQ() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <QuestionMarkCircleIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Got Questions?</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
+              <QuestionMarkCircleIcon className="w-5 h-5 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-semibold text-sm">Got Questions?</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
@@ -138,7 +138,7 @@ export default function FAQ() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-4">
@@ -158,7 +158,7 @@ export default function FAQ() {
                     <span className="text-lg font-semibold text-white pr-4">
                       {faq.question}
                     </span>
-                    <span className={`flex-shrink-0 text-[#f5a623] transition-transform duration-300 ${openItems.includes(index) ? 'rotate-180' : ''}`}>
+                    <span className={`flex-shrink-0 text-[#FFE500] transition-transform duration-300 ${openItems.includes(index) ? 'rotate-180' : ''}`}>
                       <ChevronDownIcon className="w-6 h-6" />
                     </span>
                   </button>
@@ -187,10 +187,10 @@ export default function FAQ() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
+      <section className="py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-[#FFE500]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -201,9 +201,9 @@ export default function FAQ() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-              <ChatBubbleLeftRightIcon className="w-5 h-5 text-[#00d4ff]" />
-              <span className="text-[#00d4ff] font-semibold text-sm">Need More Help?</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#0072CE]/20">
+              <ChatBubbleLeftRightIcon className="w-5 h-5 text-[#0072CE]" />
+              <span className="text-[#0072CE] font-semibold text-sm">Need More Help?</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

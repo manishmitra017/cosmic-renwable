@@ -182,11 +182,11 @@ export default function Home() {
       <RebateBanner />
 
       {/* Contact Banner */}
-      <section className="py-3 sm:py-4 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-y border-[#f5a623]/20">
+      <section className="py-3 sm:py-4 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-y border-[#FFE500]/20">
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#f5a623]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#00d4ff]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#FFE500]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#0072CE]/20 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -199,20 +199,20 @@ export default function Home() {
             {/* Mobile Layout */}
             <div className="flex flex-col items-center gap-2.5 sm:hidden">
               <div className="flex items-center gap-2 text-white font-bold text-sm">
-                <RocketIcon className="w-4 h-4 text-[#f5a623]" />
+                <RocketIcon className="w-4 h-4 text-[#FFE500]" />
                 <span className="text-gradient-solar">Australia&apos;s #1 Solar Experts</span>
               </div>
               <div className="flex items-center gap-2 w-full max-w-xs">
                 <a
                   href="tel:1300090984"
-                  className="flex-1 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
+                  className="flex-1 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
                 >
                   <PhoneIcon className="w-3.5 h-3.5" />
                   <span>1300 09 09 84</span>
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="flex-1 bg-gradient-to-r from-[#00d4ff] to-[#0099cc] text-[#0a0a0f] px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
+                  className="flex-1 bg-gradient-to-r from-[#0072CE] to-[#0099cc] text-[#0072CE] px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:scale-105 transition-transform"
                 >
                   <DeviceIcon className="w-3.5 h-3.5" />
                   <span>+61 422 786 100</span>
@@ -226,20 +226,20 @@ export default function Home() {
             {/* Desktop Layout */}
             <div className="hidden sm:flex items-center justify-center gap-4 md:gap-6">
               <div className="text-white font-bold text-base md:text-xl flex items-center gap-2">
-                <RocketIcon className="w-5 h-5 text-[#f5a623]" />
+                <RocketIcon className="w-5 h-5 text-[#FFE500]" />
                 <span className="text-gradient-solar">Australia&apos;s #1 Solar & Battery Experts</span>
               </div>
               <div className="flex items-center gap-3">
                 <a
                   href="tel:1300090984"
-                  className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(245,166,35,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
+                  className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(245,166,35,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="bg-gradient-to-r from-[#00d4ff] to-[#0099cc] text-[#0a0a0f] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(0,212,255,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
+                  className="bg-gradient-to-r from-[#0072CE] to-[#0099cc] text-[#0072CE] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(0,212,255,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   <DeviceIcon className="w-4 h-4" />
                   +61 422 786 100
@@ -254,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-[#0072CE]">
         {/* Cosmic background effects */}
         <div className="absolute inset-0">
           <Image
@@ -264,24 +264,24 @@ export default function Home() {
             className="object-cover opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/80 via-[#0a0a0f]/50 to-[#0a0a0f]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0072CE]/80 via-[#0072CE]/50 to-[#0072CE]"></div>
           {/* Star field effect */}
           <div className="absolute inset-0 star-field opacity-40"></div>
           {/* Floating orbs */}
-          <div className="absolute top-20 right-20 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-40 left-10 w-48 h-48 bg-[#00d4ff]/10 rounded-full blur-3xl animate-float-delayed"></div>
+          <div className="absolute top-20 right-20 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-40 left-10 w-48 h-48 bg-[#0072CE]/10 rounded-full blur-3xl animate-float-delayed"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-0">
           <div className="max-w-4xl">
             <motion.div
-              className="inline-flex items-center gap-2 bg-[#f5a623]/10 border border-[#f5a623]/30 px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 bg-[#FFE500]/10 border border-[#FFE500]/30 px-4 py-2 rounded-full mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <BoltIcon className="w-4 h-4 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-medium text-sm">Cosmic Renewable Energy</span>
+              <BoltIcon className="w-4 h-4 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-medium text-sm">Cosmic Renewable Energy</span>
             </motion.div>
 
             <motion.h1
@@ -297,7 +297,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.div
-              className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl mb-3 sm:mb-6 inline-block shadow-[0_0_30px_rgba(245,166,35,0.3)]"
+              className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl mb-3 sm:mb-6 inline-block shadow-[0_0_30px_rgba(245,166,35,0.3)]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -343,7 +343,7 @@ export default function Home() {
 
             {/* Stats */}
             <motion.div
-              className="grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-4 md:gap-6 glass rounded-xl p-3 sm:p-6 border border-[#f5a623]/20"
+              className="grid grid-cols-2 gap-2 sm:gap-4 md:grid-cols-4 md:gap-6 glass rounded-xl p-3 sm:p-6 border border-[#FFE500]/20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -368,7 +368,7 @@ export default function Home() {
       <PromotionsCarousel />
 
       {/* Special Offer Banner */}
-      <section className="py-12 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden">
+      <section className="py-12 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -381,9 +381,9 @@ export default function Home() {
             <div className="card-cosmic p-4 sm:p-8 max-w-4xl mx-auto">
               <div className="mb-4">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-2 flex items-center justify-center gap-3">
-                  <BoltIcon className="w-8 h-8 text-[#f5a623]" />
+                  <BoltIcon className="w-8 h-8 text-[#FFE500]" />
                   <span className="text-gradient-solar">EXCLUSIVE LIMITED TIME OFFER</span>
-                  <BoltIcon className="w-8 h-8 text-[#f5a623]" />
+                  <BoltIcon className="w-8 h-8 text-[#FFE500]" />
                 </h2>
                 <p className="text-lg text-[#b0b0b0]">
                   Don&apos;t miss out on our latest solar and battery package deals!
@@ -391,7 +391,7 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#f5a623]/20">
+                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#FFE500]/20">
                   <Image
                     src="/survey1.png"
                     alt="Cosmic Renewable Energy Offer Survey 1"
@@ -401,7 +401,7 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#f5a623]/20">
+                <div className="relative rounded-xl overflow-hidden shadow-lg border border-[#FFE500]/20">
                   <Image
                     src="/survey2.png"
                     alt="Cosmic Renewable Energy Offer Survey 2"
@@ -433,9 +433,9 @@ export default function Home() {
       </section>
 
       {/* Government Battery Rebate Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-b from-[#0072CE] to-[#005BB5] relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -452,23 +452,23 @@ export default function Home() {
               Take advantage of the $2.3 Billion Australian Government Home Battery Program.
               Save up to $8,000 on premium solar battery systems with professional installation across Australia.
             </p>
-            <div className="glass rounded-xl p-8 max-w-2xl mx-auto border border-[#f5a623]/20">
+            <div className="glass rounded-xl p-8 max-w-2xl mx-auto border border-[#FFE500]/20">
               <h3 className="text-2xl font-bold text-white mb-4">How It Works</h3>
               <ul className="text-left text-[#e0e0e0] space-y-3">
                 <li className="flex items-start">
-                  <span className="text-[#f5a623] font-bold mr-3 text-xl">1.</span>
+                  <span className="text-[#FFE500] font-bold mr-3 text-xl">1.</span>
                   Choose from approved battery systems
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#f5a623] font-bold mr-3 text-xl">2.</span>
+                  <span className="text-[#FFE500] font-bold mr-3 text-xl">2.</span>
                   Get up to 30% government discount
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#f5a623] font-bold mr-3 text-xl">3.</span>
+                  <span className="text-[#FFE500] font-bold mr-3 text-xl">3.</span>
                   Professional installation included
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#f5a623] font-bold mr-3 text-xl">4.</span>
+                  <span className="text-[#FFE500] font-bold mr-3 text-xl">4.</span>
                   Start saving on energy bills immediately
                 </li>
               </ul>
@@ -478,7 +478,7 @@ export default function Home() {
       </section>
 
       {/* Services Carousel Section */}
-      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
+      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -545,8 +545,8 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/60 to-transparent flex items-center justify-center">
-                    <service.icon className="w-10 h-10 sm:w-12 sm:h-12 text-[#f5a623]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] via-[#0072CE]/60 to-transparent flex items-center justify-center">
+                    <service.icon className="w-10 h-10 sm:w-12 sm:h-12 text-[#FFE500]" />
                   </div>
                 </div>
                 <div className="p-4 sm:p-5 lg:p-6">
@@ -560,7 +560,7 @@ export default function Home() {
       </section>
 
       {/* Brand Showcase */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-b from-[#0072CE] to-[#005BB5] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -587,14 +587,14 @@ export default function Home() {
             ].map((brand, index) => (
               <motion.div
                 key={index}
-                className="glass rounded-lg p-6 text-center border border-[#f5a623]/10 hover:border-[#f5a623]/30 transition-all duration-300"
+                className="glass rounded-lg p-6 text-center border border-[#FFE500]/10 hover:border-[#FFE500]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-[#f5a623]/20 to-[#00d4ff]/20 rounded-full flex items-center justify-center">
-                  <brand.icon className="w-8 h-8 text-[#f5a623]" />
+                <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-[#FFE500]/20 to-[#0072CE]/20 rounded-full flex items-center justify-center">
+                  <brand.icon className="w-8 h-8 text-[#FFE500]" />
                 </div>
                 <h3 className="font-semibold text-white">{brand.name}</h3>
               </motion.div>
@@ -604,7 +604,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
+      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -644,14 +644,14 @@ export default function Home() {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className="text-center p-6 glass rounded-xl border border-[#f5a623]/10 hover:border-[#f5a623]/30 transition-all duration-300"
+                className="text-center p-6 glass rounded-xl border border-[#FFE500]/10 hover:border-[#FFE500]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
-                  <feature.icon className="w-8 h-8 text-[#0a0a0f]" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
+                  <feature.icon className="w-8 h-8 text-[#0072CE]" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-[#b0b0b0]">{feature.description}</p>
@@ -665,7 +665,7 @@ export default function Home() {
       <CustomerReviews />
 
       {/* Our Work Portfolio */}
-      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
+      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -776,14 +776,14 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] via-[#0072CE]/40 to-transparent"></div>
                   <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 text-white">
-                    <div className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-1 sm:mb-2 inline-block">
+                    <div className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-1 sm:mb-2 inline-block">
                       Completed
                     </div>
                     <h3 className="text-base sm:text-lg font-bold mb-1 line-clamp-2">{project.title}</h3>
-                    <p className="text-[#00d4ff] text-sm line-clamp-1">{project.description}</p>
-                    <p className="text-[#f5a623] text-xs mt-1 line-clamp-1 flex items-center gap-1">
+                    <p className="text-[#0072CE] text-sm line-clamp-1">{project.description}</p>
+                    <p className="text-[#FFE500] text-xs mt-1 line-clamp-1 flex items-center gap-1">
                       <MapPinIcon className="w-3 h-3" />
                       {project.location}
                     </p>
@@ -800,7 +800,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="glass rounded-xl p-8 max-w-2xl mx-auto border border-[#f5a623]/20">
+            <div className="glass rounded-xl p-8 max-w-2xl mx-auto border border-[#FFE500]/20">
               <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Join Our Success Stories?
               </h3>
@@ -820,7 +820,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Showcase */}
-      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#005BB5] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -873,29 +873,29 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden mb-6 border border-[#f5a623]/20">
+                <div className="relative h-64 sm:h-80 rounded-2xl overflow-hidden mb-6 border border-[#FFE500]/20">
                   <Image
                     src={benefit.image}
                     alt={benefit.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] via-[#0072CE]/50 to-transparent"></div>
                   <div className="absolute top-6 left-6">
-                    <div className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] text-4xl sm:text-5xl font-bold px-4 py-2 rounded-lg shadow-[0_0_20px_rgba(245,166,35,0.3)]">
+                    <div className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] text-4xl sm:text-5xl font-bold px-4 py-2 rounded-lg shadow-[0_0_20px_rgba(245,166,35,0.3)]">
                       {benefit.percentage}
                     </div>
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
                     <h3 className="text-2xl sm:text-3xl font-bold mb-2">{benefit.title}</h3>
-                    <p className="text-[#00d4ff] text-lg">{benefit.description}</p>
+                    <p className="text-[#0072CE] text-lg">{benefit.description}</p>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   {benefit.features.map((feature, i) => (
                     <div key={i} className="flex items-start">
-                      <CheckIcon className="w-5 h-5 text-[#f5a623] mr-3 mt-1 flex-shrink-0" />
+                      <CheckIcon className="w-5 h-5 text-[#FFE500] mr-3 mt-1 flex-shrink-0" />
                       <span className="text-[#e0e0e0]">{feature}</span>
                     </div>
                   ))}
@@ -945,16 +945,16 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] via-[#0072CE]/40 to-transparent"></div>
                   <div className="absolute top-4 right-4">
-                    <div className="w-12 h-12 glass rounded-full flex items-center justify-center border border-[#f5a623]/30">
-                      <item.icon className="w-6 h-6 text-[#f5a623]" />
+                    <div className="w-12 h-12 glass rounded-full flex items-center justify-center border border-[#FFE500]/30">
+                      <item.icon className="w-6 h-6 text-[#FFE500]" />
                     </div>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
                     <div className="text-3xl font-bold text-gradient-solar mb-1">{item.metric}</div>
                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                    <p className="text-[#00d4ff] text-sm">{item.description}</p>
+                    <p className="text-[#0072CE] text-sm">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -969,7 +969,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="glass rounded-2xl p-8 sm:p-12 border border-[#f5a623]/20">
+            <div className="glass rounded-2xl p-8 sm:p-12 border border-[#FFE500]/20">
               <h3 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
                 Start Increasing Your Property Value Today
               </h3>
@@ -996,7 +996,7 @@ export default function Home() {
       </section>
 
       {/* Latest Solar News / Articles */}
-      <section id="solar-news" className="py-16 bg-[#0a0a0f] relative overflow-hidden scroll-mt-32">
+      <section id="solar-news" className="py-16 bg-[#0072CE] relative overflow-hidden scroll-mt-32">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -1040,7 +1040,7 @@ export default function Home() {
             ].map((article, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic overflow-hidden hover:border-[#f5a623]/30 transition-all duration-300"
+                className="card-cosmic overflow-hidden hover:border-[#FFE500]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1053,15 +1053,15 @@ export default function Home() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <div className="text-sm text-[#f5a623] font-medium mb-2">{article.date}</div>
+                  <div className="text-sm text-[#FFE500] font-medium mb-2">{article.date}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{article.title}</h3>
                   <p className="text-[#b0b0b0] mb-4">{article.description}</p>
                   <Link
                     href={article.link}
-                    className="text-[#00d4ff] font-medium hover:text-[#f5a623] transition-colors flex items-center gap-2"
+                    className="text-[#0072CE] font-medium hover:text-[#FFE500] transition-colors flex items-center gap-2"
                   >
                     Read More
                     <ArrowRightIcon className="w-4 h-4" />
@@ -1091,10 +1091,10 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
+      <section className="py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-[#FFE500]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div

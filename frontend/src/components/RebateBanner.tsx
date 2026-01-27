@@ -41,20 +41,20 @@ const ArrowRightIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 export default function RebateBanner() {
   const bannerItems = [
-    { icon: FlameIcon, text: 'GOVERNMENT BATTERY REBATE PROGRAM LIVE NOW', color: 'text-[#f5a623]' },
-    { icon: CurrencyIcon, text: 'SAVE UP TO $8,000 ON HOME BATTERY SYSTEMS', color: 'text-[#00d4ff]' },
-    { icon: BoltIcon, text: '$2.3 BILLION FEDERAL FUNDING AVAILABLE', color: 'text-[#f5a623]' },
-    { icon: PhoneIcon, text: 'CALL 1300 09 09 84 - FREE ASSESSMENT', color: 'text-[#00d4ff]' },
-    { icon: TrophyIcon, text: "COSMIC RENEWABLE - AUSTRALIA'S SOLAR LEADERS", color: 'text-[#f5a623]' },
+    { icon: FlameIcon, text: 'GOVERNMENT BATTERY REBATE PROGRAM LIVE NOW', color: 'text-[#FFE500]' },
+    { icon: CurrencyIcon, text: 'SAVE UP TO $8,000 ON HOME BATTERY SYSTEMS', color: 'text-[#0072CE]' },
+    { icon: BoltIcon, text: '$2.3 BILLION FEDERAL FUNDING AVAILABLE', color: 'text-[#FFE500]' },
+    { icon: PhoneIcon, text: 'CALL 1300 09 09 84 - FREE ASSESSMENT', color: 'text-[#0072CE]' },
+    { icon: TrophyIcon, text: "COSMIC RENEWABLE - AUSTRALIA'S SOLAR LEADERS", color: 'text-[#FFE500]' },
   ]
 
   return (
-    <div className="relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%)' }}>
+    <div className="relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #005299 0%, #0066BB 50%, #005299 100%)' }}>
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623]/5 via-transparent to-[#00d4ff]/5" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#FFE500]/5 via-transparent to-[#0072CE]/5" />
 
       {/* Top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5a623]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFE500]/30 to-transparent" />
 
       {/* Desktop Scrolling Banner */}
       <div className="hidden md:block relative z-10">
@@ -84,7 +84,7 @@ export default function RebateBanner() {
         <div className="py-2.5 px-4 text-center border-t border-white/10 bg-white/5">
           <Link
             href="/quote"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-[#f5a623]/30 hover:scale-105 transition-all"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#005299] px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-[#FFE500]/30 hover:scale-105 transition-all"
           >
             GET REBATE NOW
             <ArrowRightIcon className="w-4 h-4" />
@@ -97,10 +97,10 @@ export default function RebateBanner() {
         <div className="flex flex-col items-center gap-3">
           {/* Main headline */}
           <div className="text-center">
-            <div className="inline-flex items-center gap-1.5 glass px-3 py-1.5 rounded-full mb-2 border border-[#f5a623]/20">
-              <FlameIcon className="w-4 h-4 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-bold text-xs tracking-wide">LIVE NOW</span>
-              <FlameIcon className="w-4 h-4 text-[#f5a623]" />
+            <div className="inline-flex items-center gap-1.5 glass px-3 py-1.5 rounded-full mb-2 border border-[#FFE500]/20">
+              <FlameIcon className="w-4 h-4 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-bold text-xs tracking-wide">LIVE NOW</span>
+              <FlameIcon className="w-4 h-4 text-[#FFE500]" />
             </div>
             <h3 className="text-white font-extrabold text-sm leading-tight">
               GOVERNMENT BATTERY REBATE
@@ -108,15 +108,15 @@ export default function RebateBanner() {
           </div>
 
           {/* Savings highlight */}
-          <div className="flex items-center gap-2 glass px-4 py-2 rounded-lg border border-[#00d4ff]/20">
-            <CurrencyIcon className="w-5 h-5 text-[#00d4ff]" />
-            <span className="text-[#00d4ff] font-bold text-sm">SAVE UP TO $8,000</span>
+          <div className="flex items-center gap-2 glass px-4 py-2 rounded-lg border border-[#0072CE]/20">
+            <CurrencyIcon className="w-5 h-5 text-[#0072CE]" />
+            <span className="text-[#0072CE] font-bold text-sm">SAVE UP TO $8,000</span>
           </div>
 
           {/* CTA Button */}
           <Link
             href="/quote"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-5 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-[#f5a623]/20 hover:shadow-xl hover:scale-105 transition-all"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#005299] px-5 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-[#FFE500]/20 hover:shadow-xl hover:scale-105 transition-all"
           >
             <span>GET REBATE NOW</span>
             <ArrowRightIcon className="w-4 h-4" />
@@ -125,7 +125,7 @@ export default function RebateBanner() {
       </div>
 
       {/* Bottom border */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00d4ff]/30 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0072CE]/30 to-transparent" />
 
       <style jsx>{`
         @keyframes marquee {

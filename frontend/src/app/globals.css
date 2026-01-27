@@ -6,48 +6,48 @@
    ═══════════════════════════════════════════════════════════════════════════ */
 
 :root {
-  /* Core Palette - Cosmic Elegance */
-  --space-black: #0a0a0f;
-  --space-deep: #12121a;
-  --space-surface: #1a1a24;
-  --space-elevated: #242430;
+  /* Core Palette - Bright Energy */
+  --brand-blue: #0072CE;
+  --brand-blue-dark: #005299;
+  --brand-blue-light: #0088F0;
+  --brand-blue-surface: #0066BB;
 
-  /* Solar Energy Spectrum */
-  --solar-gold: #f5a623;
-  --solar-amber: #ff9f1c;
-  --solar-orange: #ff6b35;
-  --solar-glow: #ffd93d;
+  /* Solar Energy Spectrum - Bright Yellow */
+  --solar-gold: #FFE500;
+  --solar-amber: #FFD700;
+  --solar-orange: #FFC000;
+  --solar-glow: #FFEE00;
 
-  /* Electric Energy */
-  --energy-cyan: #00d4ff;
-  --energy-teal: #00b4a0;
-  --energy-emerald: #10b981;
-  --energy-pulse: #6ee7b7;
+  /* Electric Energy - Blue Accents */
+  --energy-cyan: #00BFFF;
+  --energy-teal: #0099CC;
+  --energy-emerald: #00AA66;
+  --energy-pulse: #66D9FF;
 
   /* Neutrals */
-  --lunar-100: #f8f9fa;
-  --lunar-200: #e9ecef;
-  --lunar-300: #dee2e6;
-  --lunar-400: #adb5bd;
-  --lunar-500: #6c757d;
-  --lunar-600: #495057;
+  --lunar-100: #ffffff;
+  --lunar-200: #f8f9fa;
+  --lunar-300: #e9ecef;
+  --lunar-400: #dee2e6;
+  --lunar-500: #adb5bd;
+  --lunar-600: #6c757d;
 
   /* Semantic Colors */
-  --background: var(--space-black);
+  --background: var(--brand-blue);
   --foreground: var(--lunar-100);
   --primary: var(--solar-gold);
-  --secondary: var(--energy-cyan);
+  --secondary: var(--brand-blue-light);
 
   /* Glass Effects */
-  --glass-white: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-glow: rgba(245, 166, 35, 0.15);
+  --glass-white: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.25);
+  --glass-glow: rgba(255, 229, 0, 0.2);
 }
 
 /* Light theme override for business pages */
 [data-theme="light"] {
-  --background: #fafbfc;
-  --foreground: #1a1a24;
+  --background: #ffffff;
+  --foreground: #0072CE;
 }
 
 @theme inline {
@@ -65,7 +65,7 @@ html {
 }
 
 body {
-  background: linear-gradient(180deg, var(--space-black) 0%, var(--space-deep) 100%);
+  background: var(--brand-blue);
   color: var(--foreground);
   font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -75,57 +75,45 @@ body {
 
 /* Premium Selection */
 ::selection {
-  background-color: rgba(245, 166, 35, 0.3);
-  color: var(--solar-glow);
+  background-color: rgba(255, 229, 0, 0.4);
+  color: var(--brand-blue-dark);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
    COSMIC BACKGROUNDS - Solar Battery Theme
    ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Animated Star Field Background */
+/* Energy Background */
 .cosmic-bg {
   position: relative;
-  background: var(--space-black);
+  background: var(--brand-blue);
 }
 
 .cosmic-bg::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image:
-    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
-    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.2), transparent),
-    radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
-    radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.2), transparent),
-    radial-gradient(1px 1px at 160px 120px, rgba(255,255,255,0.3), transparent);
-  background-size: 200px 200px;
-  animation: starfield 120s linear infinite;
-  opacity: 0.6;
+  background: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-blue-dark) 100%);
+  opacity: 1;
   pointer-events: none;
 }
 
-@keyframes starfield {
-  from { transform: translateY(0); }
-  to { transform: translateY(-200px); }
-}
-
-/* Cosmic Gradient Orb */
+/* Energy Gradient Orb */
 .cosmic-orb {
   position: absolute;
   border-radius: 50%;
   filter: blur(80px);
-  opacity: 0.4;
+  opacity: 0.5;
   animation: orbFloat 20s ease-in-out infinite;
   pointer-events: none;
 }
 
 .cosmic-orb-gold {
-  background: radial-gradient(circle, var(--solar-gold) 0%, var(--solar-orange) 50%, transparent 70%);
+  background: radial-gradient(circle, var(--solar-gold) 0%, var(--solar-amber) 50%, transparent 70%);
 }
 
 .cosmic-orb-cyan {
-  background: radial-gradient(circle, var(--energy-cyan) 0%, var(--energy-teal) 50%, transparent 70%);
+  background: radial-gradient(circle, var(--brand-blue-light) 0%, var(--brand-blue) 50%, transparent 70%);
 }
 
 @keyframes orbFloat {
@@ -151,7 +139,7 @@ body {
   background: conic-gradient(
     from 0deg,
     transparent 0deg,
-    rgba(245, 166, 35, 0.1) 45deg,
+    rgba(255, 229, 0, 0.15) 45deg,
     transparent 90deg
   );
   animation: solarRotate 30s linear infinite;
@@ -176,7 +164,7 @@ body {
   left: 0;
   right: 0;
   height: 0%;
-  background: linear-gradient(180deg, var(--energy-emerald), var(--energy-cyan));
+  background: linear-gradient(180deg, var(--solar-gold), var(--brand-blue-light));
   animation: batteryFill 3s ease-in-out infinite;
 }
 
@@ -199,7 +187,7 @@ body {
 
 /* Gradient Text - Solar Spectrum */
 .text-gradient-solar {
-  background: linear-gradient(135deg, var(--solar-glow) 0%, var(--solar-gold) 25%, var(--solar-amber) 50%, var(--solar-orange) 100%);
+  background: linear-gradient(135deg, var(--solar-glow) 0%, var(--solar-gold) 50%, var(--solar-amber) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -207,7 +195,7 @@ body {
 
 /* Gradient Text - Energy Spectrum */
 .text-gradient-energy {
-  background: linear-gradient(135deg, var(--energy-cyan) 0%, var(--energy-teal) 50%, var(--energy-emerald) 100%);
+  background: linear-gradient(135deg, var(--brand-blue-light) 0%, var(--brand-blue) 50%, var(--brand-blue-dark) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -215,7 +203,7 @@ body {
 
 /* Gradient Text - Premium Mix */
 .text-gradient-premium {
-  background: linear-gradient(135deg, var(--solar-gold) 0%, var(--energy-cyan) 100%);
+  background: linear-gradient(135deg, var(--solar-gold) 0%, var(--brand-blue-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -246,21 +234,21 @@ body {
 }
 
 .glass-elevated {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .glass-solar {
-  background: rgba(245, 166, 35, 0.08);
+  background: rgba(255, 229, 0, 0.15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(245, 166, 35, 0.2);
-  box-shadow: 0 0 40px rgba(245, 166, 35, 0.1);
+  border: 1px solid rgba(255, 229, 0, 0.3);
+  box-shadow: 0 0 40px rgba(255, 229, 0, 0.15);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -271,14 +259,14 @@ body {
 .btn-solar {
   position: relative;
   background: linear-gradient(135deg, var(--solar-gold) 0%, var(--solar-amber) 100%);
-  color: var(--space-black);
+  color: var(--brand-blue-dark);
   font-weight: 700;
   padding: 1rem 2rem;
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow:
-    0 4px 20px rgba(245, 166, 35, 0.4),
+    0 4px 20px rgba(255, 229, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -296,7 +284,7 @@ body {
 .btn-solar:hover {
   transform: translateY(-2px);
   box-shadow:
-    0 8px 30px rgba(245, 166, 35, 0.5),
+    0 8px 30px rgba(255, 229, 0, 0.5),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
@@ -308,11 +296,11 @@ body {
 .btn-energy {
   position: relative;
   background: transparent;
-  color: var(--energy-cyan);
+  color: var(--lunar-100);
   font-weight: 600;
   padding: 1rem 2rem;
   border-radius: 12px;
-  border: 2px solid var(--energy-cyan);
+  border: 2px solid var(--lunar-100);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -320,7 +308,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--energy-cyan);
+  background: var(--lunar-100);
   border-radius: 10px;
   transform: scaleX(0);
   transform-origin: right;
@@ -329,8 +317,8 @@ body {
 }
 
 .btn-energy:hover {
-  color: var(--space-black);
-  border-color: var(--energy-cyan);
+  color: var(--brand-blue);
+  border-color: var(--lunar-100);
 }
 
 .btn-energy:hover::before {
@@ -352,7 +340,8 @@ body {
 .btn-ghost:hover {
   background: var(--glass-white);
   border-color: var(--solar-gold);
-  color: var(--solar-gold);
+  color: var(--brand-blue-dark);
+  background: var(--solar-gold);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -360,7 +349,7 @@ body {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .card-cosmic {
-  background: var(--space-surface);
+  background: var(--brand-blue-surface);
   border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 2rem;
@@ -383,10 +372,10 @@ body {
 
 .card-cosmic:hover {
   transform: translateY(-8px);
-  border-color: rgba(245, 166, 35, 0.3);
+  border-color: rgba(255, 229, 0, 0.5);
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.4),
-    0 0 60px rgba(245, 166, 35, 0.1);
+    0 20px 40px rgba(0, 0, 0, 0.2),
+    0 0 60px rgba(255, 229, 0, 0.15);
 }
 
 .card-cosmic:hover::before {
@@ -395,7 +384,7 @@ body {
 
 /* Premium Feature Card */
 .card-feature {
-  background: linear-gradient(135deg, var(--space-surface) 0%, var(--space-elevated) 100%);
+  background: linear-gradient(135deg, var(--brand-blue-surface) 0%, var(--brand-blue-dark) 100%);
   border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 2.5rem;
@@ -410,7 +399,7 @@ body {
   right: -50%;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(245, 166, 35, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255, 229, 0, 0.15) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.5s ease;
 }
@@ -421,7 +410,7 @@ body {
 
 /* Battery Card */
 .card-battery {
-  background: linear-gradient(135deg, var(--space-surface) 0%, var(--space-deep) 100%);
+  background: linear-gradient(135deg, var(--brand-blue-surface) 0%, var(--brand-blue-dark) 100%);
   border: 1px solid var(--glass-border);
   border-radius: 24px;
   position: relative;
@@ -435,7 +424,7 @@ body {
   left: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(180deg, var(--energy-emerald), var(--energy-cyan));
+  background: linear-gradient(180deg, var(--solar-gold), var(--solar-amber));
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -443,15 +432,15 @@ body {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .glow-solar {
-  box-shadow: 0 0 40px rgba(245, 166, 35, 0.3);
+  box-shadow: 0 0 40px rgba(255, 229, 0, 0.4);
 }
 
 .glow-energy {
-  box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 40px rgba(0, 114, 206, 0.3);
 }
 
 .glow-battery {
-  box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 0 40px rgba(255, 229, 0, 0.3);
 }
 
 .glow-pulse {
@@ -460,10 +449,10 @@ body {
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(245, 166, 35, 0.3);
+    box-shadow: 0 0 20px rgba(255, 229, 0, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(245, 166, 35, 0.5), 0 0 60px rgba(245, 166, 35, 0.2);
+    box-shadow: 0 0 40px rgba(255, 229, 0, 0.5), 0 0 60px rgba(255, 229, 0, 0.2);
   }
 }
 
@@ -474,10 +463,10 @@ body {
 
 @keyframes energyPulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+    box-shadow: 0 0 20px rgba(0, 114, 206, 0.3);
   }
   50% {
-    box-shadow: 0 0 40px rgba(0, 212, 255, 0.5), 0 0 60px rgba(16, 185, 129, 0.2);
+    box-shadow: 0 0 40px rgba(0, 114, 206, 0.5), 0 0 60px rgba(255, 229, 0, 0.2);
   }
 }
 
@@ -584,7 +573,7 @@ body {
 .divider-glow {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--solar-gold), transparent);
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .divider-orbital {
@@ -613,7 +602,7 @@ body {
   right: 0;
   top: 50%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -621,7 +610,7 @@ body {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .input-cosmic {
-  background: var(--space-surface);
+  background: var(--brand-blue-surface);
   border: 1px solid var(--glass-border);
   border-radius: 12px;
   padding: 1rem 1.25rem;
@@ -632,23 +621,23 @@ body {
 }
 
 .input-cosmic::placeholder {
-  color: var(--lunar-500);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .input-cosmic:focus {
   outline: none;
   border-color: var(--solar-gold);
-  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.1), 0 0 20px rgba(245, 166, 35, 0.1);
+  box-shadow: 0 0 0 3px rgba(255, 229, 0, 0.2), 0 0 20px rgba(255, 229, 0, 0.15);
 }
 
 .input-cosmic:hover:not(:focus) {
-  border-color: var(--lunar-400);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* Select Styling */
 .select-cosmic {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23f5a623' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23FFE500' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 1rem center;
   padding-right: 3rem;
@@ -704,7 +693,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--space-deep);
+  background: var(--brand-blue-dark);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -713,7 +702,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, var(--solar-amber), var(--solar-orange));
+  background: linear-gradient(180deg, var(--solar-amber), var(--solar-glow));
 }
 
 /* Hide scrollbar utility */
@@ -756,19 +745,19 @@ body {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .section-dark {
-  background: var(--space-black);
+  background: var(--brand-blue-dark);
 }
 
 .section-elevated {
-  background: var(--space-surface);
+  background: var(--brand-blue-surface);
 }
 
 .section-gradient {
-  background: linear-gradient(180deg, var(--space-black) 0%, var(--space-deep) 50%, var(--space-surface) 100%);
+  background: linear-gradient(180deg, var(--brand-blue) 0%, var(--brand-blue-dark) 50%, var(--brand-blue-surface) 100%);
 }
 
 .section-radial {
-  background: radial-gradient(ellipse at center top, var(--space-surface) 0%, var(--space-black) 70%);
+  background: radial-gradient(ellipse at center top, var(--brand-blue-surface) 0%, var(--brand-blue-dark) 70%);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -818,25 +807,25 @@ img {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .rebate-badge {
-  background: linear-gradient(135deg, var(--energy-emerald) 0%, var(--energy-teal) 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--solar-gold) 0%, var(--solar-amber) 100%);
+  color: var(--brand-blue-dark);
   font-weight: 700;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 15px rgba(255, 229, 0, 0.4);
 }
 
 .price-tag {
   background: linear-gradient(135deg, var(--solar-gold) 0%, var(--solar-amber) 100%);
-  color: var(--space-black);
+  color: var(--brand-blue-dark);
   font-weight: 800;
   padding: 0.75rem 1.5rem;
   border-radius: 12px;
   display: inline-block;
-  box-shadow: 0 4px 20px rgba(245, 166, 35, 0.4);
+  box-shadow: 0 4px 20px rgba(255, 229, 0, 0.4);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -859,7 +848,7 @@ img {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .testimonial-card {
-  background: var(--space-surface);
+  background: var(--brand-blue-surface);
   border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 2rem;
@@ -874,7 +863,7 @@ img {
   font-size: 4rem;
   font-family: Georgia, serif;
   color: var(--solar-gold);
-  opacity: 0.3;
+  opacity: 0.5;
   line-height: 1;
 }
 
@@ -883,7 +872,7 @@ img {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .countdown-digit {
-  background: var(--space-surface);
+  background: var(--brand-blue-surface);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   padding: 0.5rem 0.75rem;

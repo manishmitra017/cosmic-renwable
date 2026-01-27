@@ -113,13 +113,13 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0a0a0f] overflow-hidden">
+    <footer className="relative bg-[#0072CE] overflow-hidden">
       {/* Cosmic Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 star-field opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#f5a623]/30 to-transparent"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#f5a623]/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#00d4ff]/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#FFE500]/30 to-transparent"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFE500]/3 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#0072CE]/3 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -127,8 +127,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-br from-[#f5a623] to-[#ff8c00] p-0.5">
-                <div className="w-full h-full rounded-[10px] overflow-hidden bg-[#0a0a0f] flex items-center justify-center">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-br from-[#FFE500] to-[#FFD700] p-0.5">
+                <div className="w-full h-full rounded-[10px] overflow-hidden bg-[#0072CE] flex items-center justify-center">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy"
@@ -138,7 +138,7 @@ export default function Footer() {
                   />
                 </div>
               </div>
-              <span className="text-xl font-bold font-display text-white group-hover:text-[#f5a623] transition-colors">
+              <span className="text-xl font-bold font-display text-white group-hover:text-[#FFE500] transition-colors">
                 Cosmic Renewable Energy
               </span>
             </Link>
@@ -149,14 +149,14 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
-              <a href="tel:1300123456" className="flex items-center gap-3 text-gray-400 hover:text-[#f5a623] transition-colors group">
-                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#f5a623]/10 transition-colors">
+              <a href="tel:1300123456" className="flex items-center gap-3 text-gray-400 hover:text-[#FFE500] transition-colors group">
+                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#FFE500]/10 transition-colors">
                   <PhoneIcon className="w-4 h-4" />
                 </div>
                 <span>1300 123 456</span>
               </a>
-              <a href="mailto:info@cosmicrenewableenergy.com.au" className="flex items-center gap-3 text-gray-400 hover:text-[#f5a623] transition-colors group">
-                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#f5a623]/10 transition-colors">
+              <a href="mailto:info@cosmicrenewableenergy.com.au" className="flex items-center gap-3 text-gray-400 hover:text-[#FFE500] transition-colors group">
+                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#FFE500]/10 transition-colors">
                   <EnvelopeIcon className="w-4 h-4" />
                 </div>
                 <span>info@cosmicrenewableenergy.com.au</span>
@@ -177,7 +177,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#f5a623]/20 transition-all duration-300 border border-transparent hover:border-[#f5a623]/30"
+                  className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#FFE500]/20 transition-all duration-300 border border-transparent hover:border-[#FFE500]/30"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
@@ -188,7 +188,7 @@ export default function Footer() {
 
           {/* Services Column */}
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Services</h3>
+            <h3 className="text-sm font-semibold text-[#FFE500] uppercase tracking-wider mb-6">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
@@ -196,7 +196,7 @@ export default function Footer() {
                     href={service.href}
                     className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
                   >
-                    <service.icon className="w-4 h-4 text-gray-500 group-hover:text-[#f5a623] transition-colors" />
+                    <service.icon className="w-4 h-4 text-gray-500 group-hover:text-[#FFE500] transition-colors" />
                     <span>{service.name}</span>
                     <ArrowRightIcon className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </Link>
@@ -207,7 +207,7 @@ export default function Footer() {
 
           {/* Company Column */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Company</h3>
+            <h3 className="text-sm font-semibold text-[#FFE500] uppercase tracking-wider mb-6">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
@@ -225,7 +225,7 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Stay Updated</h3>
+            <h3 className="text-sm font-semibold text-[#FFE500] uppercase tracking-wider mb-6">Stay Updated</h3>
             <p className="text-gray-400 text-sm mb-4">
               Get the latest solar news, rebate updates, and exclusive offers.
             </p>
@@ -233,11 +233,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all text-sm"
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all text-sm"
               />
               <button
                 type="submit"
-                className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] font-semibold text-sm hover:shadow-lg hover:shadow-[#f5a623]/20 transition-all duration-300"
+                className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] font-semibold text-sm hover:shadow-lg hover:shadow-[#FFE500]/20 transition-all duration-300"
               >
                 Subscribe
               </button>
@@ -252,11 +252,11 @@ export default function Footer() {
               © {new Date().getFullYear()} Cosmic Renewable Energy. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <Link href="/privacy-policy" className="text-gray-500 hover:text-[#f5a623] text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-gray-500 hover:text-[#FFE500] text-sm transition-colors">
                 Privacy Policy
               </Link>
               <span className="text-gray-700">|</span>
-              <Link href="/terms-of-service" className="text-gray-500 hover:text-[#f5a623] text-sm transition-colors">
+              <Link href="/terms-of-service" className="text-gray-500 hover:text-[#FFE500] text-sm transition-colors">
                 Terms of Service
               </Link>
             </div>
@@ -265,12 +265,12 @@ export default function Footer() {
           {/* Certifications */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 text-xs">
             <span className="flex items-center gap-2">
-              <BatteryIcon className="w-4 h-4 text-[#00d4ff]" />
+              <BatteryIcon className="w-4 h-4 text-[#0072CE]" />
               CEC Approved Installer
             </span>
             <span className="text-gray-700">•</span>
             <span className="flex items-center gap-2">
-              <SunIcon className="w-4 h-4 text-[#f5a623]" />
+              <SunIcon className="w-4 h-4 text-[#FFE500]" />
               Licensed Electrical Contractor
             </span>
             <span className="text-gray-700">•</span>

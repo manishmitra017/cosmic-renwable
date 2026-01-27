@@ -132,13 +132,13 @@ export default function PromotionsCarousel() {
   }
 
   return (
-    <section className="py-10 sm:py-16 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%)' }}>
+    <section className="py-10 sm:py-16 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0072CE 0%, #005BB5 50%, #0072CE 100%)' }}>
       {/* Star field background */}
       <div className="absolute inset-0 star-field opacity-20" />
 
       {/* Gradient orbs */}
-      <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-[100px]" />
+      <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -148,9 +148,9 @@ export default function PromotionsCarousel() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f5a623]/30 bg-[#f5a623]/10 mb-4">
-            <FlameIcon className="w-4 h-4 text-[#f5a623]" />
-            <span className="text-[#f5a623] text-sm font-semibold tracking-wide uppercase">Limited Time Offers</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FFE500]/30 bg-[#FFE500]/10 mb-4">
+            <FlameIcon className="w-4 h-4 text-[#FFE500]" />
+            <span className="text-[#FFE500] text-sm font-semibold tracking-wide uppercase">Limited Time Offers</span>
           </div>
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-6 font-display">
             Hot Deals & <span className="text-gradient-solar">Special Promotions</span>
@@ -174,7 +174,7 @@ export default function PromotionsCarousel() {
                 className="grid grid-cols-1 lg:grid-cols-2 gap-0"
               >
                 {/* Image Section */}
-                <div className="relative h-[280px] sm:h-[400px] lg:h-[600px] bg-[#0a0a0f]">
+                <div className="relative h-[280px] sm:h-[400px] lg:h-[600px] bg-[#0072CE]">
                   <Image
                     src={promotions[currentIndex].image}
                     alt={promotions[currentIndex].title}
@@ -184,7 +184,7 @@ export default function PromotionsCarousel() {
                   />
                   {/* Highlight Badge */}
                   {promotions[currentIndex].highlight && (
-                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg max-w-[200px] sm:max-w-none truncate">
+                    <div className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg max-w-[200px] sm:max-w-none truncate">
                       {promotions[currentIndex].highlight}
                     </div>
                   )}
@@ -193,7 +193,7 @@ export default function PromotionsCarousel() {
                 {/* Content Section */}
                 <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-12 bg-gradient-to-br from-white/5 to-transparent">
                   <div className="space-y-3 sm:space-y-4">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/10 text-[#00d4ff] text-xs sm:text-sm font-semibold">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#0072CE]/30 bg-[#0072CE]/10 text-[#0072CE] text-xs sm:text-sm font-semibold">
                       <ClockIcon className="w-4 h-4" />
                       LIMITED TIME OFFER
                     </div>
@@ -202,7 +202,7 @@ export default function PromotionsCarousel() {
                       {promotions[currentIndex].title}
                     </h3>
 
-                    <p className="text-sm sm:text-lg text-[#f5a623] font-semibold">
+                    <p className="text-sm sm:text-lg text-[#FFE500] font-semibold">
                       {promotions[currentIndex].subtitle}
                     </p>
 
@@ -213,19 +213,19 @@ export default function PromotionsCarousel() {
                     {/* Features List */}
                     <ul className="space-y-1.5 sm:space-y-2 text-gray-300 text-sm sm:text-base">
                       <li className="flex items-center">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-2 flex-shrink-0" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] mr-2 flex-shrink-0" />
                         Professional Installation
                       </li>
                       <li className="flex items-center">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-2 flex-shrink-0" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] mr-2 flex-shrink-0" />
                         Government Rebates Applied
                       </li>
                       <li className="hidden sm:flex items-center">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-2 flex-shrink-0" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] mr-2 flex-shrink-0" />
                         5 Year Warranty
                       </li>
                       <li className="hidden sm:flex items-center">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-2 flex-shrink-0" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] mr-2 flex-shrink-0" />
                         CEC Approved Products
                       </li>
                     </ul>
@@ -248,8 +248,8 @@ export default function PromotionsCarousel() {
                     </div>
 
                     {/* Urgency Message */}
-                    <div className="glass border border-[#f5a623]/20 p-3 sm:p-4 rounded-xl">
-                      <p className="text-[#f5a623] font-semibold text-xs sm:text-base flex items-center gap-2">
+                    <div className="glass border border-[#FFE500]/20 p-3 sm:p-4 rounded-xl">
+                      <p className="text-[#FFE500] font-semibold text-xs sm:text-base flex items-center gap-2">
                         <ClockIcon className="w-4 h-4 flex-shrink-0" />
                         Offer expires soon! Limited spots available.
                       </p>
@@ -285,7 +285,7 @@ export default function PromotionsCarousel() {
                 onClick={() => handleDotClick(index)}
                 className={`transition-all duration-200 ${
                   index === currentIndex
-                    ? 'w-8 sm:w-12 h-2 sm:h-3 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] rounded-full'
+                    ? 'w-8 sm:w-12 h-2 sm:h-3 bg-gradient-to-r from-[#FFE500] to-[#FFD700] rounded-full'
                     : 'w-2 sm:w-3 h-2 sm:h-3 bg-white/30 rounded-full hover:bg-white/50'
                 }`}
                 aria-label={`Go to promotion ${index + 1}`}
@@ -303,7 +303,7 @@ export default function PromotionsCarousel() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h3 className="text-lg sm:text-2xl font-bold text-white mb-4 sm:mb-6 text-center flex items-center justify-center gap-2 font-display">
-            <TargetIcon className="w-6 h-6 text-[#f5a623]" />
+            <TargetIcon className="w-6 h-6 text-[#FFE500]" />
             Why Choose <span className="text-gradient-solar">Cosmic Renewable Energy?</span>
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 text-center">
@@ -316,7 +316,7 @@ export default function PromotionsCarousel() {
               <div key={index} className="glass rounded-xl p-4 border border-white/5">
                 <div className="text-xl sm:text-3xl font-bold text-gradient-solar flex items-center justify-center gap-1">
                   {stat.value}
-                  {stat.showStar && <StarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-[#f5a623]" />}
+                  {stat.showStar && <StarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-[#FFE500]" />}
                 </div>
                 <div className="text-gray-400 text-xs sm:text-base mt-1">{stat.label}</div>
               </div>
