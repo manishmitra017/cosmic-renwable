@@ -364,30 +364,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Yellow Trust Bar */}
-      <section className="py-6 sm:py-8 bg-[#FFE500]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 text-center">
-            <div>
-              <div className="text-[#0072CE] text-2xl sm:text-4xl font-extrabold">TRUSTED</div>
-              <div className="text-[#0072CE]/70 text-xs sm:text-sm font-medium">Solar Provider</div>
-            </div>
-            <div>
-              <div className="text-[#0072CE] text-2xl sm:text-4xl font-extrabold">10+ YEARS</div>
-              <div className="text-[#0072CE]/70 text-xs sm:text-sm font-medium">Experience</div>
-            </div>
-            <div>
-              <div className="text-[#0072CE] text-2xl sm:text-4xl font-extrabold">OVER 26,000</div>
-              <div className="text-[#0072CE]/70 text-xs sm:text-sm font-medium">Installations</div>
-            </div>
-            <div>
-              <div className="text-[#0072CE] text-2xl sm:text-4xl font-extrabold">AUSTRALIA&apos;S</div>
-              <div className="text-[#0072CE]/70 text-xs sm:text-sm font-medium">#1 Battery Installer</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Promotions Carousel */}
       <PromotionsCarousel />
 
@@ -502,8 +478,8 @@ export default function Home() {
       </section>
 
       {/* Services Carousel Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[#f8f9fa]/50"></div>
+      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+        <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -512,10 +488,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#0072CE] mb-6">
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
               Our <span className="text-gradient-solar">Services</span>
             </h2>
-            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
+            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
               Comprehensive solar and energy solutions for your home and business.
             </p>
           </motion.div>
@@ -628,7 +604,8 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#FFE500] relative overflow-hidden">
+      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+        <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -637,8 +614,8 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#0072CE] mb-6">
-              Why Choose <span className="text-[#005299]">Cosmic Renewable Energy?</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
+              Why Choose <span className="text-gradient-solar">Cosmic Renewable Energy?</span>
             </h2>
           </motion.div>
 
@@ -667,17 +644,17 @@ export default function Home() {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className="text-center p-6 bg-white rounded-xl border border-[#0072CE]/10 hover:border-[#0072CE]/30 transition-all duration-300 shadow-lg"
+                className="text-center p-6 glass rounded-xl border border-[#FFE500]/10 hover:border-[#FFE500]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#0072CE] to-[#005299] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <feature.icon className="w-8 h-8 text-[#FFE500]" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
+                  <feature.icon className="w-8 h-8 text-[#0072CE]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#0072CE] mb-3">{feature.title}</h3>
-                <p className="text-[#666666]">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-[#b0b0b0]">{feature.description}</p>
               </motion.div>
             ))}
           </div>

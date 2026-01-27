@@ -760,30 +760,6 @@ body {
   background: radial-gradient(ellipse at center top, var(--brand-blue-surface) 0%, var(--brand-blue-dark) 70%);
 }
 
-/* Yellow Banner Section */
-.section-yellow {
-  background: var(--solar-gold);
-  color: var(--brand-blue-dark);
-}
-
-/* White Section */
-.section-white {
-  background: #ffffff;
-  color: var(--brand-blue-dark);
-}
-
-/* Light Gray Section */
-.section-light {
-  background: #f8f9fa;
-  color: var(--brand-blue-dark);
-}
-
-/* Blue Section */
-.section-blue {
-  background: var(--brand-blue);
-  color: #ffffff;
-}
-
 /* ═══════════════════════════════════════════════════════════════════════════
    UTILITY CLASSES
    ═══════════════════════════════════════════════════════════════════════════ */

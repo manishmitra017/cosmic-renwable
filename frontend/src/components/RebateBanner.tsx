@@ -41,19 +41,20 @@ const ArrowRightIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 export default function RebateBanner() {
   const bannerItems = [
-    { icon: BoltIcon, text: 'Solar Batteries from $2,880', color: 'text-[#0072CE]' },
-    { icon: BoltIcon, text: 'Cheapest Solar Battery Guaranteed', color: 'text-[#0072CE]' },
-    { icon: BoltIcon, text: "Australia's Cheaper Home Batteries", color: 'text-[#0072CE]' },
-    { icon: PhoneIcon, text: 'CALL 1300 09 09 84', color: 'text-[#0072CE]' },
+    { icon: FlameIcon, text: 'GOVERNMENT BATTERY REBATE PROGRAM LIVE NOW', color: 'text-[#FFE500]' },
+    { icon: CurrencyIcon, text: 'SAVE UP TO $8,000 ON HOME BATTERY SYSTEMS', color: 'text-[#0072CE]' },
+    { icon: BoltIcon, text: '$2.3 BILLION FEDERAL FUNDING AVAILABLE', color: 'text-[#FFE500]' },
+    { icon: PhoneIcon, text: 'CALL 1300 09 09 84 - FREE ASSESSMENT', color: 'text-[#0072CE]' },
+    { icon: TrophyIcon, text: "COSMIC RENEWABLE - AUSTRALIA'S SOLAR LEADERS", color: 'text-[#FFE500]' },
   ]
 
   return (
-    <div className="relative overflow-hidden" style={{ background: '#FFE500' }}>
+    <div className="relative overflow-hidden" style={{ background: 'linear-gradient(90deg, #005299 0%, #0066BB 50%, #005299 100%)' }}>
       {/* Subtle gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700]/50 via-transparent to-[#FFD700]/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#FFE500]/5 via-transparent to-[#0072CE]/5" />
 
       {/* Top border */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0072CE]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFE500]/30 to-transparent" />
 
       {/* Desktop Scrolling Banner */}
       <div className="hidden md:block relative z-10">
@@ -61,40 +62,70 @@ export default function RebateBanner() {
           <div className="whitespace-nowrap animate-marquee">
             <div className="inline-flex items-center space-x-12">
               {bannerItems.map((item, index) => (
-                <span key={index} className="flex items-center space-x-2 text-[#0072CE] font-bold text-lg">
+                <span key={index} className="flex items-center space-x-2 text-white font-bold text-lg">
                   <item.icon className={`w-5 h-5 ${item.color}`} />
                   <span>{item.text}</span>
+                  <item.icon className={`w-5 h-5 ${item.color}`} />
                 </span>
               ))}
               {/* Duplicate for seamless loop */}
               {bannerItems.map((item, index) => (
-                <span key={`dup-${index}`} className="flex items-center space-x-2 text-[#0072CE] font-bold text-lg">
+                <span key={`dup-${index}`} className="flex items-center space-x-2 text-white font-bold text-lg">
                   <item.icon className={`w-5 h-5 ${item.color}`} />
                   <span>{item.text}</span>
+                  <item.icon className={`w-5 h-5 ${item.color}`} />
                 </span>
               ))}
             </div>
           </div>
         </div>
 
+        {/* Button Row */}
+        <div className="py-2.5 px-4 text-center border-t border-white/10 bg-white/5">
+          <Link
+            href="/quote"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#005299] px-6 py-2.5 rounded-full font-bold text-sm hover:shadow-lg hover:shadow-[#FFE500]/30 hover:scale-105 transition-all"
+          >
+            GET REBATE NOW
+            <ArrowRightIcon className="w-4 h-4" />
+          </Link>
+        </div>
       </div>
 
       {/* Mobile Static Banner */}
-      <div className="block md:hidden py-3 px-4 relative z-10">
-        <div className="flex items-center justify-center gap-4 overflow-x-auto">
-          <div className="flex items-center gap-2 text-[#0072CE] font-bold text-sm whitespace-nowrap">
-            <BoltIcon className="w-4 h-4" />
-            <span>Solar Batteries from $2,880</span>
+      <div className="block md:hidden py-4 px-4 relative z-10">
+        <div className="flex flex-col items-center gap-3">
+          {/* Main headline */}
+          <div className="text-center">
+            <div className="inline-flex items-center gap-1.5 glass px-3 py-1.5 rounded-full mb-2 border border-[#FFE500]/20">
+              <FlameIcon className="w-4 h-4 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-bold text-xs tracking-wide">LIVE NOW</span>
+              <FlameIcon className="w-4 h-4 text-[#FFE500]" />
+            </div>
+            <h3 className="text-white font-extrabold text-sm leading-tight">
+              GOVERNMENT BATTERY REBATE
+            </h3>
           </div>
-          <div className="flex items-center gap-2 text-[#0072CE] font-bold text-sm whitespace-nowrap">
-            <BoltIcon className="w-4 h-4" />
-            <span>Cheapest Guaranteed</span>
+
+          {/* Savings highlight */}
+          <div className="flex items-center gap-2 glass px-4 py-2 rounded-lg border border-[#0072CE]/20">
+            <CurrencyIcon className="w-5 h-5 text-[#0072CE]" />
+            <span className="text-[#0072CE] font-bold text-sm">SAVE UP TO $8,000</span>
           </div>
+
+          {/* CTA Button */}
+          <Link
+            href="/quote"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#005299] px-5 py-2.5 rounded-full font-bold text-sm shadow-lg shadow-[#FFE500]/20 hover:shadow-xl hover:scale-105 transition-all"
+          >
+            <span>GET REBATE NOW</span>
+            <ArrowRightIcon className="w-4 h-4" />
+          </Link>
         </div>
       </div>
 
       {/* Bottom border */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-[#0072CE]/20" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0072CE]/30 to-transparent" />
 
       <style jsx>{`
         @keyframes marquee {
