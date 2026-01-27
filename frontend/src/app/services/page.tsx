@@ -180,10 +180,10 @@ export default function Services() {
   return (
     <div className="cosmic-bg">
       {/* Contact Banner */}
-      <section className="py-3 sm:py-4 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-y border-[#FFE500]/20">
+      <section className="py-3 sm:py-4 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-y border-[#f5a623]/20">
         <div className="absolute inset-0">
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#FFE500]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#0072CE]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-[#f5a623]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-[#00d4ff]/20 rounded-full blur-3xl animate-pulse"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -195,20 +195,20 @@ export default function Services() {
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
               <div className="text-white font-bold text-base md:text-xl flex items-center gap-2">
-                <RocketIcon className="w-5 h-5 text-[#FFE500]" />
+                <RocketIcon className="w-5 h-5 text-[#f5a623]" />
                 <span className="text-gradient-solar">Australia&apos;s #1 Solar & Battery Experts</span>
               </div>
               <div className="flex items-center gap-3">
                 <a
                   href="tel:1300090984"
-                  className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(245,166,35,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
+                  className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(245,166,35,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="bg-gradient-to-r from-[#0072CE] to-[#0099cc] text-[#0072CE] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(0,212,255,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
+                  className="bg-gradient-to-r from-[#00d4ff] to-[#0099cc] text-[#0a0a0f] px-4 py-2 rounded-full font-bold text-sm hover:shadow-[0_0_20px_rgba(0,212,255,0.5)] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   <DeviceIcon className="w-4 h-4" />
                   +61 422 786 100
@@ -220,7 +220,7 @@ export default function Services() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0072CE]">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0a0a0f]">
         <div className="absolute inset-0">
           <Image
             src="/solarroof2.jpg"
@@ -229,10 +229,10 @@ export default function Services() {
             className="object-cover opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0072CE]/80 via-[#0072CE]/50 to-[#0072CE]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/80 via-[#0a0a0f]/50 to-[#0a0a0f]"></div>
           <div className="absolute inset-0 star-field opacity-40"></div>
-          <div className="absolute top-20 right-20 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-40 left-10 w-48 h-48 bg-[#0072CE]/10 rounded-full blur-3xl animate-float-delayed"></div>
+          <div className="absolute top-20 right-20 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-40 left-10 w-48 h-48 bg-[#00d4ff]/10 rounded-full blur-3xl animate-float-delayed"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -242,9 +242,9 @@ export default function Services() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 bg-[#FFE500]/10 border border-[#FFE500]/30 px-4 py-2 rounded-full mb-6">
-              <BoltIcon className="w-4 h-4 text-[#FFE500]" />
-              <span className="text-[#FFE500] font-medium text-sm">Cosmic Renewable Energy</span>
+            <div className="inline-flex items-center gap-2 bg-[#f5a623]/10 border border-[#f5a623]/30 px-4 py-2 rounded-full mb-6">
+              <BoltIcon className="w-4 h-4 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-medium text-sm">Cosmic Renewable Energy</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
@@ -268,9 +268,9 @@ export default function Services() {
       </section>
 
       {/* Government Battery Rebate Highlight */}
-      <section className="py-12 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-y border-[#FFE500]/20">
+      <section className="py-12 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-y border-[#f5a623]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -292,7 +292,7 @@ export default function Services() {
       </section>
 
       {/* Main Services Section */}
-      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -316,7 +316,7 @@ export default function Services() {
               return (
                 <motion.div
                   key={service.id}
-                  className={`relative group card-cosmic overflow-hidden ${service.popular ? 'ring-2 ring-[#FFE500]' : ''}`}
+                  className={`relative group card-cosmic overflow-hidden ${service.popular ? 'ring-2 ring-[#f5a623]' : ''}`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -324,7 +324,7 @@ export default function Services() {
                   whileHover={{ y: -5 }}
                 >
                   {service.popular && (
-                    <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold z-10">
+                    <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold z-10">
                       Most Popular
                     </div>
                   )}
@@ -336,8 +336,8 @@ export default function Services() {
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] via-[#0072CE]/60 to-transparent flex items-center justify-center">
-                      <IconComponent className="w-10 h-10 sm:w-12 sm:h-12 text-[#FFE500]" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/60 to-transparent flex items-center justify-center">
+                      <IconComponent className="w-10 h-10 sm:w-12 sm:h-12 text-[#f5a623]" />
                     </div>
                   </div>
 
@@ -353,7 +353,7 @@ export default function Services() {
                     <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-start">
-                          <CheckIcon className="w-4 h-4 text-[#FFE500] mr-2 sm:mr-3 mt-1 flex-shrink-0" />
+                          <CheckIcon className="w-4 h-4 text-[#f5a623] mr-2 sm:mr-3 mt-1 flex-shrink-0" />
                           <span className="text-[#e0e0e0] text-xs sm:text-sm">{feature}</span>
                         </div>
                       ))}
@@ -382,7 +382,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Cosmic Renewable Energy */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#005BB5] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -422,14 +422,14 @@ export default function Services() {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className="text-center p-6 glass rounded-xl border border-[#FFE500]/10 hover:border-[#FFE500]/30 transition-all duration-300"
+                className="text-center p-6 glass rounded-xl border border-[#f5a623]/10 hover:border-[#f5a623]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
-                  <feature.icon className="w-8 h-8 text-[#0072CE]" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
+                  <feature.icon className="w-8 h-8 text-[#0a0a0f]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-[#b0b0b0] leading-relaxed">{feature.description}</p>
@@ -440,7 +440,7 @@ export default function Services() {
       </section>
 
       {/* Installation Process */}
-      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -490,8 +490,8 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
-                  <span className="text-2xl font-bold text-[#0072CE]">{process.step}</span>
+                <div className="w-16 h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-full flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(245,166,35,0.3)]">
+                  <span className="text-2xl font-bold text-[#0a0a0f]">{process.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{process.title}</h3>
                 <p className="text-[#b0b0b0] leading-relaxed">{process.description}</p>
@@ -502,10 +502,10 @@ export default function Services() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-[#FFE500]/20">
+      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div

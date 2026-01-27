@@ -101,19 +101,19 @@ export default function WhySolar() {
       icon: CurrencyDollarIcon,
       title: 'Save $2,000+ Annually',
       description: 'Average household savings on electricity bills',
-      color: 'from-[#FFE500] to-[#ff6b00]'
+      color: 'from-[#f5a623] to-[#ff6b00]'
     },
     {
       icon: HomeIcon,
       title: 'Increase Property Value',
       description: 'Add $6,000+ per kW to your home value',
-      color: 'from-[#0072CE] to-[#0066ff]'
+      color: 'from-[#00d4ff] to-[#0066ff]'
     },
     {
       icon: GlobeAltIcon,
       title: 'Reduce Carbon Footprint',
       description: 'Equivalent to planting 2,500 trees per system',
-      color: 'from-[#00ff88] to-[#0072CE]'
+      color: 'from-[#00ff88] to-[#00d4ff]'
     }
   ]
 
@@ -168,7 +168,7 @@ export default function WhySolar() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0072CE]">
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0a0a0f]">
         {/* Star field background */}
         <div className="absolute inset-0 star-field opacity-40"></div>
 
@@ -184,8 +184,8 @@ export default function WhySolar() {
         </div>
 
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen py-20">
@@ -199,10 +199,10 @@ export default function WhySolar() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20"
+                className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20"
               >
-                <BoltIcon className="w-5 h-5 text-[#FFE500]" />
-                <span className="text-[#FFE500] font-semibold text-sm">Clean Energy Revolution</span>
+                <BoltIcon className="w-5 h-5 text-[#f5a623]" />
+                <span className="text-[#f5a623] font-semibold text-sm">Clean Energy Revolution</span>
               </motion.div>
 
               <motion.h1
@@ -281,7 +281,7 @@ export default function WhySolar() {
       </section>
 
       {/* Cost Savings Section */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             <motion.div
@@ -305,7 +305,7 @@ export default function WhySolar() {
                   'Protection against rising energy costs'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
-                    <CheckIcon className="w-5 h-5 text-[#0072CE] mr-3 flex-shrink-0" />
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
                     <span className="text-white">{item}</span>
                   </li>
                 ))}
@@ -325,9 +325,9 @@ export default function WhySolar() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="glass text-[#FFE500] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#FFE500]/30">
+                  <div className="glass text-[#f5a623] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#f5a623]/30">
                     90% Savings
                   </div>
                   <h3 className="text-xl font-semibold">Dramatic Cost Reduction</h3>
@@ -360,7 +360,7 @@ export default function WhySolar() {
                   'Equivalent to planting 2,500 trees'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
-                    <CheckIcon className="w-5 h-5 text-[#0072CE] mr-3 flex-shrink-0" />
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
                     <span className="text-white">{item}</span>
                   </li>
                 ))}
@@ -380,9 +380,9 @@ export default function WhySolar() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="glass text-[#0072CE] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#0072CE]/30">
+                  <div className="glass text-[#00d4ff] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#00d4ff]/30">
                     Zero Emissions
                   </div>
                   <h3 className="text-xl font-semibold">Environmental Protection</h3>
@@ -414,7 +414,7 @@ export default function WhySolar() {
                   'Appeal to environmentally conscious buyers'
                 ].map((item, index) => (
                   <li key={index} className="flex items-center">
-                    <CheckIcon className="w-5 h-5 text-[#0072CE] mr-3 flex-shrink-0" />
+                    <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
                     <span className="text-white">{item}</span>
                   </li>
                 ))}
@@ -434,9 +434,9 @@ export default function WhySolar() {
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <div className="glass text-[#FFE500] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#FFE500]/30">
+                  <div className="glass text-[#f5a623] text-2xl font-bold px-4 py-2 rounded-lg mb-2 inline-block border border-[#f5a623]/30">
                     +$15,000 Value
                   </div>
                   <h3 className="text-xl font-semibold">Property Enhancement</h3>
@@ -449,7 +449,7 @@ export default function WhySolar() {
       </section>
 
       {/* Additional Benefits */}
-      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -475,8 +475,8 @@ export default function WhySolar() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-[#0072CE]/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#0072CE]/30">
-                  <benefit.icon className="w-8 h-8 text-[#0072CE]" />
+                <div className="w-16 h-16 bg-[#00d4ff]/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#00d4ff]/30">
+                  <benefit.icon className="w-8 h-8 text-[#00d4ff]" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-[#b0b0b0]">{benefit.description}</p>
@@ -487,7 +487,7 @@ export default function WhySolar() {
       </section>
 
       {/* Myths vs Facts */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -520,11 +520,11 @@ export default function WhySolar() {
                     </div>
                   </div>
                 </div>
-                <div className="glass rounded-lg p-6 border border-[#0072CE]/30">
+                <div className="glass rounded-lg p-6 border border-[#00d4ff]/30">
                   <div className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-1" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="text-lg font-semibold text-[#0072CE] mb-2">Fact</h3>
+                      <h3 className="text-lg font-semibold text-[#00d4ff] mb-2">Fact</h3>
                       <p className="text-[#b0b0b0]">{item.fact}</p>
                     </div>
                   </div>
@@ -536,10 +536,10 @@ export default function WhySolar() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-[#FFE500]/20">
+      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -549,9 +549,9 @@ export default function WhySolar() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
-              <SunIcon className="w-5 h-5 text-[#FFE500]" />
-              <span className="text-[#FFE500] font-semibold text-sm">Start Your Solar Journey</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <SunIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold text-sm">Start Your Solar Journey</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

@@ -54,27 +54,27 @@ export default function CountdownBanner() {
   }, [])
 
   return (
-    <div className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0072CE 0%, #005BB5 50%, #0072CE 100%)' }}>
+    <div className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%)' }}>
       {/* Star field background */}
       <div className="absolute inset-0 star-field opacity-30" />
 
       {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/20 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#FFE500]/10 rounded-full blur-[80px]" />
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/20 rounded-full blur-[100px] animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#f5a623]/10 rounded-full blur-[80px]" />
       </div>
 
       {/* Top gradient line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFE500]/50 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5a623]/50 to-transparent" />
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 relative z-10">
         <div className="flex flex-col items-center gap-6">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#FFE500]/30 bg-[#FFE500]/10 backdrop-blur-sm">
-            <CalendarIcon className="w-4 h-4 text-[#FFE500]" />
-            <span className="text-[#FFE500] text-xs sm:text-sm font-semibold tracking-wide uppercase">Deadline Approaching</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f5a623]/30 bg-[#f5a623]/10 backdrop-blur-sm">
+            <CalendarIcon className="w-4 h-4 text-[#f5a623]" />
+            <span className="text-[#f5a623] text-xs sm:text-sm font-semibold tracking-wide uppercase">Deadline Approaching</span>
           </div>
 
           {/* Main message */}
@@ -91,7 +91,7 @@ export default function CountdownBanner() {
           {/* Countdown timer */}
           <div className="w-full max-w-lg">
             <div className="flex items-center justify-center gap-2 text-gray-500 mb-4">
-              <ClockIcon className="w-4 h-4 text-[#0072CE]" />
+              <ClockIcon className="w-4 h-4 text-[#00d4ff]" />
               <span className="text-xs sm:text-sm font-medium uppercase tracking-wider">Time Left Until Rebate Reduces</span>
             </div>
             <div className="flex gap-3 sm:gap-4 justify-center">
@@ -106,7 +106,7 @@ export default function CountdownBanner() {
                   className="relative group"
                 >
                   {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#FFE500]/30 to-[#0072CE]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity" />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-[#f5a623]/30 to-[#00d4ff]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity" />
 
                   {/* Card */}
                   <div className="relative glass rounded-xl px-4 py-3 sm:px-5 sm:py-4 min-w-[70px] sm:min-w-[80px] border border-white/10">
@@ -127,9 +127,9 @@ export default function CountdownBanner() {
             href="/quote"
             className="group relative inline-flex items-center gap-2 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FFE500] to-[#FFD700] rounded-xl" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#FFD700] to-[#FFE500] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative flex items-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-[#0072CE] font-bold text-sm sm:text-base">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] rounded-xl" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#ff8c00] to-[#f5a623] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative flex items-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-[#0a0a0f] font-bold text-sm sm:text-base">
               <LockIcon className="w-5 h-5" />
               <span>Lock in My Rebate</span>
             </div>
@@ -138,7 +138,7 @@ export default function CountdownBanner() {
       </div>
 
       {/* Bottom gradient line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#0072CE]/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00d4ff]/50 to-transparent" />
     </div>
   )
 }

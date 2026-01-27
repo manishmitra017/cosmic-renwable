@@ -148,7 +148,7 @@ export default function CustomerReviews() {
       <StarIcon
         key={i}
         filled={i < rating}
-        className={`w-5 h-5 ${i < rating ? 'text-[#FFE500]' : 'text-gray-600'}`}
+        className={`w-5 h-5 ${i < rating ? 'text-[#f5a623]' : 'text-gray-600'}`}
       />
     ))
   }
@@ -164,12 +164,12 @@ export default function CustomerReviews() {
   }
 
   return (
-    <section className="relative py-20 sm:py-28 overflow-hidden bg-[#0072CE]">
+    <section className="relative py-20 sm:py-28 overflow-hidden bg-[#0a0a0f]">
       {/* Cosmic Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 star-field opacity-30"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#FFE500]/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#0072CE]/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#f5a623]/5 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#00d4ff]/5 rounded-full blur-3xl"></div>
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
@@ -190,10 +190,10 @@ export default function CustomerReviews() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFE500]/10 border border-[#FFE500]/20 mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5a623]/10 border border-[#f5a623]/20 mb-6"
           >
-            <StarIcon filled className="w-4 h-4 text-[#FFE500]" />
-            <span className="text-[#FFE500] text-sm font-medium tracking-wide">Customer Stories</span>
+            <StarIcon filled className="w-4 h-4 text-[#f5a623]" />
+            <span className="text-[#f5a623] text-sm font-medium tracking-wide">Customer Stories</span>
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold font-display mb-6">
@@ -253,22 +253,22 @@ export default function CustomerReviews() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 {/* Card Glow Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FFE500]/20 to-[#0072CE]/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                <div className="relative glass rounded-2xl p-6 border border-white/10 hover:border-[#FFE500]/30 transition-all duration-300 h-full flex flex-col">
+                <div className="relative glass rounded-2xl p-6 border border-white/10 hover:border-[#f5a623]/30 transition-all duration-300 h-full flex flex-col">
                   {/* Quote Icon */}
-                  <QuoteIcon className="absolute top-4 right-4 w-8 h-8 text-[#FFE500]/10" />
+                  <QuoteIcon className="absolute top-4 right-4 w-8 h-8 text-[#f5a623]/10" />
 
                   {/* Header */}
                   <div className="flex items-start mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-full flex items-center justify-center text-[#0072CE] font-bold text-lg mr-4 shadow-lg shadow-[#FFE500]/20">
+                    <div className="w-12 h-12 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-full flex items-center justify-center text-[#0a0a0f] font-bold text-lg mr-4 shadow-lg shadow-[#f5a623]/20">
                       {review.name.charAt(0)}
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <h3 className="font-semibold text-white truncate">{review.name}</h3>
                         {review.verified && (
-                          <CheckIcon className="w-4 h-4 text-[#0072CE] flex-shrink-0" />
+                          <CheckIcon className="w-4 h-4 text-[#00d4ff] flex-shrink-0" />
                         )}
                       </div>
                       <p className="text-sm text-gray-400">{review.location}</p>
@@ -290,7 +290,7 @@ export default function CustomerReviews() {
                   {review.verified && (
                     <div className="mt-4 pt-4 border-t border-white/5">
                       <div className="flex items-center gap-2 text-xs text-gray-500">
-                        <CheckIcon className="w-3.5 h-3.5 text-[#0072CE]" />
+                        <CheckIcon className="w-3.5 h-3.5 text-[#00d4ff]" />
                         <span>Verified Google Review</span>
                       </div>
                     </div>
@@ -304,10 +304,10 @@ export default function CustomerReviews() {
           <div className="flex justify-center items-center mt-10 gap-6">
             <button
               onClick={prevReview}
-              className="w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-[#FFE500]/50 hover:bg-[#FFE500]/10 transition-all duration-300 group"
+              className="w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-[#f5a623]/50 hover:bg-[#f5a623]/10 transition-all duration-300 group"
               aria-label="Previous review"
             >
-              <ChevronLeftIcon className="w-5 h-5 text-gray-400 group-hover:text-[#FFE500] transition-colors" />
+              <ChevronLeftIcon className="w-5 h-5 text-gray-400 group-hover:text-[#f5a623] transition-colors" />
             </button>
 
             {/* Pagination Dots */}
@@ -318,7 +318,7 @@ export default function CustomerReviews() {
                   onClick={() => setCurrentReview(index)}
                   className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                     index === currentReview
-                      ? 'bg-[#FFE500] w-8 shadow-lg shadow-[#FFE500]/30'
+                      ? 'bg-[#f5a623] w-8 shadow-lg shadow-[#f5a623]/30'
                       : 'bg-white/20 hover:bg-white/40'
                   }`}
                   aria-label={`Go to review ${index + 1}`}
@@ -328,10 +328,10 @@ export default function CustomerReviews() {
 
             <button
               onClick={nextReview}
-              className="w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-[#FFE500]/50 hover:bg-[#FFE500]/10 transition-all duration-300 group"
+              className="w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-[#f5a623]/50 hover:bg-[#f5a623]/10 transition-all duration-300 group"
               aria-label="Next review"
             >
-              <ChevronRightIcon className="w-5 h-5 text-gray-400 group-hover:text-[#FFE500] transition-colors" />
+              <ChevronRightIcon className="w-5 h-5 text-gray-400 group-hover:text-[#f5a623] transition-colors" />
             </button>
           </div>
         </div>
@@ -345,15 +345,15 @@ export default function CustomerReviews() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="flex items-center gap-2">
-            <CheckIcon className="w-4 h-4 text-[#0072CE]" />
+            <CheckIcon className="w-4 h-4 text-[#00d4ff]" />
             <span>100% Authentic Reviews</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckIcon className="w-4 h-4 text-[#0072CE]" />
+            <CheckIcon className="w-4 h-4 text-[#00d4ff]" />
             <span>Real Customer Experiences</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckIcon className="w-4 h-4 text-[#0072CE]" />
+            <CheckIcon className="w-4 h-4 text-[#00d4ff]" />
             <span>Verified by Google</span>
           </div>
         </motion.div>

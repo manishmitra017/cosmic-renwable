@@ -58,13 +58,13 @@ export default function CheaperHomeBatteriesArticle() {
     <div className="cosmic-bg">
       {/* Article Header */}
       <article>
-        <header className="relative py-16 sm:py-24 bg-[#0072CE] overflow-hidden">
+        <header className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
           {/* Star field background */}
           <div className="absolute inset-0 star-field opacity-40"></div>
 
           {/* Animated gradient orbs */}
-          <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
@@ -74,12 +74,12 @@ export default function CheaperHomeBatteriesArticle() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#0072CE] transition-colors flex items-center gap-2">
+                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#00d4ff] transition-colors flex items-center gap-2">
                   <ArrowLeftIcon className="w-4 h-4" />
                   Back to Articles
                 </Link>
                 <span className="text-[#b0b0b0]/50">|</span>
-                <span className="glass px-3 py-1 rounded-full text-sm text-[#FFE500] border border-[#FFE500]/20">Government Rebates</span>
+                <span className="glass px-3 py-1 rounded-full text-sm text-[#f5a623] border border-[#f5a623]/20">Government Rebates</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
                 $2.3 Billion Cheaper Home Batteries Program:{' '}
@@ -89,7 +89,7 @@ export default function CheaperHomeBatteriesArticle() {
                 Everything you need to know about Australia&apos;s landmark battery rebate program offering 30% off home batteries
               </p>
               <div className="flex items-center justify-center gap-4 text-[#b0b0b0]">
-                <span className="text-[#FFE500]">August 2025</span>
+                <span className="text-[#f5a623]">August 2025</span>
                 <span>|</span>
                 <span>8 min read</span>
               </div>
@@ -98,7 +98,7 @@ export default function CheaperHomeBatteriesArticle() {
         </header>
 
         {/* Featured Image */}
-        <div className="relative -mt-8 mb-12 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+        <div className="relative -mt-8 mb-12 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               className="max-w-4xl mx-auto"
@@ -114,14 +114,14 @@ export default function CheaperHomeBatteriesArticle() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
               </div>
             </motion.div>
           </div>
         </div>
 
         {/* Article Content */}
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 bg-[#0072CE]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 bg-[#0a0a0f]">
           <motion.div
             className="max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -130,8 +130,8 @@ export default function CheaperHomeBatteriesArticle() {
             transition={{ duration: 0.8 }}
           >
             {/* Key Takeaway Box */}
-            <div className="glass border-l-4 border-[#FFE500] p-6 rounded-r-xl mb-10">
-              <h2 className="text-xl font-bold text-[#FFE500] mb-3">Key Takeaway</h2>
+            <div className="glass border-l-4 border-[#f5a623] p-6 rounded-r-xl mb-10">
+              <h2 className="text-xl font-bold text-[#f5a623] mb-3">Key Takeaway</h2>
               <p className="text-[#b0b0b0] text-lg">
                 The Cheaper Home Batteries Program provides approximately <strong className="text-white">30% off the upfront cost</strong> of
                 eligible battery systems (5-100kWh). The discount is applied automatically at checkout by your installer
@@ -159,33 +159,33 @@ export default function CheaperHomeBatteriesArticle() {
               {/* How It Works */}
               <div className="card-cosmic p-6 mb-10">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <BoltIcon className="w-6 h-6 text-[#FFE500]" />
+                  <BoltIcon className="w-6 h-6 text-[#f5a623]" />
                   How It Works
                 </h3>
                 <ol className="space-y-4">
                   <li className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] rounded-full flex items-center justify-center font-bold">1</span>
+                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] rounded-full flex items-center justify-center font-bold">1</span>
                     <div>
                       <strong className="text-white">Choose Your Battery</strong>
                       <p className="text-[#b0b0b0]">Select an eligible battery system (5kWh - 100kWh) from our range of CEC-approved products.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] rounded-full flex items-center justify-center font-bold">2</span>
+                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] rounded-full flex items-center justify-center font-bold">2</span>
                     <div>
                       <strong className="text-white">Get Your Quote</strong>
                       <p className="text-[#b0b0b0]">We provide a quote with the rebate already deducted - you see the discounted price upfront.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] rounded-full flex items-center justify-center font-bold">3</span>
+                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] rounded-full flex items-center justify-center font-bold">3</span>
                     <div>
                       <strong className="text-white">Professional Installation</strong>
                       <p className="text-[#b0b0b0]">Our SAA-accredited installers complete the installation to all required standards.</p>
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] rounded-full flex items-center justify-center font-bold">4</span>
+                    <span className="flex-shrink-0 w-8 h-8 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] rounded-full flex items-center justify-center font-bold">4</span>
                     <div>
                       <strong className="text-white">We Handle The Paperwork</strong>
                       <p className="text-[#b0b0b0]">We manage all the STC paperwork and government claims - you don&apos;t need to do anything.</p>
@@ -205,18 +205,18 @@ export default function CheaperHomeBatteriesArticle() {
 
               {/* Savings Examples */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <div className="card-cosmic p-6 text-center border-[#FFE500]/30">
-                  <div className="text-3xl font-bold text-[#FFE500] mb-2">~$3,300</div>
+                <div className="card-cosmic p-6 text-center border-[#f5a623]/30">
+                  <div className="text-3xl font-bold text-[#f5a623] mb-2">~$3,300</div>
                   <div className="text-lg font-semibold text-white mb-2">10kWh Battery</div>
                   <div className="text-[#b0b0b0] text-sm">Typical home backup system</div>
                 </div>
-                <div className="card-cosmic p-6 text-center border-[#0072CE]/30">
-                  <div className="text-3xl font-bold text-[#0072CE] mb-2">~$4,000</div>
+                <div className="card-cosmic p-6 text-center border-[#00d4ff]/30">
+                  <div className="text-3xl font-bold text-[#00d4ff] mb-2">~$4,000</div>
                   <div className="text-lg font-semibold text-white mb-2">11.5kWh Battery</div>
                   <div className="text-[#b0b0b0] text-sm">Tesla Powerwall size</div>
                 </div>
-                <div className="card-cosmic p-6 text-center border-[#FFE500]/30">
-                  <div className="text-3xl font-bold text-[#FFE500] mb-2">~$5,000</div>
+                <div className="card-cosmic p-6 text-center border-[#f5a623]/30">
+                  <div className="text-3xl font-bold text-[#f5a623] mb-2">~$5,000</div>
                   <div className="text-lg font-semibold text-white mb-2">13.5kWh Battery</div>
                   <div className="text-[#b0b0b0] text-sm">Premium home storage</div>
                 </div>
@@ -230,28 +230,28 @@ export default function CheaperHomeBatteriesArticle() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                      <CheckIcon className="w-6 h-6 text-[#0072CE]" />
+                      <CheckIcon className="w-6 h-6 text-[#00d4ff]" />
                       What&apos;s Eligible
                     </h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
-                        <span className="text-[#0072CE] mt-1">✓</span>
+                        <span className="text-[#00d4ff] mt-1">✓</span>
                         <span className="text-[#b0b0b0]">Battery systems 5kWh - 100kWh nominal capacity</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-[#0072CE] mt-1">✓</span>
+                        <span className="text-[#00d4ff] mt-1">✓</span>
                         <span className="text-[#b0b0b0]">New batteries with new or existing solar PV</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-[#0072CE] mt-1">✓</span>
+                        <span className="text-[#00d4ff] mt-1">✓</span>
                         <span className="text-[#b0b0b0]">Homes, small businesses, and community facilities</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-[#0072CE] mt-1">✓</span>
+                        <span className="text-[#00d4ff] mt-1">✓</span>
                         <span className="text-[#b0b0b0]">Both on-grid and off-grid systems</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <span className="text-[#0072CE] mt-1">✓</span>
+                        <span className="text-[#00d4ff] mt-1">✓</span>
                         <span className="text-[#b0b0b0]">CEC-approved battery products</span>
                       </li>
                     </ul>
@@ -291,22 +291,22 @@ export default function CheaperHomeBatteriesArticle() {
                 Technical Requirements
               </h2>
 
-              <div className="card-cosmic p-6 mb-10 border-[#0072CE]/20">
+              <div className="card-cosmic p-6 mb-10 border-[#00d4ff]/20">
                 <ul className="space-y-4">
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckCircleIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]"><strong className="text-white">VPP Capable:</strong> On-grid batteries must be capable of Virtual Power Plant integration (able to connect to the internet)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckCircleIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]"><strong className="text-white">CEC Approved:</strong> Battery and inverter must be on the Clean Energy Council approved product list</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckCircleIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]"><strong className="text-white">Accredited Installer:</strong> Installation must be done by a Solar Accreditation Australia (SAA) accredited installer</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircleIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckCircleIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]"><strong className="text-white">Safety Standards:</strong> Must comply with AS/NZS 5139:2019 and the Best Practice Guide for Battery Storage</span>
                   </li>
                 </ul>
@@ -320,14 +320,14 @@ export default function CheaperHomeBatteriesArticle() {
                 Beyond the upfront rebate, a home battery can deliver significant ongoing savings on your electricity bills:
               </p>
 
-              <div className="bg-gradient-to-r from-[#FFE500]/20 to-[#0072CE]/20 rounded-xl p-8 mb-10 border border-[#FFE500]/30">
+              <div className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20 rounded-xl p-8 mb-10 border border-[#f5a623]/30">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-[#FFE500] mb-2">$700 - $1,600</div>
+                    <div className="text-4xl font-bold text-[#f5a623] mb-2">$700 - $1,600</div>
                     <div className="text-[#b0b0b0]">Total annual electricity savings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-[#0072CE] mb-2">$300 - $900</div>
+                    <div className="text-4xl font-bold text-[#00d4ff] mb-2">$300 - $900</div>
                     <div className="text-[#b0b0b0]">Savings directly from battery</div>
                   </div>
                 </div>
@@ -345,7 +345,7 @@ export default function CheaperHomeBatteriesArticle() {
             </div>
 
             {/* Call to Action */}
-            <div className="bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] rounded-2xl p-8 sm:p-12 text-center mt-12 border border-[#FFE500]/20">
+            <div className="bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] rounded-2xl p-8 sm:p-12 text-center mt-12 border border-[#f5a623]/20">
               <h2 className="text-2xl sm:text-3xl font-display font-bold text-white mb-4">
                 Ready to Get Your <span className="text-gradient-solar">30% Battery Discount?</span>
               </h2>
@@ -381,7 +381,7 @@ export default function CheaperHomeBatteriesArticle() {
                 href="https://www.dcceew.gov.au/energy/programs/cheaper-home-batteries"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#0072CE] hover:text-[#FFE500] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
               >
                 Visit DCCEEW Official Page
                 <ExternalLinkIcon className="w-4 h-4" />
@@ -392,7 +392,7 @@ export default function CheaperHomeBatteriesArticle() {
             <div className="mt-8 text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center gap-2 text-[#0072CE] hover:text-[#FFE500] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
                 Back to All Articles

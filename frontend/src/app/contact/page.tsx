@@ -154,9 +154,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-[#0072CE]">
+    <div className="bg-[#0a0a0f]">
       {/* Contact Banner */}
-      <section className="py-4 bg-gradient-to-r from-[#FFE500] to-[#FFD700] relative overflow-hidden">
+      <section className="py-4 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10"></div>
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -166,27 +166,27 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
-              <div className="flex items-center gap-2 text-[#0072CE] font-bold text-lg sm:text-xl">
+              <div className="flex items-center gap-2 text-[#0a0a0f] font-bold text-lg sm:text-xl">
                 <RocketIcon className="w-5 h-5" />
                 <span>Australia&apos;s #1 Solar &amp; Battery Experts</span>
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                 <a
                   href="tel:1300090984"
-                  className="bg-[#0072CE] text-[#FFE500] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#005BB5] transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-[#0a0a0f] text-[#f5a623] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#1a1a2e] transition-colors shadow-lg flex items-center gap-2"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="bg-[#0072CE] text-[#0072CE] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#005BB5] transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-[#0a0a0f] text-[#00d4ff] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#1a1a2e] transition-colors shadow-lg flex items-center gap-2"
                 >
                   <DevicePhoneIcon className="w-4 h-4" />
                   +61 422 786 100
                 </a>
               </div>
-              <div className="text-[#0072CE] font-semibold text-sm sm:text-base">
+              <div className="text-[#0a0a0f] font-semibold text-sm sm:text-base">
                 Call Now for Instant Quote!
               </div>
             </div>
@@ -204,10 +204,10 @@ export default function Contact() {
             className="object-cover opacity-30"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0072CE]/80 via-[#0072CE]/60 to-[#0072CE]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/80 via-[#0a0a0f]/60 to-[#0a0a0f]"></div>
           <div className="absolute inset-0 star-field opacity-40"></div>
-          <div className="absolute top-20 right-20 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-48 h-48 bg-[#0072CE]/10 rounded-full blur-3xl animate-float-delayed"></div>
+          <div className="absolute top-20 right-20 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-48 h-48 bg-[#00d4ff]/10 rounded-full blur-3xl animate-float-delayed"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -221,10 +221,10 @@ export default function Contact() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FFE500]/10 border border-[#FFE500]/20 mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5a623]/10 border border-[#f5a623]/20 mb-6"
             >
-              <SparklesIcon className="w-4 h-4 text-[#FFE500]" />
-              <span className="text-[#FFE500] text-sm font-medium tracking-wide">Get In Touch</span>
+              <SparklesIcon className="w-4 h-4 text-[#f5a623]" />
+              <span className="text-[#f5a623] text-sm font-medium tracking-wide">Get In Touch</span>
             </motion.div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 sm:mb-6 leading-tight">
               <span className="text-white">Contact </span>
@@ -239,7 +239,7 @@ export default function Contact() {
       </section>
 
       {/* Quick Contact Cards */}
-      <section className="py-12 bg-[#0072CE] relative">
+      <section className="py-12 bg-[#0a0a0f] relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <motion.div
@@ -249,12 +249,12 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg shadow-[#FFE500]/20">
-                <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-[#0072CE]" />
+              <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg shadow-[#f5a623]/20">
+                <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-[#0a0a0f]" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Call Now</h3>
-              <a href="tel:1300090984" className="block text-lg sm:text-2xl font-bold text-[#FFE500] mb-1 hover:text-[#FFD700] transition-colors">1300 09 09 84</a>
-              <a href="tel:+61422786100" className="block text-base sm:text-lg font-bold text-[#0072CE] mb-2 hover:text-[#00b8e0] transition-colors">+61 422 786 100</a>
+              <a href="tel:1300090984" className="block text-lg sm:text-2xl font-bold text-[#f5a623] mb-1 hover:text-[#ff8c00] transition-colors">1300 09 09 84</a>
+              <a href="tel:+61422786100" className="block text-base sm:text-lg font-bold text-[#00d4ff] mb-2 hover:text-[#00b8e0] transition-colors">+61 422 786 100</a>
               <p className="text-gray-500 text-xs sm:text-sm">Mon-Fri: 8am-6pm | Sat: 9am-4pm</p>
             </motion.div>
 
@@ -265,11 +265,11 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#0072CE] to-[#0099cc] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#0072CE]/20">
-                <EnvelopeIcon className="w-8 h-8 text-[#0072CE]" />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#00d4ff] to-[#0099cc] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#00d4ff]/20">
+                <EnvelopeIcon className="w-8 h-8 text-[#0a0a0f]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-[#FFE500] font-semibold mb-2">info@cosmicrenewableenergy.com.au</p>
+              <p className="text-[#f5a623] font-semibold mb-2">info@cosmicrenewableenergy.com.au</p>
               <p className="text-gray-500 text-sm">24/7 email support</p>
             </motion.div>
 
@@ -280,8 +280,8 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#FFE500] to-[#FFD700] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#FFE500]/20">
-                <MapPinIcon className="w-8 h-8 text-[#0072CE]" />
+              <div className="w-16 h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#f5a623]/20">
+                <MapPinIcon className="w-8 h-8 text-[#0a0a0f]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
               <p className="text-gray-400 mb-2">12 Galli Court<br />Hillside, Victoria 3037</p>
@@ -295,8 +295,8 @@ export default function Contact() {
       <section className="py-20 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 star-field opacity-20"></div>
-          <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#FFE500]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-[#0072CE]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#f5a623]/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-[#00d4ff]/5 rounded-full blur-3xl"></div>
         </div>
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
@@ -317,13 +317,13 @@ export default function Contact() {
 
               <div className="space-y-6 mb-8">
                 {[
-                  { icon: TrophyIcon, title: '2000+ Happy Customers', desc: 'Trusted by families and businesses across Australia', colorClass: 'text-[#FFE500]' },
-                  { icon: BoltIcon, title: '10+ Years Experience', desc: 'CEC-accredited professionals with proven expertise', colorClass: 'text-[#0072CE]' },
-                  { icon: ShieldCheckIcon, title: '5-Year Warranty', desc: 'Comprehensive workmanship guarantee included', colorClass: 'text-[#FFE500]' },
-                  { icon: CurrencyIcon, title: 'Government Rebates', desc: 'We handle all paperwork for maximum savings', colorClass: 'text-[#0072CE]' },
+                  { icon: TrophyIcon, title: '2000+ Happy Customers', desc: 'Trusted by families and businesses across Australia', colorClass: 'text-[#f5a623]' },
+                  { icon: BoltIcon, title: '10+ Years Experience', desc: 'CEC-accredited professionals with proven expertise', colorClass: 'text-[#00d4ff]' },
+                  { icon: ShieldCheckIcon, title: '5-Year Warranty', desc: 'Comprehensive workmanship guarantee included', colorClass: 'text-[#f5a623]' },
+                  { icon: CurrencyIcon, title: 'Government Rebates', desc: 'We handle all paperwork for maximum savings', colorClass: 'text-[#00d4ff]' },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start group">
-                    <div className="flex-shrink-0 w-12 h-12 glass rounded-xl flex items-center justify-center border border-white/10 group-hover:border-[#FFE500]/30 transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 glass rounded-xl flex items-center justify-center border border-white/10 group-hover:border-[#f5a623]/30 transition-colors">
                       <item.icon className={`w-5 h-5 ${item.colorClass}`} />
                     </div>
                     <div className="ml-4">
@@ -334,15 +334,15 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="glass rounded-2xl p-6 border border-[#FFE500]/20 bg-gradient-to-br from-[#FFE500]/10 to-transparent">
+              <div className="glass rounded-2xl p-6 border border-[#f5a623]/20 bg-gradient-to-br from-[#f5a623]/10 to-transparent">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <SparklesIcon className="w-5 h-5 text-[#FFE500]" />
+                  <SparklesIcon className="w-5 h-5 text-[#f5a623]" />
                   Free Consultation Includes:
                 </h3>
                 <ul className="space-y-3">
                   {['Complete energy audit', 'Custom system design', 'Accurate pricing quote', 'Rebate calculations'].map((item, index) => (
                     <li key={index} className="flex items-center text-gray-300">
-                      <CheckIcon className="w-5 h-5 text-[#0072CE] mr-3 flex-shrink-0" />
+                      <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -358,7 +358,7 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#FFE500]/30 to-[#0072CE]/30 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#f5a623]/30 to-[#00d4ff]/30 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               <div className="relative glass rounded-2xl p-8 border border-white/10">
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">Get Started Today</h3>
@@ -378,7 +378,7 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
                         placeholder="Your full name"
                       />
                     </div>
@@ -394,7 +394,7 @@ export default function Contact() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
                         placeholder="04XX XXX XXX"
                       />
                     </div>
@@ -411,7 +411,7 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
                       placeholder="your.email@example.com"
                     />
                   </div>
@@ -429,7 +429,7 @@ export default function Contact() {
                         required
                         value={formData.suburb}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
                         placeholder="Start typing your address..."
                       />
                     </div>
@@ -443,15 +443,15 @@ export default function Contact() {
                         name="serviceInterest"
                         value={formData.serviceInterest}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
                       >
-                        <option value="" className="bg-[#005BB5]">Select a service</option>
-                        <option value="solar-panels" className="bg-[#005BB5]">Solar Panels</option>
-                        <option value="solar-batteries" className="bg-[#005BB5]">Solar Batteries</option>
-                        <option value="heat-pumps" className="bg-[#005BB5]">Hot Water Heat Pump</option>
-                        <option value="hvac-systems" className="bg-[#005BB5]">HVAC Systems</option>
-                        <option value="maintenance" className="bg-[#005BB5]">Servicing &amp; Maintenance</option>
-                        <option value="consultation" className="bg-[#005BB5]">General Consultation</option>
+                        <option value="" className="bg-[#1a1a2e]">Select a service</option>
+                        <option value="solar-panels" className="bg-[#1a1a2e]">Solar Panels</option>
+                        <option value="solar-batteries" className="bg-[#1a1a2e]">Solar Batteries</option>
+                        <option value="heat-pumps" className="bg-[#1a1a2e]">Hot Water Heat Pump</option>
+                        <option value="hvac-systems" className="bg-[#1a1a2e]">HVAC Systems</option>
+                        <option value="maintenance" className="bg-[#1a1a2e]">Servicing &amp; Maintenance</option>
+                        <option value="consultation" className="bg-[#1a1a2e]">General Consultation</option>
                       </select>
                     </div>
                   </div>
@@ -466,7 +466,7 @@ export default function Contact() {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#FFE500]/50 focus:ring-1 focus:ring-[#FFE500]/50 transition-all resize-none"
+                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all resize-none"
                       placeholder="Tell us about your energy needs, roof details, current electricity bills, or any questions..."
                     />
                   </div>
@@ -474,7 +474,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-6 py-4 rounded-xl text-lg font-semibold hover:shadow-lg hover:shadow-[#FFE500]/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-6 py-4 rounded-xl text-lg font-semibold hover:shadow-lg hover:shadow-[#f5a623]/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>
@@ -494,7 +494,7 @@ export default function Contact() {
 
                   {submitMessage && (
                     <div className={`p-4 rounded-xl ${submitMessage.includes('Thank you')
-                        ? 'bg-[#0072CE]/10 text-[#0072CE] border border-[#0072CE]/20'
+                        ? 'bg-[#00d4ff]/10 text-[#00d4ff] border border-[#00d4ff]/20'
                         : 'bg-red-500/10 text-red-400 border border-red-500/20'
                       }`}>
                       {submitMessage}
@@ -506,7 +506,7 @@ export default function Contact() {
                   <p className="text-sm text-gray-500 mb-3">Or call us now for immediate assistance</p>
                   <a
                     href="tel:1300267642"
-                    className="inline-flex items-center gap-2 glass px-6 py-2 rounded-full font-semibold text-[#FFE500] border border-[#FFE500]/20 hover:bg-[#FFE500]/10 transition-all"
+                    className="inline-flex items-center gap-2 glass px-6 py-2 rounded-full font-semibold text-[#f5a623] border border-[#f5a623]/20 hover:bg-[#f5a623]/10 transition-all"
                   >
                     <PhoneIcon className="w-4 h-4" />
                     1300 COSMIC
@@ -554,12 +554,12 @@ export default function Contact() {
                   ].map((item, index) => (
                     <div key={index} className="flex items-start">
                       <div className="w-10 h-10 glass rounded-lg flex items-center justify-center border border-white/10 flex-shrink-0">
-                        <item.icon className="w-5 h-5 text-[#FFE500]" />
+                        <item.icon className="w-5 h-5 text-[#f5a623]" />
                       </div>
                       <div className="ml-4">
                         <p className="font-semibold text-white">{item.title}</p>
                         {item.isLink ? (
-                          <a href={item.href} className="text-[#FFE500] hover:text-[#FFD700] transition-colors whitespace-pre-line">
+                          <a href={item.href} className="text-[#f5a623] hover:text-[#ff8c00] transition-colors whitespace-pre-line">
                             {item.content}
                           </a>
                         ) : (
@@ -619,13 +619,13 @@ export default function Contact() {
             ].map((city, index) => (
               <motion.div
                 key={city}
-                className="p-3 sm:p-4 glass rounded-xl border border-white/5 hover:border-[#FFE500]/30 transition-all duration-300 group"
+                className="p-3 sm:p-4 glass rounded-xl border border-white/5 hover:border-[#f5a623]/30 transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
               >
-                <h3 className="font-semibold text-gray-300 group-hover:text-[#FFE500] transition-colors text-sm sm:text-base">{city}</h3>
+                <h3 className="font-semibold text-gray-300 group-hover:text-[#f5a623] transition-colors text-sm sm:text-base">{city}</h3>
               </motion.div>
             ))}
           </div>
@@ -673,7 +673,7 @@ export default function Contact() {
               ].map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="glass rounded-2xl p-6 border border-white/10 hover:border-[#FFE500]/30 transition-all duration-300"
+                  className="glass rounded-2xl p-6 border border-white/10 hover:border-[#f5a623]/30 transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -694,7 +694,7 @@ export default function Contact() {
 
       {/* Final CTA */}
       <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FFE500]/20 to-[#FFD700]/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623]/20 to-[#ff8c00]/20"></div>
         <div className="absolute inset-0 star-field opacity-30"></div>
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -712,7 +712,7 @@ export default function Contact() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-lg hover:shadow-[#FFE500]/30 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-lg hover:shadow-[#f5a623]/30 transition-all duration-300"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

@@ -58,13 +58,13 @@ export default function FederalBatteryRebateArticle() {
     <div className="cosmic-bg">
       <article>
         {/* Header */}
-        <header className="relative py-16 sm:py-24 bg-[#0072CE] overflow-hidden">
+        <header className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
           {/* Star field background */}
           <div className="absolute inset-0 star-field opacity-40"></div>
 
           {/* Animated gradient orbs */}
-          <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
@@ -74,12 +74,12 @@ export default function FederalBatteryRebateArticle() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#0072CE] transition-colors flex items-center gap-2">
+                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#00d4ff] transition-colors flex items-center gap-2">
                   <ArrowLeftIcon className="w-4 h-4" />
                   Back to Articles
                 </Link>
                 <span className="text-[#b0b0b0]/50">|</span>
-                <span className="glass px-3 py-1 rounded-full text-sm text-[#0072CE] border border-[#0072CE]/20">Government Rebates</span>
+                <span className="glass px-3 py-1 rounded-full text-sm text-[#00d4ff] border border-[#00d4ff]/20">Government Rebates</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
                 Federal Battery Rebate Changes: <span className="text-gradient-solar">$7.2 Billion Expansion</span> with New Rules for 2026
@@ -89,7 +89,7 @@ export default function FederalBatteryRebateArticle() {
               </p>
               <div className="flex items-center justify-center gap-4 text-[#b0b0b0]">
                 <span>December 2025</span>
-                <span className="text-[#FFE500]">|</span>
+                <span className="text-[#f5a623]">|</span>
                 <span>10 min read</span>
               </div>
             </motion.div>
@@ -113,7 +113,7 @@ export default function FederalBatteryRebateArticle() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -129,8 +129,8 @@ export default function FederalBatteryRebateArticle() {
             transition={{ duration: 0.8 }}
           >
             {/* Key Takeaway Box */}
-            <div className="card-cosmic p-6 mb-10 border-l-4 border-[#FFE500]">
-              <h2 className="text-xl font-bold text-[#FFE500] mb-3 flex items-center gap-2">
+            <div className="card-cosmic p-6 mb-10 border-l-4 border-[#f5a623]">
+              <h2 className="text-xl font-bold text-[#f5a623] mb-3 flex items-center gap-2">
                 <BoltIcon className="w-6 h-6" />
                 Key Takeaway for Our Customers
               </h2>
@@ -164,22 +164,22 @@ export default function FederalBatteryRebateArticle() {
               </p>
 
               {/* Important Changes Box */}
-              <div className="card-cosmic p-6 mb-10 border border-[#FFE500]/30">
-                <h3 className="text-xl font-bold text-[#FFE500] mb-4 flex items-center gap-2">
+              <div className="card-cosmic p-6 mb-10 border border-[#f5a623]/30">
+                <h3 className="text-xl font-bold text-[#f5a623] mb-4 flex items-center gap-2">
                   <ExclamationTriangleIcon className="w-6 h-6" />
                   Important Changes Coming May 2026
                 </h3>
                 <ul className="space-y-3 text-[#b0b0b0]">
                   <li className="flex items-start gap-3">
-                    <span className="text-[#FFE500] font-bold mt-1">1.</span>
+                    <span className="text-[#f5a623] font-bold mt-1">1.</span>
                     <span>Rebate will decline at a higher rate every <strong className="text-white">six months</strong>, instead of the annual reduction initially planned</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#FFE500] font-bold mt-1">2.</span>
+                    <span className="text-[#f5a623] font-bold mt-1">2.</span>
                     <span>The value of the rebate will be <strong className="text-white">significantly reduced for larger home battery systems</strong> under a new tiered system</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#FFE500] font-bold mt-1">3.</span>
+                    <span className="text-[#f5a623] font-bold mt-1">3.</span>
                     <span>All these changes will only apply to home batteries installed from the <strong className="text-white">start of May 2026</strong></span>
                   </li>
                 </ul>
@@ -206,13 +206,13 @@ export default function FederalBatteryRebateArticle() {
               </p>
 
               {/* Quote from Energy Minister */}
-              <blockquote className="card-cosmic p-6 mb-10 border-l-4 border-[#0072CE] italic text-[#b0b0b0]">
+              <blockquote className="card-cosmic p-6 mb-10 border-l-4 border-[#00d4ff] italic text-[#b0b0b0]">
                 <p className="mb-4">
                   &quot;We want more Aussie households to have access to batteries that are good for bills and good for the grid
                   – because it means more cheap, fast, safe solar energy is available in our homes night or day, when and
                   where it&apos;s needed.&quot;
                 </p>
-                <cite className="text-[#0072CE] not-italic font-semibold">— Energy Minister Chris Bowen</cite>
+                <cite className="text-[#00d4ff] not-italic font-semibold">— Energy Minister Chris Bowen</cite>
               </blockquote>
 
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
@@ -227,7 +227,7 @@ export default function FederalBatteryRebateArticle() {
 
               {/* Rebate Value Table */}
               <div className="card-cosmic overflow-hidden mb-10">
-                <div className="bg-gradient-to-r from-[#FFE500]/20 to-[#0072CE]/20 p-4">
+                <div className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20 p-4">
                   <h3 className="text-xl font-bold text-white">Estimated Rebate Value Per kWh</h3>
                 </div>
                 <div className="overflow-x-auto">
@@ -240,20 +240,20 @@ export default function FederalBatteryRebateArticle() {
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-white/10">
-                      <tr className="bg-[#FFE500]/10">
-                        <td className="p-4 font-semibold text-[#FFE500]">Rest of 2025</td>
-                        <td className="p-4 text-right font-bold text-[#FFE500] text-lg">$372</td>
-                        <td className="p-4 text-center"><span className="bg-[#FFE500] text-black px-3 py-1 rounded-full text-sm font-semibold">Current</span></td>
+                      <tr className="bg-[#f5a623]/10">
+                        <td className="p-4 font-semibold text-[#f5a623]">Rest of 2025</td>
+                        <td className="p-4 text-right font-bold text-[#f5a623] text-lg">$372</td>
+                        <td className="p-4 text-center"><span className="bg-[#f5a623] text-black px-3 py-1 rounded-full text-sm font-semibold">Current</span></td>
                       </tr>
                       <tr>
                         <td className="p-4 text-[#b0b0b0]">Jan - April 2026</td>
                         <td className="p-4 text-right font-semibold text-white">$336</td>
-                        <td className="p-4 text-center"><span className="glass px-3 py-1 rounded-full text-sm text-[#0072CE] border border-[#0072CE]/30">Upcoming</span></td>
+                        <td className="p-4 text-center"><span className="glass px-3 py-1 rounded-full text-sm text-[#00d4ff] border border-[#00d4ff]/30">Upcoming</span></td>
                       </tr>
-                      <tr className="bg-[#FFE500]/5">
+                      <tr className="bg-[#f5a623]/5">
                         <td className="p-4 text-[#b0b0b0]">May - Dec 2026 *</td>
                         <td className="p-4 text-right font-semibold text-white">$272</td>
-                        <td className="p-4 text-center"><span className="glass px-3 py-1 rounded-full text-sm text-[#FFE500] border border-[#FFE500]/30">New Rules Apply</span></td>
+                        <td className="p-4 text-center"><span className="glass px-3 py-1 rounded-full text-sm text-[#f5a623] border border-[#f5a623]/30">New Rules Apply</span></td>
                       </tr>
                       <tr>
                         <td className="p-4 text-[#b0b0b0]">Jan - June 2027</td>
@@ -319,17 +319,17 @@ export default function FederalBatteryRebateArticle() {
 
               {/* Tiered System */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                <div className="card-cosmic p-6 text-center border-2 border-[#0072CE]">
-                  <div className="text-4xl font-bold text-[#0072CE] mb-2">100%</div>
+                <div className="card-cosmic p-6 text-center border-2 border-[#00d4ff]">
+                  <div className="text-4xl font-bold text-[#00d4ff] mb-2">100%</div>
                   <div className="text-lg font-semibold text-white mb-2">Full Rebate</div>
                   <div className="text-[#b0b0b0]">Up to 14 kWh</div>
-                  <div className="mt-4 text-sm text-[#0072CE]">STC factor applied at full rate</div>
+                  <div className="mt-4 text-sm text-[#00d4ff]">STC factor applied at full rate</div>
                 </div>
-                <div className="card-cosmic p-6 text-center border-2 border-[#FFE500]">
-                  <div className="text-4xl font-bold text-[#FFE500] mb-2">60%</div>
+                <div className="card-cosmic p-6 text-center border-2 border-[#f5a623]">
+                  <div className="text-4xl font-bold text-[#f5a623] mb-2">60%</div>
                   <div className="text-lg font-semibold text-white mb-2">Reduced Rebate</div>
                   <div className="text-[#b0b0b0]">14 kWh to 28 kWh</div>
-                  <div className="mt-4 text-sm text-[#FFE500]">STC factor applied at 60%</div>
+                  <div className="mt-4 text-sm text-[#f5a623]">STC factor applied at 60%</div>
                 </div>
                 <div className="card-cosmic p-6 text-center border-2 border-red-500">
                   <div className="text-4xl font-bold text-red-500 mb-2">15%</div>
@@ -353,19 +353,19 @@ export default function FederalBatteryRebateArticle() {
                 <h3 className="text-xl font-bold text-white mb-4">Who Can Apply</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">Homes, small businesses, and community facilities</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">No means test – available regardless of income</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">Rebates available per property (multiple properties eligible)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">The scheme is uncapped – no limit on number of subsidies available</span>
                   </li>
                 </ul>
@@ -373,19 +373,19 @@ export default function FederalBatteryRebateArticle() {
                 <h3 className="text-xl font-bold text-white mb-4 mt-8">Technical Requirements</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">Battery systems must have usable capacity of <strong className="text-white">5 kWh to 50 kWh</strong></span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">Must be connected to new or existing rooftop solar</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">Installers must be accredited by Solar Accreditation Australia</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckIcon className="w-6 h-6 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-6 h-6 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                     <span className="text-[#b0b0b0]">Batteries must be on the Clean Energy Council-approved product list</span>
                   </li>
                 </ul>
@@ -420,17 +420,17 @@ export default function FederalBatteryRebateArticle() {
                 in the next few months won&apos;t suddenly be copping a reduced rebate for jobs already booked in.
               </p>
 
-              <blockquote className="card-cosmic p-6 mb-10 border-l-4 border-[#0072CE] italic text-[#b0b0b0]">
+              <blockquote className="card-cosmic p-6 mb-10 border-l-4 border-[#00d4ff] italic text-[#b0b0b0]">
                 <p className="mb-4">
                   &quot;We are a responsible industry that believes in spreading the benefits of solar and batteries to as
                   many people as possible. If that means changes to the rebate we support that.&quot;
                 </p>
-                <cite className="text-[#0072CE] not-italic font-semibold">— John Grimes, Smart Energy Council Chief Executive</cite>
+                <cite className="text-[#00d4ff] not-italic font-semibold">— John Grimes, Smart Energy Council Chief Executive</cite>
               </blockquote>
             </div>
 
             {/* Call to Action */}
-            <div className="card-cosmic p-8 sm:p-12 text-center mt-12 bg-gradient-to-r from-[#FFE500]/10 to-[#0072CE]/10 border border-[#FFE500]/30">
+            <div className="card-cosmic p-8 sm:p-12 text-center mt-12 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10 border border-[#f5a623]/30">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Act Now to Maximise Your Rebate
               </h2>
@@ -461,18 +461,18 @@ export default function FederalBatteryRebateArticle() {
             <div className="mt-12 pt-8 border-t border-white/10">
               <h3 className="text-xl font-bold text-white mb-6">Related Resources</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Link href="/battery-guide" className="flex items-center gap-4 p-4 card-cosmic hover:border-[#FFE500]/30 transition-colors">
-                  <div className="w-12 h-12 bg-[#FFE500]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <DocumentTextIcon className="w-6 h-6 text-[#FFE500]" />
+                <Link href="/battery-guide" className="flex items-center gap-4 p-4 card-cosmic hover:border-[#f5a623]/30 transition-colors">
+                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <DocumentTextIcon className="w-6 h-6 text-[#f5a623]" />
                   </div>
                   <div>
                     <div className="font-semibold text-white">Battery Guide</div>
                     <div className="text-sm text-[#b0b0b0]">Learn about home battery systems</div>
                   </div>
                 </Link>
-                <Link href="/battery-comparison" className="flex items-center gap-4 p-4 card-cosmic hover:border-[#FFE500]/30 transition-colors">
-                  <div className="w-12 h-12 bg-[#FFE500]/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <ChartBarIcon className="w-6 h-6 text-[#FFE500]" />
+                <Link href="/battery-comparison" className="flex items-center gap-4 p-4 card-cosmic hover:border-[#f5a623]/30 transition-colors">
+                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center flex-shrink-0">
+                    <ChartBarIcon className="w-6 h-6 text-[#f5a623]" />
                   </div>
                   <div>
                     <div className="font-semibold text-white">Battery Comparison</div>
@@ -486,7 +486,7 @@ export default function FederalBatteryRebateArticle() {
             <div className="mt-8 text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center gap-2 text-[#0072CE] hover:text-[#FFE500] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
                 Back to All Articles

@@ -113,15 +113,15 @@ export default function BatteryGuide() {
       icon: SunIcon,
       title: "1. Solar Panels Generate Power",
       description: "During the day, your solar panels convert sunlight into DC electricity. This power first goes to your home to run appliances.",
-      bgColor: "bg-[#FFE500]/20",
-      iconColor: "text-[#FFE500]"
+      bgColor: "bg-[#f5a623]/20",
+      iconColor: "text-[#f5a623]"
     },
     {
       icon: BatteryIcon,
       title: "2. Excess Power Gets Stored",
       description: "Any extra solar power your home doesn&apos;t use immediately gets stored in your battery for later. This is when electricity is free!",
-      bgColor: "bg-[#0072CE]/20",
-      iconColor: "text-[#0072CE]"
+      bgColor: "bg-[#00d4ff]/20",
+      iconColor: "text-[#00d4ff]"
     },
     {
       icon: MoonIcon,
@@ -177,13 +177,13 @@ export default function BatteryGuide() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#0072CE] overflow-hidden">
+      <section className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
         {/* Star field background */}
         <div className="absolute inset-0 star-field opacity-40"></div>
 
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -192,9 +192,9 @@ export default function BatteryGuide() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
-              <BookOpenIcon className="w-5 h-5 text-[#FFE500]" />
-              <span className="text-[#FFE500] font-semibold text-sm">Complete Guide</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <BookOpenIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold text-sm">Complete Guide</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
@@ -208,7 +208,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* Jargon Buster Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -218,9 +218,9 @@ export default function BatteryGuide() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#0072CE]/20">
-                <LanguageIcon className="w-5 h-5 text-[#0072CE]" />
-                <span className="text-[#0072CE] font-semibold text-sm">Terminology</span>
+              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
+                <LanguageIcon className="w-5 h-5 text-[#00d4ff]" />
+                <span className="text-[#00d4ff] font-semibold text-sm">Terminology</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                 Battery <span className="text-gradient-energy">Jargon Buster</span>
@@ -234,13 +234,13 @@ export default function BatteryGuide() {
               {jargonTerms.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="card-cosmic p-6 hover:border-[#FFE500]/30 transition-all duration-300"
+                  className="card-cosmic p-6 hover:border-[#f5a623]/30 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
-                  <h3 className="text-xl font-bold text-[#FFE500] mb-3">{item.term}</h3>
+                  <h3 className="text-xl font-bold text-[#f5a623] mb-3">{item.term}</h3>
                   <p className="text-[#b0b0b0] leading-relaxed">{item.definition}</p>
                 </motion.div>
               ))}
@@ -250,7 +250,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* How Batteries Work Section */}
-      <section className="py-16 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-16 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -262,9 +262,9 @@ export default function BatteryGuide() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
-                <BoltIcon className="w-5 h-5 text-[#FFE500]" />
-                <span className="text-[#FFE500] font-semibold text-sm">How It Works</span>
+              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+                <BoltIcon className="w-5 h-5 text-[#f5a623]" />
+                <span className="text-[#f5a623] font-semibold text-sm">How It Works</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                 How Solar Batteries <span className="text-gradient-solar">Actually Work</span>
@@ -300,7 +300,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* Common Questions */}
-      <section className="py-16 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -310,9 +310,9 @@ export default function BatteryGuide() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#0072CE]/20">
-                <QuestionMarkCircleIcon className="w-5 h-5 text-[#0072CE]" />
-                <span className="text-[#0072CE] font-semibold text-sm">FAQ</span>
+              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
+                <QuestionMarkCircleIcon className="w-5 h-5 text-[#00d4ff]" />
+                <span className="text-[#00d4ff] font-semibold text-sm">FAQ</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
                 Most Common <span className="text-gradient-energy">Questions Answered</span>
@@ -323,7 +323,7 @@ export default function BatteryGuide() {
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="card-cosmic p-6 hover:border-[#FFE500]/30 transition-all duration-300"
+                  className="card-cosmic p-6 hover:border-[#f5a623]/30 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -339,10 +339,10 @@ export default function BatteryGuide() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-[#FFE500]/20">
+      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -352,9 +352,9 @@ export default function BatteryGuide() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
-              <BoltIcon className="w-5 h-5 text-[#FFE500]" />
-              <span className="text-[#FFE500] font-semibold text-sm">Get Started</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <BoltIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold text-sm">Get Started</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">

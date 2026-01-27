@@ -66,11 +66,11 @@ export default function SolarBatteryMelbourne() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0072CE]">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0a0a0f]">
         {/* Background Effects */}
         <div className="absolute inset-0 star-field opacity-40"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="absolute inset-0">
           <Image
@@ -80,7 +80,7 @@ export default function SolarBatteryMelbourne() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0072CE] via-[#0072CE]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
@@ -91,9 +91,9 @@ export default function SolarBatteryMelbourne() {
             transition={{ duration: 0.8 }}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#FFE500]/30 mb-6">
-              <SparklesIcon className="w-4 h-4 text-[#FFE500]" />
-              <span className="text-[#FFE500] text-sm font-semibold">VICTORIA&apos;S #1 CHOICE</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#f5a623]/30 mb-6">
+              <SparklesIcon className="w-4 h-4 text-[#f5a623]" />
+              <span className="text-[#f5a623] text-sm font-semibold">VICTORIA&apos;S #1 CHOICE</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight font-display">
@@ -101,7 +101,7 @@ export default function SolarBatteryMelbourne() {
               <span className="block text-gradient-solar">Melbourne</span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-300 mb-8">
-              Government Rebates Up to <span className="text-[#FFE500] font-bold">$3,500</span>
+              Government Rebates Up to <span className="text-[#f5a623] font-bold">$3,500</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -124,7 +124,7 @@ export default function SolarBatteryMelbourne() {
       </section>
 
       {/* Melbourne-Specific Benefits */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#005BB5] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -137,14 +137,14 @@ export default function SolarBatteryMelbourne() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
-              className="card-cosmic p-8 rounded-2xl border border-[#FFE500]/20 hover:border-[#FFE500]/40 transition-all duration-300 group"
+              className="card-cosmic p-8 rounded-2xl border border-[#f5a623]/20 hover:border-[#f5a623]/40 transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="w-16 h-16 bg-[#FFE500]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <SunIcon className="w-8 h-8 text-[#FFE500]" />
+              <div className="w-16 h-16 bg-[#f5a623]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <SunIcon className="w-8 h-8 text-[#f5a623]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Year-Round Solar Potential</h3>
               <p className="text-gray-400">
@@ -153,14 +153,14 @@ export default function SolarBatteryMelbourne() {
             </motion.div>
 
             <motion.div
-              className="card-cosmic p-8 rounded-2xl border border-[#0072CE]/20 hover:border-[#0072CE]/40 transition-all duration-300 group"
+              className="card-cosmic p-8 rounded-2xl border border-[#00d4ff]/20 hover:border-[#00d4ff]/40 transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <div className="w-16 h-16 bg-[#0072CE]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <CurrencyIcon className="w-8 h-8 text-[#0072CE]" />
+              <div className="w-16 h-16 bg-[#00d4ff]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <CurrencyIcon className="w-8 h-8 text-[#00d4ff]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">VIC Energy Costs</h3>
               <p className="text-gray-400">
@@ -169,14 +169,14 @@ export default function SolarBatteryMelbourne() {
             </motion.div>
 
             <motion.div
-              className="card-cosmic p-8 rounded-2xl border border-[#FFE500]/20 hover:border-[#FFE500]/40 transition-all duration-300 group"
+              className="card-cosmic p-8 rounded-2xl border border-[#f5a623]/20 hover:border-[#f5a623]/40 transition-all duration-300 group"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <div className="w-16 h-16 bg-[#FFE500]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                <BoltIcon className="w-8 h-8 text-[#FFE500]" />
+              <div className="w-16 h-16 bg-[#f5a623]/10 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <BoltIcon className="w-8 h-8 text-[#f5a623]" />
               </div>
               <h3 className="text-xl font-bold text-white mb-3">Extreme Weather Backup</h3>
               <p className="text-gray-400">
@@ -188,9 +188,9 @@ export default function SolarBatteryMelbourne() {
       </section>
 
       {/* Melbourne Pricing */}
-      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-30"></div>
-        <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#FFE500]/5 rounded-full blur-[120px]"></div>
+        <div className="absolute top-1/2 right-0 w-96 h-96 bg-[#f5a623]/5 rounded-full blur-[120px]"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-5xl mx-auto">
@@ -200,21 +200,21 @@ export default function SolarBatteryMelbourne() {
                 <span className="text-gradient-energy">Pricing</span>
               </h2>
               <p className="text-xl text-gray-400">
-                Victorian residents can access up to <span className="text-[#FFE500] font-semibold">$3,500</span> in government rebates
+                Victorian residents can access up to <span className="text-[#f5a623] font-semibold">$3,500</span> in government rebates
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Essential */}
-              <div className="glass rounded-2xl p-8 border border-white/10 hover:border-[#0072CE]/30 transition-all duration-300">
+              <div className="glass rounded-2xl p-8 border border-white/10 hover:border-[#00d4ff]/30 transition-all duration-300">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">Essential</h3>
-                  <div className="text-4xl font-bold text-[#0072CE] mb-2">From $4,800</div>
+                  <div className="text-4xl font-bold text-[#00d4ff] mb-2">From $4,800</div>
                   <p className="text-gray-400 mb-6">5kWh Battery System</p>
                   <ul className="text-left space-y-3 mb-8">
                     {['5kWh usable capacity', '10-year warranty', 'Backup power ready', 'Full installation included'].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                         <span className="text-gray-300">{item}</span>
                       </li>
                     ))}
@@ -226,21 +226,21 @@ export default function SolarBatteryMelbourne() {
               </div>
 
               {/* Standard - Featured */}
-              <div className="relative glass rounded-2xl p-8 border-2 border-[#FFE500]/50 transform md:scale-105 shadow-2xl shadow-[#FFE500]/10">
+              <div className="relative glass rounded-2xl p-8 border-2 border-[#f5a623]/50 transform md:scale-105 shadow-2xl shadow-[#f5a623]/10">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <div className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                  <div className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                     <StarIcon className="w-4 h-4" />
                     MOST POPULAR
                   </div>
                 </div>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-white mb-4 mt-2">Standard</h3>
-                  <div className="text-4xl font-bold text-[#FFE500] mb-2">From $8,300</div>
+                  <div className="text-4xl font-bold text-[#f5a623] mb-2">From $8,300</div>
                   <p className="text-gray-400 mb-6">10kWh Battery System</p>
                   <ul className="text-left space-y-3 mb-8">
                     {['10kWh usable capacity', '10-year warranty', 'Full backup power', 'Modular expansion ready', 'Smart monitoring app'].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#FFE500] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#f5a623] flex-shrink-0 mt-0.5" />
                         <span className="text-gray-300">{item}</span>
                       </li>
                     ))}
@@ -252,15 +252,15 @@ export default function SolarBatteryMelbourne() {
               </div>
 
               {/* Premium */}
-              <div className="glass rounded-2xl p-8 border border-white/10 hover:border-[#0072CE]/30 transition-all duration-300">
+              <div className="glass rounded-2xl p-8 border border-white/10 hover:border-[#00d4ff]/30 transition-all duration-300">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-white mb-4">Premium</h3>
-                  <div className="text-4xl font-bold text-[#0072CE] mb-2">From $13,800</div>
+                  <div className="text-4xl font-bold text-[#00d4ff] mb-2">From $13,800</div>
                   <p className="text-gray-400 mb-6">13.5kWh Tesla Powerwall</p>
                   <ul className="text-left space-y-3 mb-8">
                     {['13.5kWh capacity', '10-year warranty', 'Tesla app monitoring', 'Premium installation'].map((item, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
                         <span className="text-gray-300">{item}</span>
                       </li>
                     ))}
@@ -280,7 +280,7 @@ export default function SolarBatteryMelbourne() {
       </section>
 
       {/* Melbourne Service Areas */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#005BB5] relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -298,7 +298,7 @@ export default function SolarBatteryMelbourne() {
             {suburbs.map((suburb, index) => (
               <motion.div
                 key={suburb}
-                className="glass rounded-lg p-3 text-center border border-white/5 hover:border-[#FFE500]/30 transition-colors"
+                className="glass rounded-lg p-3 text-center border border-white/5 hover:border-[#f5a623]/30 transition-colors"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
@@ -311,17 +311,17 @@ export default function SolarBatteryMelbourne() {
 
           <p className="text-center text-gray-500 mt-8">
             Don&apos;t see your suburb? We service all Greater Melbourne areas.{' '}
-            <Link href="/contact" className="text-[#FFE500] font-semibold hover:underline">Contact us</Link> to confirm.
+            <Link href="/contact" className="text-[#f5a623] font-semibold hover:underline">Contact us</Link> to confirm.
           </p>
         </div>
       </section>
 
       {/* Final CTA */}
       <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#FFE500]/20 via-[#005BB5] to-[#0072CE]/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623]/20 via-[#1a1a2e] to-[#00d4ff]/20"></div>
         <div className="absolute inset-0 star-field opacity-30"></div>
-        <div className="absolute top-10 left-1/4 w-32 h-32 bg-[#FFE500]/20 rounded-full blur-[60px] animate-float"></div>
-        <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-[#0072CE]/20 rounded-full blur-[80px] animate-float-delayed"></div>
+        <div className="absolute top-10 left-1/4 w-32 h-32 bg-[#f5a623]/20 rounded-full blur-[60px] animate-float"></div>
+        <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-[#00d4ff]/20 rounded-full blur-[80px] animate-float-delayed"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 font-display">
@@ -334,7 +334,7 @@ export default function SolarBatteryMelbourne() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
-              className="btn-solar inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-bold shadow-2xl shadow-[#FFE500]/20"
+              className="btn-solar inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-bold shadow-2xl shadow-[#f5a623]/20"
             >
               Get Free Melbourne Quote
               <ArrowRightIcon className="w-5 h-5" />

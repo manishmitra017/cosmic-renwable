@@ -178,13 +178,13 @@ export default function About() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0072CE]">
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0a0a0f]">
         {/* Star field background */}
         <div className="absolute inset-0 star-field opacity-40"></div>
 
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="absolute inset-0">
           <Image
@@ -203,9 +203,9 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
-              <BuildingOfficeIcon className="w-5 h-5 text-[#FFE500]" />
-              <span className="text-[#FFE500] font-semibold text-sm">About Us</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <BuildingOfficeIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold text-sm">About Us</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
@@ -223,7 +223,7 @@ export default function About() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
@@ -247,11 +247,11 @@ export default function About() {
 
               <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
                 <div className="text-center card-cosmic p-4 sm:p-6">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#FFE500] mb-1 sm:mb-2">10+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#f5a623] mb-1 sm:mb-2">10+</div>
                   <div className="text-[#b0b0b0] text-sm sm:text-base">Years Experience</div>
                 </div>
                 <div className="text-center card-cosmic p-4 sm:p-6">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#0072CE] mb-1 sm:mb-2">5000+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-[#00d4ff] mb-1 sm:mb-2">5000+</div>
                   <div className="text-[#b0b0b0] text-sm sm:text-base">Happy Customers</div>
                 </div>
               </div>
@@ -272,7 +272,7 @@ export default function About() {
               className="relative"
             >
               <div className="card-cosmic p-8">
-                <div className="h-64 rounded-lg overflow-hidden flex items-center justify-center bg-[#0072CE]">
+                <div className="h-64 rounded-lg overflow-hidden flex items-center justify-center bg-[#0a0a0f]">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy Company Logo"
@@ -288,7 +288,7 @@ export default function About() {
       </section>
 
       {/* Our Mission & Values */}
-      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -317,8 +317,8 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="w-16 h-16 bg-[#FFE500]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#FFE500]/30">
-                  <value.icon className="w-8 h-8 text-[#FFE500]" />
+                <div className="w-16 h-16 bg-[#f5a623]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#f5a623]/30">
+                  <value.icon className="w-8 h-8 text-[#f5a623]" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
                 <p className="text-[#b0b0b0] leading-relaxed">{value.description}</p>
@@ -329,7 +329,7 @@ export default function About() {
       </section>
 
       {/* Why Choose Cosmic Renewable Energy */}
-      <section className="py-20 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
+      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -351,21 +351,21 @@ export default function About() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic p-8 hover:border-[#FFE500]/30 transition-all duration-300"
+                className="card-cosmic p-8 hover:border-[#f5a623]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-[#0072CE]/10 rounded-full flex items-center justify-center mb-6 border border-[#0072CE]/30">
-                  <feature.icon className="w-8 h-8 text-[#0072CE]" />
+                <div className="w-16 h-16 bg-[#00d4ff]/10 rounded-full flex items-center justify-center mb-6 border border-[#00d4ff]/30">
+                  <feature.icon className="w-8 h-8 text-[#00d4ff]" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                 <p className="text-[#b0b0b0] mb-4 leading-relaxed">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.features.map((item, i) => (
                     <li key={i} className="flex items-center text-sm text-[#b0b0b0]">
-                      <CheckIcon className="w-4 h-4 text-[#0072CE] mr-2 flex-shrink-0" />
+                      <CheckIcon className="w-4 h-4 text-[#00d4ff] mr-2 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -377,7 +377,7 @@ export default function About() {
       </section>
 
       {/* Our Work Gallery */}
-      <section className="py-20 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -414,10 +414,10 @@ export default function About() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-1 sm:bottom-2 left-1 sm:left-2 right-1 sm:right-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 className="text-xs sm:text-sm font-semibold line-clamp-1">{project.title}</h3>
-                    <p className="text-xs text-[#0072CE]">{project.size} System</p>
+                    <p className="text-xs text-[#00d4ff]">{project.size} System</p>
                   </div>
                 </div>
               </motion.div>
@@ -434,15 +434,15 @@ export default function About() {
             <div className="card-cosmic p-8 max-w-3xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#FFE500] mb-2">5000+</div>
+                  <div className="text-3xl font-bold text-[#f5a623] mb-2">5000+</div>
                   <div className="text-[#b0b0b0]">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#0072CE] mb-2">100%</div>
+                  <div className="text-3xl font-bold text-[#00d4ff] mb-2">100%</div>
                   <div className="text-[#b0b0b0]">Customer Satisfaction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#FFE500] mb-2">10+</div>
+                  <div className="text-3xl font-bold text-[#f5a623] mb-2">10+</div>
                   <div className="text-[#b0b0b0]">Years Experience</div>
                 </div>
               </div>
@@ -455,10 +455,10 @@ export default function About() {
       </section>
 
       {/* Certifications & Accreditations */}
-      <section className="py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-b border-[#FFE500]/20">
+      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-b border-[#f5a623]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -487,8 +487,8 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="h-16 bg-gradient-to-br from-[#FFE500] to-[#0072CE] rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#0072CE] font-bold text-xl">{cert.abbr}</span>
+                <div className="h-16 bg-gradient-to-br from-[#f5a623] to-[#00d4ff] rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-[#0a0a0f] font-bold text-xl">{cert.abbr}</span>
                 </div>
                 <h3 className="text-white font-semibold mb-1">{cert.name}</h3>
                 <p className="text-[#b0b0b0] text-sm">{cert.description}</p>
@@ -499,7 +499,7 @@ export default function About() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-[#0072CE] relative overflow-hidden">
+      <section className="py-16 bg-[#0a0a0f] relative overflow-hidden">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -509,9 +509,9 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
-              <RocketIcon className="w-5 h-5 text-[#FFE500]" />
-              <span className="text-[#FFE500] font-semibold text-sm">Get Started Today</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
+              <RocketIcon className="w-5 h-5 text-[#f5a623]" />
+              <span className="text-[#f5a623] font-semibold text-sm">Get Started Today</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
