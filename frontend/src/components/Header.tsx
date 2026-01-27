@@ -124,8 +124,8 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="hidden lg:block text-sm text-gray-400">
-              Australia&apos;s Premium <span className="text-[#0072CE]">Solar Battery</span> Specialists
+            <span className="hidden lg:block text-sm text-white/80">
+              Australia&apos;s Premium <span className="text-[#FFE500]">Solar Battery</span> Specialists
             </span>
             <div className="flex items-center gap-2">
               {socialIcons.map((social, i) => (
@@ -191,7 +191,7 @@ export default function Header() {
                 <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">
                   Cosmic <span className="text-gradient-solar">Renewable</span> Energy
                 </h1>
-                <p className="text-[10px] sm:text-xs text-[#0072CE] font-medium hidden sm:block">
+                <p className="text-[10px] sm:text-xs text-[#FFE500]/80 font-medium hidden sm:block">
                   The Solar Energy Pioneers
                 </p>
               </div>
@@ -230,7 +230,7 @@ export default function Header() {
               {/* Quote Button */}
               <Link
                 href="/quote"
-                className="btn-energy flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg whitespace-nowrap flex-shrink-0"
+                className="flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-full whitespace-nowrap flex-shrink-0 bg-[#FFE500] text-[#0072CE] hover:bg-[#FFD700] hover:shadow-lg hover:shadow-[#FFE500]/30 transition-all"
               >
                 <BoltIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">Free Quote</span>
