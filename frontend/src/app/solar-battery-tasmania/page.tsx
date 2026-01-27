@@ -90,11 +90,11 @@ export default function SolarBatteryTasmania() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0a0a0f]">
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0072CE]">
         {/* Background Effects */}
         <div className="absolute inset-0 star-field opacity-40"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
@@ -103,9 +103,9 @@ export default function SolarBatteryTasmania() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <LeafIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold">Australia&apos;s Clean Energy State</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
+              <LeafIcon className="w-5 h-5 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-semibold">Australia&apos;s Clean Energy State</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
@@ -139,7 +139,7 @@ export default function SolarBatteryTasmania() {
       </section>
 
       {/* Why Tasmania Needs Batteries */}
-      <section className="relative py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
+      <section className="relative py-20 bg-gradient-to-b from-[#0072CE] to-[#005BB5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -161,25 +161,25 @@ export default function SolarBatteryTasmania() {
                 icon: LeafIcon,
                 title: "Clean Energy State",
                 description: "Tasmania has excellent solar potential year-round. Maximize renewable energy self-sufficiency",
-                color: "text-[#f5a623]"
+                color: "text-[#FFE500]"
               },
               {
                 icon: CurrencyIcon,
                 title: "TAS Energy Costs",
                 description: "Tasmanian electricity prices are 24-29c/kWh. Solar batteries reduce your energy bills significantly",
-                color: "text-[#00d4ff]"
+                color: "text-[#0072CE]"
               },
               {
                 icon: ShieldIcon,
                 title: "Remote Area Security",
                 description: "Tasmania's rural areas benefit from battery backup during weather events and outages",
-                color: "text-[#f5a623]"
+                color: "text-[#FFE500]"
               },
               {
                 icon: BoltIcon,
                 title: "Energy Independence",
                 description: "Reduce grid dependence and achieve energy independence for remote properties",
-                color: "text-[#00d4ff]"
+                color: "text-[#0072CE]"
               }
             ].map((benefit, index) => (
               <motion.div
@@ -202,7 +202,7 @@ export default function SolarBatteryTasmania() {
       </section>
 
       {/* Pricing Section */}
-      <section className="relative py-20 bg-[#0a0a0f]">
+      <section className="relative py-20 bg-[#0072CE]">
         <div className="absolute inset-0 star-field opacity-20"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -229,7 +229,7 @@ export default function SolarBatteryTasmania() {
               className="glass rounded-2xl p-8 border border-white/10"
             >
               <div className="text-center mb-6">
-                <BatteryIcon className="w-12 h-12 text-[#00d4ff] mx-auto mb-4" />
+                <BatteryIcon className="w-12 h-12 text-[#0072CE] mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Essential</h3>
                 <p className="text-gray-400 text-sm">Perfect for smaller Tasmanian homes</p>
               </div>
@@ -240,7 +240,7 @@ export default function SolarBatteryTasmania() {
               <ul className="space-y-3 mb-8">
                 {['5kWh capacity', 'Single phase', '10-year warranty', 'Backup power ready', 'Full installation'].map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                    <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -256,16 +256,16 @@ export default function SolarBatteryTasmania() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="relative glass rounded-2xl p-8 border-2 border-[#f5a623]/50 transform md:scale-105 shadow-2xl shadow-[#f5a623]/10"
+              className="relative glass rounded-2xl p-8 border-2 border-[#FFE500]/50 transform md:scale-105 shadow-2xl shadow-[#FFE500]/10"
             >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <div className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                <div className="bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                   <StarIcon className="w-4 h-4" />
                   MOST POPULAR
                 </div>
               </div>
               <div className="text-center mb-6">
-                <BatteryIcon className="w-12 h-12 text-[#f5a623] mx-auto mb-4" />
+                <BatteryIcon className="w-12 h-12 text-[#FFE500] mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Standard</h3>
                 <p className="text-gray-400 text-sm">Ideal for average Tasmanian households</p>
               </div>
@@ -276,7 +276,7 @@ export default function SolarBatteryTasmania() {
               <ul className="space-y-3 mb-8">
                 {['10kWh capacity', 'Single/Three phase', '10-year warranty', 'Full backup power', 'Modular expansion ready', 'Smart monitoring app'].map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckIcon className="w-5 h-5 text-[#f5a623] flex-shrink-0" />
+                    <CheckIcon className="w-5 h-5 text-[#FFE500] flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -295,7 +295,7 @@ export default function SolarBatteryTasmania() {
               className="glass rounded-2xl p-8 border border-white/10"
             >
               <div className="text-center mb-6">
-                <BatteryIcon className="w-12 h-12 text-[#00d4ff] mx-auto mb-4" />
+                <BatteryIcon className="w-12 h-12 text-[#0072CE] mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
                 <p className="text-gray-400 text-sm">Maximum independence for larger homes</p>
               </div>
@@ -306,7 +306,7 @@ export default function SolarBatteryTasmania() {
               <ul className="space-y-3 mb-8">
                 {['13.5kWh Tesla Powerwall', 'Three phase', '10-year warranty', 'Tesla app monitoring', 'Full home backup', 'Premium installation'].map((feature, index) => (
                   <li key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                    <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
@@ -324,7 +324,7 @@ export default function SolarBatteryTasmania() {
       </section>
 
       {/* Service Areas */}
-      <section className="relative py-20 bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0f]">
+      <section className="relative py-20 bg-gradient-to-b from-[#005BB5] to-[#0072CE]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -333,7 +333,7 @@ export default function SolarBatteryTasmania() {
             className="text-center mb-12"
           >
             <div className="inline-flex items-center gap-2 mb-4">
-              <MapPinIcon className="w-6 h-6 text-[#f5a623]" />
+              <MapPinIcon className="w-6 h-6 text-[#FFE500]" />
               <h2 className="text-3xl sm:text-4xl font-bold text-white">
                 Tasmania <span className="text-gradient-energy">Service Areas</span>
               </h2>
@@ -360,16 +360,16 @@ export default function SolarBatteryTasmania() {
               ))}
             </div>
             <p className="text-center text-gray-500 mt-6 text-sm">
-              Don&apos;t see your area? We service all Tasmania regions. <Link href="/contact" className="text-[#00d4ff] hover:underline">Contact us</Link> to confirm.
+              Don&apos;t see your area? We service all Tasmania regions. <Link href="/contact" className="text-[#0072CE] hover:underline">Contact us</Link> to confirm.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-[#0a0a0f]">
+      <section className="relative py-20 bg-[#0072CE]">
         <div className="absolute inset-0 star-field opacity-30"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#f5a623]/5 rounded-full blur-[150px]"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#FFE500]/5 rounded-full blur-[150px]"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
@@ -377,7 +377,7 @@ export default function SolarBatteryTasmania() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <SparklesIcon className="w-12 h-12 text-[#f5a623] mx-auto mb-6" />
+            <SparklesIcon className="w-12 h-12 text-[#FFE500] mx-auto mb-6" />
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Ready for Tasmania&apos;s <span className="text-gradient-solar">Clean Energy Future</span>?
             </h2>

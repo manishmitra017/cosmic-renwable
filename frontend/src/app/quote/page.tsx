@@ -199,7 +199,7 @@ export default function Quote() {
   return (
     <div className="cosmic-bg">
       {/* Contact Banner */}
-      <section className="py-4 bg-gradient-to-r from-[#f5a623] to-[#ff6b35]">
+      <section className="py-4 bg-gradient-to-r from-[#FFE500] to-[#ff6b35]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
@@ -232,13 +232,13 @@ export default function Quote() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
+      <section className="relative py-16 sm:py-24 bg-[#0072CE] overflow-hidden">
         {/* Star field background */}
         <div className="absolute inset-0 star-field opacity-40"></div>
 
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -247,9 +247,9 @@ export default function Quote() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <DocumentTextIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Free No-Obligation Quote</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
+              <DocumentTextIcon className="w-5 h-5 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-semibold text-sm">Free No-Obligation Quote</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
@@ -264,7 +264,7 @@ export default function Quote() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -280,8 +280,8 @@ export default function Quote() {
                 <div className="space-y-6">
                   {steps.map((step, index) => (
                     <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-[#f5a623]/20 rounded-full flex items-center justify-center mr-4">
-                        <step.icon className="w-5 h-5 text-[#f5a623]" />
+                      <div className="flex-shrink-0 w-10 h-10 bg-[#FFE500]/20 rounded-full flex items-center justify-center mr-4">
+                        <step.icon className="w-5 h-5 text-[#FFE500]" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-white mb-1">{step.title}</h3>
@@ -314,7 +314,7 @@ export default function Quote() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white placeholder-white/40 transition-colors"
                           placeholder="Your full name"
                         />
                       </div>
@@ -330,7 +330,7 @@ export default function Quote() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white placeholder-white/40 transition-colors"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -348,7 +348,7 @@ export default function Quote() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white placeholder-white/40 transition-colors"
                           placeholder="Your phone number"
                         />
                       </div>
@@ -365,7 +365,7 @@ export default function Quote() {
                           required
                           value={formData.address}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white placeholder-white/40 transition-colors"
                           placeholder="Start typing your property address..."
                         />
                       </div>
@@ -382,14 +382,14 @@ export default function Quote() {
                           required
                           value={formData.property_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select property type</option>
-                          <option value="house" className="bg-[#1a1a2e]">House</option>
-                          <option value="apartment" className="bg-[#1a1a2e]">Apartment</option>
-                          <option value="townhouse" className="bg-[#1a1a2e]">Townhouse</option>
-                          <option value="commercial" className="bg-[#1a1a2e]">Commercial</option>
-                          <option value="industrial" className="bg-[#1a1a2e]">Industrial</option>
+                          <option value="" className="bg-[#005BB5]">Select property type</option>
+                          <option value="house" className="bg-[#005BB5]">House</option>
+                          <option value="apartment" className="bg-[#005BB5]">Apartment</option>
+                          <option value="townhouse" className="bg-[#005BB5]">Townhouse</option>
+                          <option value="commercial" className="bg-[#005BB5]">Commercial</option>
+                          <option value="industrial" className="bg-[#005BB5]">Industrial</option>
                         </select>
                       </div>
 
@@ -403,14 +403,14 @@ export default function Quote() {
                           required
                           value={formData.roof_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select roof type</option>
-                          <option value="tile" className="bg-[#1a1a2e]">Tile</option>
-                          <option value="metal" className="bg-[#1a1a2e]">Metal/Colorbond</option>
-                          <option value="flat" className="bg-[#1a1a2e]">Flat</option>
-                          <option value="slate" className="bg-[#1a1a2e]">Slate</option>
-                          <option value="other" className="bg-[#1a1a2e]">Other</option>
+                          <option value="" className="bg-[#005BB5]">Select roof type</option>
+                          <option value="tile" className="bg-[#005BB5]">Tile</option>
+                          <option value="metal" className="bg-[#005BB5]">Metal/Colorbond</option>
+                          <option value="flat" className="bg-[#005BB5]">Flat</option>
+                          <option value="slate" className="bg-[#005BB5]">Slate</option>
+                          <option value="other" className="bg-[#005BB5]">Other</option>
                         </select>
                       </div>
                     </div>
@@ -426,11 +426,11 @@ export default function Quote() {
                           required
                           value={formData.storey_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select storey type</option>
-                          <option value="single" className="bg-[#1a1a2e]">Single Storey</option>
-                          <option value="double" className="bg-[#1a1a2e]">Double Storey</option>
+                          <option value="" className="bg-[#005BB5]">Select storey type</option>
+                          <option value="single" className="bg-[#005BB5]">Single Storey</option>
+                          <option value="double" className="bg-[#005BB5]">Double Storey</option>
                         </select>
                       </div>
 
@@ -444,12 +444,12 @@ export default function Quote() {
                           required
                           value={formData.meter_phase}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select meter phase</option>
-                          <option value="single" className="bg-[#1a1a2e]">Single Phase Meter</option>
-                          <option value="three" className="bg-[#1a1a2e]">Three Phase Meter</option>
-                          <option value="unknown" className="bg-[#1a1a2e]">Don&apos;t know</option>
+                          <option value="" className="bg-[#005BB5]">Select meter phase</option>
+                          <option value="single" className="bg-[#005BB5]">Single Phase Meter</option>
+                          <option value="three" className="bg-[#005BB5]">Three Phase Meter</option>
+                          <option value="unknown" className="bg-[#005BB5]">Don&apos;t know</option>
                         </select>
                       </div>
                     </div>
@@ -464,14 +464,14 @@ export default function Quote() {
                           name="energy_usage"
                           value={formData.energy_usage}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select your bill range</option>
-                          <option value="under-300" className="bg-[#1a1a2e]">Under $300</option>
-                          <option value="300-600" className="bg-[#1a1a2e]">$300 - $600</option>
-                          <option value="600-900" className="bg-[#1a1a2e]">$600 - $900</option>
-                          <option value="900-1200" className="bg-[#1a1a2e]">$900 - $1,200</option>
-                          <option value="over-1200" className="bg-[#1a1a2e]">Over $1,200</option>
+                          <option value="" className="bg-[#005BB5]">Select your bill range</option>
+                          <option value="under-300" className="bg-[#005BB5]">Under $300</option>
+                          <option value="300-600" className="bg-[#005BB5]">$300 - $600</option>
+                          <option value="600-900" className="bg-[#005BB5]">$600 - $900</option>
+                          <option value="900-1200" className="bg-[#005BB5]">$900 - $1,200</option>
+                          <option value="over-1200" className="bg-[#005BB5]">Over $1,200</option>
                         </select>
                       </div>
 
@@ -484,14 +484,14 @@ export default function Quote() {
                           name="budget_range"
                           value={formData.budget_range}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select budget range</option>
-                          <option value="under-5k" className="bg-[#1a1a2e]">Under $5,000</option>
-                          <option value="5k-10k" className="bg-[#1a1a2e]">$5,000 - $10,000</option>
-                          <option value="10k-15k" className="bg-[#1a1a2e]">$10,000 - $15,000</option>
-                          <option value="15k-20k" className="bg-[#1a1a2e]">$15,000 - $20,000</option>
-                          <option value="over-20k" className="bg-[#1a1a2e]">Over $20,000</option>
+                          <option value="" className="bg-[#005BB5]">Select budget range</option>
+                          <option value="under-5k" className="bg-[#005BB5]">Under $5,000</option>
+                          <option value="5k-10k" className="bg-[#005BB5]">$5,000 - $10,000</option>
+                          <option value="10k-15k" className="bg-[#005BB5]">$10,000 - $15,000</option>
+                          <option value="15k-20k" className="bg-[#005BB5]">$15,000 - $20,000</option>
+                          <option value="over-20k" className="bg-[#005BB5]">Over $20,000</option>
                         </select>
                       </div>
                     </div>
@@ -506,7 +506,7 @@ export default function Quote() {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#FFE500]/50 focus:border-[#FFE500]/50 text-white placeholder-white/40 transition-colors resize-none"
                         placeholder="Any additional information about your requirements..."
                       />
                     </div>
@@ -541,9 +541,9 @@ export default function Quote() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gradient-to-b from-[#12121a] to-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
+      <section className="py-16 bg-gradient-to-b from-[#0066BB] to-[#0072CE] relative overflow-hidden">
+        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -567,8 +567,8 @@ export default function Quote() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-[#00d4ff]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-[#00d4ff]" />
+                <div className="w-16 h-16 bg-[#0072CE]/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <benefit.icon className="w-8 h-8 text-[#0072CE]" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-[#b0b0b0]">{benefit.description}</p>

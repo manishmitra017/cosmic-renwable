@@ -103,16 +103,16 @@ export default function Header() {
             ? 'md:h-0 md:overflow-hidden md:opacity-0'
             : 'opacity-100'
         }`}
-        style={{ background: 'linear-gradient(90deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%)' }}
+        style={{ background: 'linear-gradient(90deg, #0072CE 0%, #005BB5 50%, #0072CE 100%)' }}
       >
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#f5a623] to-transparent opacity-50" />
+        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#FFE500] to-transparent opacity-50" />
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-4 sm:gap-8">
             <a
               href="tel:1300090984"
-              className="flex items-center gap-2 text-[#f5a623] hover:text-[#ffd93d] transition-colors group"
+              className="flex items-center gap-2 text-[#FFE500] hover:text-[#FFEE00] transition-colors group"
             >
-              <div className="w-8 h-8 rounded-full bg-[#f5a623]/10 flex items-center justify-center group-hover:bg-[#f5a623]/20 transition-colors">
+              <div className="w-8 h-8 rounded-full bg-[#FFE500]/10 flex items-center justify-center group-hover:bg-[#FFE500]/20 transition-colors">
                 <PhoneIcon className="w-4 h-4" />
               </div>
               <span className="font-semibold text-sm hidden sm:block">1300 09 09 84</span>
@@ -125,7 +125,7 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <span className="hidden lg:block text-sm text-gray-400">
-              Australia&apos;s Premium <span className="text-[#00d4ff]">Solar Battery</span> Specialists
+              Australia&apos;s Premium <span className="text-[#0072CE]">Solar Battery</span> Specialists
             </span>
             <div className="flex items-center gap-2">
               {socialIcons.map((social, i) => (
@@ -134,7 +134,7 @@ export default function Header() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f5a623]/20 flex items-center justify-center text-gray-400 hover:text-[#f5a623] transition-all duration-300"
+                  className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#FFE500]/20 flex items-center justify-center text-gray-400 hover:text-[#FFE500] transition-all duration-300"
                   aria-label={social.label}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -161,12 +161,12 @@ export default function Header() {
             scrolled ? 'opacity-100' : 'opacity-95'
           }`}
           style={{
-            background: 'rgba(10, 10, 15, 0.85)',
+            background: 'rgba(0, 114, 206, 0.95)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)'
           }}
         />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5a623]/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#FFE500]/30 to-transparent" />
 
         <nav className="relative max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -174,7 +174,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
                 {/* Logo container with dark background to blend white edges */}
-                <div className="relative h-12 lg:h-14 w-12 lg:w-14 rounded-xl overflow-hidden bg-gradient-to-br from-[#1a1a2e] to-[#0a0a0f] border border-[#f5a623]/20 flex items-center justify-center">
+                <div className="relative h-12 lg:h-14 w-12 lg:w-14 rounded-xl overflow-hidden bg-gradient-to-br from-[#0066BB] to-[#0072CE] border border-[#FFE500]/20 flex items-center justify-center">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy"
@@ -185,13 +185,13 @@ export default function Header() {
                   />
                 </div>
                 {/* Glow effect */}
-                <div className="absolute inset-0 bg-[#f5a623]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-[#FFE500]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <div className="whitespace-nowrap">
                 <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">
                   Cosmic <span className="text-gradient-solar">Renewable</span> Energy
                 </h1>
-                <p className="text-[10px] sm:text-xs text-[#00d4ff] font-medium hidden sm:block">
+                <p className="text-[10px] sm:text-xs text-[#0072CE] font-medium hidden sm:block">
                   The Solar Energy Pioneers
                 </p>
               </div>
@@ -206,7 +206,7 @@ export default function Header() {
                   className="relative py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors group whitespace-nowrap"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#f5a623] to-[#00d4ff] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#FFE500] to-[#0072CE] group-hover:w-full transition-all duration-300" />
                 </Link>
               ))}
             </div>
@@ -218,8 +218,8 @@ export default function Header() {
                 href="tel:1300090984"
                 className="hidden xl:flex items-center gap-3 text-gray-300 hover:text-white transition-colors group whitespace-nowrap"
               >
-                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-br from-[#00d4ff]/20 to-[#00d4ff]/5 border border-[#00d4ff]/30 flex items-center justify-center group-hover:border-[#00d4ff]/50 transition-colors">
-                  <PhoneIcon className="w-5 h-5 text-[#00d4ff]" />
+                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-br from-[#0072CE]/20 to-[#0072CE]/5 border border-[#0072CE]/30 flex items-center justify-center group-hover:border-[#0072CE]/50 transition-colors">
+                  <PhoneIcon className="w-5 h-5 text-[#0072CE]" />
                 </div>
                 <div className="text-left">
                   <p className="text-xs text-gray-500">Call Now</p>
@@ -263,7 +263,7 @@ export default function Header() {
               transition={{ duration: 0.3, ease: 'easeInOut' }}
               className="lg:hidden relative overflow-hidden"
               style={{
-                background: 'rgba(10, 10, 15, 0.98)',
+                background: 'rgba(0, 114, 206, 0.98)',
                 backdropFilter: 'blur(20px)'
               }}
             >
@@ -282,7 +282,7 @@ export default function Header() {
                       className="flex items-center justify-between px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-all group"
                     >
                       <span>{link.label}</span>
-                      <ChevronIcon className="w-4 h-4 text-gray-600 group-hover:text-[#f5a623] group-hover:translate-x-1 transition-all" />
+                      <ChevronIcon className="w-4 h-4 text-gray-600 group-hover:text-[#FFE500] group-hover:translate-x-1 transition-all" />
                     </Link>
                   </motion.div>
                 ))}
@@ -290,7 +290,7 @@ export default function Header() {
                 <div className="pt-4 space-y-3 border-t border-white/10 mt-4">
                   <a
                     href="tel:1300090984"
-                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#f5a623] to-[#ff9f1c] text-[#0a0a0f] px-4 py-3.5 rounded-xl font-bold shadow-lg shadow-[#f5a623]/20"
+                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#FFE500] to-[#FFD700] text-[#0072CE] px-4 py-3.5 rounded-xl font-bold shadow-lg shadow-[#FFE500]/20"
                     onClick={() => setIsOpen(false)}
                   >
                     <PhoneIcon className="w-5 h-5" />
@@ -299,7 +299,7 @@ export default function Header() {
 
                   <Link
                     href="/quote"
-                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#00d4ff] to-[#00b4a0] text-[#0a0a0f] px-4 py-3.5 rounded-xl font-bold shadow-lg shadow-[#00d4ff]/20"
+                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#0072CE] to-[#0088F0] text-[#0072CE] px-4 py-3.5 rounded-xl font-bold shadow-lg shadow-[#0072CE]/20"
                     onClick={() => setIsOpen(false)}
                   >
                     <BatteryIcon className="w-5 h-5" />

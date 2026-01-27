@@ -82,13 +82,13 @@ export default function BatteryStorageRevolutionArticle() {
     <div className="cosmic-bg">
       <article>
         {/* Header */}
-        <header className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
+        <header className="relative py-16 sm:py-24 bg-[#0072CE] overflow-hidden">
           {/* Star field background */}
           <div className="absolute inset-0 star-field opacity-40"></div>
 
           {/* Animated gradient orbs */}
-          <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+          <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
+          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
@@ -98,12 +98,12 @@ export default function BatteryStorageRevolutionArticle() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#00d4ff] transition-colors flex items-center gap-2">
+                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#0072CE] transition-colors flex items-center gap-2">
                   <ArrowLeftIcon className="w-4 h-4" />
                   Back to Articles
                 </Link>
                 <span className="text-[#b0b0b0]/50">|</span>
-                <span className="glass px-3 py-1 rounded-full text-sm text-[#00d4ff] border border-[#00d4ff]/20">Industry News</span>
+                <span className="glass px-3 py-1 rounded-full text-sm text-[#0072CE] border border-[#0072CE]/20">Industry News</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
                 Battery Storage Revolution: <span className="text-gradient-solar">5kWh to 100kWh</span> Systems Now Eligible
@@ -113,7 +113,7 @@ export default function BatteryStorageRevolutionArticle() {
               </p>
               <div className="flex items-center justify-center gap-4 text-[#b0b0b0]">
                 <span>August 2025</span>
-                <span className="text-[#f5a623]">|</span>
+                <span className="text-[#FFE500]">|</span>
                 <span>7 min read</span>
               </div>
             </motion.div>
@@ -137,7 +137,7 @@ export default function BatteryStorageRevolutionArticle() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0072CE] to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -153,8 +153,8 @@ export default function BatteryStorageRevolutionArticle() {
             transition={{ duration: 0.8 }}
           >
             {/* Key Takeaway Box */}
-            <div className="card-cosmic p-6 mb-10 border-l-4 border-[#f5a623]">
-              <h2 className="text-xl font-bold text-[#f5a623] mb-3 flex items-center gap-2">
+            <div className="card-cosmic p-6 mb-10 border-l-4 border-[#FFE500]">
+              <h2 className="text-xl font-bold text-[#FFE500] mb-3 flex items-center gap-2">
                 <BoltIcon className="w-6 h-6" />
                 Key Takeaway
               </h2>
@@ -178,18 +178,18 @@ export default function BatteryStorageRevolutionArticle() {
               </p>
 
               {/* Capacity Range Visual */}
-              <div className="card-cosmic p-8 mb-10 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10">
+              <div className="card-cosmic p-8 mb-10 bg-gradient-to-r from-[#FFE500]/10 to-[#0072CE]/10">
                 <h3 className="text-2xl font-bold mb-6 text-center text-white">Eligible Capacity Range</h3>
                 <div className="flex items-center justify-between max-w-2xl mx-auto">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-[#f5a623]">5kWh</div>
+                    <div className="text-4xl font-bold text-[#FFE500]">5kWh</div>
                     <div className="text-[#b0b0b0]">Minimum</div>
                   </div>
                   <div className="flex-1 mx-8 h-4 bg-white/10 rounded-full relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623] to-[#00d4ff] rounded-full"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#FFE500] to-[#0072CE] rounded-full"></div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-[#00d4ff]">100kWh</div>
+                    <div className="text-4xl font-bold text-[#0072CE]">100kWh</div>
                     <div className="text-[#b0b0b0]">Maximum</div>
                   </div>
                 </div>
@@ -218,26 +218,26 @@ export default function BatteryStorageRevolutionArticle() {
                 equipment meets Australian safety and performance standards.
               </p>
 
-              <div className="card-cosmic p-6 mb-10 border border-[#00d4ff]/30">
-                <h4 className="font-bold text-[#00d4ff] mb-4 flex items-center gap-2">
+              <div className="card-cosmic p-6 mb-10 border border-[#0072CE]/30">
+                <h4 className="font-bold text-[#0072CE] mb-4 flex items-center gap-2">
                   <ShieldCheckIcon className="w-6 h-6" />
                   CEC Approval Ensures:
                 </h4>
                 <ul className="space-y-3 text-[#b0b0b0]">
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                     <span>Batteries meet relevant Australian safety standards</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                     <span>Products are tested by IEC or JAS-ANZ accredited bodies</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                     <span>Compliance with industry best practice requirements</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                     <span>Only lithium-based batteries currently qualify</span>
                   </li>
                 </ul>
@@ -249,32 +249,32 @@ export default function BatteryStorageRevolutionArticle() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <BoltIcon className="w-6 h-6 text-[#f5a623]" />
+                  <div className="w-12 h-12 bg-[#FFE500]/20 rounded-full flex items-center justify-center mb-4">
+                    <BoltIcon className="w-6 h-6 text-[#FFE500]" />
                   </div>
                   <h4 className="font-bold text-white mb-2">VPP Capability</h4>
                   <p className="text-[#b0b0b0]">On-grid batteries must be VPP (Virtual Power Plant) capable - able to connect to the internet and respond to external signals. You don&apos;t have to join a VPP, but the battery must be capable.</p>
                 </div>
 
                 <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <SunIcon className="w-6 h-6 text-[#f5a623]" />
+                  <div className="w-12 h-12 bg-[#FFE500]/20 rounded-full flex items-center justify-center mb-4">
+                    <SunIcon className="w-6 h-6 text-[#FFE500]" />
                   </div>
                   <h4 className="font-bold text-white mb-2">Solar PV Required</h4>
                   <p className="text-[#b0b0b0]">Batteries must be installed with new or existing solar PV (up to 100kW). Standalone batteries without solar are not eligible for the rebate.</p>
                 </div>
 
                 <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <CheckBadgeIcon className="w-6 h-6 text-[#f5a623]" />
+                  <div className="w-12 h-12 bg-[#FFE500]/20 rounded-full flex items-center justify-center mb-4">
+                    <CheckBadgeIcon className="w-6 h-6 text-[#FFE500]" />
                   </div>
                   <h4 className="font-bold text-white mb-2">Safety Standards</h4>
                   <p className="text-[#b0b0b0]">Must comply with AS/NZS 5139:2019 and the Best Practice Guide: Battery Storage Equipment for safe installation.</p>
                 </div>
 
                 <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <UserIcon className="w-6 h-6 text-[#f5a623]" />
+                  <div className="w-12 h-12 bg-[#FFE500]/20 rounded-full flex items-center justify-center mb-4">
+                    <UserIcon className="w-6 h-6 text-[#FFE500]" />
                   </div>
                   <h4 className="font-bold text-white mb-2">Accredited Installer</h4>
                   <p className="text-[#b0b0b0]">Installation must be carried out or supervised by a technician accredited by Solar Accreditation Australia (SAA).</p>
@@ -289,28 +289,28 @@ export default function BatteryStorageRevolutionArticle() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                      <CheckIcon className="w-6 h-6 text-[#00d4ff]" />
+                      <CheckIcon className="w-6 h-6 text-[#0072CE]" />
                       Eligible Systems
                     </h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                         <span className="text-[#b0b0b0]">New CEC-approved lithium batteries</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                         <span className="text-[#b0b0b0]">On-grid systems (VPP capable)</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                         <span className="text-[#b0b0b0]">Off-grid systems (no VPP requirement)</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                         <span className="text-[#b0b0b0]">Residential, small business, community</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                        <CheckIcon className="w-5 h-5 text-[#0072CE] flex-shrink-0 mt-0.5" />
                         <span className="text-[#b0b0b0]">Additions to existing solar systems</span>
                       </li>
                     </ul>
@@ -363,8 +363,8 @@ export default function BatteryStorageRevolutionArticle() {
                 ))}
               </div>
 
-              <div className="card-cosmic p-6 mb-10 border border-[#f5a623]/30">
-                <h4 className="font-bold text-[#f5a623] mb-3 flex items-center gap-2">
+              <div className="card-cosmic p-6 mb-10 border border-[#FFE500]/30">
+                <h4 className="font-bold text-[#FFE500] mb-3 flex items-center gap-2">
                   <InformationCircleIcon className="w-6 h-6" />
                   Important Note
                 </h4>
@@ -381,7 +381,7 @@ export default function BatteryStorageRevolutionArticle() {
 
               <div className="card-cosmic overflow-hidden mb-10">
                 <table className="w-full">
-                  <thead className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20">
+                  <thead className="bg-gradient-to-r from-[#FFE500]/20 to-[#0072CE]/20">
                     <tr>
                       <th className="text-left p-4 text-white">Battery Size</th>
                       <th className="text-right p-4 text-white">Estimated Rebate (2025)</th>
@@ -391,32 +391,32 @@ export default function BatteryStorageRevolutionArticle() {
                   <tbody className="divide-y divide-white/10">
                     <tr>
                       <td className="p-4 font-medium text-white">5 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$1,650</td>
+                      <td className="p-4 text-right font-bold text-[#FFE500]">~$1,650</td>
                       <td className="p-4 text-center text-[#b0b0b0]">Basic backup</td>
                     </tr>
                     <tr className="bg-white/5">
                       <td className="p-4 font-medium text-white">10 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$3,300</td>
+                      <td className="p-4 text-right font-bold text-[#FFE500]">~$3,300</td>
                       <td className="p-4 text-center text-[#b0b0b0]">Average home</td>
                     </tr>
                     <tr>
                       <td className="p-4 font-medium text-white">13.5 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$4,450</td>
+                      <td className="p-4 text-right font-bold text-[#FFE500]">~$4,450</td>
                       <td className="p-4 text-center text-[#b0b0b0]">Tesla Powerwall</td>
                     </tr>
                     <tr className="bg-white/5">
                       <td className="p-4 font-medium text-white">20 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$6,600</td>
+                      <td className="p-4 text-right font-bold text-[#FFE500]">~$6,600</td>
                       <td className="p-4 text-center text-[#b0b0b0]">Large home</td>
                     </tr>
                     <tr>
                       <td className="p-4 font-medium text-white">30 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$9,900</td>
+                      <td className="p-4 text-right font-bold text-[#FFE500]">~$9,900</td>
                       <td className="p-4 text-center text-[#b0b0b0]">Small business</td>
                     </tr>
                     <tr className="bg-white/5">
                       <td className="p-4 font-medium text-white">50 kWh+</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$16,500 (capped)</td>
+                      <td className="p-4 text-right font-bold text-[#FFE500]">~$16,500 (capped)</td>
                       <td className="p-4 text-center text-[#b0b0b0]">Commercial</td>
                     </tr>
                   </tbody>
@@ -428,7 +428,7 @@ export default function BatteryStorageRevolutionArticle() {
             </div>
 
             {/* Call to Action */}
-            <div className="card-cosmic p-8 sm:p-12 text-center mt-12 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10 border border-[#f5a623]/30">
+            <div className="card-cosmic p-8 sm:p-12 text-center mt-12 bg-gradient-to-r from-[#FFE500]/10 to-[#0072CE]/10 border border-[#FFE500]/30">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
                 Not Sure If Your Battery Qualifies?
               </h2>
@@ -465,7 +465,7 @@ export default function BatteryStorageRevolutionArticle() {
                   href="https://www.cleanenergycouncil.org.au/industry-programs/products-program/batteries"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-[#0072CE] hover:text-[#FFE500] font-semibold transition-colors"
                 >
                   CEC Approved Products
                   <ExternalLinkIcon className="w-4 h-4" />
@@ -474,7 +474,7 @@ export default function BatteryStorageRevolutionArticle() {
                   href="https://cer.gov.au/batteries"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-[#0072CE] hover:text-[#FFE500] font-semibold transition-colors"
                 >
                   Clean Energy Regulator
                   <ExternalLinkIcon className="w-4 h-4" />
@@ -486,7 +486,7 @@ export default function BatteryStorageRevolutionArticle() {
             <div className="mt-8 text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#0072CE] hover:text-[#FFE500] font-semibold transition-colors"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
                 Back to All Articles

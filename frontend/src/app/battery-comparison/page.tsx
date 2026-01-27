@@ -86,13 +86,13 @@ export default function BatteryComparison() {
   return (
     <div className="cosmic-bg">
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-20 bg-[#0a0a0f] overflow-hidden">
+      <section className="relative py-12 sm:py-20 bg-[#0072CE] overflow-hidden">
         {/* Star field background */}
         <div className="absolute inset-0 star-field opacity-40"></div>
 
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+        <div className="absolute top-20 right-20 w-96 h-96 bg-[#FFE500]/10 rounded-full blur-[120px] animate-float"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#0072CE]/10 rounded-full blur-[100px] animate-float-delayed"></div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
@@ -101,9 +101,9 @@ export default function BatteryComparison() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <ScaleIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Side-by-Side Comparison</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#FFE500]/20">
+              <ScaleIcon className="w-5 h-5 text-[#FFE500]" />
+              <span className="text-[#FFE500] font-semibold text-sm">Side-by-Side Comparison</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6">
@@ -117,7 +117,7 @@ export default function BatteryComparison() {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-12 sm:py-16 bg-gradient-to-b from-[#0072CE] to-[#0066BB]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mobile: Cards */}
           <div className="block lg:hidden space-y-6">
@@ -130,9 +130,9 @@ export default function BatteryComparison() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20 p-4 border-b border-white/10">
+                <div className="bg-gradient-to-r from-[#FFE500]/20 to-[#0072CE]/20 p-4 border-b border-white/10">
                   <h3 className="text-2xl font-bold text-white">{battery.name}</h3>
-                  <div className="text-2xl font-bold mt-2 text-[#f5a623]">{battery.price}</div>
+                  <div className="text-2xl font-bold mt-2 text-[#FFE500]">{battery.price}</div>
                 </div>
                 <div className="p-4 space-y-3">
                   <div className="flex justify-between border-b border-white/10 pb-2">
@@ -153,11 +153,11 @@ export default function BatteryComparison() {
                   </div>
 
                   <div className="pt-3">
-                    <p className="font-semibold text-[#00d4ff] mb-2">Pros:</p>
+                    <p className="font-semibold text-[#0072CE] mb-2">Pros:</p>
                     <ul className="text-sm space-y-1">
                       {battery.pros.map((pro, i) => (
                         <li key={i} className="flex items-start text-[#b0b0b0]">
-                          <CheckIcon className="w-4 h-4 text-[#00d4ff] mr-2 flex-shrink-0 mt-0.5" />
+                          <CheckIcon className="w-4 h-4 text-[#0072CE] mr-2 flex-shrink-0 mt-0.5" />
                           <span>{pro}</span>
                         </li>
                       ))}
@@ -176,8 +176,8 @@ export default function BatteryComparison() {
                     </ul>
                   </div>
 
-                  <div className="pt-3 glass rounded-lg p-3 border border-[#f5a623]/20">
-                    <p className="font-semibold text-sm mb-1 text-[#f5a623]">Best For:</p>
+                  <div className="pt-3 glass rounded-lg p-3 border border-[#FFE500]/20">
+                    <p className="font-semibold text-sm mb-1 text-[#FFE500]">Best For:</p>
                     <p className="text-sm text-[#b0b0b0]">{battery.bestFor}</p>
                   </div>
 
@@ -202,7 +202,7 @@ export default function BatteryComparison() {
               transition={{ duration: 0.8 }}
             >
               <thead>
-                <tr className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20">
+                <tr className="bg-gradient-to-r from-[#FFE500]/20 to-[#0072CE]/20">
                   <th className="px-6 py-4 text-left text-white font-semibold">Feature</th>
                   {batteries.map((battery, index) => (
                     <th key={index} className="px-6 py-4 text-center text-white font-semibold">{battery.name}</th>
@@ -210,44 +210,44 @@ export default function BatteryComparison() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/10">
-                <tr className="bg-[#12121a]/50">
+                <tr className="bg-[#0066BB]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Price (After Rebates)</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-center font-bold text-[#f5a623] text-xl">{battery.price}</td>
+                    <td key={index} className="px-6 py-4 text-center font-bold text-[#FFE500] text-xl">{battery.price}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
+                <tr className="bg-[#0072CE]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Capacity</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-center text-white">{battery.capacity}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
+                <tr className="bg-[#0066BB]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Warranty</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-center text-white">{battery.warranty}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
+                <tr className="bg-[#0072CE]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Round-Trip Efficiency</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-center text-white">{battery.efficiency}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
+                <tr className="bg-[#0066BB]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Backup Power</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-center text-white">{battery.backup}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
+                <tr className="bg-[#0072CE]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0] align-top">Pros</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4">
                       <ul className="text-sm space-y-1">
                         {battery.pros.map((pro, i) => (
                           <li key={i} className="flex items-start text-[#b0b0b0]">
-                            <CheckIcon className="w-4 h-4 text-[#00d4ff] mr-2 flex-shrink-0 mt-0.5" />
+                            <CheckIcon className="w-4 h-4 text-[#0072CE] mr-2 flex-shrink-0 mt-0.5" />
                             <span>{pro}</span>
                           </li>
                         ))}
@@ -255,7 +255,7 @@ export default function BatteryComparison() {
                     </td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
+                <tr className="bg-[#0066BB]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0] align-top">Cons</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4">
@@ -270,13 +270,13 @@ export default function BatteryComparison() {
                     </td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
+                <tr className="bg-[#0072CE]/50">
                   <td className="px-6 py-4 font-semibold text-[#b0b0b0] align-top">Best For</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-sm text-[#b0b0b0]">{battery.bestFor}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
+                <tr className="bg-[#0066BB]/50">
                   <td className="px-6 py-4"></td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-center">
@@ -296,10 +296,10 @@ export default function BatteryComparison() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
+      <section className="py-12 sm:py-16 bg-gradient-to-r from-[#0072CE] via-[#005BB5] to-[#0072CE] relative overflow-hidden border-t border-[#FFE500]/20">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#FFE500]/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#0072CE]/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -309,9 +309,9 @@ export default function BatteryComparison() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-              <QuestionMarkCircleIcon className="w-5 h-5 text-[#00d4ff]" />
-              <span className="text-[#00d4ff] font-semibold text-sm">Need Help Deciding?</span>
+            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#0072CE]/20">
+              <QuestionMarkCircleIcon className="w-5 h-5 text-[#0072CE]" />
+              <span className="text-[#0072CE] font-semibold text-sm">Need Help Deciding?</span>
             </div>
 
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-4 sm:mb-6">
