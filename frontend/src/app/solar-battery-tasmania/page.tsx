@@ -88,14 +88,9 @@ const tasmaniaAreas = [
 
 export default function SolarBatteryTasmania() {
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0a0a0f]">
-        {/* Background Effects */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0073b9]">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -103,32 +98,32 @@ export default function SolarBatteryTasmania() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <LeafIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold">Australia&apos;s Clean Energy State</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/20">
+              <LeafIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-[#fee000] font-semibold">Australia&apos;s Clean Energy State</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-white">Solar Battery Installation</span>
               <br />
-              <span className="text-gradient-solar">Tasmania</span>
+              <span className="text-[#fee000]">Tasmania</span>
             </h1>
 
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto mb-8">
               Tasmania&apos;s excellent solar potential and remote areas make battery storage ideal for energy independence. Join 600+ Tasmanian households already saving with Cosmic Renewable Energy.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/quote"
-                className="btn-solar inline-flex items-center gap-2 text-lg px-8 py-4"
+                className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] inline-flex items-center gap-2 text-lg px-8 py-4 rounded-lg font-semibold transition-colors"
               >
                 Get Your Free Tasmania Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy inline-flex items-center gap-2 text-lg px-8 py-4"
+                className="bg-white text-[#0073b9] hover:bg-gray-100 inline-flex items-center gap-2 text-lg px-8 py-4 rounded-lg font-semibold transition-colors"
               >
                 <PhoneIcon className="w-5 h-5" />
                 1300 09 09 84
@@ -139,7 +134,7 @@ export default function SolarBatteryTasmania() {
       </section>
 
       {/* Why Tasmania Needs Batteries */}
-      <section className="relative py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e]">
+      <section className="relative py-20 bg-[#efefef]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -147,10 +142,10 @@ export default function SolarBatteryTasmania() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Why Tasmania Homes Need <span className="text-gradient-energy">Battery Storage</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#333333] mb-4">
+              Why Tasmania Homes Need <span className="text-[#0073b9]">Battery Storage</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#666666] max-w-2xl mx-auto">
               Tasmania&apos;s unique environment makes solar batteries a smart choice for homeowners
             </p>
           </motion.div>
@@ -161,25 +156,25 @@ export default function SolarBatteryTasmania() {
                 icon: LeafIcon,
                 title: "Clean Energy State",
                 description: "Tasmania has excellent solar potential year-round. Maximize renewable energy self-sufficiency",
-                color: "text-[#f5a623]"
+                color: "text-[#0073b9]"
               },
               {
                 icon: CurrencyIcon,
                 title: "TAS Energy Costs",
                 description: "Tasmanian electricity prices are 24-29c/kWh. Solar batteries reduce your energy bills significantly",
-                color: "text-[#00d4ff]"
+                color: "text-[#0073b9]"
               },
               {
                 icon: ShieldIcon,
                 title: "Remote Area Security",
                 description: "Tasmania's rural areas benefit from battery backup during weather events and outages",
-                color: "text-[#f5a623]"
+                color: "text-[#0073b9]"
               },
               {
                 icon: BoltIcon,
                 title: "Energy Independence",
                 description: "Reduce grid dependence and achieve energy independence for remote properties",
-                color: "text-[#00d4ff]"
+                color: "text-[#0073b9]"
               }
             ].map((benefit, index) => (
               <motion.div
@@ -188,13 +183,13 @@ export default function SolarBatteryTasmania() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="card-cosmic p-6 text-center"
+                className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 text-center"
               >
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 mb-4 ${benefit.color}`}>
+                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-[#0073b9]/10 mb-4 ${benefit.color}`}>
                   <benefit.icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-400 text-sm">{benefit.description}</p>
+                <h3 className="text-lg font-bold text-[#333333] mb-2">{benefit.title}</h3>
+                <p className="text-[#666666] text-sm">{benefit.description}</p>
               </motion.div>
             ))}
           </div>
@@ -202,9 +197,7 @@ export default function SolarBatteryTasmania() {
       </section>
 
       {/* Pricing Section */}
-      <section className="relative py-20 bg-[#0a0a0f]">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="relative py-20 bg-white">
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -212,10 +205,10 @@ export default function SolarBatteryTasmania() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Tasmania Battery <span className="text-gradient-solar">Packages</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#333333] mb-4">
+              Tasmania Battery <span className="text-[#0073b9]">Packages</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#666666] max-w-2xl mx-auto">
               Competitive pricing for Tasmanian residents with full installation included
             </p>
           </motion.div>
@@ -226,26 +219,26 @@ export default function SolarBatteryTasmania() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="glass rounded-2xl p-8 border border-white/10"
+              className="bg-white rounded-xl shadow-lg border border-gray-200 p-8"
             >
               <div className="text-center mb-6">
-                <BatteryIcon className="w-12 h-12 text-[#00d4ff] mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Essential</h3>
-                <p className="text-gray-400 text-sm">Perfect for smaller Tasmanian homes</p>
+                <BatteryIcon className="w-12 h-12 text-[#0073b9] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-[#333333] mb-2">Essential</h3>
+                <p className="text-[#666666] text-sm">Perfect for smaller Tasmanian homes</p>
               </div>
               <div className="text-center mb-6">
-                <span className="text-4xl font-bold text-white">$5,500</span>
-                <span className="text-gray-400 ml-2">installed</span>
+                <span className="text-4xl font-bold text-[#333333]">$5,500</span>
+                <span className="text-[#666666] ml-2">installed</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {['5kWh capacity', 'Single phase', '10-year warranty', 'Backup power ready', 'Full installation'].map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                  <li key={index} className="flex items-center gap-3 text-[#444444]">
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              <Link href="/quote" className="btn-energy w-full text-center block py-3">
+              <Link href="/quote" className="bg-[#0073b9] text-white hover:bg-[#005a91] w-full text-center block py-3 rounded-lg font-semibold transition-colors">
                 Get Tasmania Quote
               </Link>
             </motion.div>
@@ -256,32 +249,32 @@ export default function SolarBatteryTasmania() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="relative glass rounded-2xl p-8 border-2 border-[#f5a623]/50 transform md:scale-105 shadow-2xl shadow-[#f5a623]/10"
+              className="relative bg-white rounded-xl shadow-xl border-2 border-[#0073b9] p-8 transform md:scale-105"
             >
               <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                <div className="bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+                <div className="bg-[#0073b9] text-white px-4 py-1 rounded-full text-sm font-bold flex items-center gap-1">
                   <StarIcon className="w-4 h-4" />
                   MOST POPULAR
                 </div>
               </div>
               <div className="text-center mb-6">
-                <BatteryIcon className="w-12 h-12 text-[#f5a623] mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Standard</h3>
-                <p className="text-gray-400 text-sm">Ideal for average Tasmanian households</p>
+                <BatteryIcon className="w-12 h-12 text-[#0073b9] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-[#333333] mb-2">Standard</h3>
+                <p className="text-[#666666] text-sm">Ideal for average Tasmanian households</p>
               </div>
               <div className="text-center mb-6">
-                <span className="text-4xl font-bold text-white">$9,400</span>
-                <span className="text-gray-400 ml-2">installed</span>
+                <span className="text-4xl font-bold text-[#333333]">$9,400</span>
+                <span className="text-[#666666] ml-2">installed</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {['10kWh capacity', 'Single/Three phase', '10-year warranty', 'Full backup power', 'Modular expansion ready', 'Smart monitoring app'].map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckIcon className="w-5 h-5 text-[#f5a623] flex-shrink-0" />
+                  <li key={index} className="flex items-center gap-3 text-[#444444]">
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              <Link href="/quote" className="btn-solar w-full text-center block py-3">
+              <Link href="/quote" className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] w-full text-center block py-3 rounded-lg font-semibold transition-colors">
                 Get Tasmania Quote
               </Link>
             </motion.div>
@@ -292,39 +285,39 @@ export default function SolarBatteryTasmania() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass rounded-2xl p-8 border border-white/10"
+              className="bg-white rounded-xl shadow-lg border border-gray-200 p-8"
             >
               <div className="text-center mb-6">
-                <BatteryIcon className="w-12 h-12 text-[#00d4ff] mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-2">Premium</h3>
-                <p className="text-gray-400 text-sm">Maximum independence for larger homes</p>
+                <BatteryIcon className="w-12 h-12 text-[#0073b9] mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-[#333333] mb-2">Premium</h3>
+                <p className="text-[#666666] text-sm">Maximum independence for larger homes</p>
               </div>
               <div className="text-center mb-6">
-                <span className="text-4xl font-bold text-white">$14,700</span>
-                <span className="text-gray-400 ml-2">installed</span>
+                <span className="text-4xl font-bold text-[#333333]">$14,700</span>
+                <span className="text-[#666666] ml-2">installed</span>
               </div>
               <ul className="space-y-3 mb-8">
                 {['13.5kWh Tesla Powerwall', 'Three phase', '10-year warranty', 'Tesla app monitoring', 'Full home backup', 'Premium installation'].map((feature, index) => (
-                  <li key={index} className="flex items-center gap-3 text-gray-300">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                  <li key={index} className="flex items-center gap-3 text-[#444444]">
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0" />
                     {feature}
                   </li>
                 ))}
               </ul>
-              <Link href="/quote" className="btn-energy w-full text-center block py-3">
+              <Link href="/quote" className="bg-[#0073b9] text-white hover:bg-[#005a91] w-full text-center block py-3 rounded-lg font-semibold transition-colors">
                 Get Tasmania Quote
               </Link>
             </motion.div>
           </div>
 
-          <p className="text-center text-gray-500 mt-8 text-sm">
+          <p className="text-center text-[#666666] mt-8 text-sm">
             *Prices include installation. Final price depends on site assessment and system selection.
           </p>
         </div>
       </section>
 
       {/* Service Areas */}
-      <section className="relative py-20 bg-gradient-to-b from-[#1a1a2e] to-[#0a0a0f]">
+      <section className="relative py-20 bg-[#efefef]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -333,12 +326,12 @@ export default function SolarBatteryTasmania() {
             className="text-center mb-12"
           >
             <div className="inline-flex items-center gap-2 mb-4">
-              <MapPinIcon className="w-6 h-6 text-[#f5a623]" />
-              <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                Tasmania <span className="text-gradient-energy">Service Areas</span>
+              <MapPinIcon className="w-6 h-6 text-[#0073b9]" />
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#333333]">
+                Tasmania <span className="text-[#0073b9]">Service Areas</span>
               </h2>
             </div>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#666666] max-w-2xl mx-auto">
               We install solar batteries across Tasmania - from Hobart to Launceston and beyond
             </p>
           </motion.div>
@@ -347,54 +340,51 @@ export default function SolarBatteryTasmania() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="glass rounded-2xl p-8 border border-white/10"
+            className="bg-white rounded-xl shadow-lg border border-gray-200 p-8"
           >
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {tasmaniaAreas.map((area, index) => (
                 <div
                   key={index}
-                  className="text-center py-2 px-3 rounded-lg bg-white/5 hover:bg-white/10 transition-colors"
+                  className="text-center py-2 px-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors"
                 >
-                  <span className="text-gray-300 text-sm">{area}</span>
+                  <span className="text-[#444444] text-sm">{area}</span>
                 </div>
               ))}
             </div>
-            <p className="text-center text-gray-500 mt-6 text-sm">
-              Don&apos;t see your area? We service all Tasmania regions. <Link href="/contact" className="text-[#00d4ff] hover:underline">Contact us</Link> to confirm.
+            <p className="text-center text-[#666666] mt-6 text-sm">
+              Don&apos;t see your area? We service all Tasmania regions. <Link href="/contact" className="text-[#0073b9] hover:underline">Contact us</Link> to confirm.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-[#0a0a0f]">
-        <div className="absolute inset-0 star-field opacity-30"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#f5a623]/5 rounded-full blur-[150px]"></div>
-
+      <section className="relative py-20 bg-[#fee000]">
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <SparklesIcon className="w-12 h-12 text-[#f5a623] mx-auto mb-6" />
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Ready for Tasmania&apos;s <span className="text-gradient-solar">Clean Energy Future</span>?
+            <SparklesIcon className="w-12 h-12 text-[#083941] mx-auto mb-6" />
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#083941] mb-4">
+              Ready for Tasmania&apos;s <span className="text-[#0073b9]">Clean Energy Future</span>?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-[#083941]/80 mb-8">
               Join 600+ Tasmanian homeowners who have made the switch to solar battery storage. Achieve energy independence in Australia&apos;s clean energy state. Get your free, no-obligation quote today.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="/quote"
-                className="btn-solar inline-flex items-center gap-2 text-lg px-8 py-4"
+                className="bg-[#083941] text-white hover:bg-[#0a4a54] inline-flex items-center gap-2 text-lg px-8 py-4 rounded-lg font-semibold transition-colors"
               >
                 Get Free Tasmania Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy inline-flex items-center gap-2 text-lg px-8 py-4"
+                className="bg-white text-[#083941] hover:bg-gray-100 inline-flex items-center gap-2 text-lg px-8 py-4 rounded-lg font-semibold transition-colors"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call 1300 09 09 84

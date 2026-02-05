@@ -54,44 +54,31 @@ export default function CountdownBanner() {
   }, [])
 
   return (
-    <div className="relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0a0a0f 100%)' }}>
-      {/* Star field background */}
-      <div className="absolute inset-0 star-field opacity-30" />
-
-      {/* Animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/20 rounded-full blur-[100px] animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#f5a623]/10 rounded-full blur-[80px]" />
-      </div>
-
-      {/* Top gradient line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5a623]/50 to-transparent" />
-
+    <div className="relative overflow-hidden bg-[#0073b9]">
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 relative z-10">
         <div className="flex flex-col items-center gap-6">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#f5a623]/30 bg-[#f5a623]/10 backdrop-blur-sm">
-            <CalendarIcon className="w-4 h-4 text-[#f5a623]" />
-            <span className="text-[#f5a623] text-xs sm:text-sm font-semibold tracking-wide uppercase">Deadline Approaching</span>
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm">
+            <CalendarIcon className="w-4 h-4 text-[#fee000]" />
+            <span className="text-[#fee000] text-xs sm:text-sm font-semibold tracking-wide uppercase">Deadline Approaching</span>
           </div>
 
           {/* Main message */}
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 leading-tight font-display">
               <span className="text-white">Solar Battery Rebate </span>
-              <span className="text-gradient-solar">reduces on 1 May 2026</span>
+              <span className="text-[#fee000]">reduces on 1 May 2026</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-[#b0b0b0] max-w-xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-xl mx-auto">
               Don&apos;t miss your highest rebate! Install before the deadline.
             </p>
           </div>
 
           {/* Countdown timer */}
           <div className="w-full max-w-lg">
-            <div className="flex items-center justify-center gap-2 text-[#b0b0b0] mb-4">
-              <ClockIcon className="w-4 h-4 text-[#00d4ff]" />
+            <div className="flex items-center justify-center gap-2 text-white/80 mb-4">
+              <ClockIcon className="w-4 h-4 text-[#fee000]" />
               <span className="text-xs sm:text-sm font-medium uppercase tracking-wider">Time Left Until Rebate Reduces</span>
             </div>
             <div className="flex gap-3 sm:gap-4 justify-center">
@@ -105,15 +92,12 @@ export default function CountdownBanner() {
                   key={index}
                   className="relative group"
                 >
-                  {/* Glow effect */}
-                  <div className="absolute -inset-1 bg-gradient-to-r from-[#f5a623]/30 to-[#00d4ff]/30 rounded-2xl blur opacity-50 group-hover:opacity-75 transition-opacity" />
-
                   {/* Card */}
-                  <div className="relative glass rounded-xl px-4 py-3 sm:px-5 sm:py-4 min-w-[70px] sm:min-w-[80px] border border-white/10">
+                  <div className="relative bg-white/10 backdrop-blur-sm rounded-xl px-4 py-3 sm:px-5 sm:py-4 min-w-[70px] sm:min-w-[80px] border border-white/20">
                     <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-none font-display">
                       {item.value}
                     </div>
-                    <div className="text-[10px] sm:text-xs font-semibold text-[#9ca3af] mt-1 uppercase tracking-wider">
+                    <div className="text-[10px] sm:text-xs font-semibold text-white/70 mt-1 uppercase tracking-wider">
                       {item.label}
                     </div>
                   </div>
@@ -127,18 +111,15 @@ export default function CountdownBanner() {
             href="/quote"
             className="group relative inline-flex items-center gap-2 overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] rounded-xl" />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff8c00] to-[#f5a623] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="relative flex items-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-[#0a0a0f] font-bold text-sm sm:text-base">
+            <div className="absolute inset-0 bg-[#fee000] rounded-xl" />
+            <div className="absolute inset-0 bg-[#e5ca00] rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative flex items-center gap-2 px-6 py-3.5 sm:px-8 sm:py-4 text-[#083941] font-bold text-sm sm:text-base">
               <LockIcon className="w-5 h-5" />
               <span>Lock in My Rebate</span>
             </div>
           </Link>
         </div>
       </div>
-
-      {/* Bottom gradient line */}
-      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00d4ff]/50 to-transparent" />
     </div>
   )
 }

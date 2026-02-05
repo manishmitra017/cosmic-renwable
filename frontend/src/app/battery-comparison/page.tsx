@@ -84,16 +84,9 @@ export default function BatteryComparison() {
   ]
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-12 sm:py-20 bg-[#0a0a0f] overflow-hidden">
-        {/* Star field background */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+      <section className="relative py-12 sm:py-20 bg-[#0073b9] overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -101,15 +94,15 @@ export default function BatteryComparison() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <ScaleIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Side-by-Side Comparison</span>
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
+              <ScaleIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-[#fee000] font-semibold text-sm">Side-by-Side Comparison</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6">
-              Solar Battery <span className="text-gradient-solar">Comparison</span> <span className="text-gradient-energy">2025</span>
+              Solar Battery <span className="text-[#fee000]">Comparison</span> <span className="text-[#fee000]">2025</span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#b0b0b0]">
+            <p className="text-lg sm:text-xl text-white/90">
               Compare top solar battery brands side-by-side
             </p>
           </motion.div>
@@ -117,47 +110,47 @@ export default function BatteryComparison() {
       </section>
 
       {/* Comparison Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-12 sm:py-16 bg-[#efefef]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Mobile: Cards */}
           <div className="block lg:hidden space-y-6">
             {batteries.map((battery, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic overflow-hidden"
+                className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20 p-4 border-b border-white/10">
+                <div className="bg-[#0073b9] p-4 border-b border-gray-200">
                   <h3 className="text-2xl font-bold text-white">{battery.name}</h3>
-                  <div className="text-2xl font-bold mt-2 text-[#f5a623]">{battery.price}</div>
+                  <div className="text-2xl font-bold mt-2 text-[#fee000]">{battery.price}</div>
                 </div>
                 <div className="p-4 space-y-3">
-                  <div className="flex justify-between border-b border-white/10 pb-2">
-                    <span className="font-semibold text-[#b0b0b0]">Capacity:</span>
-                    <span className="text-white">{battery.capacity}</span>
+                  <div className="flex justify-between border-b border-gray-200 pb-2">
+                    <span className="font-semibold text-[#666666]">Capacity:</span>
+                    <span className="text-[#333333]">{battery.capacity}</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/10 pb-2">
-                    <span className="font-semibold text-[#b0b0b0]">Warranty:</span>
-                    <span className="text-white">{battery.warranty}</span>
+                  <div className="flex justify-between border-b border-gray-200 pb-2">
+                    <span className="font-semibold text-[#666666]">Warranty:</span>
+                    <span className="text-[#333333]">{battery.warranty}</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/10 pb-2">
-                    <span className="font-semibold text-[#b0b0b0]">Efficiency:</span>
-                    <span className="text-white">{battery.efficiency}</span>
+                  <div className="flex justify-between border-b border-gray-200 pb-2">
+                    <span className="font-semibold text-[#666666]">Efficiency:</span>
+                    <span className="text-[#333333]">{battery.efficiency}</span>
                   </div>
-                  <div className="flex justify-between border-b border-white/10 pb-2">
-                    <span className="font-semibold text-[#b0b0b0]">Backup:</span>
-                    <span className="text-white">{battery.backup}</span>
+                  <div className="flex justify-between border-b border-gray-200 pb-2">
+                    <span className="font-semibold text-[#666666]">Backup:</span>
+                    <span className="text-[#333333]">{battery.backup}</span>
                   </div>
 
                   <div className="pt-3">
-                    <p className="font-semibold text-[#00d4ff] mb-2">Pros:</p>
+                    <p className="font-semibold text-[#0073b9] mb-2">Pros:</p>
                     <ul className="text-sm space-y-1">
                       {battery.pros.map((pro, i) => (
-                        <li key={i} className="flex items-start text-[#b0b0b0]">
-                          <CheckIcon className="w-4 h-4 text-[#00d4ff] mr-2 flex-shrink-0 mt-0.5" />
+                        <li key={i} className="flex items-start text-[#444444]">
+                          <CheckIcon className="w-4 h-4 text-[#0073b9] mr-2 flex-shrink-0 mt-0.5" />
                           <span>{pro}</span>
                         </li>
                       ))}
@@ -165,25 +158,25 @@ export default function BatteryComparison() {
                   </div>
 
                   <div className="pt-3">
-                    <p className="font-semibold text-red-400 mb-2">Cons:</p>
+                    <p className="font-semibold text-red-500 mb-2">Cons:</p>
                     <ul className="text-sm space-y-1">
                       {battery.cons.map((con, i) => (
-                        <li key={i} className="flex items-start text-[#b0b0b0]">
-                          <XMarkIcon className="w-4 h-4 text-red-400 mr-2 flex-shrink-0 mt-0.5" />
+                        <li key={i} className="flex items-start text-[#444444]">
+                          <XMarkIcon className="w-4 h-4 text-red-500 mr-2 flex-shrink-0 mt-0.5" />
                           <span>{con}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="pt-3 glass rounded-lg p-3 border border-[#f5a623]/20">
-                    <p className="font-semibold text-sm mb-1 text-[#f5a623]">Best For:</p>
-                    <p className="text-sm text-[#b0b0b0]">{battery.bestFor}</p>
+                  <div className="pt-3 bg-gray-50 rounded-lg p-3 border border-gray-200">
+                    <p className="font-semibold text-sm mb-1 text-[#0073b9]">Best For:</p>
+                    <p className="text-sm text-[#444444]">{battery.bestFor}</p>
                   </div>
 
                   <Link
                     href="/quote"
-                    className="block w-full btn-solar text-center px-6 py-3 rounded-lg font-semibold mt-4"
+                    className="block w-full bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] text-center px-6 py-3 rounded-lg font-semibold mt-4 transition-colors"
                   >
                     Get Quote
                   </Link>
@@ -195,59 +188,59 @@ export default function BatteryComparison() {
           {/* Desktop: Table */}
           <div className="hidden lg:block overflow-x-auto">
             <motion.table
-              className="w-full"
+              className="w-full bg-white rounded-xl shadow-lg border border-gray-200"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
               <thead>
-                <tr className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20">
+                <tr className="bg-[#0073b9]">
                   <th className="px-6 py-4 text-left text-white font-semibold">Feature</th>
                   {batteries.map((battery, index) => (
                     <th key={index} className="px-6 py-4 text-center text-white font-semibold">{battery.name}</th>
                   ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/10">
-                <tr className="bg-[#12121a]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Price (After Rebates)</td>
+              <tbody className="divide-y divide-gray-200">
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 font-semibold text-[#666666]">Price (After Rebates)</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-center font-bold text-[#f5a623] text-xl">{battery.price}</td>
+                    <td key={index} className="px-6 py-4 text-center font-bold text-[#0073b9] text-xl">{battery.price}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Capacity</td>
+                <tr className="bg-white">
+                  <td className="px-6 py-4 font-semibold text-[#666666]">Capacity</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-center text-white">{battery.capacity}</td>
+                    <td key={index} className="px-6 py-4 text-center text-[#333333]">{battery.capacity}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Warranty</td>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 font-semibold text-[#666666]">Warranty</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-center text-white">{battery.warranty}</td>
+                    <td key={index} className="px-6 py-4 text-center text-[#333333]">{battery.warranty}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Round-Trip Efficiency</td>
+                <tr className="bg-white">
+                  <td className="px-6 py-4 font-semibold text-[#666666]">Round-Trip Efficiency</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-center text-white">{battery.efficiency}</td>
+                    <td key={index} className="px-6 py-4 text-center text-[#333333]">{battery.efficiency}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0]">Backup Power</td>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 font-semibold text-[#666666]">Backup Power</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-center text-white">{battery.backup}</td>
+                    <td key={index} className="px-6 py-4 text-center text-[#333333]">{battery.backup}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0] align-top">Pros</td>
+                <tr className="bg-white">
+                  <td className="px-6 py-4 font-semibold text-[#666666] align-top">Pros</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4">
                       <ul className="text-sm space-y-1">
                         {battery.pros.map((pro, i) => (
-                          <li key={i} className="flex items-start text-[#b0b0b0]">
-                            <CheckIcon className="w-4 h-4 text-[#00d4ff] mr-2 flex-shrink-0 mt-0.5" />
+                          <li key={i} className="flex items-start text-[#444444]">
+                            <CheckIcon className="w-4 h-4 text-[#0073b9] mr-2 flex-shrink-0 mt-0.5" />
                             <span>{pro}</span>
                           </li>
                         ))}
@@ -255,14 +248,14 @@ export default function BatteryComparison() {
                     </td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0] align-top">Cons</td>
+                <tr className="bg-gray-50">
+                  <td className="px-6 py-4 font-semibold text-[#666666] align-top">Cons</td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4">
                       <ul className="text-sm space-y-1">
                         {battery.cons.map((con, i) => (
-                          <li key={i} className="flex items-start text-[#b0b0b0]">
-                            <XMarkIcon className="w-4 h-4 text-red-400 mr-2 flex-shrink-0 mt-0.5" />
+                          <li key={i} className="flex items-start text-[#444444]">
+                            <XMarkIcon className="w-4 h-4 text-red-500 mr-2 flex-shrink-0 mt-0.5" />
                             <span>{con}</span>
                           </li>
                         ))}
@@ -270,19 +263,19 @@ export default function BatteryComparison() {
                     </td>
                   ))}
                 </tr>
-                <tr className="bg-[#0a0a0f]/50">
-                  <td className="px-6 py-4 font-semibold text-[#b0b0b0] align-top">Best For</td>
+                <tr className="bg-white">
+                  <td className="px-6 py-4 font-semibold text-[#666666] align-top">Best For</td>
                   {batteries.map((battery, index) => (
-                    <td key={index} className="px-6 py-4 text-sm text-[#b0b0b0]">{battery.bestFor}</td>
+                    <td key={index} className="px-6 py-4 text-sm text-[#444444]">{battery.bestFor}</td>
                   ))}
                 </tr>
-                <tr className="bg-[#12121a]/50">
+                <tr className="bg-gray-50">
                   <td className="px-6 py-4"></td>
                   {batteries.map((battery, index) => (
                     <td key={index} className="px-6 py-4 text-center">
                       <Link
                         href="/quote"
-                        className="inline-block btn-solar px-6 py-3 rounded-lg font-semibold"
+                        className="inline-block bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-6 py-3 rounded-lg font-semibold transition-colors"
                       >
                         Get Quote
                       </Link>
@@ -296,12 +289,7 @@ export default function BatteryComparison() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
-        </div>
-
+      <section className="py-12 sm:py-16 bg-[#fee000] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -309,28 +297,28 @@ export default function BatteryComparison() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-              <QuestionMarkCircleIcon className="w-5 h-5 text-[#00d4ff]" />
-              <span className="text-[#00d4ff] font-semibold text-sm">Need Help Deciding?</span>
+            <div className="inline-flex items-center gap-2 bg-[#083941]/10 px-4 py-2 rounded-full mb-6">
+              <QuestionMarkCircleIcon className="w-5 h-5 text-[#083941]" />
+              <span className="text-[#083941] font-semibold text-sm">Need Help Deciding?</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-white mb-4 sm:mb-6">
-              Not Sure Which Battery is <span className="text-gradient-energy">Right for You?</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-[#083941] mb-4 sm:mb-6">
+              Not Sure Which Battery is <span className="text-[#0073b9]">Right for You?</span>
             </h2>
-            <p className="text-lg sm:text-xl text-[#b0b0b0] mb-6 sm:mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#083941]/80 mb-6 sm:mb-8 max-w-2xl mx-auto">
               Get expert advice and a personalized recommendation based on your needs
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="btn-solar px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#083941] text-white hover:bg-[#0a4a54] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold inline-flex items-center justify-center gap-2 transition-colors"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#0073b9] text-white hover:bg-[#005a91] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold inline-flex items-center justify-center gap-2 transition-colors"
               >
                 <PhoneIcon className="w-5 h-5" />
                 1300 09 09 84

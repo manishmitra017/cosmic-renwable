@@ -96,36 +96,34 @@ export default function Header() {
 
   return (
     <>
-      {/* Premium Top Bar */}
+      {/* Premium Top Bar - Light Theme */}
       <div
-        className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+        className={`fixed w-full top-0 z-50 transition-all duration-500 bg-[#0073b9] ${
           scrolled
             ? 'md:h-0 md:overflow-hidden md:opacity-0'
             : 'opacity-100'
         }`}
-        style={{ background: 'linear-gradient(90deg, #0a0a0f 0%, #12121a 50%, #0a0a0f 100%)' }}
       >
-        <div className="h-px w-full bg-gradient-to-r from-transparent via-[#f5a623] to-transparent opacity-50" />
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-4 sm:gap-8">
             <a
               href="tel:1300090984"
-              className="flex items-center gap-2 text-[#f5a623] hover:text-[#ffd93d] transition-colors group"
+              className="flex items-center gap-2 text-white hover:text-[#fee000] transition-colors group"
             >
-              <div className="w-8 h-8 rounded-full bg-[#f5a623]/10 flex items-center justify-center group-hover:bg-[#f5a623]/20 transition-colors">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                 <PhoneIcon className="w-4 h-4" />
               </div>
               <span className="font-semibold text-sm hidden sm:block">1300 09 09 84</span>
             </a>
-            <div className="hidden md:flex items-center gap-2 text-[#b0b0b0]">
+            <div className="hidden md:flex items-center gap-2 text-white/80">
               <ClockIcon className="w-4 h-4" />
               <span className="text-sm">Mon-Sat: 8AM-6PM</span>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="hidden lg:block text-sm text-[#b0b0b0]">
-              Australia&apos;s Premium <span className="text-[#00d4ff]">Solar Battery</span> Specialists
+            <span className="hidden lg:block text-sm text-white/90">
+              Australia&apos;s Premium <span className="text-[#fee000]">Solar Battery</span> Specialists
             </span>
             <div className="flex items-center gap-2">
               {socialIcons.map((social, i) => (
@@ -134,7 +132,7 @@ export default function Header() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f5a623]/20 flex items-center justify-center text-[#b0b0b0] hover:text-[#f5a623] transition-all duration-300"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white hover:text-[#fee000] transition-all duration-300"
                   aria-label={social.label}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -147,7 +145,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Header */}
+      {/* Main Header - Light Theme */}
       <header
         className={`fixed w-full z-40 transition-all duration-500 ${
           scrolled
@@ -155,43 +153,40 @@ export default function Header() {
             : 'top-14 md:top-10 shadow-md'
         }`}
       >
-        {/* Glass background with gradient border */}
+        {/* Light background */}
         <div
-          className={`absolute inset-0 transition-all duration-500 ${
+          className={`absolute inset-0 transition-all duration-500 bg-white ${
             scrolled ? 'opacity-100' : 'opacity-95'
           }`}
           style={{
-            background: 'rgba(10, 10, 15, 0.85)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)'
           }}
         />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f5a623]/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200" />
 
         <nav className="relative max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
-                {/* Logo container with dark background to blend white edges */}
-                <div className="relative h-12 lg:h-14 w-12 lg:w-14 rounded-xl overflow-hidden bg-gradient-to-br from-[#1a1a2e] to-[#0a0a0f] border border-[#f5a623]/20 flex items-center justify-center">
+                {/* Logo container */}
+                <div className="relative h-12 lg:h-14 w-12 lg:w-14 rounded-xl overflow-hidden bg-[#0073b9] border border-[#0073b9] flex items-center justify-center">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy"
                     width={56}
                     height={56}
-                    className="h-10 lg:h-12 w-auto object-contain mix-blend-lighten"
+                    className="h-10 lg:h-12 w-auto object-contain"
                     priority
                   />
                 </div>
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-[#f5a623]/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <div className="whitespace-nowrap">
-                <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">
-                  Cosmic <span className="text-gradient-solar">Renewable</span> Energy
+                <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-[#333333] leading-tight">
+                  Cosmic <span className="text-[#0073b9]">Renewable</span> Energy
                 </h1>
-                <p className="text-[10px] sm:text-xs text-[#00d4ff] font-medium hidden sm:block">
+                <p className="text-[10px] sm:text-xs text-[#0073b9] font-medium hidden sm:block">
                   The Solar Energy Pioneers
                 </p>
               </div>
@@ -203,10 +198,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative py-2 text-[#d1d5db] hover:text-white font-medium text-sm transition-colors group whitespace-nowrap"
+                  className="relative py-2 text-[#444444] hover:text-[#0073b9] font-medium text-sm transition-colors group whitespace-nowrap"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#f5a623] to-[#00d4ff] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0073b9] group-hover:w-full transition-all duration-300" />
                 </Link>
               ))}
             </div>
@@ -216,21 +211,21 @@ export default function Header() {
               {/* Phone - Desktop */}
               <a
                 href="tel:1300090984"
-                className="hidden xl:flex items-center gap-3 text-[#d1d5db] hover:text-white transition-colors group whitespace-nowrap"
+                className="hidden xl:flex items-center gap-3 text-[#444444] hover:text-[#0073b9] transition-colors group whitespace-nowrap"
               >
-                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-br from-[#00d4ff]/20 to-[#00d4ff]/5 border border-[#00d4ff]/30 flex items-center justify-center group-hover:border-[#00d4ff]/50 transition-colors">
-                  <PhoneIcon className="w-5 h-5 text-[#00d4ff]" />
+                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-[#0073b9]/10 border border-[#0073b9]/30 flex items-center justify-center group-hover:bg-[#0073b9]/20 transition-colors">
+                  <PhoneIcon className="w-5 h-5 text-[#0073b9]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-[#9ca3af]">Call Now</p>
-                  <p className="text-sm font-bold text-white whitespace-nowrap">1300 09 09 84</p>
+                  <p className="text-xs text-[#666666]">Call Now</p>
+                  <p className="text-sm font-bold text-[#333333] whitespace-nowrap">1300 09 09 84</p>
                 </div>
               </a>
 
               {/* Quote Button */}
               <Link
                 href="/quote"
-                className="btn-energy flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg whitespace-nowrap flex-shrink-0"
+                className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg whitespace-nowrap flex-shrink-0 shadow-lg transition-all"
               >
                 <BoltIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">Free Quote</span>
@@ -240,7 +235,7 @@ export default function Header() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-[#d1d5db] hover:text-white hover:bg-white/5 rounded-xl transition-colors"
+                className="lg:hidden p-2 text-[#444444] hover:text-[#0073b9] hover:bg-gray-100 rounded-xl transition-colors"
                 aria-label="Toggle menu"
               >
                 {isOpen ? (
@@ -253,7 +248,7 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Light Theme */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -261,13 +256,9 @@ export default function Header() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="lg:hidden relative overflow-hidden"
-              style={{
-                background: 'rgba(10, 10, 15, 0.98)',
-                backdropFilter: 'blur(20px)'
-              }}
+              className="lg:hidden relative overflow-hidden bg-white"
             >
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+              <div className="h-px w-full bg-gray-200" />
               <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
                 {navLinks.map((link, index) => (
                   <motion.div
@@ -279,18 +270,18 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-between px-4 py-3 text-[#d1d5db] hover:text-white hover:bg-white/5 rounded-xl font-medium transition-all group"
+                      className="flex items-center justify-between px-4 py-3 text-[#444444] hover:text-[#0073b9] hover:bg-gray-50 rounded-xl font-medium transition-all group"
                     >
                       <span>{link.label}</span>
-                      <ChevronIcon className="w-4 h-4 text-[#9ca3af] group-hover:text-[#f5a623] group-hover:translate-x-1 transition-all" />
+                      <ChevronIcon className="w-4 h-4 text-[#666666] group-hover:text-[#0073b9] group-hover:translate-x-1 transition-all" />
                     </Link>
                   </motion.div>
                 ))}
 
-                <div className="pt-4 space-y-3 border-t border-white/10 mt-4">
+                <div className="pt-4 space-y-3 border-t border-gray-200 mt-4">
                   <a
                     href="tel:1300090984"
-                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-[#f5a623] to-[#ff9f1c] text-[#0a0a0f] px-4 py-3.5 rounded-xl font-bold shadow-lg shadow-[#f5a623]/20"
+                    className="flex items-center justify-center gap-3 bg-[#0073b9] text-white px-4 py-3.5 rounded-xl font-bold shadow-lg hover:bg-[#005a91] transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     <PhoneIcon className="w-5 h-5" />
@@ -299,7 +290,7 @@ export default function Header() {
 
                   <Link
                     href="/quote"
-                    className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#00d4ff] to-[#00b4a0] text-[#0a0a0f] px-4 py-3.5 rounded-xl font-bold shadow-lg shadow-[#00d4ff]/20"
+                    className="flex items-center justify-center gap-2 bg-[#fee000] text-[#083941] px-4 py-3.5 rounded-xl font-bold shadow-lg hover:bg-[#e5ca00] transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     <BatteryIcon className="w-5 h-5" />

@@ -76,15 +76,12 @@ const articles = [
 
 export default function ArticlesPage() {
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-[#0a0a0f]">
-        {/* Star field background */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-[#0073b9]">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0073b9] via-[#0073b9]/90 to-[#0073b9]"></div>
+        </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16">
           <motion.div
@@ -93,24 +90,24 @@ export default function ArticlesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <NewspaperIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Solar & Battery News</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/20">
+              <NewspaperIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-white font-semibold text-sm">Solar & Battery News</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-white mb-6">
-              Latest <span className="text-gradient-solar">Articles</span> &{' '}
-              <span className="text-gradient-energy">Updates</span>
+              Latest <span className="text-[#fee000]">Articles</span> &{' '}
+              <span className="text-white">Updates</span>
             </h1>
 
-            <p className="text-xl text-[#b0b0b0] max-w-2xl mx-auto mb-8">
+            <p className="text-xl text-white/90 max-w-2xl mx-auto mb-8">
               Stay informed with the latest government rebates, industry news, and important changes
               affecting solar and battery installations in Australia.
             </p>
 
             <a
               href="tel:1300090984"
-              className="inline-flex items-center gap-2 btn-solar px-6 py-3 rounded-lg font-semibold"
+              className="inline-flex items-center gap-2 bg-[#fee000] text-[#083941] px-6 py-3 rounded-lg font-semibold hover:bg-[#e5ca00] transition-all"
             >
               <PhoneIcon className="w-5 h-5" />
               Call 1300 09 09 84
@@ -121,7 +118,7 @@ export default function ArticlesPage() {
 
       {/* Featured Article */}
       {articles.filter(a => a.featured).map((article) => (
-        <section key={article.slug} className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+        <section key={article.slug} className="py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -130,14 +127,14 @@ export default function ArticlesPage() {
               transition={{ duration: 0.8 }}
             >
               <div className="text-center mb-8">
-                <span className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full border border-[#f5a623]/30">
-                  <StarIcon className="w-4 h-4 text-[#f5a623]" />
-                  <span className="text-[#f5a623] font-semibold text-sm">Featured Article</span>
+                <span className="inline-flex items-center gap-2 bg-[#fee000]/20 px-4 py-2 rounded-full border border-[#fee000]/30">
+                  <StarIcon className="w-4 h-4 text-[#0073b9]" />
+                  <span className="text-[#0073b9] font-semibold text-sm">Featured Article</span>
                 </span>
               </div>
 
               <Link href={`/articles/${article.slug}`} className="block group">
-                <div className="card-cosmic overflow-hidden hover:border-[#f5a623]/40 transition-all duration-300">
+                <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:border-[#0073b9]/40 transition-all duration-300">
                   <div className="grid md:grid-cols-2 gap-0">
                     <div className="relative h-64 md:h-96">
                       <Image
@@ -146,21 +143,21 @@ export default function ArticlesPage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0a0a0f]/80 md:block hidden"></div>
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent md:hidden"></div>
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/80 md:block hidden"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent md:hidden"></div>
                     </div>
                     <div className="p-8 md:p-12 flex flex-col justify-center">
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="glass px-3 py-1 rounded-full text-sm text-[#00d4ff] border border-[#00d4ff]/20">{article.category}</span>
-                        <span className="text-[#b0b0b0]">{article.date}</span>
+                        <span className="bg-[#0073b9]/10 px-3 py-1 rounded-full text-sm text-[#0073b9] border border-[#0073b9]/20">{article.category}</span>
+                        <span className="text-[#666666]">{article.date}</span>
                       </div>
-                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-[#f5a623] transition-colors">
+                      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#333333] mb-4 group-hover:text-[#0073b9] transition-colors">
                         {article.title}
                       </h2>
-                      <p className="text-[#b0b0b0] text-lg mb-6">
+                      <p className="text-[#666666] text-lg mb-6">
                         {article.description}
                       </p>
-                      <div className="flex items-center text-[#00d4ff] font-semibold group-hover:gap-4 gap-2 transition-all">
+                      <div className="flex items-center text-[#0073b9] font-semibold group-hover:gap-4 gap-2 transition-all">
                         Read Full Article
                         <ArrowRightIcon className="w-5 h-5" />
                       </div>
@@ -174,9 +171,7 @@ export default function ArticlesPage() {
       ))}
 
       {/* All Articles Grid */}
-      <section className="py-16 bg-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="py-16 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -185,10 +180,10 @@ export default function ArticlesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-              All <span className="text-gradient-solar">Articles</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+              All <span className="text-[#0073b9]">Articles</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0]">
+            <p className="text-xl text-[#666666]">
               Important updates for Australian solar and battery customers
             </p>
           </motion.div>
@@ -203,7 +198,7 @@ export default function ArticlesPage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <Link href={`/articles/${article.slug}`} className="block group h-full">
-                  <div className="card-cosmic overflow-hidden hover:border-[#f5a623]/30 transition-all duration-300 h-full flex flex-col">
+                  <div className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden hover:border-[#0073b9]/30 transition-all duration-300 h-full flex flex-col">
                     <div className="relative h-48">
                       <Image
                         src={article.image}
@@ -211,27 +206,27 @@ export default function ArticlesPage() {
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent"></div>
                       <div className="absolute top-4 left-4">
-                        <span className="glass px-3 py-1 rounded-full text-xs font-semibold text-[#00d4ff] border border-[#00d4ff]/20">
+                        <span className="bg-white/90 px-3 py-1 rounded-full text-xs font-semibold text-[#0073b9] border border-[#0073b9]/20">
                           {article.category}
                         </span>
                       </div>
                       {article.featured && (
                         <div className="absolute top-4 right-4">
-                          <span className="glass px-2 py-1 rounded-full border border-[#f5a623]/30">
-                            <StarIcon className="w-4 h-4 text-[#f5a623]" />
+                          <span className="bg-[#fee000] px-2 py-1 rounded-full">
+                            <StarIcon className="w-4 h-4 text-[#083941]" />
                           </span>
                         </div>
                       )}
                     </div>
                     <div className="p-6 flex-1 flex flex-col">
-                      <div className="text-sm text-[#f5a623] font-medium mb-2">{article.date}</div>
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-[#f5a623] transition-colors line-clamp-2">
+                      <div className="text-sm text-[#0073b9] font-medium mb-2">{article.date}</div>
+                      <h3 className="text-xl font-semibold text-[#333333] mb-3 group-hover:text-[#0073b9] transition-colors line-clamp-2">
                         {article.title}
                       </h3>
-                      <p className="text-[#b0b0b0] mb-4 line-clamp-3 flex-1">{article.description}</p>
-                      <div className="flex items-center text-[#00d4ff] font-medium group-hover:gap-3 gap-1 transition-all">
+                      <p className="text-[#666666] mb-4 line-clamp-3 flex-1">{article.description}</p>
+                      <div className="flex items-center text-[#0073b9] font-medium group-hover:gap-3 gap-1 transition-all">
                         Read More
                         <ArrowRightIcon className="w-4 h-4" />
                       </div>
@@ -245,12 +240,7 @@ export default function ArticlesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
-        </div>
-
+      <section className="py-16 bg-[#0073b9] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -258,17 +248,17 @@ export default function ArticlesPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <BoltIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Limited Time Offer</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/20">
+              <BoltIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-white font-semibold text-sm">Limited Time Offer</span>
             </div>
 
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
               Ready to Take Advantage of the{' '}
-              <span className="text-gradient-solar">Rebates?</span>
+              <span className="text-[#fee000]">Rebates?</span>
             </h2>
 
-            <p className="text-xl text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Don&apos;t miss out on the government battery rebates. Contact us today for a free consultation
               and find out how much you can save.
             </p>
@@ -276,14 +266,14 @@ export default function ArticlesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#fee000] text-[#083941] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#e5ca00] transition-all"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-white text-[#0073b9] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-gray-100 transition-all"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call 1300 09 09 84

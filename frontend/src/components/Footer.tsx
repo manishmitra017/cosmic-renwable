@@ -113,22 +113,14 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[#0a0a0f] overflow-hidden">
-      {/* Cosmic Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[#f5a623]/30 to-transparent"></div>
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#f5a623]/3 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#00d4ff]/3 rounded-full blur-3xl"></div>
-      </div>
-
+    <footer className="relative bg-[#0073b9] overflow-hidden">
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
-              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-gradient-to-br from-[#f5a623] to-[#ff8c00] p-0.5">
-                <div className="w-full h-full rounded-[10px] overflow-hidden bg-[#0a0a0f] flex items-center justify-center">
+              <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-white p-0.5">
+                <div className="w-full h-full rounded-[10px] overflow-hidden bg-[#0073b9] flex items-center justify-center">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy"
@@ -138,31 +130,31 @@ export default function Footer() {
                   />
                 </div>
               </div>
-              <span className="text-xl font-bold font-display text-white group-hover:text-[#f5a623] transition-colors">
+              <span className="text-xl font-bold font-display text-white group-hover:text-[#fee000] transition-colors">
                 Cosmic Renewable Energy
               </span>
             </Link>
-            <p className="text-[#b0b0b0] mb-6 max-w-md leading-relaxed">
+            <p className="text-white/80 mb-6 max-w-md leading-relaxed">
               Australia&apos;s leading provider of premium solar battery solutions. We help homes and businesses
               transition to clean, renewable energy with professional installation and ongoing support.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
-              <a href="tel:1300123456" className="flex items-center gap-3 text-[#b0b0b0] hover:text-[#f5a623] transition-colors group">
-                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#f5a623]/10 transition-colors">
+              <a href="tel:1300123456" className="flex items-center gap-3 text-white/80 hover:text-[#fee000] transition-colors group">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <PhoneIcon className="w-4 h-4" />
                 </div>
                 <span>1300 123 456</span>
               </a>
-              <a href="mailto:info@cosmicrenewableenergy.com.au" className="flex items-center gap-3 text-[#b0b0b0] hover:text-[#f5a623] transition-colors group">
-                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#f5a623]/10 transition-colors">
+              <a href="mailto:info@cosmicrenewableenergy.com.au" className="flex items-center gap-3 text-white/80 hover:text-[#fee000] transition-colors group">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                   <EnvelopeIcon className="w-4 h-4" />
                 </div>
                 <span>info@cosmicrenewableenergy.com.au</span>
               </a>
-              <div className="flex items-center gap-3 text-[#b0b0b0]">
-                <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <div className="flex items-center gap-3 text-white/80">
+                <div className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center">
                   <MapPinIcon className="w-4 h-4" />
                 </div>
                 <span>Servicing All of Australia</span>
@@ -177,7 +169,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-[#b0b0b0] hover:text-white hover:bg-[#f5a623]/20 transition-all duration-300 border border-transparent hover:border-[#f5a623]/30"
+                  className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white hover:text-[#fee000] hover:bg-white/20 transition-all duration-300"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
@@ -188,15 +180,15 @@ export default function Footer() {
 
           {/* Services Column */}
           <div className="lg:col-span-3">
-            <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Services</h3>
+            <h3 className="text-sm font-semibold text-[#fee000] uppercase tracking-wider mb-6">Services</h3>
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="group flex items-center gap-3 text-[#b0b0b0] hover:text-white transition-colors"
+                    className="group flex items-center gap-3 text-white/80 hover:text-white transition-colors"
                   >
-                    <service.icon className="w-4 h-4 text-[#9ca3af] group-hover:text-[#f5a623] transition-colors" />
+                    <service.icon className="w-4 h-4 text-white/60 group-hover:text-[#fee000] transition-colors" />
                     <span>{service.name}</span>
                     <ArrowRightIcon className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </Link>
@@ -207,13 +199,13 @@ export default function Footer() {
 
           {/* Company Column */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Company</h3>
+            <h3 className="text-sm font-semibold text-[#fee000] uppercase tracking-wider mb-6">Company</h3>
             <ul className="space-y-3">
               {company.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="group flex items-center gap-2 text-[#b0b0b0] hover:text-white transition-colors"
+                    className="group flex items-center gap-2 text-white/80 hover:text-white transition-colors"
                   >
                     <span>{item.name}</span>
                     <ArrowRightIcon className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
@@ -225,19 +217,19 @@ export default function Footer() {
 
           {/* Newsletter Column */}
           <div className="lg:col-span-2">
-            <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Stay Updated</h3>
-            <p className="text-[#b0b0b0] text-sm mb-4">
+            <h3 className="text-sm font-semibold text-[#fee000] uppercase tracking-wider mb-6">Stay Updated</h3>
+            <p className="text-white/80 text-sm mb-4">
               Get the latest solar news, rebate updates, and exclusive offers.
             </p>
             <form className="space-y-3">
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-[#9ca3af] focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all text-sm"
+                className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-[#fee000]/50 focus:ring-1 focus:ring-[#fee000]/50 transition-all text-sm"
               />
               <button
                 type="submit"
-                className="w-full px-4 py-3 rounded-lg bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] font-semibold text-sm hover:shadow-lg hover:shadow-[#f5a623]/20 transition-all duration-300"
+                className="w-full px-4 py-3 rounded-lg bg-[#fee000] text-[#083941] font-semibold text-sm hover:bg-[#e5ca00] transition-all duration-300 shadow-lg"
               >
                 Subscribe
               </button>
@@ -246,34 +238,34 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/5">
+        <div className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-[#9ca3af] text-sm">
+            <p className="text-white/70 text-sm">
               © {new Date().getFullYear()} Cosmic Renewable Energy. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <Link href="/privacy-policy" className="text-[#9ca3af] hover:text-[#f5a623] text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-white/70 hover:text-[#fee000] text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <span className="text-[#6b7280]">|</span>
-              <Link href="/terms-of-service" className="text-[#9ca3af] hover:text-[#f5a623] text-sm transition-colors">
+              <span className="text-white/40">|</span>
+              <Link href="/terms-of-service" className="text-white/70 hover:text-[#fee000] text-sm transition-colors">
                 Terms of Service
               </Link>
             </div>
           </div>
 
           {/* Certifications */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-[#9ca3af] text-xs">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-white/70 text-xs">
             <span className="flex items-center gap-2">
-              <BatteryIcon className="w-4 h-4 text-[#00d4ff]" />
+              <BatteryIcon className="w-4 h-4 text-[#fee000]" />
               CEC Approved Installer
             </span>
-            <span className="text-[#6b7280]">•</span>
+            <span className="text-white/40">•</span>
             <span className="flex items-center gap-2">
-              <SunIcon className="w-4 h-4 text-[#f5a623]" />
+              <SunIcon className="w-4 h-4 text-[#fee000]" />
               Licensed Electrical Contractor
             </span>
-            <span className="text-[#6b7280]">•</span>
+            <span className="text-white/40">•</span>
             <span>ABN: XX XXX XXX XXX</span>
           </div>
         </div>

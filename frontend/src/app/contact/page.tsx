@@ -154,10 +154,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="bg-[#0a0a0f]">
+    <div className="bg-white">
       {/* Contact Banner */}
-      <section className="py-4 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10"></div>
+      <section className="py-4 bg-[#fee000] relative overflow-hidden">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center"
@@ -166,27 +165,27 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
-              <div className="flex items-center gap-2 text-[#0a0a0f] font-bold text-lg sm:text-xl">
+              <div className="flex items-center gap-2 text-[#083941] font-bold text-lg sm:text-xl">
                 <RocketIcon className="w-5 h-5" />
                 <span>Australia&apos;s #1 Solar &amp; Battery Experts</span>
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                 <a
                   href="tel:1300090984"
-                  className="bg-[#0a0a0f] text-[#f5a623] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#1a1a2e] transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-[#0073b9] text-white px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#005a91] transition-colors shadow-lg flex items-center gap-2"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="bg-[#0a0a0f] text-[#00d4ff] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#1a1a2e] transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-white text-[#0073b9] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2"
                 >
                   <DevicePhoneIcon className="w-4 h-4" />
                   +61 422 786 100
                 </a>
               </div>
-              <div className="text-[#0a0a0f] font-semibold text-sm sm:text-base">
+              <div className="text-[#083941] font-semibold text-sm sm:text-base">
                 Call Now for Instant Quote!
               </div>
             </div>
@@ -195,19 +194,16 @@ export default function Contact() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden bg-[#0073b9]">
         <div className="absolute inset-0">
           <Image
             src="/solarroof6.jpg"
             alt="Contact Cosmic Renewable Energy"
             fill
-            className="object-cover opacity-30"
+            className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/80 via-[#0a0a0f]/60 to-[#0a0a0f]"></div>
-          <div className="absolute inset-0 star-field opacity-40"></div>
-          <div className="absolute top-20 right-20 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-48 h-48 bg-[#00d4ff]/10 rounded-full blur-3xl animate-float-delayed"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0073b9]/80 via-[#0073b9]/60 to-[#0073b9]"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -221,16 +217,16 @@ export default function Contact() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#f5a623]/10 border border-[#f5a623]/20 mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6"
             >
-              <SparklesIcon className="w-4 h-4 text-[#f5a623]" />
-              <span className="text-[#f5a623] text-sm font-medium tracking-wide">Get In Touch</span>
+              <SparklesIcon className="w-4 h-4 text-[#fee000]" />
+              <span className="text-white text-sm font-medium tracking-wide">Get In Touch</span>
             </motion.div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-display mb-4 sm:mb-6 leading-tight">
               <span className="text-white">Contact </span>
-              <span className="text-gradient-solar">Us</span>
+              <span className="text-[#fee000]">Us</span>
             </h1>
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed">
               Ready to start your solar journey? Get in touch with Australia&apos;s trusted solar experts
               for a free consultation and personalized energy solution.
             </p>
@@ -239,65 +235,60 @@ export default function Contact() {
       </section>
 
       {/* Quick Contact Cards */}
-      <section className="py-12 bg-[#0a0a0f] relative">
+      <section className="py-12 bg-white relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <motion.div
-              className="text-center p-4 sm:p-6 glass rounded-2xl border border-white/10"
+              className="text-center p-4 sm:p-6 bg-white rounded-2xl border border-gray-200 shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="w-12 sm:w-16 h-12 sm:h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg shadow-[#f5a623]/20">
-                <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-[#0a0a0f]" />
+              <div className="w-12 sm:w-16 h-12 sm:h-16 bg-[#0073b9] rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
+                <PhoneIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Call Now</h3>
-              <a href="tel:1300090984" className="block text-lg sm:text-2xl font-bold text-[#f5a623] mb-1 hover:text-[#ff8c00] transition-colors">1300 09 09 84</a>
-              <a href="tel:+61422786100" className="block text-base sm:text-lg font-bold text-[#00d4ff] mb-2 hover:text-[#00b8e0] transition-colors">+61 422 786 100</a>
-              <p className="text-gray-500 text-xs sm:text-sm">Mon-Fri: 8am-6pm | Sat: 9am-4pm</p>
+              <h3 className="text-lg sm:text-xl font-bold text-[#333333] mb-2">Call Now</h3>
+              <a href="tel:1300090984" className="block text-lg sm:text-2xl font-bold text-[#0073b9] mb-1 hover:text-[#005a91] transition-colors">1300 09 09 84</a>
+              <a href="tel:+61422786100" className="block text-base sm:text-lg font-bold text-[#0073b9] mb-2 hover:text-[#005a91] transition-colors">+61 422 786 100</a>
+              <p className="text-[#666666] text-xs sm:text-sm">Mon-Fri: 8am-6pm | Sat: 9am-4pm</p>
             </motion.div>
 
             <motion.div
-              className="text-center p-6 glass rounded-2xl border border-white/10"
+              className="text-center p-6 bg-white rounded-2xl border border-gray-200 shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#00d4ff] to-[#0099cc] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#00d4ff]/20">
-                <EnvelopeIcon className="w-8 h-8 text-[#0a0a0f]" />
+              <div className="w-16 h-16 bg-[#fee000] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <EnvelopeIcon className="w-8 h-8 text-[#083941]" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Email Us</h3>
-              <p className="text-[#f5a623] font-semibold mb-2">info@cosmicrenewableenergy.com.au</p>
-              <p className="text-gray-500 text-sm">24/7 email support</p>
+              <h3 className="text-xl font-bold text-[#333333] mb-2">Email Us</h3>
+              <p className="text-[#0073b9] font-semibold mb-2">info@cosmicrenewableenergy.com.au</p>
+              <p className="text-[#666666] text-sm">24/7 email support</p>
             </motion.div>
 
             <motion.div
-              className="text-center p-6 glass rounded-2xl border border-white/10"
+              className="text-center p-6 bg-white rounded-2xl border border-gray-200 shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[#f5a623] to-[#ff8c00] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg shadow-[#f5a623]/20">
-                <MapPinIcon className="w-8 h-8 text-[#0a0a0f]" />
+              <div className="w-16 h-16 bg-[#0073b9] rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <MapPinIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">Visit Us</h3>
-              <p className="text-gray-400 mb-2">12 Galli Court<br />Hillside, Victoria 3037</p>
-              <p className="text-gray-500 text-sm">Free on-site consultations Australia-wide</p>
+              <h3 className="text-xl font-bold text-[#333333] mb-2">Visit Us</h3>
+              <p className="text-[#666666] mb-2">12 Galli Court<br />Hillside, Victoria 3037</p>
+              <p className="text-[#666666] text-sm">Free on-site consultations Australia-wide</p>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 star-field opacity-20"></div>
-          <div className="absolute top-1/4 left-0 w-96 h-96 bg-[#f5a623]/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 right-0 w-80 h-80 bg-[#00d4ff]/5 rounded-full blur-3xl"></div>
-        </div>
+      <section className="py-20 bg-[#efefef] relative overflow-hidden">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
             {/* Contact Information */}
@@ -307,42 +298,42 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-white mb-4 sm:mb-6">
-                Get Your <span className="text-gradient-solar">Free Quote</span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-display text-[#333333] mb-4 sm:mb-6">
+                Get Your <span className="text-[#0073b9]">Free Quote</span>
               </h2>
-              <p className="text-lg text-gray-400 mb-8">
+              <p className="text-lg text-[#666666] mb-8">
                 Join thousands of satisfied customers who have made the switch to clean, renewable energy.
                 Our team of certified solar experts is ready to design the perfect system for your needs.
               </p>
 
               <div className="space-y-6 mb-8">
                 {[
-                  { icon: TrophyIcon, title: '2000+ Happy Customers', desc: 'Trusted by families and businesses across Australia', colorClass: 'text-[#f5a623]' },
-                  { icon: BoltIcon, title: '10+ Years Experience', desc: 'CEC-accredited professionals with proven expertise', colorClass: 'text-[#00d4ff]' },
-                  { icon: ShieldCheckIcon, title: '5-Year Warranty', desc: 'Comprehensive workmanship guarantee included', colorClass: 'text-[#f5a623]' },
-                  { icon: CurrencyIcon, title: 'Government Rebates', desc: 'We handle all paperwork for maximum savings', colorClass: 'text-[#00d4ff]' },
+                  { icon: TrophyIcon, title: '2000+ Happy Customers', desc: 'Trusted by families and businesses across Australia', colorClass: 'text-[#0073b9]' },
+                  { icon: BoltIcon, title: '10+ Years Experience', desc: 'CEC-accredited professionals with proven expertise', colorClass: 'text-[#0073b9]' },
+                  { icon: ShieldCheckIcon, title: '5-Year Warranty', desc: 'Comprehensive workmanship guarantee included', colorClass: 'text-[#0073b9]' },
+                  { icon: CurrencyIcon, title: 'Government Rebates', desc: 'We handle all paperwork for maximum savings', colorClass: 'text-[#0073b9]' },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start group">
-                    <div className="flex-shrink-0 w-12 h-12 glass rounded-xl flex items-center justify-center border border-white/10 group-hover:border-[#f5a623]/30 transition-colors">
+                    <div className="flex-shrink-0 w-12 h-12 bg-white rounded-xl flex items-center justify-center border border-gray-200 shadow-sm group-hover:border-[#0073b9]/30 transition-colors">
                       <item.icon className={`w-5 h-5 ${item.colorClass}`} />
                     </div>
                     <div className="ml-4">
-                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                      <p className="text-gray-400">{item.desc}</p>
+                      <h3 className="text-lg font-semibold text-[#333333]">{item.title}</h3>
+                      <p className="text-[#666666]">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="glass rounded-2xl p-6 border border-[#f5a623]/20 bg-gradient-to-br from-[#f5a623]/10 to-transparent">
-                <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                  <SparklesIcon className="w-5 h-5 text-[#f5a623]" />
+              <div className="bg-white rounded-2xl p-6 border border-[#0073b9]/20 shadow-lg">
+                <h3 className="text-xl font-bold text-[#333333] mb-4 flex items-center gap-2">
+                  <SparklesIcon className="w-5 h-5 text-[#0073b9]" />
                   Free Consultation Includes:
                 </h3>
                 <ul className="space-y-3">
                   {['Complete energy audit', 'Custom system design', 'Accurate pricing quote', 'Rebate calculations'].map((item, index) => (
-                    <li key={index} className="flex items-center text-gray-300">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-3 flex-shrink-0" />
+                    <li key={index} className="flex items-center text-[#666666]">
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] mr-3 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -358,17 +349,16 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="absolute -inset-1 bg-gradient-to-r from-[#f5a623]/30 to-[#00d4ff]/30 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              <div className="relative glass rounded-2xl p-8 border border-white/10">
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-200 shadow-lg">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">Get Started Today</h3>
-                  <p className="text-gray-400">Fill out the form below and we&apos;ll contact you within 24 hours</p>
+                  <h3 className="text-2xl font-bold text-[#333333] mb-2">Get Started Today</h3>
+                  <p className="text-[#666666]">Fill out the form below and we&apos;ll contact you within 24 hours</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label htmlFor="name" className="block text-sm font-medium text-[#333333] mb-1">
                         Full Name *
                       </label>
                       <input
@@ -378,13 +368,13 @@ export default function Contact() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#efefef] border border-gray-200 rounded-xl text-[#333333] placeholder-[#999999] focus:outline-none focus:border-[#0073b9] focus:ring-1 focus:ring-[#0073b9] transition-all"
                         placeholder="Your full name"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label htmlFor="phone" className="block text-sm font-medium text-[#333333] mb-1">
                         Phone Number *
                       </label>
                       <input
@@ -394,14 +384,14 @@ export default function Contact() {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#efefef] border border-gray-200 rounded-xl text-[#333333] placeholder-[#999999] focus:outline-none focus:border-[#0073b9] focus:ring-1 focus:ring-[#0073b9] transition-all"
                         placeholder="04XX XXX XXX"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label htmlFor="email" className="block text-sm font-medium text-[#333333] mb-1">
                       Email Address *
                     </label>
                     <input
@@ -411,14 +401,14 @@ export default function Contact() {
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
+                      className="w-full px-4 py-3 bg-[#efefef] border border-gray-200 rounded-xl text-[#333333] placeholder-[#999999] focus:outline-none focus:border-[#0073b9] focus:ring-1 focus:ring-[#0073b9] transition-all"
                       placeholder="your.email@example.com"
                     />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="suburb" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label htmlFor="suburb" className="block text-sm font-medium text-[#333333] mb-1">
                         Address *
                       </label>
                       <input
@@ -429,13 +419,13 @@ export default function Contact() {
                         required
                         value={formData.suburb}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#efefef] border border-gray-200 rounded-xl text-[#333333] placeholder-[#999999] focus:outline-none focus:border-[#0073b9] focus:ring-1 focus:ring-[#0073b9] transition-all"
                         placeholder="Start typing your address..."
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="serviceInterest" className="block text-sm font-medium text-gray-300 mb-1">
+                      <label htmlFor="serviceInterest" className="block text-sm font-medium text-[#333333] mb-1">
                         Service Interest
                       </label>
                       <select
@@ -443,21 +433,21 @@ export default function Contact() {
                         name="serviceInterest"
                         value={formData.serviceInterest}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all"
+                        className="w-full px-4 py-3 bg-[#efefef] border border-gray-200 rounded-xl text-[#333333] focus:outline-none focus:border-[#0073b9] focus:ring-1 focus:ring-[#0073b9] transition-all"
                       >
-                        <option value="" className="bg-[#1a1a2e]">Select a service</option>
-                        <option value="solar-panels" className="bg-[#1a1a2e]">Solar Panels</option>
-                        <option value="solar-batteries" className="bg-[#1a1a2e]">Solar Batteries</option>
-                        <option value="heat-pumps" className="bg-[#1a1a2e]">Hot Water Heat Pump</option>
-                        <option value="hvac-systems" className="bg-[#1a1a2e]">HVAC Systems</option>
-                        <option value="maintenance" className="bg-[#1a1a2e]">Servicing &amp; Maintenance</option>
-                        <option value="consultation" className="bg-[#1a1a2e]">General Consultation</option>
+                        <option value="" className="bg-white">Select a service</option>
+                        <option value="solar-panels" className="bg-white">Solar Panels</option>
+                        <option value="solar-batteries" className="bg-white">Solar Batteries</option>
+                        <option value="heat-pumps" className="bg-white">Hot Water Heat Pump</option>
+                        <option value="hvac-systems" className="bg-white">HVAC Systems</option>
+                        <option value="maintenance" className="bg-white">Servicing &amp; Maintenance</option>
+                        <option value="consultation" className="bg-white">General Consultation</option>
                       </select>
                     </div>
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-1">
+                    <label htmlFor="message" className="block text-sm font-medium text-[#333333] mb-1">
                       Message
                     </label>
                     <textarea
@@ -466,7 +456,7 @@ export default function Contact() {
                       rows={4}
                       value={formData.message}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all resize-none"
+                      className="w-full px-4 py-3 bg-[#efefef] border border-gray-200 rounded-xl text-[#333333] placeholder-[#999999] focus:outline-none focus:border-[#0073b9] focus:ring-1 focus:ring-[#0073b9] transition-all resize-none"
                       placeholder="Tell us about your energy needs, roof details, current electricity bills, or any questions..."
                     />
                   </div>
@@ -474,7 +464,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-6 py-4 rounded-xl text-lg font-semibold hover:shadow-lg hover:shadow-[#f5a623]/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-[#fee000] text-[#083941] px-6 py-4 rounded-xl text-lg font-semibold hover:bg-[#e5ca00] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-lg"
                   >
                     {isSubmitting ? (
                       <>
@@ -494,19 +484,19 @@ export default function Contact() {
 
                   {submitMessage && (
                     <div className={`p-4 rounded-xl ${submitMessage.includes('Thank you')
-                        ? 'bg-[#00d4ff]/10 text-[#00d4ff] border border-[#00d4ff]/20'
-                        : 'bg-red-500/10 text-red-400 border border-red-500/20'
+                        ? 'bg-green-50 text-green-700 border border-green-200'
+                        : 'bg-red-50 text-red-700 border border-red-200'
                       }`}>
                       {submitMessage}
                     </div>
                   )}
                 </form>
 
-                <div className="mt-6 pt-6 border-t border-white/10 text-center">
-                  <p className="text-sm text-gray-500 mb-3">Or call us now for immediate assistance</p>
+                <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+                  <p className="text-sm text-[#666666] mb-3">Or call us now for immediate assistance</p>
                   <a
                     href="tel:1300267642"
-                    className="inline-flex items-center gap-2 glass px-6 py-2 rounded-full font-semibold text-[#f5a623] border border-[#f5a623]/20 hover:bg-[#f5a623]/10 transition-all"
+                    className="inline-flex items-center gap-2 bg-[#efefef] px-6 py-2 rounded-full font-semibold text-[#0073b9] border border-gray-200 hover:bg-[#0073b9] hover:text-white transition-all"
                   >
                     <PhoneIcon className="w-4 h-4" />
                     1300 COSMIC
@@ -519,7 +509,7 @@ export default function Contact() {
       </section>
 
       {/* Google Maps Section */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -528,10 +518,10 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">
-              Find Our <span className="text-gradient-solar">Location</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-[#333333] mb-6">
+              Find Our <span className="text-[#0073b9]">Location</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto mb-8">
               Visit our office or schedule a free on-site consultation anywhere in Australia.
             </p>
           </motion.div>
@@ -543,8 +533,8 @@ export default function Contact() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="glass rounded-2xl p-6 border border-white/10 h-full">
-                <h3 className="text-2xl font-bold text-white mb-6">Our Office</h3>
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg h-full">
+                <h3 className="text-2xl font-bold text-[#333333] mb-6">Our Office</h3>
                 <div className="space-y-4">
                   {[
                     { icon: MapPinIcon, title: 'Address', content: '12 Galli Court\nHillside, Victoria 3037' },
@@ -553,17 +543,17 @@ export default function Contact() {
                     { icon: EnvelopeIcon, title: 'Email', content: 'info@cosmicrenewableenergy.com.au', isLink: true, href: 'mailto:info@cosmicrenewableenergy.com.au' },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start">
-                      <div className="w-10 h-10 glass rounded-lg flex items-center justify-center border border-white/10 flex-shrink-0">
-                        <item.icon className="w-5 h-5 text-[#f5a623]" />
+                      <div className="w-10 h-10 bg-[#efefef] rounded-lg flex items-center justify-center border border-gray-200 flex-shrink-0">
+                        <item.icon className="w-5 h-5 text-[#0073b9]" />
                       </div>
                       <div className="ml-4">
-                        <p className="font-semibold text-white">{item.title}</p>
+                        <p className="font-semibold text-[#333333]">{item.title}</p>
                         {item.isLink ? (
-                          <a href={item.href} className="text-[#f5a623] hover:text-[#ff8c00] transition-colors whitespace-pre-line">
+                          <a href={item.href} className="text-[#0073b9] hover:text-[#005a91] transition-colors whitespace-pre-line">
                             {item.content}
                           </a>
                         ) : (
-                          <p className="text-gray-400 whitespace-pre-line">{item.content}</p>
+                          <p className="text-[#666666] whitespace-pre-line">{item.content}</p>
                         )}
                       </div>
                     </div>
@@ -577,13 +567,13 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="rounded-2xl overflow-hidden border border-white/10"
+              className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3154.2!2d144.7435!3d-37.7299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s12%20Galli%20Ct%2C%20Hillside%20VIC%203037%2C%20Australia!5e0!3m2!1sen!2sau!4v1691234567890!5m2!1sen!2sau"
                 width="100%"
                 height="400"
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }}
+                style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -595,7 +585,7 @@ export default function Contact() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-16 relative">
+      <section className="py-16 bg-[#efefef] relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -604,10 +594,10 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">
-              Service Areas Across <span className="text-gradient-solar">Australia</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-[#333333] mb-6">
+              Service Areas Across <span className="text-[#0073b9]">Australia</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               We provide solar and energy solutions to customers across all major Australian cities and regions.
             </p>
           </motion.div>
@@ -619,13 +609,13 @@ export default function Contact() {
             ].map((city, index) => (
               <motion.div
                 key={city}
-                className="p-3 sm:p-4 glass rounded-xl border border-white/5 hover:border-[#f5a623]/30 transition-all duration-300 group"
+                className="p-3 sm:p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-[#0073b9]/30 transition-all duration-300 group"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.05 }}
               >
-                <h3 className="font-semibold text-gray-300 group-hover:text-[#f5a623] transition-colors text-sm sm:text-base">{city}</h3>
+                <h3 className="font-semibold text-[#666666] group-hover:text-[#0073b9] transition-colors text-sm sm:text-base">{city}</h3>
               </motion.div>
             ))}
           </div>
@@ -633,8 +623,7 @@ export default function Contact() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 relative">
-        <div className="absolute inset-0 star-field opacity-10"></div>
+      <section className="py-16 bg-white relative">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -643,10 +632,10 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">
-              Frequently Asked <span className="text-gradient-solar">Questions</span>
+            <h2 className="text-3xl md:text-4xl font-bold font-display text-[#333333] mb-6">
+              Frequently Asked <span className="text-[#0073b9]">Questions</span>
             </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               Get answers to the most common questions about solar energy and our services.
             </p>
           </motion.div>
@@ -673,16 +662,16 @@ export default function Contact() {
               ].map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="glass rounded-2xl p-6 border border-white/10 hover:border-[#f5a623]/30 transition-all duration-300"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 shadow-lg hover:border-[#0073b9]/30 transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
-                  <h3 className="text-lg font-semibold text-white mb-3">
+                  <h3 className="text-lg font-semibold text-[#333333] mb-3">
                     {faq.question}
                   </h3>
-                  <p className="text-gray-400 leading-relaxed">
+                  <p className="text-[#666666] leading-relaxed">
                     {faq.answer}
                   </p>
                 </motion.div>
@@ -693,9 +682,7 @@ export default function Contact() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623]/20 to-[#ff8c00]/20"></div>
-        <div className="absolute inset-0 star-field opacity-30"></div>
+      <section className="py-16 bg-[#0073b9] relative overflow-hidden">
         <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -704,22 +691,22 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">
-              Ready to Start Saving with <span className="text-gradient-solar">Solar</span>?
+              Ready to Start Saving with <span className="text-[#fee000]">Solar</span>?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Don&apos;t wait - government rebates are available now. Contact us today for your free consultation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#f5a623] to-[#ff8c00] text-[#0a0a0f] px-8 py-4 rounded-xl text-lg font-semibold hover:shadow-lg hover:shadow-[#f5a623]/30 transition-all duration-300"
+                className="group inline-flex items-center justify-center gap-2 bg-[#fee000] text-[#083941] px-8 py-4 rounded-xl text-lg font-semibold hover:bg-[#e5ca00] transition-all duration-300 shadow-lg"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="tel:1300267642"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white/20 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white hover:text-[#0073b9] transition-all duration-300"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call 1300 COSMIC

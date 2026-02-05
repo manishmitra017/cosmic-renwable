@@ -95,25 +95,25 @@ export default function SolarBattery() {
       icon: BatteryIcon,
       title: 'Energy Independence',
       description: 'Store solar energy during the day and use it at night. Reduce reliance on the grid with home battery storage systems.',
-      color: 'text-[#00d4ff]',
-      bgColor: 'bg-[#00d4ff]/10',
-      borderColor: 'border-[#00d4ff]/20'
+      color: 'text-[#0073b9]',
+      bgColor: 'bg-[#0073b9]/10',
+      borderColor: 'border-[#0073b9]/20'
     },
     {
       icon: CurrencyIcon,
       title: 'Government Rebates',
       description: 'Access up to $8,000 in Australian government rebates for solar battery installations. We handle all paperwork.',
-      color: 'text-[#f5a623]',
-      bgColor: 'bg-[#f5a623]/10',
-      borderColor: 'border-[#f5a623]/20'
+      color: 'text-[#0073b9]',
+      bgColor: 'bg-[#fee000]/20',
+      borderColor: 'border-[#fee000]/30'
     },
     {
       icon: BoltIcon,
       title: 'Backup Power',
       description: 'Keep your home powered during blackouts with reliable solar battery backup systems for Australian homes.',
-      color: 'text-[#00d4ff]',
-      bgColor: 'bg-[#00d4ff]/10',
-      borderColor: 'border-[#00d4ff]/20'
+      color: 'text-[#0073b9]',
+      bgColor: 'bg-[#0073b9]/10',
+      borderColor: 'border-[#0073b9]/20'
     }
   ]
 
@@ -136,19 +136,14 @@ export default function SolarBattery() {
   ]
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0a0a0f]">
-        {/* Background Effects */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#0073b9]">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -158,25 +153,25 @@ export default function SolarBattery() {
             className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0f] via-[#0a0a0f]/80 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0073b9] via-[#0073b9]/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border border-[#f5a623]/30 mb-6">
-              <SparklesIcon className="w-4 h-4 text-[#f5a623]" />
-              <span className="text-[#f5a623] text-sm font-semibold">$8,000 REBATES AVAILABLE</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">
+              <SparklesIcon className="w-4 h-4 text-[#fee000]" />
+              <span className="text-white text-sm font-semibold">$8,000 REBATES AVAILABLE</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight font-display">
               <span className="text-white">Solar Battery Installation</span>
-              <span className="block text-gradient-solar">
+              <span className="block text-[#fee000]">
                 Australia Wide Service
               </span>
             </h1>
 
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-2xl">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed max-w-2xl">
               Premium solar battery systems with government rebates up to $8,000. Professional installation
               across Melbourne, Sydney, Brisbane, Perth, Adelaide and all Australian cities.
             </p>
@@ -184,14 +179,14 @@ export default function SolarBattery() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/quote"
-                className="btn-solar inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl"
+                className="bg-[#fee000] text-[#083941] inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-semibold shadow-xl hover:bg-[#e5ca00] transition-all"
               >
                 Get Free Solar Battery Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-semibold"
+                className="bg-white text-[#0073b9] inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-gray-100 transition-all"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call Solar Battery Experts
@@ -202,18 +197,14 @@ export default function SolarBattery() {
       </section>
 
       {/* Solar Battery Benefits */}
-      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#1a1a2e] relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 star-field opacity-20"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-[#00d4ff]/5 rounded-full blur-[80px]"></div>
-
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-4 font-display">
               Why Choose Solar Battery Systems in{' '}
-              <span className="text-gradient-solar">Australia?</span>
+              <span className="text-[#0073b9]">Australia?</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#666666] max-w-2xl mx-auto">
               Discover the benefits of home battery storage and why thousands of Australians are making the switch.
             </p>
           </div>
@@ -222,13 +213,13 @@ export default function SolarBattery() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className={`card-cosmic p-8 rounded-2xl border ${benefit.borderColor} hover:border-opacity-50 transition-all duration-300 group`}
+                className={`bg-white p-8 rounded-2xl border border-gray-200 shadow-lg hover:border-[#0073b9]/30 transition-all duration-300 group`}
               >
                 <div className={`w-16 h-16 ${benefit.bgColor} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <benefit.icon className={`w-8 h-8 ${benefit.color}`} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+                <h3 className="text-xl font-bold text-[#333333] mb-3">{benefit.title}</h3>
+                <p className="text-[#666666] leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -236,18 +227,14 @@ export default function SolarBattery() {
       </section>
 
       {/* Popular Battery Brands */}
-      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 star-field opacity-30"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#f5a623]/5 rounded-full blur-[120px]"></div>
-
+      <section className="py-20 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-display">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-4 font-display">
               Premium Solar Battery Brands{' '}
-              <span className="text-gradient-energy">We Install</span>
+              <span className="text-[#0073b9]">We Install</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#666666] max-w-2xl mx-auto">
               We partner with the world&apos;s leading battery manufacturers to deliver reliable, high-performance energy storage.
             </p>
           </div>
@@ -256,19 +243,19 @@ export default function SolarBattery() {
             {brands.map((brand, index) => (
               <div
                 key={index}
-                className="glass rounded-2xl p-8 border border-white/10 hover:border-[#f5a623]/30 transition-all duration-300 group"
+                className="bg-white rounded-2xl p-8 border border-gray-200 shadow-lg hover:border-[#0073b9]/30 transition-all duration-300 group"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-[#f5a623]/10 rounded-lg flex items-center justify-center">
-                    <ShieldIcon className="w-5 h-5 text-[#f5a623]" />
+                  <div className="w-10 h-10 bg-[#fee000]/20 rounded-lg flex items-center justify-center">
+                    <ShieldIcon className="w-5 h-5 text-[#0073b9]" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">{brand.name}</h3>
+                  <h3 className="text-xl font-bold text-[#333333]">{brand.name}</h3>
                 </div>
-                <p className="text-gray-400 mb-6">{brand.description}</p>
+                <p className="text-[#666666] mb-6">{brand.description}</p>
                 <ul className="space-y-3">
                   {brand.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-3 text-gray-300">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center gap-3 text-[#666666]">
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -280,35 +267,27 @@ export default function SolarBattery() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623]/20 via-[#1a1a2e] to-[#00d4ff]/20"></div>
-        <div className="absolute inset-0 star-field opacity-30"></div>
-
-        {/* Animated Orbs */}
-        <div className="absolute top-10 left-1/4 w-32 h-32 bg-[#f5a623]/20 rounded-full blur-[60px] animate-float"></div>
-        <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-[#00d4ff]/20 rounded-full blur-[80px] animate-float-delayed"></div>
-
+      <section className="py-20 bg-[#0073b9] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 font-display">
             Ready for Solar Battery{' '}
-            <span className="text-gradient-solar">Installation?</span>
+            <span className="text-[#fee000]">Installation?</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
             Join thousands of Australian families saving money with solar battery systems.
             Government rebates available now - don&apos;t miss out!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/quote"
-              className="btn-solar inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-bold shadow-2xl shadow-[#f5a623]/20 hover:shadow-[#f5a623]/40 transition-all"
+              className="bg-[#fee000] text-[#083941] inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-bold shadow-2xl hover:bg-[#e5ca00] transition-all"
             >
               Get Free Solar Battery Quote
               <ArrowRightIcon className="w-5 h-5" />
             </Link>
             <a
               href="tel:1300090984"
-              className="btn-energy inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-bold"
+              className="bg-white text-[#0073b9] inline-flex items-center justify-center gap-2 px-10 py-4 rounded-xl text-lg font-bold hover:bg-gray-100 transition-all"
             >
               <PhoneIcon className="w-5 h-5" />
               Call Solar Battery Specialists

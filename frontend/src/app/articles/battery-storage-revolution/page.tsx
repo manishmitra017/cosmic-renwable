@@ -79,17 +79,10 @@ const InformationCircleIcon = ({ className = "w-5 h-5" }: { className?: string }
 
 export default function BatteryStorageRevolutionArticle() {
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       <article>
         {/* Header */}
-        <header className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
-          {/* Star field background */}
-          <div className="absolute inset-0 star-field opacity-40"></div>
-
-          {/* Animated gradient orbs */}
-          <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+        <header className="relative py-16 sm:py-24 bg-[#0073b9] overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               className="max-w-4xl mx-auto text-center"
@@ -98,22 +91,22 @@ export default function BatteryStorageRevolutionArticle() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#00d4ff] transition-colors flex items-center gap-2">
+                <Link href="/articles" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
                   <ArrowLeftIcon className="w-4 h-4" />
                   Back to Articles
                 </Link>
-                <span className="text-[#b0b0b0]/50">|</span>
-                <span className="glass px-3 py-1 rounded-full text-sm text-[#00d4ff] border border-[#00d4ff]/20">Industry News</span>
+                <span className="text-white/50">|</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm text-white border border-white/30">Industry News</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
-                Battery Storage Revolution: <span className="text-gradient-solar">5kWh to 100kWh</span> Systems Now Eligible
+                Battery Storage Revolution: <span className="text-[#fee000]">5kWh to 100kWh</span> Systems Now Eligible
               </h1>
-              <p className="text-xl text-[#b0b0b0] mb-6">
+              <p className="text-xl text-white/90 mb-6">
                 Understanding CEC approval requirements and which battery systems qualify for the federal rebate
               </p>
-              <div className="flex items-center justify-center gap-4 text-[#b0b0b0]">
+              <div className="flex items-center justify-center gap-4 text-white/80">
                 <span>August 2025</span>
-                <span className="text-[#f5a623]">|</span>
+                <span className="text-[#fee000]">|</span>
                 <span>7 min read</span>
               </div>
             </motion.div>
@@ -129,7 +122,7 @@ export default function BatteryStorageRevolutionArticle() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-white/10">
+              <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                 <Image
                   src="/batteryImage1.jpg"
                   alt="Battery storage systems - CEC approved products"
@@ -137,7 +130,6 @@ export default function BatteryStorageRevolutionArticle() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -153,300 +145,300 @@ export default function BatteryStorageRevolutionArticle() {
             transition={{ duration: 0.8 }}
           >
             {/* Key Takeaway Box */}
-            <div className="card-cosmic p-6 mb-10 border-l-4 border-[#f5a623]">
-              <h2 className="text-xl font-bold text-[#f5a623] mb-3 flex items-center gap-2">
+            <div className="bg-[#fee000] p-6 mb-10 border-l-4 border-[#083941] rounded-r-xl">
+              <h2 className="text-xl font-bold text-[#083941] mb-3 flex items-center gap-2">
                 <BoltIcon className="w-6 h-6" />
                 Key Takeaway
               </h2>
-              <p className="text-[#b0b0b0] text-lg">
-                The Cheaper Home Batteries Program covers a wide range of battery sizes from <strong className="text-white">5kWh to 100kWh</strong>,
-                but only batteries on the <strong className="text-white">CEC approved product list</strong> and installed by accredited
+              <p className="text-[#083941] text-lg">
+                The Cheaper Home Batteries Program covers a wide range of battery sizes from <strong>5kWh to 100kWh</strong>,
+                but only batteries on the <strong>CEC approved product list</strong> and installed by accredited
                 professionals qualify for the rebate.
               </p>
             </div>
 
             {/* Article Body */}
-            <div className="prose prose-lg max-w-none prose-invert">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Battery Size Requirements
               </h2>
 
-              <p className="text-[#b0b0b0] text-lg mb-6">
-                The Cheaper Home Batteries Program applies to battery systems with a <strong className="text-white">nominal capacity between
+              <p className="text-[#444444] text-lg mb-6">
+                The Cheaper Home Batteries Program applies to battery systems with a <strong className="text-[#333333]">nominal capacity between
                 5kWh and 100kWh</strong>. The nominal capacity is the maximum amount of energy a battery can store at
                 full charge - typically the capacity shown on the product label.
               </p>
 
               {/* Capacity Range Visual */}
-              <div className="card-cosmic p-8 mb-10 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10">
-                <h3 className="text-2xl font-bold mb-6 text-center text-white">Eligible Capacity Range</h3>
+              <div className="bg-[#efefef] p-8 mb-10 rounded-xl">
+                <h3 className="text-2xl font-bold mb-6 text-center text-[#333333]">Eligible Capacity Range</h3>
                 <div className="flex items-center justify-between max-w-2xl mx-auto">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-[#f5a623]">5kWh</div>
-                    <div className="text-[#b0b0b0]">Minimum</div>
+                    <div className="text-4xl font-bold text-[#0073b9]">5kWh</div>
+                    <div className="text-[#666666]">Minimum</div>
                   </div>
-                  <div className="flex-1 mx-8 h-4 bg-white/10 rounded-full relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#f5a623] to-[#00d4ff] rounded-full"></div>
+                  <div className="flex-1 mx-8 h-4 bg-gray-300 rounded-full relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0073b9] to-[#fee000] rounded-full"></div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-[#00d4ff]">100kWh</div>
-                    <div className="text-[#b0b0b0]">Maximum</div>
+                    <div className="text-4xl font-bold text-[#083941]">100kWh</div>
+                    <div className="text-[#666666]">Maximum</div>
                   </div>
                 </div>
-                <p className="text-center text-[#b0b0b0] mt-6">
+                <p className="text-center text-[#666666] mt-6">
                   Rebate applies to the first 50kWh of usable capacity
                 </p>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-[#333333] mb-4">
                 Stacking Smaller Batteries
               </h3>
 
-              <p className="text-[#b0b0b0] text-lg mb-8">
+              <p className="text-[#444444] text-lg mb-8">
                 If you have modular batteries, you can combine them to meet the minimum 5kWh threshold. When combining
                 batteries as one system, the combined capacity needs to be at least 5kWh and not exceed 100kWh in
                 nominal capacity.
               </p>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 CEC Approval Requirements
               </h2>
 
-              <p className="text-[#b0b0b0] text-lg mb-6">
+              <p className="text-[#444444] text-lg mb-6">
                 To qualify for the rebate, both the battery and its inverter must appear on the
-                <strong className="text-white"> Clean Energy Council&apos;s (CEC) approved product list</strong>. This ensures all installed
+                <strong className="text-[#333333]"> Clean Energy Council&apos;s (CEC) approved product list</strong>. This ensures all installed
                 equipment meets Australian safety and performance standards.
               </p>
 
-              <div className="card-cosmic p-6 mb-10 border border-[#00d4ff]/30">
-                <h4 className="font-bold text-[#00d4ff] mb-4 flex items-center gap-2">
+              <div className="bg-white p-6 mb-10 border-2 border-[#0073b9] rounded-xl">
+                <h4 className="font-bold text-[#0073b9] mb-4 flex items-center gap-2">
                   <ShieldCheckIcon className="w-6 h-6" />
                   CEC Approval Ensures:
                 </h4>
-                <ul className="space-y-3 text-[#b0b0b0]">
+                <ul className="space-y-3 text-[#444444]">
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
                     <span>Batteries meet relevant Australian safety standards</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
                     <span>Products are tested by IEC or JAS-ANZ accredited bodies</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
                     <span>Compliance with industry best practice requirements</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
                     <span>Only lithium-based batteries currently qualify</span>
                   </li>
                 </ul>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Technical Requirements
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <BoltIcon className="w-6 h-6 text-[#f5a623]" />
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <BoltIcon className="w-6 h-6 text-[#0073b9]" />
                   </div>
-                  <h4 className="font-bold text-white mb-2">VPP Capability</h4>
-                  <p className="text-[#b0b0b0]">On-grid batteries must be VPP (Virtual Power Plant) capable - able to connect to the internet and respond to external signals. You don&apos;t have to join a VPP, but the battery must be capable.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">VPP Capability</h4>
+                  <p className="text-[#444444]">On-grid batteries must be VPP (Virtual Power Plant) capable - able to connect to the internet and respond to external signals. You don&apos;t have to join a VPP, but the battery must be capable.</p>
                 </div>
 
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <SunIcon className="w-6 h-6 text-[#f5a623]" />
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <SunIcon className="w-6 h-6 text-[#0073b9]" />
                   </div>
-                  <h4 className="font-bold text-white mb-2">Solar PV Required</h4>
-                  <p className="text-[#b0b0b0]">Batteries must be installed with new or existing solar PV (up to 100kW). Standalone batteries without solar are not eligible for the rebate.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Solar PV Required</h4>
+                  <p className="text-[#444444]">Batteries must be installed with new or existing solar PV (up to 100kW). Standalone batteries without solar are not eligible for the rebate.</p>
                 </div>
 
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <CheckBadgeIcon className="w-6 h-6 text-[#f5a623]" />
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <CheckBadgeIcon className="w-6 h-6 text-[#0073b9]" />
                   </div>
-                  <h4 className="font-bold text-white mb-2">Safety Standards</h4>
-                  <p className="text-[#b0b0b0]">Must comply with AS/NZS 5139:2019 and the Best Practice Guide: Battery Storage Equipment for safe installation.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Safety Standards</h4>
+                  <p className="text-[#444444]">Must comply with AS/NZS 5139:2019 and the Best Practice Guide: Battery Storage Equipment for safe installation.</p>
                 </div>
 
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <UserIcon className="w-6 h-6 text-[#f5a623]" />
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <UserIcon className="w-6 h-6 text-[#0073b9]" />
                   </div>
-                  <h4 className="font-bold text-white mb-2">Accredited Installer</h4>
-                  <p className="text-[#b0b0b0]">Installation must be carried out or supervised by a technician accredited by Solar Accreditation Australia (SAA).</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Accredited Installer</h4>
+                  <p className="text-[#444444]">Installation must be carried out or supervised by a technician accredited by Solar Accreditation Australia (SAA).</p>
                 </div>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 What Qualifies and What Doesn&apos;t
               </h2>
 
-              <div className="card-cosmic p-6 mb-10">
+              <div className="bg-[#efefef] p-6 mb-10 rounded-xl">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                      <CheckIcon className="w-6 h-6 text-[#00d4ff]" />
+                    <h3 className="text-xl font-bold text-[#333333] mb-4 flex items-center gap-2">
+                      <CheckIcon className="w-6 h-6 text-[#0073b9]" />
                       Eligible Systems
                     </h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">New CEC-approved lithium batteries</span>
+                        <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#444444]">New CEC-approved lithium batteries</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">On-grid systems (VPP capable)</span>
+                        <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#444444]">On-grid systems (VPP capable)</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Off-grid systems (no VPP requirement)</span>
+                        <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#444444]">Off-grid systems (no VPP requirement)</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Residential, small business, community</span>
+                        <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#444444]">Residential, small business, community</span>
                       </li>
                       <li className="flex items-start gap-3">
-                        <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Additions to existing solar systems</span>
+                        <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                        <span className="text-[#444444]">Additions to existing solar systems</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-[#333333] mb-4 flex items-center gap-2">
                       <XIcon className="w-6 h-6 text-red-500" />
                       NOT Eligible
                     </h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-3">
                         <XIcon className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Electric vehicle (EV) batteries</span>
+                        <span className="text-[#444444]">Electric vehicle (EV) batteries</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <XIcon className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">EV charging systems</span>
+                        <span className="text-[#444444]">EV charging systems</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <XIcon className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Used or refurbished batteries</span>
+                        <span className="text-[#444444]">Used or refurbished batteries</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <XIcon className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Grid-only storage (no solar)</span>
+                        <span className="text-[#444444]">Grid-only storage (no solar)</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <XIcon className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-[#b0b0b0]">Non-CEC approved products</span>
+                        <span className="text-[#444444]">Non-CEC approved products</span>
                       </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Popular CEC-Approved Batteries
               </h2>
 
-              <p className="text-[#b0b0b0] text-lg mb-6">
+              <p className="text-[#444444] text-lg mb-6">
                 Here are some of the most popular battery brands and models that are CEC-approved and eligible for
                 the rebate:
               </p>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                 {['Tesla Powerwall', 'BYD Battery-Box', 'Enphase IQ', 'SolarEdge Home Battery', 'LG RESU', 'Sungrow SBR', 'Alpha ESS', 'Huawei LUNA'].map((brand) => (
-                  <div key={brand} className="glass px-4 py-3 rounded-lg text-center border border-white/10">
-                    <span className="text-white font-medium">{brand}</span>
+                  <div key={brand} className="bg-white px-4 py-3 rounded-lg text-center border border-gray-200 shadow-sm">
+                    <span className="text-[#333333] font-medium">{brand}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="card-cosmic p-6 mb-10 border border-[#f5a623]/30">
-                <h4 className="font-bold text-[#f5a623] mb-3 flex items-center gap-2">
+              <div className="bg-white p-6 mb-10 border-2 border-[#fee000] rounded-xl">
+                <h4 className="font-bold text-[#083941] mb-3 flex items-center gap-2">
                   <InformationCircleIcon className="w-6 h-6" />
                   Important Note
                 </h4>
-                <p className="text-[#b0b0b0]">
+                <p className="text-[#444444]">
                   The CEC approved product list is regularly updated. Always verify that your chosen battery is on
                   the current list at the time of installation. We can help you select a compliant system that
                   qualifies for the full rebate.
                 </p>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Rebate Value by Battery Size
               </h2>
 
-              <div className="card-cosmic overflow-hidden mb-10">
+              <div className="bg-white rounded-xl overflow-hidden mb-10 shadow-lg border border-gray-200">
                 <table className="w-full">
-                  <thead className="bg-gradient-to-r from-[#f5a623]/20 to-[#00d4ff]/20">
+                  <thead className="bg-[#0073b9]">
                     <tr>
                       <th className="text-left p-4 text-white">Battery Size</th>
                       <th className="text-right p-4 text-white">Estimated Rebate (2025)</th>
                       <th className="text-center p-4 text-white">Common Use</th>
                     </tr>
                   </thead>
-                  <tbody className="divide-y divide-white/10">
+                  <tbody className="divide-y divide-gray-200">
                     <tr>
-                      <td className="p-4 font-medium text-white">5 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$1,650</td>
-                      <td className="p-4 text-center text-[#b0b0b0]">Basic backup</td>
+                      <td className="p-4 font-medium text-[#333333]">5 kWh</td>
+                      <td className="p-4 text-right font-bold text-[#0073b9]">~$1,650</td>
+                      <td className="p-4 text-center text-[#666666]">Basic backup</td>
                     </tr>
-                    <tr className="bg-white/5">
-                      <td className="p-4 font-medium text-white">10 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$3,300</td>
-                      <td className="p-4 text-center text-[#b0b0b0]">Average home</td>
-                    </tr>
-                    <tr>
-                      <td className="p-4 font-medium text-white">13.5 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$4,450</td>
-                      <td className="p-4 text-center text-[#b0b0b0]">Tesla Powerwall</td>
-                    </tr>
-                    <tr className="bg-white/5">
-                      <td className="p-4 font-medium text-white">20 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$6,600</td>
-                      <td className="p-4 text-center text-[#b0b0b0]">Large home</td>
+                    <tr className="bg-[#efefef]">
+                      <td className="p-4 font-medium text-[#333333]">10 kWh</td>
+                      <td className="p-4 text-right font-bold text-[#0073b9]">~$3,300</td>
+                      <td className="p-4 text-center text-[#666666]">Average home</td>
                     </tr>
                     <tr>
-                      <td className="p-4 font-medium text-white">30 kWh</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$9,900</td>
-                      <td className="p-4 text-center text-[#b0b0b0]">Small business</td>
+                      <td className="p-4 font-medium text-[#333333]">13.5 kWh</td>
+                      <td className="p-4 text-right font-bold text-[#0073b9]">~$4,450</td>
+                      <td className="p-4 text-center text-[#666666]">Tesla Powerwall</td>
                     </tr>
-                    <tr className="bg-white/5">
-                      <td className="p-4 font-medium text-white">50 kWh+</td>
-                      <td className="p-4 text-right font-bold text-[#f5a623]">~$16,500 (capped)</td>
-                      <td className="p-4 text-center text-[#b0b0b0]">Commercial</td>
+                    <tr className="bg-[#efefef]">
+                      <td className="p-4 font-medium text-[#333333]">20 kWh</td>
+                      <td className="p-4 text-right font-bold text-[#0073b9]">~$6,600</td>
+                      <td className="p-4 text-center text-[#666666]">Large home</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4 font-medium text-[#333333]">30 kWh</td>
+                      <td className="p-4 text-right font-bold text-[#0073b9]">~$9,900</td>
+                      <td className="p-4 text-center text-[#666666]">Small business</td>
+                    </tr>
+                    <tr className="bg-[#efefef]">
+                      <td className="p-4 font-medium text-[#333333]">50 kWh+</td>
+                      <td className="p-4 text-right font-bold text-[#0073b9]">~$16,500 (capped)</td>
+                      <td className="p-4 text-center text-[#666666]">Commercial</td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="p-4 bg-white/5 text-sm text-[#b0b0b0]">
+                <div className="p-4 bg-[#efefef] text-sm text-[#666666]">
                   * Rebate capped at 50kWh usable capacity. Based on $330/kWh after admin fees.
                 </div>
               </div>
             </div>
 
             {/* Call to Action */}
-            <div className="card-cosmic p-8 sm:p-12 text-center mt-12 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10 border border-[#f5a623]/30">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <div className="bg-[#fee000] p-8 sm:p-12 text-center mt-12 rounded-2xl">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#083941] mb-4">
                 Not Sure If Your Battery Qualifies?
               </h2>
-              <p className="text-lg text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-[#083941]/80 mb-8 max-w-2xl mx-auto">
                 We only install CEC-approved battery systems with accredited technicians. Let us help you choose
                 the right battery that qualifies for the maximum rebate.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/quote"
-                  className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                  className="bg-[#0073b9] text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#005a91] transition-colors"
                 >
                   Get Free Quote
                   <ArrowRightIcon className="w-5 h-5" />
                 </Link>
                 <a
                   href="tel:1300090984"
-                  className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                  className="bg-[#083941] text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#083941]/90 transition-colors"
                 >
                   <PhoneIcon className="w-5 h-5" />
                   Call 1300 09 09 84
@@ -455,9 +447,9 @@ export default function BatteryStorageRevolutionArticle() {
             </div>
 
             {/* More Information */}
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <h3 className="text-xl font-bold text-white mb-4">More Information</h3>
-              <p className="text-[#b0b0b0] mb-4">
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-[#333333] mb-4">More Information</h3>
+              <p className="text-[#666666] mb-4">
                 For official information about CEC approved products and battery requirements:
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -465,7 +457,7 @@ export default function BatteryStorageRevolutionArticle() {
                   href="https://www.cleanenergycouncil.org.au/industry-programs/products-program/batteries"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-[#0073b9] hover:text-[#005a91] font-semibold transition-colors"
                 >
                   CEC Approved Products
                   <ExternalLinkIcon className="w-4 h-4" />
@@ -474,7 +466,7 @@ export default function BatteryStorageRevolutionArticle() {
                   href="https://cer.gov.au/batteries"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                  className="inline-flex items-center gap-2 text-[#0073b9] hover:text-[#005a91] font-semibold transition-colors"
                 >
                   Clean Energy Regulator
                   <ExternalLinkIcon className="w-4 h-4" />
@@ -486,7 +478,7 @@ export default function BatteryStorageRevolutionArticle() {
             <div className="mt-8 text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#0073b9] hover:text-[#005a91] font-semibold transition-colors"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
                 Back to All Articles

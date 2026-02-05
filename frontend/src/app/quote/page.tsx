@@ -197,33 +197,33 @@ export default function Quote() {
   ]
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       {/* Contact Banner */}
-      <section className="py-4 bg-gradient-to-r from-[#f5a623] to-[#ff6b35]">
+      <section className="py-4 bg-[#fee000]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-6">
-              <div className="text-white font-bold text-lg sm:text-xl flex items-center gap-2">
-                <RocketIcon className="w-5 h-5" />
+              <div className="text-[#083941] font-bold text-lg sm:text-xl flex items-center gap-2">
+                <RocketIcon className="w-5 h-5 text-[#0073b9]" />
                 Australia&apos;s #1 Solar & Battery Experts
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
                 <a
                   href="tel:1300090984"
-                  className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-white/20 transition-colors border border-white/20 flex items-center gap-2"
+                  className="bg-[#0073b9] text-white px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-[#005a91] transition-colors flex items-center gap-2 shadow-lg"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="bg-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-white/20 transition-colors border border-white/20 flex items-center gap-2"
+                  className="bg-white text-[#0073b9] px-4 py-2 rounded-full font-bold text-sm sm:text-base hover:bg-gray-100 transition-colors border border-[#0073b9] flex items-center gap-2 shadow-lg"
                 >
                   <DevicePhoneMobileIcon className="w-4 h-4" />
                   +61 422 786 100
                 </a>
               </div>
-              <div className="text-white font-semibold text-sm sm:text-base">
+              <div className="text-[#083941] font-semibold text-sm sm:text-base">
                 Call Now for Instant Quote!
               </div>
             </div>
@@ -232,14 +232,7 @@ export default function Quote() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
-        {/* Star field background */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+      <section className="relative py-16 sm:py-24 bg-[#0073b9] overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center"
@@ -247,15 +240,15 @@ export default function Quote() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <DocumentTextIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Free No-Obligation Quote</span>
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6 border border-white/30">
+              <DocumentTextIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-white font-semibold text-sm">Free No-Obligation Quote</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Get Your Free <span className="text-gradient-solar">Solar Quote</span>
+              Get Your Free <span className="text-[#fee000]">Solar Quote</span>
             </h1>
-            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Get a personalized quote for your solar installation. Our experts will design
               a custom solution based on your specific needs and property requirements.
             </p>
@@ -264,7 +257,7 @@ export default function Quote() {
       </section>
 
       {/* Form Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-[#efefef]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -276,16 +269,16 @@ export default function Quote() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-2xl font-bold text-white mb-6">What to Expect</h2>
+                <h2 className="text-2xl font-bold text-[#333333] mb-6">What to Expect</h2>
                 <div className="space-y-6">
                   {steps.map((step, index) => (
                     <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0 w-10 h-10 bg-[#f5a623]/20 rounded-full flex items-center justify-center mr-4">
-                        <step.icon className="w-5 h-5 text-[#f5a623]" />
+                      <div className="flex-shrink-0 w-10 h-10 bg-[#0073b9]/10 rounded-full flex items-center justify-center mr-4">
+                        <step.icon className="w-5 h-5 text-[#0073b9]" />
                       </div>
                       <div>
-                        <h3 className="font-semibold text-white mb-1">{step.title}</h3>
-                        <p className="text-[#b0b0b0] text-sm">{step.description}</p>
+                        <h3 className="font-semibold text-[#333333] mb-1">{step.title}</h3>
+                        <p className="text-[#666666] text-sm">{step.description}</p>
                       </div>
                     </div>
                   ))}
@@ -300,11 +293,11 @@ export default function Quote() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="card-cosmic p-8">
+                <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="name" className="block text-sm font-medium text-[#444444] mb-2">
                           Full Name *
                         </label>
                         <input
@@ -314,13 +307,13 @@ export default function Quote() {
                           required
                           value={formData.name}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] placeholder-gray-400 transition-colors"
                           placeholder="Your full name"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="email" className="block text-sm font-medium text-[#444444] mb-2">
                           Email Address *
                         </label>
                         <input
@@ -330,7 +323,7 @@ export default function Quote() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] placeholder-gray-400 transition-colors"
                           placeholder="your.email@example.com"
                         />
                       </div>
@@ -338,7 +331,7 @@ export default function Quote() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="phone" className="block text-sm font-medium text-[#444444] mb-2">
                           Phone Number *
                         </label>
                         <input
@@ -348,13 +341,13 @@ export default function Quote() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] placeholder-gray-400 transition-colors"
                           placeholder="Your phone number"
                         />
                       </div>
 
                       <div>
-                        <label htmlFor="address" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="address" className="block text-sm font-medium text-[#444444] mb-2">
                           Property Address *
                         </label>
                         <input
@@ -365,7 +358,7 @@ export default function Quote() {
                           required
                           value={formData.address}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] placeholder-gray-400 transition-colors"
                           placeholder="Start typing your property address..."
                         />
                       </div>
@@ -373,7 +366,7 @@ export default function Quote() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="property_type" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="property_type" className="block text-sm font-medium text-[#444444] mb-2">
                           Property Type *
                         </label>
                         <select
@@ -382,19 +375,19 @@ export default function Quote() {
                           required
                           value={formData.property_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select property type</option>
-                          <option value="house" className="bg-[#1a1a2e]">House</option>
-                          <option value="apartment" className="bg-[#1a1a2e]">Apartment</option>
-                          <option value="townhouse" className="bg-[#1a1a2e]">Townhouse</option>
-                          <option value="commercial" className="bg-[#1a1a2e]">Commercial</option>
-                          <option value="industrial" className="bg-[#1a1a2e]">Industrial</option>
+                          <option value="">Select property type</option>
+                          <option value="house">House</option>
+                          <option value="apartment">Apartment</option>
+                          <option value="townhouse">Townhouse</option>
+                          <option value="commercial">Commercial</option>
+                          <option value="industrial">Industrial</option>
                         </select>
                       </div>
 
                       <div>
-                        <label htmlFor="roof_type" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="roof_type" className="block text-sm font-medium text-[#444444] mb-2">
                           Roof Type *
                         </label>
                         <select
@@ -403,21 +396,21 @@ export default function Quote() {
                           required
                           value={formData.roof_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select roof type</option>
-                          <option value="tile" className="bg-[#1a1a2e]">Tile</option>
-                          <option value="metal" className="bg-[#1a1a2e]">Metal/Colorbond</option>
-                          <option value="flat" className="bg-[#1a1a2e]">Flat</option>
-                          <option value="slate" className="bg-[#1a1a2e]">Slate</option>
-                          <option value="other" className="bg-[#1a1a2e]">Other</option>
+                          <option value="">Select roof type</option>
+                          <option value="tile">Tile</option>
+                          <option value="metal">Metal/Colorbond</option>
+                          <option value="flat">Flat</option>
+                          <option value="slate">Slate</option>
+                          <option value="other">Other</option>
                         </select>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="storey_type" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="storey_type" className="block text-sm font-medium text-[#444444] mb-2">
                           Storey Type *
                         </label>
                         <select
@@ -426,16 +419,16 @@ export default function Quote() {
                           required
                           value={formData.storey_type}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select storey type</option>
-                          <option value="single" className="bg-[#1a1a2e]">Single Storey</option>
-                          <option value="double" className="bg-[#1a1a2e]">Double Storey</option>
+                          <option value="">Select storey type</option>
+                          <option value="single">Single Storey</option>
+                          <option value="double">Double Storey</option>
                         </select>
                       </div>
 
                       <div>
-                        <label htmlFor="meter_phase" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="meter_phase" className="block text-sm font-medium text-[#444444] mb-2">
                           Meter Phase *
                         </label>
                         <select
@@ -444,19 +437,19 @@ export default function Quote() {
                           required
                           value={formData.meter_phase}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select meter phase</option>
-                          <option value="single" className="bg-[#1a1a2e]">Single Phase Meter</option>
-                          <option value="three" className="bg-[#1a1a2e]">Three Phase Meter</option>
-                          <option value="unknown" className="bg-[#1a1a2e]">Don&apos;t know</option>
+                          <option value="">Select meter phase</option>
+                          <option value="single">Single Phase Meter</option>
+                          <option value="three">Three Phase Meter</option>
+                          <option value="unknown">Don&apos;t know</option>
                         </select>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="energy_usage" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="energy_usage" className="block text-sm font-medium text-[#444444] mb-2">
                           Average Quarterly Electricity Bill
                         </label>
                         <select
@@ -464,19 +457,19 @@ export default function Quote() {
                           name="energy_usage"
                           value={formData.energy_usage}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select your bill range</option>
-                          <option value="under-300" className="bg-[#1a1a2e]">Under $300</option>
-                          <option value="300-600" className="bg-[#1a1a2e]">$300 - $600</option>
-                          <option value="600-900" className="bg-[#1a1a2e]">$600 - $900</option>
-                          <option value="900-1200" className="bg-[#1a1a2e]">$900 - $1,200</option>
-                          <option value="over-1200" className="bg-[#1a1a2e]">Over $1,200</option>
+                          <option value="">Select your bill range</option>
+                          <option value="under-300">Under $300</option>
+                          <option value="300-600">$300 - $600</option>
+                          <option value="600-900">$600 - $900</option>
+                          <option value="900-1200">$900 - $1,200</option>
+                          <option value="over-1200">Over $1,200</option>
                         </select>
                       </div>
 
                       <div>
-                        <label htmlFor="budget_range" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                        <label htmlFor="budget_range" className="block text-sm font-medium text-[#444444] mb-2">
                           Budget Range
                         </label>
                         <select
@@ -484,20 +477,20 @@ export default function Quote() {
                           name="budget_range"
                           value={formData.budget_range}
                           onChange={handleChange}
-                          className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white transition-colors"
+                          className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] transition-colors"
                         >
-                          <option value="" className="bg-[#1a1a2e]">Select budget range</option>
-                          <option value="under-5k" className="bg-[#1a1a2e]">Under $5,000</option>
-                          <option value="5k-10k" className="bg-[#1a1a2e]">$5,000 - $10,000</option>
-                          <option value="10k-15k" className="bg-[#1a1a2e]">$10,000 - $15,000</option>
-                          <option value="15k-20k" className="bg-[#1a1a2e]">$15,000 - $20,000</option>
-                          <option value="over-20k" className="bg-[#1a1a2e]">Over $20,000</option>
+                          <option value="">Select budget range</option>
+                          <option value="under-5k">Under $5,000</option>
+                          <option value="5k-10k">$5,000 - $10,000</option>
+                          <option value="10k-15k">$10,000 - $15,000</option>
+                          <option value="15k-20k">$15,000 - $20,000</option>
+                          <option value="over-20k">Over $20,000</option>
                         </select>
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-[#b0b0b0] mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-[#444444] mb-2">
                         Additional Information
                       </label>
                       <textarea
@@ -506,7 +499,7 @@ export default function Quote() {
                         rows={4}
                         value={formData.message}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg focus:ring-2 focus:ring-[#f5a623]/50 focus:border-[#f5a623]/50 text-white placeholder-white/40 transition-colors resize-none"
+                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0073b9]/50 focus:border-[#0073b9] text-[#333333] placeholder-gray-400 transition-colors resize-none"
                         placeholder="Any additional information about your requirements..."
                       />
                     </div>
@@ -514,7 +507,7 @@ export default function Quote() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full btn-solar px-6 py-4 rounded-lg text-lg font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-6 py-4 rounded-lg text-lg font-bold transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                     >
                       {isSubmitting ? 'Submitting Request...' : 'Get My Free Quote'}
                     </button>
@@ -525,8 +518,8 @@ export default function Quote() {
                         animate={{ opacity: 1, y: 0 }}
                         className={`p-4 rounded-lg ${
                           submitMessage.includes('Thank you')
-                            ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                            : 'bg-red-500/20 text-red-400 border border-red-500/30'
+                            ? 'bg-green-100 text-green-800 border border-green-200'
+                            : 'bg-red-100 text-red-800 border border-red-200'
                         }`}
                       >
                         {submitMessage}
@@ -541,10 +534,7 @@ export default function Quote() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-gradient-to-b from-[#12121a] to-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -553,25 +543,25 @@ export default function Quote() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Get a <span className="text-gradient-energy">Solar Quote?</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-6">
+              Why Get a <span className="text-[#0073b9]">Solar Quote?</span>
             </h2>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic p-8 text-center"
+                className="bg-[#efefef] rounded-2xl p-8 text-center border border-gray-200"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-[#00d4ff]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-[#00d4ff]" />
+                <div className="w-16 h-16 bg-[#0073b9] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <benefit.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
-                <p className="text-[#b0b0b0]">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-[#333333] mb-3">{benefit.title}</h3>
+                <p className="text-[#666666]">{benefit.description}</p>
               </motion.div>
             ))}
           </div>

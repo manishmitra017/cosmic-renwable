@@ -111,7 +111,7 @@ export default function TeslaPowerwallAustralia() {
   ]
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       <Script
         id="tesla-powerwall-schema"
         type="application/ld+json"
@@ -133,15 +133,7 @@ export default function TeslaPowerwallAustralia() {
       </Script>
 
       {/* Hero Section */}
-      <section className="relative py-20 sm:py-28 bg-[#0a0a0f] overflow-hidden">
-        {/* Star field background */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-red-500/5 rounded-full blur-[150px]"></div>
-
+      <section className="relative py-20 sm:py-28 bg-[#0073b9] overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="max-w-4xl mx-auto text-center"
@@ -149,34 +141,34 @@ export default function TeslaPowerwallAustralia() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-red-500/30">
-              <StarIcon className="w-5 h-5 text-red-500" />
-              <span className="text-red-400 font-semibold text-sm">Premium Battery System</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/30">
+              <StarIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-white font-semibold text-sm">Premium Battery System</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Tesla Powerwall 3 <span className="text-gradient-solar">Australia</span>
+              Tesla Powerwall 3 <span className="text-[#fee000]">Australia</span>
             </h1>
-            <p className="text-xl text-[#b0b0b0] mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
               Australia&apos;s most advanced home battery system. 13.5kWh capacity, integrated inverter,
               smartphone control. From $12,000 installed with government rebates up to $4,600.
             </p>
 
-            <div className="glass px-6 py-3 rounded-lg inline-block mb-8 border border-[#f5a623]/30">
-              <span className="font-bold text-lg text-[#f5a623]">Government Rebate: Save $4,600</span>
+            <div className="bg-white/10 px-6 py-3 rounded-lg inline-block mb-8 border border-[#fee000]/30">
+              <span className="font-bold text-lg text-[#fee000]">Government Rebate: Save $4,600</span>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
               >
                 Get Tesla Powerwall Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-white text-[#0073b9] hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call Tesla Specialists
@@ -187,7 +179,7 @@ export default function TeslaPowerwallAustralia() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-[#efefef]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-12"
@@ -196,12 +188,12 @@ export default function TeslaPowerwallAustralia() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-              <BoltIcon className="w-5 h-5 text-[#00d4ff]" />
-              <span className="text-[#00d4ff] font-semibold text-sm">Key Features</span>
+            <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+              <BoltIcon className="w-5 h-5 text-[#0073b9]" />
+              <span className="text-[#0073b9] font-semibold text-sm">Key Features</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-              Why Choose <span className="text-gradient-energy">Powerwall 3?</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+              Why Choose <span className="text-[#0073b9]">Powerwall 3?</span>
             </h2>
           </motion.div>
 
@@ -209,17 +201,17 @@ export default function TeslaPowerwallAustralia() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic p-6 text-center hover:border-[#f5a623]/30 transition-all duration-300"
+                className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 text-center hover:border-[#0073b9]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#f5a623]/10 flex items-center justify-center">
-                  <feature.icon className="w-7 h-7 text-[#f5a623]" />
+                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#0073b9]/10 flex items-center justify-center">
+                  <feature.icon className="w-7 h-7 text-[#0073b9]" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-[#b0b0b0]">{feature.description}</p>
+                <h3 className="text-xl font-bold text-[#333333] mb-2">{feature.title}</h3>
+                <p className="text-[#666666]">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -227,9 +219,7 @@ export default function TeslaPowerwallAustralia() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -238,18 +228,18 @@ export default function TeslaPowerwallAustralia() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <ShieldCheckIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Benefits</span>
+            <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+              <ShieldCheckIcon className="w-5 h-5 text-[#0073b9]" />
+              <span className="text-[#0073b9] font-semibold text-sm">Benefits</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-              What You <span className="text-gradient-solar">Get</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+              What You <span className="text-[#0073b9]">Get</span>
             </h2>
           </motion.div>
 
           <div className="max-w-3xl mx-auto">
             <motion.div
-              className="card-cosmic p-8"
+              className="bg-white rounded-xl shadow-lg border border-gray-200 p-8"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -258,8 +248,8 @@ export default function TeslaPowerwallAustralia() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                    <span className="text-[#b0b0b0]">{benefit}</span>
+                    <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                    <span className="text-[#444444]">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -269,7 +259,7 @@ export default function TeslaPowerwallAustralia() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-[#efefef]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -279,35 +269,35 @@ export default function TeslaPowerwallAustralia() {
             transition={{ duration: 0.8 }}
           >
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-                <CurrencyDollarIcon className="w-5 h-5 text-[#00d4ff]" />
-                <span className="text-[#00d4ff] font-semibold text-sm">Pricing</span>
+              <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+                <CurrencyDollarIcon className="w-5 h-5 text-[#0073b9]" />
+                <span className="text-[#0073b9] font-semibold text-sm">Pricing</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-                Tesla Powerwall 3 <span className="text-gradient-energy">Pricing</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+                Tesla Powerwall 3 <span className="text-[#0073b9]">Pricing</span>
               </h2>
             </div>
 
-            <div className="card-cosmic p-8 text-center">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 text-center">
               <div className="mb-6">
-                <div className="text-[#b0b0b0] text-lg mb-2">Starting from</div>
-                <div className="text-5xl md:text-6xl font-bold text-white mb-2">$12,000</div>
-                <div className="text-[#f5a623] font-semibold">Fully installed with rebates</div>
+                <div className="text-[#666666] text-lg mb-2">Starting from</div>
+                <div className="text-5xl md:text-6xl font-bold text-[#333333] mb-2">$12,000</div>
+                <div className="text-[#0073b9] font-semibold">Fully installed with rebates</div>
               </div>
 
-              <div className="glass rounded-lg p-4 mb-6 border border-[#f5a623]/20 inline-block">
-                <div className="text-sm text-[#b0b0b0] mb-1">Government rebate saves you</div>
-                <div className="text-2xl font-bold text-[#f5a623]">Up to $4,600</div>
+              <div className="bg-[#0073b9]/10 rounded-lg p-4 mb-6 inline-block border border-[#0073b9]/20">
+                <div className="text-sm text-[#666666] mb-1">Government rebate saves you</div>
+                <div className="text-2xl font-bold text-[#0073b9]">Up to $4,600</div>
               </div>
 
-              <p className="text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+              <p className="text-[#666666] mb-8 max-w-2xl mx-auto">
                 Price includes professional CEC-certified installation, 10-year warranty,
                 and full system configuration. Finance options available.
               </p>
 
               <Link
                 href="/quote"
-                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
               >
                 Get Your Custom Quote
                 <ArrowRightIcon className="w-5 h-5" />
@@ -318,12 +308,7 @@ export default function TeslaPowerwallAustralia() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-red-500/10 rounded-full blur-3xl"></div>
-        </div>
-
+      <section className="py-16 bg-[#fee000] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -331,23 +316,23 @@ export default function TeslaPowerwallAustralia() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
-              Ready for <span className="text-gradient-solar">Energy Independence?</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#083941] mb-6">
+              Ready for <span className="text-[#0073b9]">Energy Independence?</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-[#083941]/80 mb-8 max-w-2xl mx-auto">
               Join thousands of Australian households powered by Tesla Powerwall
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-white text-[#083941] hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call 1300 09 09 84
