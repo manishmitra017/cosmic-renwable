@@ -96,35 +96,34 @@ export default function Header() {
 
   return (
     <>
-      {/* Trust Bar - Yellow Banner */}
+      {/* Premium Top Bar - Light Theme */}
       <div
-        className={`fixed w-full top-0 z-50 transition-all duration-500 ${
+        className={`fixed w-full top-0 z-50 transition-all duration-500 bg-[#0073b9] ${
           scrolled
             ? 'md:h-0 md:overflow-hidden md:opacity-0'
             : 'opacity-100'
         }`}
-        style={{ background: '#FFB800' }}
       >
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-4 sm:gap-8">
             <a
               href="tel:1300090984"
-              className="flex items-center gap-2 text-[#1A2634] hover:text-[#00857C] transition-colors group"
+              className="flex items-center gap-2 text-white hover:text-[#fee000] transition-colors group"
             >
-              <div className="w-8 h-8 rounded-full bg-[#1A2634]/10 flex items-center justify-center group-hover:bg-[#1A2634]/20 transition-colors">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors">
                 <PhoneIcon className="w-4 h-4" />
               </div>
-              <span className="font-bold text-sm hidden sm:block">1300 09 09 84</span>
+              <span className="font-semibold text-sm hidden sm:block">1300 09 09 84</span>
             </a>
-            <div className="hidden md:flex items-center gap-2 text-[#1A2634]/80">
+            <div className="hidden md:flex items-center gap-2 text-white/80">
               <ClockIcon className="w-4 h-4" />
-              <span className="text-sm font-medium">Mon-Sat: 8AM-6PM</span>
+              <span className="text-sm">Mon-Sat: 8AM-6PM</span>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="hidden lg:block text-sm text-[#1A2634] font-semibold">
-              Australia&apos;s Premium <span className="text-[#00857C]">Solar Battery</span> Specialists
+            <span className="hidden lg:block text-sm text-white/90">
+              Australia&apos;s Premium <span className="text-[#fee000]">Solar Battery</span> Specialists
             </span>
             <div className="flex items-center gap-2">
               {socialIcons.map((social, i) => (
@@ -133,7 +132,7 @@ export default function Header() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full bg-[#1A2634]/10 hover:bg-[#1A2634]/20 flex items-center justify-center text-[#1A2634] hover:text-[#00857C] transition-all duration-300"
+                  className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white hover:text-[#fee000] transition-all duration-300"
                   aria-label={social.label}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -146,7 +145,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Main Header */}
+      {/* Main Header - Light Theme */}
       <header
         className={`fixed w-full z-40 transition-all duration-500 ${
           scrolled
@@ -154,16 +153,17 @@ export default function Header() {
             : 'top-14 md:top-10 shadow-md'
         }`}
       >
-        {/* Solid teal header background */}
+        {/* Light background */}
         <div
-          className={`absolute inset-0 transition-all duration-500 ${
-            scrolled ? 'opacity-100' : 'opacity-100'
+          className={`absolute inset-0 transition-all duration-500 bg-white ${
+            scrolled ? 'opacity-100' : 'opacity-95'
           }`}
           style={{
-            background: '#1E4A5F',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)'
           }}
         />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00857C]/50 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200" />
 
         <nav className="relative max-w-7xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16 lg:h-20">
@@ -171,7 +171,7 @@ export default function Header() {
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
                 {/* Logo container */}
-                <div className="relative h-12 lg:h-14 w-12 lg:w-14 rounded-xl overflow-hidden bg-white/10 border border-white/20 flex items-center justify-center">
+                <div className="relative h-12 lg:h-14 w-12 lg:w-14 rounded-xl overflow-hidden bg-[#0073b9] border border-[#0073b9] flex items-center justify-center">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy"
@@ -181,14 +181,12 @@ export default function Header() {
                     priority
                   />
                 </div>
-                {/* Glow effect */}
-                <div className="absolute inset-0 bg-[#FFB800]/30 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               <div className="whitespace-nowrap">
-                <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-white leading-tight">
-                  Cosmic <span className="text-[#FFB800]">Renewable</span> Energy
+                <h1 className="text-sm sm:text-lg lg:text-xl font-bold text-[#333333] leading-tight">
+                  Cosmic <span className="text-[#0073b9]">Renewable</span> Energy
                 </h1>
-                <p className="text-[10px] sm:text-xs text-[#00A896] font-medium hidden sm:block">
+                <p className="text-[10px] sm:text-xs text-[#0073b9] font-medium hidden sm:block">
                   The Solar Energy Pioneers
                 </p>
               </div>
@@ -200,10 +198,10 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative py-2 text-white/80 hover:text-white font-medium text-sm transition-colors group whitespace-nowrap"
+                  className="relative py-2 text-[#444444] hover:text-[#0073b9] font-medium text-sm transition-colors group whitespace-nowrap"
                 >
                   {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#FFB800] group-hover:w-full transition-all duration-300" />
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-[#0073b9] group-hover:w-full transition-all duration-300" />
                 </Link>
               ))}
             </div>
@@ -213,21 +211,21 @@ export default function Header() {
               {/* Phone - Desktop */}
               <a
                 href="tel:1300090984"
-                className="hidden xl:flex items-center gap-3 text-white/80 hover:text-white transition-colors group whitespace-nowrap"
+                className="hidden xl:flex items-center gap-3 text-[#444444] hover:text-[#0073b9] transition-colors group whitespace-nowrap"
               >
-                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                  <PhoneIcon className="w-5 h-5 text-[#FFB800]" />
+                <div className="w-10 h-10 flex-shrink-0 rounded-full bg-[#0073b9]/10 border border-[#0073b9]/30 flex items-center justify-center group-hover:bg-[#0073b9]/20 transition-colors">
+                  <PhoneIcon className="w-5 h-5 text-[#0073b9]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-white/60">Call Now</p>
-                  <p className="text-sm font-bold text-white whitespace-nowrap">1300 09 09 84</p>
+                  <p className="text-xs text-[#666666]">Call Now</p>
+                  <p className="text-sm font-bold text-[#333333] whitespace-nowrap">1300 09 09 84</p>
                 </div>
               </a>
 
               {/* Quote Button */}
               <Link
                 href="/quote"
-                className="flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg whitespace-nowrap flex-shrink-0 bg-[#FFB800] text-[#1A2634] hover:bg-[#E5A600] transition-colors shadow-lg"
+                className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-sm font-bold rounded-lg whitespace-nowrap flex-shrink-0 shadow-lg transition-all"
               >
                 <BoltIcon className="w-4 h-4" />
                 <span className="hidden sm:inline">Free Quote</span>
@@ -237,7 +235,7 @@ export default function Header() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-white hover:bg-white/10 rounded-xl transition-colors"
+                className="lg:hidden p-2 text-[#444444] hover:text-[#0073b9] hover:bg-gray-100 rounded-xl transition-colors"
                 aria-label="Toggle menu"
               >
                 {isOpen ? (
@@ -250,7 +248,7 @@ export default function Header() {
           </div>
         </nav>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu - Light Theme */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
@@ -258,12 +256,9 @@ export default function Header() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
-              className="lg:hidden relative overflow-hidden"
-              style={{
-                background: '#163845',
-              }}
+              className="lg:hidden relative overflow-hidden bg-white"
             >
-              <div className="h-px w-full bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+              <div className="h-px w-full bg-gray-200" />
               <div className="max-w-7xl mx-auto px-4 py-4 space-y-1">
                 {navLinks.map((link, index) => (
                   <motion.div
@@ -275,18 +270,18 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-between px-4 py-3 text-white/80 hover:text-white hover:bg-white/10 rounded-xl font-medium transition-all group"
+                      className="flex items-center justify-between px-4 py-3 text-[#444444] hover:text-[#0073b9] hover:bg-gray-50 rounded-xl font-medium transition-all group"
                     >
                       <span>{link.label}</span>
-                      <ChevronIcon className="w-4 h-4 text-white/40 group-hover:text-[#FFB800] group-hover:translate-x-1 transition-all" />
+                      <ChevronIcon className="w-4 h-4 text-[#666666] group-hover:text-[#0073b9] group-hover:translate-x-1 transition-all" />
                     </Link>
                   </motion.div>
                 ))}
 
-                <div className="pt-4 space-y-3 border-t border-white/20 mt-4">
+                <div className="pt-4 space-y-3 border-t border-gray-200 mt-4">
                   <a
                     href="tel:1300090984"
-                    className="flex items-center justify-center gap-3 bg-[#FFB800] text-[#1A2634] px-4 py-3.5 rounded-xl font-bold shadow-lg"
+                    className="flex items-center justify-center gap-3 bg-[#0073b9] text-white px-4 py-3.5 rounded-xl font-bold shadow-lg hover:bg-[#005a91] transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     <PhoneIcon className="w-5 h-5" />
@@ -295,7 +290,7 @@ export default function Header() {
 
                   <Link
                     href="/quote"
-                    className="flex items-center justify-center gap-2 bg-[#00857C] text-white px-4 py-3.5 rounded-xl font-bold shadow-lg"
+                    className="flex items-center justify-center gap-2 bg-[#fee000] text-[#083941] px-4 py-3.5 rounded-xl font-bold shadow-lg hover:bg-[#e5ca00] transition-all"
                     onClick={() => setIsOpen(false)}
                   >
                     <BatteryIcon className="w-5 h-5" />

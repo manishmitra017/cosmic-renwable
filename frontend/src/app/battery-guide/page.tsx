@@ -113,29 +113,29 @@ export default function BatteryGuide() {
       icon: SunIcon,
       title: "1. Solar Panels Generate Power",
       description: "During the day, your solar panels convert sunlight into DC electricity. This power first goes to your home to run appliances.",
-      bgColor: "bg-[#f5a623]/20",
-      iconColor: "text-[#f5a623]"
+      bgColor: "bg-[#fee000]/20",
+      iconColor: "text-[#0073b9]"
     },
     {
       icon: BatteryIcon,
       title: "2. Excess Power Gets Stored",
       description: "Any extra solar power your home doesn&apos;t use immediately gets stored in your battery for later. This is when electricity is free!",
-      bgColor: "bg-[#00d4ff]/20",
-      iconColor: "text-[#00d4ff]"
+      bgColor: "bg-[#0073b9]/20",
+      iconColor: "text-[#0073b9]"
     },
     {
       icon: MoonIcon,
       title: "3. Battery Powers Your Home at Night",
       description: "When the sun goes down or on cloudy days, your battery automatically powers your home instead of drawing expensive grid electricity.",
       bgColor: "bg-purple-500/20",
-      iconColor: "text-purple-400"
+      iconColor: "text-purple-600"
     },
     {
       icon: ShieldCheckIcon,
       title: "4. Blackout Protection",
       description: "If the grid goes down, your battery instantly takes over (with UPS feature) - keeping lights, fridge, and essential appliances running.",
       bgColor: "bg-green-500/20",
-      iconColor: "text-green-400"
+      iconColor: "text-green-600"
     }
   ]
 
@@ -175,16 +175,9 @@ export default function BatteryGuide() {
   ]
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
-        {/* Star field background */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+      <section className="relative py-16 sm:py-24 bg-[#0073b9] overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center max-w-4xl mx-auto"
@@ -192,15 +185,15 @@ export default function BatteryGuide() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <BookOpenIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Complete Guide</span>
+            <div className="inline-flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full mb-6">
+              <BookOpenIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-[#fee000] font-semibold text-sm">Complete Guide</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Solar Battery 101: <span className="text-gradient-solar">Complete Buyer&apos;s Guide</span>
+              Solar Battery 101: <span className="text-[#fee000]">Complete Buyer&apos;s Guide</span>
             </h1>
-            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               Everything you need to know about solar batteries - explained simply
             </p>
           </motion.div>
@@ -208,7 +201,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* Jargon Buster Section */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-[#efefef]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <motion.div
@@ -218,14 +211,14 @@ export default function BatteryGuide() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-                <LanguageIcon className="w-5 h-5 text-[#00d4ff]" />
-                <span className="text-[#00d4ff] font-semibold text-sm">Terminology</span>
+              <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+                <LanguageIcon className="w-5 h-5 text-[#0073b9]" />
+                <span className="text-[#0073b9] font-semibold text-sm">Terminology</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-                Battery <span className="text-gradient-energy">Jargon Buster</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+                Battery <span className="text-[#0073b9]">Jargon Buster</span>
               </h2>
-              <p className="text-lg text-[#b0b0b0] max-w-2xl mx-auto">
+              <p className="text-lg text-[#666666] max-w-2xl mx-auto">
                 No more confusion! Here&apos;s what all those technical terms actually mean:
               </p>
             </motion.div>
@@ -234,14 +227,14 @@ export default function BatteryGuide() {
               {jargonTerms.map((item, index) => (
                 <motion.div
                   key={index}
-                  className="card-cosmic p-6 hover:border-[#f5a623]/30 transition-all duration-300"
+                  className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 hover:border-[#0073b9]/30 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
-                  <h3 className="text-xl font-bold text-[#f5a623] mb-3">{item.term}</h3>
-                  <p className="text-[#b0b0b0] leading-relaxed">{item.definition}</p>
+                  <h3 className="text-xl font-bold text-[#0073b9] mb-3">{item.term}</h3>
+                  <p className="text-[#666666] leading-relaxed">{item.definition}</p>
                 </motion.div>
               ))}
             </div>
@@ -250,9 +243,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* How Batteries Work Section */}
-      <section className="py-16 bg-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -262,12 +253,12 @@ export default function BatteryGuide() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-                <BoltIcon className="w-5 h-5 text-[#f5a623]" />
-                <span className="text-[#f5a623] font-semibold text-sm">How It Works</span>
+              <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+                <BoltIcon className="w-5 h-5 text-[#0073b9]" />
+                <span className="text-[#0073b9] font-semibold text-sm">How It Works</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-                How Solar Batteries <span className="text-gradient-solar">Actually Work</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+                How Solar Batteries <span className="text-[#0073b9]">Actually Work</span>
               </h2>
             </motion.div>
 
@@ -275,7 +266,7 @@ export default function BatteryGuide() {
               {howItWorks.map((step, index) => (
                 <motion.div
                   key={index}
-                  className="card-cosmic p-8"
+                  className="bg-white rounded-xl shadow-lg border border-gray-200 p-8"
                   initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -288,8 +279,8 @@ export default function BatteryGuide() {
                       <step.icon className={`w-7 h-7 ${step.iconColor}`} />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
-                      <p className="text-[#b0b0b0] leading-relaxed">{step.description}</p>
+                      <h3 className="text-2xl font-bold text-[#333333] mb-3">{step.title}</h3>
+                      <p className="text-[#666666] leading-relaxed">{step.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -300,7 +291,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* Common Questions */}
-      <section className="py-16 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-16 bg-[#efefef]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <motion.div
@@ -310,12 +301,12 @@ export default function BatteryGuide() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#00d4ff]/20">
-                <QuestionMarkCircleIcon className="w-5 h-5 text-[#00d4ff]" />
-                <span className="text-[#00d4ff] font-semibold text-sm">FAQ</span>
+              <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+                <QuestionMarkCircleIcon className="w-5 h-5 text-[#0073b9]" />
+                <span className="text-[#0073b9] font-semibold text-sm">FAQ</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-                Most Common <span className="text-gradient-energy">Questions Answered</span>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-4">
+                Most Common <span className="text-[#0073b9]">Questions Answered</span>
               </h2>
             </motion.div>
 
@@ -323,14 +314,14 @@ export default function BatteryGuide() {
               {faqs.map((faq, index) => (
                 <motion.div
                   key={index}
-                  className="card-cosmic p-6 hover:border-[#f5a623]/30 transition-all duration-300"
+                  className="bg-white rounded-xl shadow-lg border border-gray-200 p-6 hover:border-[#0073b9]/30 transition-all duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-[#b0b0b0] leading-relaxed">{faq.answer}</p>
+                  <h3 className="text-xl font-bold text-[#333333] mb-3">{faq.question}</h3>
+                  <p className="text-[#666666] leading-relaxed">{faq.answer}</p>
                 </motion.div>
               ))}
             </div>
@@ -339,12 +330,7 @@ export default function BatteryGuide() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-[#f5a623]/20">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
-        </div>
-
+      <section className="py-16 bg-[#fee000] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -352,28 +338,28 @@ export default function BatteryGuide() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <BoltIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Get Started</span>
+            <div className="inline-flex items-center gap-2 bg-white shadow-lg border border-gray-200 px-4 py-2 rounded-full mb-6">
+              <BoltIcon className="w-5 h-5 text-[#0073b9]" />
+              <span className="text-[#0073b9] font-semibold text-sm">Get Started</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
-              Ready to Get Your <span className="text-gradient-solar">Solar Battery?</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#083941] mb-6">
+              Ready to Get Your <span className="text-[#0073b9]">Solar Battery?</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-[#083941] mb-8 max-w-2xl mx-auto">
               Get a free personalized quote with government rebate calculations
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 transition-colors"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <a
                 href="tel:1300090984"
-                className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#083941] text-white hover:bg-[#062a30] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 transition-colors"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call 1300 09 09 84

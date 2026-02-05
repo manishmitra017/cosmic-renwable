@@ -17,12 +17,6 @@ const PhoneIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 )
 
-const DevicePhoneMobileIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
-  </svg>
-)
-
 const TrophyIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 013 3h-15a3 3 0 013-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 01-.982-3.172M9.497 14.25a7.454 7.454 0 00.981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 007.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M7.73 9.728a6.726 6.726 0 002.748 1.35m8.272-6.842V4.5c0 2.108-.966 3.99-2.48 5.228m2.48-5.492a46.32 46.32 0 012.916.52 6.003 6.003 0 01-5.395 4.972m0 0a6.726 6.726 0 01-2.749 1.35m0 0a6.772 6.772 0 01-3.044 0" />
@@ -176,16 +170,9 @@ export default function About() {
   ]
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0a0a0f]">
-        {/* Star field background */}
-        <div className="absolute inset-0 star-field opacity-40"></div>
-
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+      <section className="relative min-h-[60vh] flex items-center overflow-hidden bg-[#0073b9]">
         <div className="absolute inset-0">
           <Image
             src="/solarroof6.jpg"
@@ -194,6 +181,7 @@ export default function About() {
             className="object-cover opacity-20"
             priority
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0073b9]/80 via-[#0073b9]/60 to-[#0073b9]"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -203,18 +191,18 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <BuildingOfficeIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">About Us</span>
+            <div className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full mb-6 border border-white/20">
+              <BuildingOfficeIcon className="w-5 h-5 text-[#fee000]" />
+              <span className="text-white font-semibold text-sm">About Us</span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 sm:mb-6 leading-tight">
-              About <span className="text-gradient-solar">Cosmic</span>
-              <span className="block text-gradient-energy">
+              About <span className="text-[#fee000]">Cosmic</span>
+              <span className="block text-white">
                 Renewable Energy
               </span>
             </h1>
-            <p className="text-lg sm:text-xl text-[#b0b0b0] leading-relaxed max-w-2xl">
+            <p className="text-lg sm:text-xl text-white/90 leading-relaxed max-w-2xl">
               Australia&apos;s trusted solar and battery specialists, dedicated to powering homes
               and businesses with clean, renewable energy solutions.
             </p>
@@ -223,7 +211,7 @@ export default function About() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <motion.div
@@ -232,33 +220,33 @@ export default function About() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6">
-                Leading <span className="text-gradient-solar">Solar</span> Innovation
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#333333] mb-4 sm:mb-6">
+                Leading <span className="text-[#0073b9]">Solar</span> Innovation
               </h2>
-              <p className="text-base sm:text-lg text-[#b0b0b0] mb-4 sm:mb-6 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#666666] mb-4 sm:mb-6 leading-relaxed">
                 With over 10 years of experience in the renewable energy sector, Cosmic Renewable Energy
                 has established itself as one of Australia&apos;s most trusted solar and battery installation companies.
               </p>
-              <p className="text-base sm:text-lg text-[#b0b0b0] mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg text-[#666666] mb-6 sm:mb-8 leading-relaxed">
                 We&apos;ve helped over 5,000 Australian families and businesses achieve energy independence
                 through our premium solar panel and battery storage solutions, backed by industry-leading warranties
                 and exceptional customer service.
               </p>
 
               <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6 sm:mb-8">
-                <div className="text-center card-cosmic p-4 sm:p-6">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#f5a623] mb-1 sm:mb-2">10+</div>
-                  <div className="text-[#b0b0b0] text-sm sm:text-base">Years Experience</div>
+                <div className="text-center bg-[#efefef] rounded-xl p-4 sm:p-6 border border-gray-200">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#0073b9] mb-1 sm:mb-2">10+</div>
+                  <div className="text-[#666666] text-sm sm:text-base">Years Experience</div>
                 </div>
-                <div className="text-center card-cosmic p-4 sm:p-6">
-                  <div className="text-2xl sm:text-3xl font-bold text-[#00d4ff] mb-1 sm:mb-2">5000+</div>
-                  <div className="text-[#b0b0b0] text-sm sm:text-base">Happy Customers</div>
+                <div className="text-center bg-[#efefef] rounded-xl p-4 sm:p-6 border border-gray-200">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#0073b9] mb-1 sm:mb-2">5000+</div>
+                  <div className="text-[#666666] text-sm sm:text-base">Happy Customers</div>
                 </div>
               </div>
 
               <Link
                 href="/quote"
-                className="w-full sm:w-auto btn-solar px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold text-center block sm:inline-block"
+                className="w-full sm:w-auto bg-[#fee000] text-[#083941] px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-base sm:text-lg font-semibold text-center block sm:inline-block hover:bg-[#e5ca00] transition-all"
               >
                 Get Your Quote Today
               </Link>
@@ -271,8 +259,8 @@ export default function About() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="card-cosmic p-8">
-                <div className="h-64 rounded-lg overflow-hidden flex items-center justify-center bg-[#0a0a0f]">
+              <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8">
+                <div className="h-64 rounded-lg overflow-hidden flex items-center justify-center bg-[#efefef]">
                   <Image
                     src="/company-logo.png"
                     alt="Cosmic Renewable Energy Company Logo"
@@ -288,9 +276,7 @@ export default function About() {
       </section>
 
       {/* Our Mission & Values */}
-      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="py-20 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -299,10 +285,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Mission & <span className="text-gradient-energy">Values</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+              Our Mission & <span className="text-[#0073b9]">Values</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               We&apos;re committed to making clean energy accessible, affordable, and reliable for all Australians.
             </p>
           </motion.div>
@@ -311,17 +297,17 @@ export default function About() {
             {values.map((value, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic p-8 text-center"
+                className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <div className="w-16 h-16 bg-[#f5a623]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#f5a623]/30">
-                  <value.icon className="w-8 h-8 text-[#f5a623]" />
+                <div className="w-16 h-16 bg-[#0073b9]/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-[#0073b9]/30">
+                  <value.icon className="w-8 h-8 text-[#0073b9]" />
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
-                <p className="text-[#b0b0b0] leading-relaxed">{value.description}</p>
+                <h3 className="text-2xl font-bold text-[#333333] mb-4">{value.title}</h3>
+                <p className="text-[#666666] leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -329,7 +315,7 @@ export default function About() {
       </section>
 
       {/* Why Choose Cosmic Renewable Energy */}
-      <section className="py-20 bg-gradient-to-b from-[#0a0a0f] to-[#12121a]">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
@@ -338,10 +324,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Why Choose <span className="text-gradient-solar">Cosmic</span> Renewable Energy?
+            <h2 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+              Why Choose <span className="text-[#0073b9]">Cosmic</span> Renewable Energy?
             </h2>
-            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               We combine industry expertise with exceptional customer service to deliver
               solar solutions that exceed expectations.
             </p>
@@ -351,21 +337,21 @@ export default function About() {
             {features.map((feature, index) => (
               <motion.div
                 key={index}
-                className="card-cosmic p-8 hover:border-[#f5a623]/30 transition-all duration-300"
+                className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:border-[#0073b9]/30 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-[#00d4ff]/10 rounded-full flex items-center justify-center mb-6 border border-[#00d4ff]/30">
-                  <feature.icon className="w-8 h-8 text-[#00d4ff]" />
+                <div className="w-16 h-16 bg-[#fee000]/20 rounded-full flex items-center justify-center mb-6 border border-[#fee000]/50">
+                  <feature.icon className="w-8 h-8 text-[#0073b9]" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-[#b0b0b0] mb-4 leading-relaxed">{feature.description}</p>
+                <h3 className="text-xl font-bold text-[#333333] mb-3">{feature.title}</h3>
+                <p className="text-[#666666] mb-4 leading-relaxed">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.features.map((item, i) => (
-                    <li key={i} className="flex items-center text-sm text-[#b0b0b0]">
-                      <CheckIcon className="w-4 h-4 text-[#00d4ff] mr-2 flex-shrink-0" />
+                    <li key={i} className="flex items-center text-sm text-[#666666]">
+                      <CheckIcon className="w-4 h-4 text-[#0073b9] mr-2 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -377,9 +363,7 @@ export default function About() {
       </section>
 
       {/* Our Work Gallery */}
-      <section className="py-20 bg-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="py-20 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -388,10 +372,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Quality Work <span className="text-gradient-energy">Speaks for Itself</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-[#333333] mb-6">
+              Our Quality Work <span className="text-[#0073b9]">Speaks for Itself</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               Every installation is a testament to our commitment to quality, precision, and customer satisfaction.
               Browse our portfolio of successful projects across Australia.
             </p>
@@ -401,7 +385,7 @@ export default function About() {
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="group relative overflow-hidden rounded-lg card-cosmic"
+                className="group relative overflow-hidden rounded-lg bg-white shadow-lg border border-gray-200"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -414,10 +398,10 @@ export default function About() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0073b9] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-1 sm:bottom-2 left-1 sm:left-2 right-1 sm:right-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 className="text-xs sm:text-sm font-semibold line-clamp-1">{project.title}</h3>
-                    <p className="text-xs text-[#00d4ff]">{project.size} System</p>
+                    <p className="text-xs text-[#fee000]">{project.size} System</p>
                   </div>
                 </div>
               </motion.div>
@@ -431,22 +415,22 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="card-cosmic p-8 max-w-3xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 max-w-3xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#f5a623] mb-2">5000+</div>
-                  <div className="text-[#b0b0b0]">Projects Completed</div>
+                  <div className="text-3xl font-bold text-[#0073b9] mb-2">5000+</div>
+                  <div className="text-[#666666]">Projects Completed</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#00d4ff] mb-2">100%</div>
-                  <div className="text-[#b0b0b0]">Customer Satisfaction</div>
+                  <div className="text-3xl font-bold text-[#0073b9] mb-2">100%</div>
+                  <div className="text-[#666666]">Customer Satisfaction</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-[#f5a623] mb-2">10+</div>
-                  <div className="text-[#b0b0b0]">Years Experience</div>
+                  <div className="text-3xl font-bold text-[#0073b9] mb-2">10+</div>
+                  <div className="text-[#666666]">Years Experience</div>
                 </div>
               </div>
-              <p className="text-[#b0b0b0] text-center">
+              <p className="text-[#666666] text-center">
                 Every project is completed to the highest standards with ongoing support and monitoring.
               </p>
             </div>
@@ -455,12 +439,7 @@ export default function About() {
       </section>
 
       {/* Certifications & Accreditations */}
-      <section className="py-16 bg-gradient-to-r from-[#0a0a0f] via-[#1a1a2e] to-[#0a0a0f] relative overflow-hidden border-t border-b border-[#f5a623]/20">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#f5a623]/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-[#00d4ff]/10 rounded-full blur-3xl"></div>
-        </div>
-
+      <section className="py-16 bg-[#0073b9] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -470,9 +449,9 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Certifications & <span className="text-gradient-energy">Accreditations</span>
+              Certifications & <span className="text-[#fee000]">Accreditations</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0] max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
               We maintain the highest industry standards through continuous training and certification.
             </p>
           </motion.div>
@@ -481,17 +460,17 @@ export default function About() {
             {certifications.map((cert, index) => (
               <motion.div
                 key={index}
-                className="glass rounded-lg p-6 text-center border border-white/10"
+                className="bg-white/10 rounded-lg p-6 text-center border border-white/20"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="h-16 bg-gradient-to-br from-[#f5a623] to-[#00d4ff] rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-[#0a0a0f] font-bold text-xl">{cert.abbr}</span>
+                <div className="h-16 bg-[#fee000] rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-[#083941] font-bold text-xl">{cert.abbr}</span>
                 </div>
                 <h3 className="text-white font-semibold mb-1">{cert.name}</h3>
-                <p className="text-[#b0b0b0] text-sm">{cert.description}</p>
+                <p className="text-white/70 text-sm">{cert.description}</p>
               </motion.div>
             ))}
           </div>
@@ -499,9 +478,7 @@ export default function About() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-[#0a0a0f] relative overflow-hidden">
-        <div className="absolute inset-0 star-field opacity-20"></div>
-
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -509,29 +486,29 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full mb-6 border border-[#f5a623]/20">
-              <RocketIcon className="w-5 h-5 text-[#f5a623]" />
-              <span className="text-[#f5a623] font-semibold text-sm">Get Started Today</span>
+            <div className="inline-flex items-center gap-2 bg-[#0073b9]/10 px-4 py-2 rounded-full mb-6 border border-[#0073b9]/20">
+              <RocketIcon className="w-5 h-5 text-[#0073b9]" />
+              <span className="text-[#0073b9] font-semibold text-sm">Get Started Today</span>
             </div>
 
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Work with Australia&apos;s <span className="text-gradient-solar">Solar Experts?</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-6">
+              Ready to Work with Australia&apos;s <span className="text-[#0073b9]">Solar Experts?</span>
             </h2>
-            <p className="text-xl text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-[#666666] mb-8 max-w-2xl mx-auto">
               Experience the difference of working with a trusted solar energy partner.
               Get your personalized quote today and start saving.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#fee000] text-[#083941] px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#e5ca00] transition-all"
               >
                 Get Free Quote
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link
                 href="/contact"
-                className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                className="bg-[#0073b9] text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#005a91] transition-all"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Contact Our Team

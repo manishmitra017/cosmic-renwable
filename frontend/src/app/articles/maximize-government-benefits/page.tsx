@@ -55,17 +55,10 @@ const ExclamationTriangleIcon = ({ className = "w-5 h-5" }: { className?: string
 
 export default function MaximizeGovernmentBenefitsArticle() {
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       <article>
         {/* Header */}
-        <header className="relative py-16 sm:py-24 bg-[#0a0a0f] overflow-hidden">
-          {/* Star field background */}
-          <div className="absolute inset-0 star-field opacity-40"></div>
-
-          {/* Animated gradient orbs */}
-          <div className="absolute top-20 right-20 w-96 h-96 bg-[#f5a623]/10 rounded-full blur-[120px] animate-float"></div>
-          <div className="absolute bottom-20 left-20 w-80 h-80 bg-[#00d4ff]/10 rounded-full blur-[100px] animate-float-delayed"></div>
-
+        <header className="relative py-16 sm:py-24 bg-[#0073b9] overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
               className="max-w-4xl mx-auto text-center"
@@ -74,22 +67,22 @@ export default function MaximizeGovernmentBenefitsArticle() {
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center justify-center gap-3 mb-6">
-                <Link href="/articles" className="text-[#b0b0b0] hover:text-[#00d4ff] transition-colors flex items-center gap-2">
+                <Link href="/articles" className="text-white/80 hover:text-white transition-colors flex items-center gap-2">
                   <ArrowLeftIcon className="w-4 h-4" />
                   Back to Articles
                 </Link>
-                <span className="text-[#b0b0b0]/50">|</span>
-                <span className="glass px-3 py-1 rounded-full text-sm text-[#00d4ff] border border-[#00d4ff]/20">Guides</span>
+                <span className="text-white/50">|</span>
+                <span className="bg-white/20 px-3 py-1 rounded-full text-sm text-white border border-white/30">Guides</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
-                How Solar Households Can <span className="text-gradient-solar">Maximize Government Benefits</span> in 2025
+                How Solar Households Can <span className="text-[#fee000]">Maximize Government Benefits</span> in 2025
               </h1>
-              <p className="text-xl text-[#b0b0b0] mb-6">
+              <p className="text-xl text-white/90 mb-6">
                 Complete guide to federal and state solar incentives, battery rebates, and how to stack multiple programs
               </p>
-              <div className="flex items-center justify-center gap-4 text-[#b0b0b0]">
+              <div className="flex items-center justify-center gap-4 text-white/80">
                 <span>August 2025</span>
-                <span className="text-[#f5a623]">|</span>
+                <span className="text-[#fee000]">|</span>
                 <span>12 min read</span>
               </div>
             </motion.div>
@@ -105,7 +98,7 @@ export default function MaximizeGovernmentBenefitsArticle() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-white/10">
+              <div className="relative h-64 sm:h-96 rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
                 <Image
                   src="/solarroof8.jpg"
                   alt="Solar panels on Australian home - Government benefits guide"
@@ -113,7 +106,6 @@ export default function MaximizeGovernmentBenefitsArticle() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] to-transparent"></div>
               </div>
             </motion.div>
           </div>
@@ -129,317 +121,317 @@ export default function MaximizeGovernmentBenefitsArticle() {
             transition={{ duration: 0.8 }}
           >
             {/* Key Takeaway Box */}
-            <div className="card-cosmic p-6 mb-10 border-l-4 border-[#f5a623]">
-              <h2 className="text-xl font-bold text-[#f5a623] mb-3 flex items-center gap-2">
+            <div className="bg-[#fee000] p-6 mb-10 border-l-4 border-[#083941] rounded-r-xl">
+              <h2 className="text-xl font-bold text-[#083941] mb-3 flex items-center gap-2">
                 <BoltIcon className="w-6 h-6" />
                 Key Takeaway
               </h2>
-              <p className="text-[#b0b0b0] text-lg">
-                In 2025, Australian households can access <strong className="text-white">multiple incentives</strong> for solar and batteries.
+              <p className="text-[#083941] text-lg">
+                In 2025, Australian households can access <strong>multiple incentives</strong> for solar and batteries.
                 By combining federal STC rebates with the new battery program and state-specific incentives, you can
-                save <strong className="text-white">$6,000 - $10,000+</strong> on a solar and battery system.
+                save <strong>$6,000 - $10,000+</strong> on a solar and battery system.
               </p>
             </div>
 
             {/* Article Body */}
-            <div className="prose prose-lg max-w-none prose-invert">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+            <div className="prose prose-lg max-w-none">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Federal Government Programs
               </h2>
 
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-[#333333] mb-4">
                 1. Small-scale Renewable Energy Scheme (SRES) - Solar Panel Rebate
               </h3>
 
-              <p className="text-[#b0b0b0] text-lg mb-6">
+              <p className="text-[#444444] text-lg mb-6">
                 The SRES remains the backbone of Australia&apos;s solar incentive system. When you install a solar system
                 under 100kW, you generate Small-scale Technology Certificates (STCs) which are typically redeemed as
-                an <strong className="text-white">upfront discount</strong> on your installation.
+                an <strong className="text-[#333333]">upfront discount</strong> on your installation.
               </p>
 
-              <div className="card-cosmic p-6 mb-8 border border-[#00d4ff]/30">
-                <h4 className="font-bold text-[#00d4ff] mb-3">2025 Solar Rebate Value</h4>
-                <ul className="space-y-2 text-[#b0b0b0]">
+              <div className="bg-white p-6 mb-8 border-2 border-[#0073b9] rounded-xl">
+                <h4 className="font-bold text-[#0073b9] mb-3">2025 Solar Rebate Value</h4>
+                <ul className="space-y-2 text-[#444444]">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#f5a623]">&#8226;</span>
-                    <span>Average 6.6kW system: <strong className="text-white">~$2,400</strong> rebate</span>
+                    <span className="text-[#0073b9]">&#8226;</span>
+                    <span>Average 6.6kW system: <strong className="text-[#333333]">~$2,400</strong> rebate</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#f5a623]">&#8226;</span>
+                    <span className="text-[#0073b9]">&#8226;</span>
                     <span>The rebate reduces each year until 2030 when SRES ends</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#f5a623]">&#8226;</span>
+                    <span className="text-[#0073b9]">&#8226;</span>
                     <span>Act sooner to maximize your savings</span>
                   </li>
                 </ul>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-[#333333] mb-4">
                 2. Cheaper Home Batteries Program - Battery Rebate
               </h3>
 
-              <p className="text-[#b0b0b0] text-lg mb-6">
-                From 1 July 2025, the Cheaper Home Batteries Program provides around <strong className="text-white">30% off</strong> the cost
+              <p className="text-[#444444] text-lg mb-6">
+                From 1 July 2025, the Cheaper Home Batteries Program provides around <strong className="text-[#333333]">30% off</strong> the cost
                 of installing a battery. This is delivered through the same STC mechanism, with the government funding
                 additional certificates for battery installations.
               </p>
 
-              <div className="card-cosmic p-6 mb-8 border border-[#f5a623]/30">
-                <h4 className="font-bold text-[#f5a623] mb-3">Battery Rebate Value</h4>
-                <ul className="space-y-2 text-[#b0b0b0]">
+              <div className="bg-white p-6 mb-8 border-2 border-[#fee000] rounded-xl">
+                <h4 className="font-bold text-[#083941] mb-3">Battery Rebate Value</h4>
+                <ul className="space-y-2 text-[#444444]">
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00d4ff]">&#8226;</span>
-                    <span>Up to <strong className="text-white">$372 per usable kWh</strong> (~$330 after admin fees)</span>
+                    <span className="text-[#0073b9]">&#8226;</span>
+                    <span>Up to <strong className="text-[#333333]">$372 per usable kWh</strong> (~$330 after admin fees)</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00d4ff]">&#8226;</span>
-                    <span>10-13.5kWh battery: <strong className="text-white">~$3,300 - $4,000</strong> savings</span>
+                    <span className="text-[#0073b9]">&#8226;</span>
+                    <span>10-13.5kWh battery: <strong className="text-[#333333]">~$3,300 - $4,000</strong> savings</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-[#00d4ff]">&#8226;</span>
+                    <span className="text-[#0073b9]">&#8226;</span>
                     <span>Can be combined with state battery incentives</span>
                   </li>
                 </ul>
               </div>
 
-              <h3 className="text-xl font-bold text-white mb-4">
+              <h3 className="text-xl font-bold text-[#333333] mb-4">
                 3. Community Solar Banks Program
               </h3>
 
-              <p className="text-[#b0b0b0] text-lg mb-8">
+              <p className="text-[#444444] text-lg mb-8">
                 For those who can&apos;t install their own solar (renters, apartment dwellers), the Community Solar Banks
                 Program supports shared solar installations in apartment buildings and multi-unit dwellings, helping
                 up to 25,000 households access solar benefits.
               </p>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 State-by-State Incentives
               </h2>
 
               {/* State Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
                 {/* NSW */}
-                <div className="card-cosmic p-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#00d4ff] rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 bg-[#0073b9] rounded-full flex items-center justify-center text-white font-bold">
                       NSW
                     </div>
-                    <h4 className="text-lg font-bold text-white">New South Wales</h4>
+                    <h4 className="text-lg font-bold text-[#333333]">New South Wales</h4>
                   </div>
-                  <ul className="space-y-3 text-[#b0b0b0]">
+                  <ul className="space-y-3 text-[#444444]">
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Empowering Homes:</strong> Interest-free loans up to $14,000 for solar-battery (income under $180,000)</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Empowering Homes:</strong> Interest-free loans up to $14,000 for solar-battery (income under $180,000)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">VPP Incentive:</strong> Up to $1,500 for connecting to a Virtual Power Plant</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">VPP Incentive:</strong> Up to $1,500 for connecting to a Virtual Power Plant</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <ExclamationTriangleIcon className="w-5 h-5 text-[#f5a623] flex-shrink-0 mt-0.5" />
+                      <ExclamationTriangleIcon className="w-5 h-5 text-[#e5ca00] flex-shrink-0 mt-0.5" />
                       <span>Peak Demand Reduction Scheme ended June 2025</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* Victoria */}
-                <div className="card-cosmic p-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#00d4ff]/80 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 bg-[#005a91] rounded-full flex items-center justify-center text-white font-bold">
                       VIC
                     </div>
-                    <h4 className="text-lg font-bold text-white">Victoria</h4>
+                    <h4 className="text-lg font-bold text-[#333333]">Victoria</h4>
                   </div>
-                  <ul className="space-y-3 text-[#b0b0b0]">
+                  <ul className="space-y-3 text-[#444444]">
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Solar Panel Rebate:</strong> Up to $1,400 for solar panels</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Solar Panel Rebate:</strong> Up to $1,400 for solar panels</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Solar for Rentals:</strong> $1,400 rebate for landlords</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Solar for Rentals:</strong> $1,400 rebate for landlords</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Apartments:</strong> Up to $2,800 per apartment for shared solar</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Apartments:</strong> Up to $2,800 per apartment for shared solar</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* South Australia */}
-                <div className="card-cosmic p-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">
                       SA
                     </div>
-                    <h4 className="text-lg font-bold text-white">South Australia</h4>
+                    <h4 className="text-lg font-bold text-[#333333]">South Australia</h4>
                   </div>
-                  <ul className="space-y-3 text-[#b0b0b0]">
+                  <ul className="space-y-3 text-[#444444]">
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Concession Swap:</strong> Trade 10 years of concessions for a 4.4kW solar system</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Concession Swap:</strong> Trade 10 years of concessions for a 4.4kW solar system</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">VPP Battery Rebate:</strong> Up to $2,050 for REPS-approved VPP connection</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">VPP Battery Rebate:</strong> Up to $2,050 for REPS-approved VPP connection</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* ACT */}
-                <div className="card-cosmic p-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-[#f5a623] rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-10 h-10 bg-[#fee000] rounded-full flex items-center justify-center text-[#083941] font-bold">
                       ACT
                     </div>
-                    <h4 className="text-lg font-bold text-white">ACT (Canberra)</h4>
+                    <h4 className="text-lg font-bold text-[#333333]">ACT (Canberra)</h4>
                   </div>
-                  <ul className="space-y-3 text-[#b0b0b0]">
+                  <ul className="space-y-3 text-[#444444]">
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Pensioner Rebate:</strong> Up to 50% off solar (max $2,500)</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Pensioner Rebate:</strong> Up to 50% off solar (max $2,500)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Sustainable Household Scheme:</strong> Zero-interest loans $2,000 - $15,000 for solar, battery, EV chargers</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Sustainable Household Scheme:</strong> Zero-interest loans $2,000 - $15,000 for solar, battery, EV chargers</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* WA */}
-                <div className="card-cosmic p-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-[#f5a623] font-bold border border-[#f5a623]">
+                    <div className="w-10 h-10 bg-[#333333] rounded-full flex items-center justify-center text-[#fee000] font-bold border border-[#fee000]">
                       WA
                     </div>
-                    <h4 className="text-lg font-bold text-white">Western Australia</h4>
+                    <h4 className="text-lg font-bold text-[#333333]">Western Australia</h4>
                   </div>
-                  <ul className="space-y-3 text-[#b0b0b0]">
+                  <ul className="space-y-3 text-[#444444]">
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">DEBS Feed-in Tariff:</strong> Up to 10c/kWh (peak) for exported energy</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">DEBS Feed-in Tariff:</strong> Up to 10c/kWh (peak) for exported energy</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
                       <span>Plus federal battery rebate available</span>
                     </li>
                   </ul>
                 </div>
 
                 {/* NT */}
-                <div className="card-cosmic p-6">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold">
                       NT
                     </div>
-                    <h4 className="text-lg font-bold text-white">Northern Territory</h4>
+                    <h4 className="text-lg font-bold text-[#333333]">Northern Territory</h4>
                   </div>
-                  <ul className="space-y-3 text-[#b0b0b0]">
+                  <ul className="space-y-3 text-[#444444]">
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
-                      <span><strong className="text-white">Highest STC Value:</strong> ~$2,200 off a 6.6kW system in Darwin</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
+                      <span><strong className="text-[#333333]">Highest STC Value:</strong> ~$2,200 off a 6.6kW system in Darwin</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckIcon className="w-5 h-5 text-[#00d4ff] flex-shrink-0 mt-0.5" />
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] flex-shrink-0 mt-0.5" />
                       <span>Federal battery rebate (~30% off) available</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 How to Stack Multiple Incentives
               </h2>
 
-              <p className="text-[#b0b0b0] text-lg mb-6">
+              <p className="text-[#444444] text-lg mb-6">
                 The federal battery rebate was designed to be &quot;stackable&quot; with state programs. Here&apos;s how to maximize your savings:
               </p>
 
-              <div className="card-cosmic p-8 mb-10 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10 border border-[#f5a623]/30">
-                <h3 className="text-2xl font-bold mb-6 text-white">Example: Maximum Savings in Victoria</h3>
+              <div className="bg-[#fee000] p-8 mb-10 rounded-xl">
+                <h3 className="text-2xl font-bold mb-6 text-[#083941]">Example: Maximum Savings in Victoria</h3>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center border-b border-white/20 pb-3">
-                    <span className="text-[#b0b0b0]">Federal Solar STC Rebate (6.6kW)</span>
-                    <span className="font-bold text-white">~$2,400</span>
+                  <div className="flex justify-between items-center border-b border-[#083941]/20 pb-3">
+                    <span className="text-[#083941]">Federal Solar STC Rebate (6.6kW)</span>
+                    <span className="font-bold text-[#083941]">~$2,400</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-white/20 pb-3">
-                    <span className="text-[#b0b0b0]">Victorian Solar Panel Rebate</span>
-                    <span className="font-bold text-white">$1,400</span>
+                  <div className="flex justify-between items-center border-b border-[#083941]/20 pb-3">
+                    <span className="text-[#083941]">Victorian Solar Panel Rebate</span>
+                    <span className="font-bold text-[#083941]">$1,400</span>
                   </div>
-                  <div className="flex justify-between items-center border-b border-white/20 pb-3">
-                    <span className="text-[#b0b0b0]">Federal Battery Rebate (13.5kWh)</span>
-                    <span className="font-bold text-white">~$4,000</span>
+                  <div className="flex justify-between items-center border-b border-[#083941]/20 pb-3">
+                    <span className="text-[#083941]">Federal Battery Rebate (13.5kWh)</span>
+                    <span className="font-bold text-[#083941]">~$4,000</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 text-xl">
-                    <span className="font-bold text-white">Total Potential Savings</span>
-                    <span className="font-bold text-[#f5a623]">~$7,800+</span>
+                    <span className="font-bold text-[#083941]">Total Potential Savings</span>
+                    <span className="font-bold text-[#083941]">~$7,800+</span>
                   </div>
                 </div>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Tips to Maximize Your Benefits
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-2xl text-[#f5a623] font-bold">1</span>
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-2xl text-[#0073b9] font-bold">1</span>
                   </div>
-                  <h4 className="font-bold text-white mb-2">Act in 2025</h4>
-                  <p className="text-[#b0b0b0]">Both the solar STC rebate and battery rebate reduce each year. Acting now maximizes your savings before reductions kick in.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Act in 2025</h4>
+                  <p className="text-[#444444]">Both the solar STC rebate and battery rebate reduce each year. Acting now maximizes your savings before reductions kick in.</p>
                 </div>
 
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-2xl text-[#f5a623] font-bold">2</span>
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-2xl text-[#0073b9] font-bold">2</span>
                   </div>
-                  <h4 className="font-bold text-white mb-2">Combine Solar + Battery</h4>
-                  <p className="text-[#b0b0b0]">Installing both solar and battery together qualifies you for both rebate programs and is often more cost-effective than separate installations.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Combine Solar + Battery</h4>
+                  <p className="text-[#444444]">Installing both solar and battery together qualifies you for both rebate programs and is often more cost-effective than separate installations.</p>
                 </div>
 
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-2xl text-[#f5a623] font-bold">3</span>
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-2xl text-[#0073b9] font-bold">3</span>
                   </div>
-                  <h4 className="font-bold text-white mb-2">Check State Programs</h4>
-                  <p className="text-[#b0b0b0]">Research your state&apos;s specific incentives. Many can be stacked with federal programs for additional savings.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Check State Programs</h4>
+                  <p className="text-[#444444]">Research your state&apos;s specific incentives. Many can be stacked with federal programs for additional savings.</p>
                 </div>
 
-                <div className="card-cosmic p-6">
-                  <div className="w-12 h-12 bg-[#f5a623]/20 rounded-full flex items-center justify-center mb-4">
-                    <span className="text-2xl text-[#f5a623] font-bold">4</span>
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                  <div className="w-12 h-12 bg-[#0073b9]/10 rounded-full flex items-center justify-center mb-4">
+                    <span className="text-2xl text-[#0073b9] font-bold">4</span>
                   </div>
-                  <h4 className="font-bold text-white mb-2">Maximize Self-Consumption</h4>
-                  <p className="text-[#b0b0b0]">Greater savings come from using your own solar power rather than exporting it. A battery helps you use more of what you generate.</p>
+                  <h4 className="font-bold text-[#333333] mb-2">Maximize Self-Consumption</h4>
+                  <p className="text-[#444444]">Greater savings come from using your own solar power rather than exporting it. A battery helps you use more of what you generate.</p>
                 </div>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#333333] mb-6">
                 Why Act Now?
               </h2>
 
-              <div className="card-cosmic p-6 mb-10 border border-[#f5a623]/30">
-                <h4 className="font-bold text-[#f5a623] mb-4 flex items-center gap-2">
+              <div className="bg-white p-6 mb-10 border-2 border-[#0073b9] rounded-xl">
+                <h4 className="font-bold text-[#0073b9] mb-4 flex items-center gap-2">
                   <ClockIcon className="w-6 h-6" />
                   Time-Sensitive Incentives
                 </h4>
-                <ul className="space-y-3 text-[#b0b0b0]">
+                <ul className="space-y-3 text-[#444444]">
                   <li className="flex items-start gap-3">
-                    <span className="text-[#f5a623] font-bold">&#8226;</span>
-                    <span>The SRES solar rebate <strong className="text-white">decreases annually</strong> and ends completely in 2030</span>
+                    <span className="text-[#0073b9] font-bold">&#8226;</span>
+                    <span>The SRES solar rebate <strong className="text-[#333333]">decreases annually</strong> and ends completely in 2030</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#f5a623] font-bold">&#8226;</span>
+                    <span className="text-[#0073b9] font-bold">&#8226;</span>
                     <span>Battery rebate will decline faster from May 2026 (every 6 months instead of annually)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#f5a623] font-bold">&#8226;</span>
+                    <span className="text-[#0073b9] font-bold">&#8226;</span>
                     <span>State programs frequently change or end (e.g., NSW PDRS ended June 2025)</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-[#f5a623] font-bold">&#8226;</span>
+                    <span className="text-[#0073b9] font-bold">&#8226;</span>
                     <span>Electricity prices continue to rise, making solar+battery more valuable over time</span>
                   </li>
                 </ul>
@@ -447,25 +439,25 @@ export default function MaximizeGovernmentBenefitsArticle() {
             </div>
 
             {/* Call to Action */}
-            <div className="card-cosmic p-8 sm:p-12 text-center mt-12 bg-gradient-to-r from-[#f5a623]/10 to-[#00d4ff]/10 border border-[#f5a623]/30">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <div className="bg-[#fee000] p-8 sm:p-12 text-center mt-12 rounded-2xl">
+              <h2 className="text-2xl sm:text-3xl font-bold text-[#083941] mb-4">
                 Let Us Help You Maximize Your Savings
               </h2>
-              <p className="text-lg text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+              <p className="text-lg text-[#083941]/80 mb-8 max-w-2xl mx-auto">
                 As experts in Australian solar incentives, we&apos;ll help you navigate all available rebates and ensure you
                 get the maximum benefit. Free consultation, no obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/quote"
-                  className="btn-solar px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                  className="bg-[#0073b9] text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#005a91] transition-colors"
                 >
                   Get Free Quote
                   <ArrowRightIcon className="w-5 h-5" />
                 </Link>
                 <a
                   href="tel:1300090984"
-                  className="btn-energy px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2"
+                  className="bg-[#083941] text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 hover:bg-[#083941]/90 transition-colors"
                 >
                   <PhoneIcon className="w-5 h-5" />
                   Call 1300 09 09 84
@@ -474,16 +466,16 @@ export default function MaximizeGovernmentBenefitsArticle() {
             </div>
 
             {/* More Information */}
-            <div className="mt-12 pt-8 border-t border-white/10">
-              <h3 className="text-xl font-bold text-white mb-4">More Information</h3>
-              <p className="text-[#b0b0b0] mb-4">
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <h3 className="text-xl font-bold text-[#333333] mb-4">More Information</h3>
+              <p className="text-[#666666] mb-4">
                 For official government information about solar rebates and incentives:
               </p>
               <a
                 href="https://www.energy.gov.au/solar/switch-solar-power/solar-households"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#0073b9] hover:text-[#005a91] font-semibold transition-colors"
               >
                 Visit Energy.gov.au
                 <ExternalLinkIcon className="w-4 h-4" />
@@ -494,7 +486,7 @@ export default function MaximizeGovernmentBenefitsArticle() {
             <div className="mt-8 text-center">
               <Link
                 href="/articles"
-                className="inline-flex items-center gap-2 text-[#00d4ff] hover:text-[#f5a623] font-semibold transition-colors"
+                className="inline-flex items-center gap-2 text-[#0073b9] hover:text-[#005a91] font-semibold transition-colors"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
                 Back to All Articles

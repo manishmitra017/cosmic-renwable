@@ -166,7 +166,7 @@ export default function Home() {
   const [lightboxImage, setLightboxImage] = useState<{image: string, title: string} | null>(null)
 
   return (
-    <div className="cosmic-bg">
+    <div className="bg-white">
       <Script
         id="structured-data"
         type="application/ld+json"
@@ -182,7 +182,7 @@ export default function Home() {
       <RebateBanner />
 
       {/* Contact Banner */}
-      <section className="py-3 sm:py-4 bg-[#1E4A5F] relative overflow-hidden">
+      <section className="py-3 sm:py-4 bg-[#fee000] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center"
@@ -192,54 +192,54 @@ export default function Home() {
           >
             {/* Mobile Layout */}
             <div className="flex flex-col items-center gap-2.5 sm:hidden">
-              <div className="flex items-center gap-2 text-white font-bold text-sm">
-                <RocketIcon className="w-4 h-4 text-[#FFB800]" />
-                <span className="text-[#FFB800]">Australia&apos;s #1 Solar Experts</span>
+              <div className="flex items-center gap-2 text-[#083941] font-bold text-sm">
+                <RocketIcon className="w-4 h-4 text-[#0073b9]" />
+                <span>Australia&apos;s #1 Solar Experts</span>
               </div>
               <div className="flex items-center gap-2 w-full max-w-xs">
                 <a
                   href="tel:1300090984"
-                  className="flex-1 bg-[#FFB800] text-[#1A2634] px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:bg-[#E5A600] transition-colors"
+                  className="flex-1 bg-[#0073b9] text-white px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:bg-[#005a91] hover:scale-105 transition-all"
                 >
                   <PhoneIcon className="w-3.5 h-3.5" />
                   <span>1300 09 09 84</span>
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="flex-1 bg-[#00857C] text-white px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:bg-[#006B64] transition-colors"
+                  className="flex-1 bg-white text-[#0073b9] px-3 py-2.5 rounded-full font-bold text-xs shadow-lg flex items-center justify-center gap-1.5 hover:bg-gray-100 hover:scale-105 transition-all border border-[#0073b9]"
                 >
                   <DeviceIcon className="w-3.5 h-3.5" />
                   <span>+61 422 786 100</span>
                 </a>
               </div>
-              <div className="text-white/80 font-medium text-xs">
+              <div className="text-[#083941] font-medium text-xs">
                 Call Now for Instant Quote!
               </div>
             </div>
 
             {/* Desktop Layout */}
             <div className="hidden sm:flex items-center justify-center gap-4 md:gap-6">
-              <div className="text-white font-bold text-base md:text-xl flex items-center gap-2">
-                <RocketIcon className="w-5 h-5 text-[#FFB800]" />
-                <span className="text-[#FFB800]">Australia&apos;s #1 Solar & Battery Experts</span>
+              <div className="text-[#083941] font-bold text-base md:text-xl flex items-center gap-2">
+                <RocketIcon className="w-5 h-5 text-[#0073b9]" />
+                <span>Australia&apos;s #1 Solar & Battery Experts</span>
               </div>
               <div className="flex items-center gap-3">
                 <a
                   href="tel:1300090984"
-                  className="bg-[#FFB800] text-[#1A2634] px-4 py-2 rounded-full font-bold text-sm hover:bg-[#E5A600] transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-[#0073b9] text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-[#005a91] transition-all shadow-lg flex items-center gap-2 hover:scale-105"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
                 <a
                   href="tel:+61422786100"
-                  className="bg-[#00857C] text-white px-4 py-2 rounded-full font-bold text-sm hover:bg-[#006B64] transition-colors shadow-lg flex items-center gap-2"
+                  className="bg-white text-[#0073b9] px-4 py-2 rounded-full font-bold text-sm hover:bg-gray-100 transition-all shadow-lg flex items-center gap-2 hover:scale-105 border border-[#0073b9]"
                 >
                   <DeviceIcon className="w-4 h-4" />
                   +61 422 786 100
                 </a>
               </div>
-              <div className="text-white/80 font-semibold text-sm md:text-base">
+              <div className="text-[#083941] font-semibold text-sm md:text-base">
                 Call Now for Instant Quote!
               </div>
             </div>
@@ -248,28 +248,28 @@ export default function Home() {
       </section>
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-[#1E4A5F]">
-        {/* Background image with overlay */}
+      <section className="relative min-h-[85vh] sm:min-h-screen flex items-center overflow-hidden bg-[#0073b9]">
+        {/* Background with image overlay */}
         <div className="absolute inset-0">
           <Image
             src="/solarroof9.jpg"
             alt="Premium solar battery system installation on Australian home roof - Cosmic Renewable Energy"
             fill
-            className="object-cover opacity-40"
+            className="object-cover opacity-20"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#1E4A5F]/70 via-[#1E4A5F]/50 to-[#1E4A5F]/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0073b9]/90 via-[#0073b9]/70 to-[#0073b9]"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-0">
           <div className="max-w-4xl">
             <motion.div
-              className="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 bg-white/20 border border-white/30 px-4 py-2 rounded-full mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <BoltIcon className="w-4 h-4 text-[#FFB800]" />
+              <BoltIcon className="w-4 h-4 text-[#fee000]" />
               <span className="text-white font-medium text-sm">Cosmic Renewable Energy</span>
             </motion.div>
 
@@ -280,13 +280,13 @@ export default function Home() {
               transition={{ duration: 0.8 }}
             >
               Premium Solar Battery Systems
-              <span className="block text-[#FFB800] text-xl sm:text-3xl md:text-4xl lg:text-6xl mt-1 sm:mt-2">
+              <span className="block text-[#fee000] text-xl sm:text-3xl md:text-4xl lg:text-6xl mt-1 sm:mt-2">
                 Australia Wide Installation
               </span>
             </motion.h1>
 
             <motion.div
-              className="bg-[#FFB800] text-[#1A2634] text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl mb-3 sm:mb-6 inline-block shadow-lg"
+              className="bg-[#fee000] text-[#083941] text-base sm:text-xl md:text-2xl lg:text-3xl font-bold px-4 sm:px-6 py-2.5 sm:py-4 rounded-xl mb-3 sm:mb-6 inline-block shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -295,7 +295,7 @@ export default function Home() {
             </motion.div>
 
             <motion.p
-              className="text-sm sm:text-lg md:text-xl text-white/80 mb-5 sm:mb-8 leading-relaxed max-w-2xl"
+              className="text-sm sm:text-lg md:text-xl text-white/90 mb-5 sm:mb-8 leading-relaxed max-w-2xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -314,7 +314,7 @@ export default function Home() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/quote"
-                  className="w-full sm:w-auto bg-[#FFB800] hover:bg-[#E5A600] text-[#1A2634] px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-bold text-center block sm:inline-block shadow-lg transition-colors"
+                  className="w-full sm:w-auto bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-bold text-center block sm:inline-block shadow-lg transition-all"
                 >
                   Book Free Consultation
                 </Link>
@@ -322,7 +322,7 @@ export default function Home() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <a
                   href="tel:1300090984"
-                  className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border-2 border-white text-white px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-bold text-center block sm:inline-block flex items-center justify-center gap-2 transition-colors"
+                  className="w-full sm:w-auto bg-white text-[#0073b9] hover:bg-gray-100 px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-bold text-center block sm:inline-block flex items-center justify-center gap-2 shadow-lg transition-all"
                 >
                   <PhoneIcon className="w-5 h-5" />
                   Call Now: 1300 09 09 84
@@ -344,8 +344,8 @@ export default function Home() {
                 { value: '90%', label: 'Bill Reduction' }
               ].map((stat, index) => (
                 <div key={index} className="text-center p-2 sm:p-0">
-                  <div className="text-lg sm:text-2xl md:text-3xl font-extrabold text-[#FFB800]">{stat.value}</div>
-                  <div className="text-white/70 text-[10px] sm:text-sm font-medium">{stat.label}</div>
+                  <div className="text-lg sm:text-2xl md:text-3xl font-extrabold text-[#fee000]">{stat.value}</div>
+                  <div className="text-white/80 text-[10px] sm:text-sm font-medium">{stat.label}</div>
                 </div>
               ))}
             </motion.div>
@@ -357,7 +357,7 @@ export default function Home() {
       <PromotionsCarousel />
 
       {/* Special Offer Banner */}
-      <section className="py-12 bg-[#F5F7F9] relative overflow-hidden">
+      <section className="py-12 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center"
@@ -366,14 +366,14 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-white rounded-2xl p-4 sm:p-8 max-w-4xl mx-auto shadow-lg border border-gray-100">
+            <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 max-w-4xl mx-auto border border-gray-200">
               <div className="mb-4">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-[#1A2634] mb-2 flex items-center justify-center gap-3">
-                  <BoltIcon className="w-8 h-8 text-[#FFB800]" />
-                  <span className="text-[#1E4A5F]">EXCLUSIVE LIMITED TIME OFFER</span>
-                  <BoltIcon className="w-8 h-8 text-[#FFB800]" />
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-[#333333] mb-2 flex items-center justify-center gap-3">
+                  <BoltIcon className="w-8 h-8 text-[#0073b9]" />
+                  <span className="text-[#0073b9]">EXCLUSIVE LIMITED TIME OFFER</span>
+                  <BoltIcon className="w-8 h-8 text-[#0073b9]" />
                 </h2>
-                <p className="text-lg text-[#6C757D]">
+                <p className="text-lg text-[#666666]">
                   Don&apos;t miss out on our latest solar and battery package deals!
                 </p>
               </div>
@@ -403,13 +403,13 @@ export default function Home() {
               <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/quote"
-                  className="bg-[#FFB800] hover:bg-[#E5A600] text-[#1A2634] px-8 py-4 rounded-lg text-lg font-bold transition-colors shadow-lg"
+                  className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-bold shadow-lg transition-all"
                 >
                   Claim This Offer Now
                 </Link>
                 <a
                   href="tel:1300090984"
-                  className="bg-[#1E4A5F] hover:bg-[#163845] text-white px-8 py-4 rounded-lg text-lg font-bold flex items-center justify-center gap-2 transition-colors shadow-lg"
+                  className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-bold flex items-center justify-center gap-2 shadow-lg transition-all"
                 >
                   <PhoneIcon className="w-5 h-5" />
                   Call for Details
@@ -421,7 +421,7 @@ export default function Home() {
       </section>
 
       {/* Government Battery Rebate Section */}
-      <section className="py-16 bg-[#1E4A5F] relative overflow-hidden">
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center"
@@ -430,30 +430,30 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-              Solar Battery Rebates Australia - <span className="text-[#FFB800]">Save $8,000</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#333333] mb-6">
+              Solar Battery Rebates Australia - <span className="text-[#0073b9]">Save $8,000</span>
             </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] mb-8 max-w-3xl mx-auto">
               Take advantage of the $2.3 Billion Australian Government Home Battery Program.
               Save up to $8,000 on premium solar battery systems with professional installation across Australia.
             </p>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 max-w-2xl mx-auto border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-4">How It Works</h3>
-              <ul className="text-left text-white/90 space-y-3">
+            <div className="bg-[#efefef] rounded-xl p-8 max-w-2xl mx-auto border border-gray-200">
+              <h3 className="text-2xl font-bold text-[#333333] mb-4">How It Works</h3>
+              <ul className="text-left text-[#444444] space-y-3">
                 <li className="flex items-start">
-                  <span className="text-[#FFB800] font-bold mr-3 text-xl">1.</span>
+                  <span className="text-[#0073b9] font-bold mr-3 text-xl">1.</span>
                   Choose from approved battery systems
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FFB800] font-bold mr-3 text-xl">2.</span>
+                  <span className="text-[#0073b9] font-bold mr-3 text-xl">2.</span>
                   Get up to 30% government discount
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FFB800] font-bold mr-3 text-xl">3.</span>
+                  <span className="text-[#0073b9] font-bold mr-3 text-xl">3.</span>
                   Professional installation included
                 </li>
                 <li className="flex items-start">
-                  <span className="text-[#FFB800] font-bold mr-3 text-xl">4.</span>
+                  <span className="text-[#0073b9] font-bold mr-3 text-xl">4.</span>
                   Start saving on energy bills immediately
                 </li>
               </ul>
@@ -463,7 +463,7 @@ export default function Home() {
       </section>
 
       {/* Services Carousel Section */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -472,10 +472,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1A2634] mb-6">
-              Our <span className="text-[#1E4A5F]">Services</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#333333] mb-6">
+              Our <span className="text-[#0073b9]">Services</span>
             </h2>
-            <p className="text-xl text-[#6C757D] max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               Comprehensive solar and energy solutions for your home and business.
             </p>
           </motion.div>
@@ -515,7 +515,7 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-all"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -529,13 +529,13 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E4A5F]/90 via-[#1E4A5F]/40 to-transparent flex items-center justify-center">
-                    <service.icon className="w-10 h-10 sm:w-12 sm:h-12 text-[#FFB800]" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0073b9]/80 via-[#0073b9]/40 to-transparent flex items-center justify-center">
+                    <service.icon className="w-10 h-10 sm:w-12 sm:h-12 text-white" />
                   </div>
                 </div>
                 <div className="p-4 sm:p-5 lg:p-6">
-                  <h3 className="text-lg sm:text-xl font-semibold text-[#1A2634] mb-2">{service.title}</h3>
-                  <p className="text-[#6C757D] text-sm">{service.description}</p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-[#333333] mb-2">{service.title}</h3>
+                  <p className="text-[#666666] text-sm">{service.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -544,7 +544,7 @@ export default function Home() {
       </section>
 
       {/* Brand Showcase */}
-      <section className="py-16 bg-[#F5F7F9] relative overflow-hidden">
+      <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -553,10 +553,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1A2634] mb-6">
-              Industry Leading <span className="text-[#1E4A5F]">Battery Brands</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-6">
+              Industry Leading <span className="text-[#0073b9]">Battery Brands</span>
             </h2>
-            <p className="text-xl text-[#6C757D]">
+            <p className="text-xl text-[#666666]">
               We partner with the world&apos;s most trusted battery manufacturers
             </p>
           </motion.div>
@@ -571,16 +571,16 @@ export default function Home() {
             ].map((brand, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg p-6 text-center border border-gray-200 hover:border-[#FFB800] hover:shadow-lg transition-all duration-300"
+                className="bg-[#efefef] rounded-lg p-6 text-center border border-gray-200 hover:border-[#0073b9] hover:shadow-lg transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 mx-auto mb-3 bg-gradient-to-br from-[#1E4A5F] to-[#00857C] rounded-full flex items-center justify-center">
-                  <brand.icon className="w-8 h-8 text-[#FFB800]" />
+                <div className="w-16 h-16 mx-auto mb-3 bg-[#0073b9] rounded-full flex items-center justify-center">
+                  <brand.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#1A2634]">{brand.name}</h3>
+                <h3 className="font-semibold text-[#333333]">{brand.name}</h3>
               </motion.div>
             ))}
           </div>
@@ -588,7 +588,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-[#1E4A5F] relative overflow-hidden">
+      <section className="py-20 bg-[#0073b9] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -598,7 +598,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-6">
-              Why Choose <span className="text-[#FFB800]">Cosmic Renewable Energy?</span>
+              Why Choose <span className="text-[#fee000]">Cosmic Renewable Energy?</span>
             </h2>
           </motion.div>
 
@@ -627,14 +627,14 @@ export default function Home() {
             ].map((feature, index) => (
               <motion.div
                 key={index}
-                className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-[#FFB800]/50 transition-all duration-300"
+                className="text-center p-6 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
               >
-                <div className="w-16 h-16 bg-[#FFB800] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <feature.icon className="w-8 h-8 text-[#1A2634]" />
+                <div className="w-16 h-16 bg-[#fee000] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <feature.icon className="w-8 h-8 text-[#083941]" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-white/80">{feature.description}</p>
@@ -648,7 +648,7 @@ export default function Home() {
       <CustomerReviews />
 
       {/* Our Work Portfolio */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-20 bg-[#efefef] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -657,10 +657,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1A2634] mb-6">
-              Our <span className="text-[#1E4A5F]">Completed Projects</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#333333] mb-6">
+              Our <span className="text-[#0073b9]">Completed Projects</span>
             </h2>
-            <p className="text-xl text-[#6C757D] max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               See the quality of our work across thousands of successful solar installations.
               From residential rooftops to commercial systems, we deliver excellence every time.
             </p>
@@ -743,7 +743,7 @@ export default function Home() {
             ].map((project, index) => (
               <motion.div
                 key={index}
-                className="group bg-white rounded-2xl overflow-hidden cursor-pointer shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="group bg-white rounded-xl shadow-lg overflow-hidden cursor-pointer border border-gray-200 hover:shadow-xl transition-all"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -758,14 +758,14 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E4A5F] via-[#1E4A5F]/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4 text-white">
-                    <div className="bg-[#FFB800] text-[#1A2634] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-1 sm:mb-2 inline-block">
+                    <div className="bg-[#fee000] text-[#083941] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold mb-1 sm:mb-2 inline-block">
                       Completed
                     </div>
                     <h3 className="text-base sm:text-lg font-bold mb-1 line-clamp-2">{project.title}</h3>
-                    <p className="text-[#00A896] text-sm line-clamp-1">{project.description}</p>
-                    <p className="text-[#FFB800] text-xs mt-1 line-clamp-1 flex items-center gap-1">
+                    <p className="text-white/90 text-sm line-clamp-1">{project.description}</p>
+                    <p className="text-[#fee000] text-xs mt-1 line-clamp-1 flex items-center gap-1">
                       <MapPinIcon className="w-3 h-3" />
                       {project.location}
                     </p>
@@ -782,17 +782,17 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-[#F5F7F9] rounded-xl p-8 max-w-2xl mx-auto border border-gray-200">
-              <h3 className="text-2xl font-bold text-[#1A2634] mb-4">
+            <div className="bg-white rounded-xl p-8 max-w-2xl mx-auto border border-gray-200 shadow-lg">
+              <h3 className="text-2xl font-bold text-[#333333] mb-4">
                 Ready to Join Our Success Stories?
               </h3>
-              <p className="text-[#6C757D] mb-6">
+              <p className="text-[#666666] mb-6">
                 Over 5,000 satisfied customers have trusted us with their solar installations.
                 Let us design the perfect system for your property.
               </p>
               <Link
                 href="/quote"
-                className="bg-[#FFB800] hover:bg-[#E5A600] text-[#1A2634] px-8 py-4 rounded-lg text-lg font-semibold inline-block transition-colors shadow-lg"
+                className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-semibold inline-block shadow-lg transition-all"
               >
                 Get Your Free Quote
               </Link>
@@ -802,7 +802,7 @@ export default function Home() {
       </section>
 
       {/* Benefits Showcase */}
-      <section className="py-20 bg-[#F5F7F9] relative overflow-hidden">
+      <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-16"
@@ -811,10 +811,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#1A2634] mb-6">
-              Why Solar Increases Your <span className="text-[#1E4A5F]">Property Value</span>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#333333] mb-6">
+              Why Solar Increases Your <span className="text-[#0073b9]">Property Value</span>
             </h2>
-            <p className="text-xl text-[#6C757D] max-w-3xl mx-auto">
+            <p className="text-xl text-[#666666] max-w-3xl mx-auto">
               Solar installations don&apos;t just save you money on electricity bills - they significantly increase your property value and appeal to future buyers.
             </p>
           </motion.div>
@@ -861,23 +861,23 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E4A5F] via-[#1E4A5F]/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute top-6 left-6">
-                    <div className="bg-[#FFB800] text-[#1A2634] text-4xl sm:text-5xl font-bold px-4 py-2 rounded-lg shadow-lg">
+                    <div className="bg-[#fee000] text-[#083941] text-4xl sm:text-5xl font-bold px-4 py-2 rounded-lg shadow-lg">
                       {benefit.percentage}
                     </div>
                   </div>
                   <div className="absolute bottom-6 left-6 right-6 text-white">
                     <h3 className="text-2xl sm:text-3xl font-bold mb-2">{benefit.title}</h3>
-                    <p className="text-[#00A896] text-lg">{benefit.description}</p>
+                    <p className="text-white/90 text-lg">{benefit.description}</p>
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   {benefit.features.map((feature, i) => (
                     <div key={i} className="flex items-start">
-                      <CheckIcon className="w-5 h-5 text-[#00857C] mr-3 mt-1 flex-shrink-0" />
-                      <span className="text-[#495057]">{feature}</span>
+                      <CheckIcon className="w-5 h-5 text-[#0073b9] mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-[#444444]">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -912,7 +912,7 @@ export default function Home() {
             ].map((item, index) => (
               <motion.div
                 key={index}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+                className="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-all"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -926,16 +926,16 @@ export default function Home() {
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E4A5F] via-[#1E4A5F]/40 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
                   <div className="absolute top-4 right-4">
-                    <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg">
-                      <item.icon className="w-6 h-6 text-[#1E4A5F]" />
+                    <div className="w-12 h-12 bg-[#0073b9] rounded-full flex items-center justify-center shadow-lg">
+                      <item.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="text-3xl font-bold text-[#FFB800] mb-1">{item.metric}</div>
+                    <div className="text-3xl font-bold text-[#fee000] mb-1">{item.metric}</div>
                     <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                    <p className="text-[#00A896] text-sm">{item.description}</p>
+                    <p className="text-white/90 text-sm">{item.description}</p>
                   </div>
                 </div>
               </motion.div>
@@ -950,7 +950,7 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-[#1E4A5F] rounded-2xl p-8 sm:p-12">
+            <div className="bg-[#0073b9] rounded-2xl p-8 sm:p-12">
               <h3 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
                 Start Increasing Your Property Value Today
               </h3>
@@ -960,13 +960,13 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/quote"
-                  className="bg-[#FFB800] hover:bg-[#E5A600] text-[#1A2634] px-8 py-4 rounded-lg text-lg font-semibold inline-block transition-colors shadow-lg"
+                  className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-semibold inline-block shadow-lg transition-all"
                 >
                   Get Free Property Assessment
                 </Link>
                 <Link
                   href="/contact"
-                  className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold inline-block transition-colors"
+                  className="bg-white text-[#0073b9] hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold inline-block shadow-lg transition-all"
                 >
                   Calculate My Savings
                 </Link>
@@ -977,7 +977,7 @@ export default function Home() {
       </section>
 
       {/* Latest Solar News / Articles */}
-      <section id="solar-news" className="py-16 bg-white relative overflow-hidden scroll-mt-32">
+      <section id="solar-news" className="py-16 bg-[#efefef] relative overflow-hidden scroll-mt-32">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             className="text-center mb-12"
@@ -986,10 +986,10 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#1A2634] mb-6">
-              Latest <span className="text-[#1E4A5F]">Solar News</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-6">
+              Latest <span className="text-[#0073b9]">Solar News</span>
             </h2>
-            <p className="text-xl text-[#6C757D]">
+            <p className="text-xl text-[#666666]">
               Stay informed with the latest developments in solar technology
             </p>
           </motion.div>
@@ -1020,7 +1020,7 @@ export default function Home() {
             ].map((article, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#FFB800]/30 transition-all duration-300"
+                className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -1033,15 +1033,15 @@ export default function Home() {
                     fill
                     className="object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E4A5F] to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
                 <div className="p-6">
-                  <div className="text-sm text-[#FFB800] font-medium mb-2">{article.date}</div>
-                  <h3 className="text-xl font-semibold text-[#1A2634] mb-3">{article.title}</h3>
-                  <p className="text-[#6C757D] mb-4">{article.description}</p>
+                  <div className="text-sm text-[#0073b9] font-medium mb-2">{article.date}</div>
+                  <h3 className="text-xl font-semibold text-[#333333] mb-3">{article.title}</h3>
+                  <p className="text-[#666666] mb-4">{article.description}</p>
                   <Link
                     href={article.link}
-                    className="text-[#00857C] font-medium hover:text-[#1E4A5F] transition-colors flex items-center gap-2"
+                    className="text-[#0073b9] font-medium hover:text-[#005a91] transition-colors flex items-center gap-2"
                   >
                     Read More
                     <ArrowRightIcon className="w-4 h-4" />
@@ -1061,7 +1061,7 @@ export default function Home() {
           >
             <Link
               href="/articles"
-              className="inline-flex items-center gap-3 bg-[#1E4A5F] hover:bg-[#163845] text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors shadow-lg"
+              className="inline-flex items-center gap-3 bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-semibold shadow-lg transition-all"
             >
               <span>View All Articles</span>
               <ArrowRightIcon className="w-5 h-5" />
@@ -1071,7 +1071,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-[#1E4A5F] relative overflow-hidden">
+      <section className="py-16 bg-[#fee000] relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1079,22 +1079,22 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-6">
-              Ready to Start Your <span className="text-[#FFB800]">Solar Journey?</span>
+            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#083941] mb-6">
+              Ready to Start Your <span className="text-[#0073b9]">Solar Journey?</span>
             </h2>
-            <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-[#083941]/80 mb-8 max-w-2xl mx-auto">
               Get a personalized quote and discover how much you can save with solar and battery systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/quote"
-                className="bg-[#FFB800] hover:bg-[#E5A600] text-[#1A2634] px-8 py-4 rounded-lg text-lg font-semibold inline-block transition-colors shadow-lg"
+                className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-semibold inline-block shadow-lg transition-all"
               >
                 Get Free Quote
               </Link>
               <a
                 href="tel:1300090984"
-                className="bg-white/10 hover:bg-white/20 border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 transition-colors"
+                className="bg-white text-[#0073b9] hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold inline-flex items-center justify-center gap-2 shadow-lg transition-all"
               >
                 <PhoneIcon className="w-5 h-5" />
                 Call 1300 09 09 84

@@ -41,22 +41,22 @@ const ArrowRightIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 export default function RebateBanner() {
   const bannerItems = [
-    { icon: FlameIcon, text: 'GOVERNMENT BATTERY REBATE PROGRAM LIVE NOW', color: 'text-[#FFB800]' },
-    { icon: CurrencyIcon, text: 'SAVE UP TO $8,000 ON HOME BATTERY SYSTEMS', color: 'text-white' },
-    { icon: BoltIcon, text: '$2.3 BILLION FEDERAL FUNDING AVAILABLE', color: 'text-[#FFB800]' },
-    { icon: PhoneIcon, text: 'CALL 1300 09 09 84 - FREE ASSESSMENT', color: 'text-white' },
-    { icon: TrophyIcon, text: "COSMIC RENEWABLE - AUSTRALIA'S SOLAR LEADERS", color: 'text-[#FFB800]' },
+    { icon: FlameIcon, text: 'GOVERNMENT BATTERY REBATE PROGRAM LIVE NOW', color: 'text-[#0073b9]' },
+    { icon: CurrencyIcon, text: 'SAVE UP TO $8,000 ON HOME BATTERY SYSTEMS', color: 'text-[#0073b9]' },
+    { icon: BoltIcon, text: '$2.3 BILLION FEDERAL FUNDING AVAILABLE', color: 'text-[#0073b9]' },
+    { icon: PhoneIcon, text: 'CALL 1300 09 09 84 - FREE ASSESSMENT', color: 'text-[#0073b9]' },
+    { icon: TrophyIcon, text: "COSMIC RENEWABLE - AUSTRALIA'S SOLAR LEADERS", color: 'text-[#0073b9]' },
   ]
 
   return (
-    <div className="relative overflow-hidden bg-[#00857C]">
+    <div className="relative overflow-hidden bg-[#fee000]">
       {/* Desktop Scrolling Banner */}
       <div className="hidden md:block relative z-10">
         <div className="py-3 px-4 overflow-hidden">
           <div className="whitespace-nowrap animate-marquee">
             <div className="inline-flex items-center space-x-12">
               {bannerItems.map((item, index) => (
-                <span key={index} className="flex items-center space-x-2 text-white font-bold text-lg">
+                <span key={index} className="flex items-center space-x-2 text-[#083941] font-bold text-lg">
                   <item.icon className={`w-5 h-5 ${item.color}`} />
                   <span>{item.text}</span>
                   <item.icon className={`w-5 h-5 ${item.color}`} />
@@ -64,7 +64,7 @@ export default function RebateBanner() {
               ))}
               {/* Duplicate for seamless loop */}
               {bannerItems.map((item, index) => (
-                <span key={`dup-${index}`} className="flex items-center space-x-2 text-white font-bold text-lg">
+                <span key={`dup-${index}`} className="flex items-center space-x-2 text-[#083941] font-bold text-lg">
                   <item.icon className={`w-5 h-5 ${item.color}`} />
                   <span>{item.text}</span>
                   <item.icon className={`w-5 h-5 ${item.color}`} />
@@ -75,10 +75,10 @@ export default function RebateBanner() {
         </div>
 
         {/* Button Row */}
-        <div className="py-2.5 px-4 text-center border-t border-white/20 bg-white/10">
+        <div className="py-2.5 px-4 text-center border-t border-[#083941]/10 bg-[#083941]/5">
           <Link
             href="/quote"
-            className="inline-flex items-center gap-2 bg-[#FFB800] text-[#1A2634] px-6 py-2.5 rounded-full font-bold text-sm hover:bg-[#E5A600] transition-colors shadow-lg"
+            className="inline-flex items-center gap-2 bg-[#0073b9] text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-[#005a91] hover:scale-105 transition-all shadow-lg"
           >
             GET REBATE NOW
             <ArrowRightIcon className="w-4 h-4" />
@@ -91,26 +91,26 @@ export default function RebateBanner() {
         <div className="flex flex-col items-center gap-3">
           {/* Main headline */}
           <div className="text-center">
-            <div className="inline-flex items-center gap-1.5 bg-white/10 px-3 py-1.5 rounded-full mb-2">
-              <FlameIcon className="w-4 h-4 text-[#FFB800]" />
-              <span className="text-[#FFB800] font-bold text-xs tracking-wide">LIVE NOW</span>
-              <FlameIcon className="w-4 h-4 text-[#FFB800]" />
+            <div className="inline-flex items-center gap-1.5 bg-[#0073b9] px-3 py-1.5 rounded-full mb-2">
+              <FlameIcon className="w-4 h-4 text-white" />
+              <span className="text-white font-bold text-xs tracking-wide">LIVE NOW</span>
+              <FlameIcon className="w-4 h-4 text-white" />
             </div>
-            <h3 className="text-white font-extrabold text-sm leading-tight">
+            <h3 className="text-[#083941] font-extrabold text-sm leading-tight">
               GOVERNMENT BATTERY REBATE
             </h3>
           </div>
 
           {/* Savings highlight */}
-          <div className="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-            <CurrencyIcon className="w-5 h-5 text-[#FFB800]" />
-            <span className="text-white font-bold text-sm">SAVE UP TO $8,000</span>
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md">
+            <CurrencyIcon className="w-5 h-5 text-[#0073b9]" />
+            <span className="text-[#0073b9] font-bold text-sm">SAVE UP TO $8,000</span>
           </div>
 
           {/* CTA Button */}
           <Link
             href="/quote"
-            className="inline-flex items-center gap-2 bg-[#FFB800] text-[#1A2634] px-5 py-2.5 rounded-full font-bold text-sm shadow-lg hover:bg-[#E5A600] transition-colors"
+            className="inline-flex items-center gap-2 bg-[#0073b9] text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-lg hover:bg-[#005a91] hover:scale-105 transition-all"
           >
             <span>GET REBATE NOW</span>
             <ArrowRightIcon className="w-4 h-4" />
