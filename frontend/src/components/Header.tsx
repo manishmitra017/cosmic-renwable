@@ -117,14 +117,14 @@ export default function Header() {
               </div>
               <span className="font-semibold text-sm hidden sm:block">1300 09 09 84</span>
             </a>
-            <div className="hidden md:flex items-center gap-2 text-gray-400">
+            <div className="hidden md:flex items-center gap-2 text-[#b0b0b0]">
               <ClockIcon className="w-4 h-4" />
               <span className="text-sm">Mon-Sat: 8AM-6PM</span>
             </div>
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="hidden lg:block text-sm text-gray-400">
+            <span className="hidden lg:block text-sm text-[#b0b0b0]">
               Australia&apos;s Premium <span className="text-[#00d4ff]">Solar Battery</span> Specialists
             </span>
             <div className="flex items-center gap-2">
@@ -134,7 +134,7 @@ export default function Header() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f5a623]/20 flex items-center justify-center text-gray-400 hover:text-[#f5a623] transition-all duration-300"
+                  className="w-8 h-8 rounded-full bg-white/5 hover:bg-[#f5a623]/20 flex items-center justify-center text-[#b0b0b0] hover:text-[#f5a623] transition-all duration-300"
                   aria-label={social.label}
                 >
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -203,7 +203,7 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative py-2 text-gray-300 hover:text-white font-medium text-sm transition-colors group whitespace-nowrap"
+                  className="relative py-2 text-[#d1d5db] hover:text-white font-medium text-sm transition-colors group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-[#f5a623] to-[#00d4ff] group-hover:w-full transition-all duration-300" />
@@ -216,13 +216,13 @@ export default function Header() {
               {/* Phone - Desktop */}
               <a
                 href="tel:1300090984"
-                className="hidden xl:flex items-center gap-3 text-gray-300 hover:text-white transition-colors group whitespace-nowrap"
+                className="hidden xl:flex items-center gap-3 text-[#d1d5db] hover:text-white transition-colors group whitespace-nowrap"
               >
                 <div className="w-10 h-10 flex-shrink-0 rounded-full bg-gradient-to-br from-[#00d4ff]/20 to-[#00d4ff]/5 border border-[#00d4ff]/30 flex items-center justify-center group-hover:border-[#00d4ff]/50 transition-colors">
                   <PhoneIcon className="w-5 h-5 text-[#00d4ff]" />
                 </div>
                 <div className="text-left">
-                  <p className="text-xs text-gray-500">Call Now</p>
+                  <p className="text-xs text-[#9ca3af]">Call Now</p>
                   <p className="text-sm font-bold text-white whitespace-nowrap">1300 09 09 84</p>
                 </div>
               </a>
@@ -240,7 +240,7 @@ export default function Header() {
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
+                className="lg:hidden p-2 text-[#d1d5db] hover:text-white hover:bg-white/5 rounded-xl transition-colors"
                 aria-label="Toggle menu"
               >
                 {isOpen ? (
@@ -279,10 +279,10 @@ export default function Header() {
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-between px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl font-medium transition-all group"
+                      className="flex items-center justify-between px-4 py-3 text-[#d1d5db] hover:text-white hover:bg-white/5 rounded-xl font-medium transition-all group"
                     >
                       <span>{link.label}</span>
-                      <ChevronIcon className="w-4 h-4 text-gray-600 group-hover:text-[#f5a623] group-hover:translate-x-1 transition-all" />
+                      <ChevronIcon className="w-4 h-4 text-[#9ca3af] group-hover:text-[#f5a623] group-hover:translate-x-1 transition-all" />
                     </Link>
                   </motion.div>
                 ))}

@@ -632,7 +632,7 @@ body {
 }
 
 .input-cosmic::placeholder {
-  color: var(--lunar-500);
+  color: var(--lunar-400);
 }
 
 .input-cosmic:focus {

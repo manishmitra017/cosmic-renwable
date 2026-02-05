@@ -83,14 +83,14 @@ export default function CountdownBanner() {
               <span className="text-white">Solar Battery Rebate </span>
               <span className="text-gradient-solar">reduces on 1 May 2026</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-[#b0b0b0] max-w-xl mx-auto">
               Don&apos;t miss your highest rebate! Install before the deadline.
             </p>
           </div>
 
           {/* Countdown timer */}
           <div className="w-full max-w-lg">
-            <div className="flex items-center justify-center gap-2 text-gray-500 mb-4">
+            <div className="flex items-center justify-center gap-2 text-[#b0b0b0] mb-4">
               <ClockIcon className="w-4 h-4 text-[#00d4ff]" />
               <span className="text-xs sm:text-sm font-medium uppercase tracking-wider">Time Left Until Rebate Reduces</span>
             </div>
@@ -113,7 +113,7 @@ export default function CountdownBanner() {
                     <div className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-none font-display">
                       {item.value}
                     </div>
-                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 mt-1 uppercase tracking-wider">
+                    <div className="text-[10px] sm:text-xs font-semibold text-[#9ca3af] mt-1 uppercase tracking-wider">
                       {item.label}
                     </div>
                   </div>

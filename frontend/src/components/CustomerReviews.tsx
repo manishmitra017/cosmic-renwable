@@ -200,7 +200,7 @@ export default function CustomerReviews() {
             <span className="text-white">Trusted by </span>
             <span className="text-gradient-solar">Australians</span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
+          <p className="text-[#b0b0b0] text-lg max-w-2xl mx-auto mb-10">
             Join hundreds of satisfied customers who have transformed their energy future with Cosmic Renewable Energy.
           </p>
 
@@ -222,7 +222,7 @@ export default function CustomerReviews() {
                     {renderStars(Math.round(averageRating))}
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-400 text-sm">{totalReviews.toLocaleString()} reviews on</span>
+                    <span className="text-[#b0b0b0] text-sm">{totalReviews.toLocaleString()} reviews on</span>
                     <GoogleIcon className="w-5 h-5" />
                   </div>
                 </div>
@@ -271,8 +271,8 @@ export default function CustomerReviews() {
                           <CheckIcon className="w-4 h-4 text-[#00d4ff] flex-shrink-0" />
                         )}
                       </div>
-                      <p className="text-sm text-gray-400">{review.location}</p>
-                      <p className="text-xs text-gray-500">{review.date}</p>
+                      <p className="text-sm text-[#b0b0b0]">{review.location}</p>
+                      <p className="text-xs text-[#9ca3af]">{review.date}</p>
                     </div>
                   </div>
 
@@ -282,14 +282,14 @@ export default function CustomerReviews() {
                   </div>
 
                   {/* Review Text */}
-                  <p className="text-gray-300 leading-relaxed text-sm flex-grow">
+                  <p className="text-[#d1d5db] leading-relaxed text-sm flex-grow">
                     &ldquo;{review.review}&rdquo;
                   </p>
 
                   {/* Verified Badge */}
                   {review.verified && (
                     <div className="mt-4 pt-4 border-t border-white/5">
-                      <div className="flex items-center gap-2 text-xs text-gray-500">
+                      <div className="flex items-center gap-2 text-xs text-[#9ca3af]">
                         <CheckIcon className="w-3.5 h-3.5 text-[#00d4ff]" />
                         <span>Verified Google Review</span>
                       </div>
@@ -307,7 +307,7 @@ export default function CustomerReviews() {
               className="w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-[#f5a623]/50 hover:bg-[#f5a623]/10 transition-all duration-300 group"
               aria-label="Previous review"
             >
-              <ChevronLeftIcon className="w-5 h-5 text-gray-400 group-hover:text-[#f5a623] transition-colors" />
+              <ChevronLeftIcon className="w-5 h-5 text-[#b0b0b0] group-hover:text-[#f5a623] transition-colors" />
             </button>
 
             {/* Pagination Dots */}
@@ -331,14 +331,14 @@ export default function CustomerReviews() {
               className="w-12 h-12 glass rounded-full flex items-center justify-center border border-white/10 hover:border-[#f5a623]/50 hover:bg-[#f5a623]/10 transition-all duration-300 group"
               aria-label="Next review"
             >
-              <ChevronRightIcon className="w-5 h-5 text-gray-400 group-hover:text-[#f5a623] transition-colors" />
+              <ChevronRightIcon className="w-5 h-5 text-[#b0b0b0] group-hover:text-[#f5a623] transition-colors" />
             </button>
           </div>
         </div>
 
         {/* Trust Indicators */}
         <motion.div
-          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-gray-500 text-sm"
+          className="mt-16 flex flex-wrap items-center justify-center gap-8 text-[#9ca3af] text-sm"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

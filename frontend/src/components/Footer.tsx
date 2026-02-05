@@ -142,26 +142,26 @@ export default function Footer() {
                 Cosmic Renewable Energy
               </span>
             </Link>
-            <p className="text-gray-400 mb-6 max-w-md leading-relaxed">
+            <p className="text-[#b0b0b0] mb-6 max-w-md leading-relaxed">
               Australia&apos;s leading provider of premium solar battery solutions. We help homes and businesses
               transition to clean, renewable energy with professional installation and ongoing support.
             </p>
 
             {/* Contact Info */}
             <div className="space-y-3 mb-8">
-              <a href="tel:1300123456" className="flex items-center gap-3 text-gray-400 hover:text-[#f5a623] transition-colors group">
+              <a href="tel:1300123456" className="flex items-center gap-3 text-[#b0b0b0] hover:text-[#f5a623] transition-colors group">
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#f5a623]/10 transition-colors">
                   <PhoneIcon className="w-4 h-4" />
                 </div>
                 <span>1300 123 456</span>
               </a>
-              <a href="mailto:info@cosmicrenewableenergy.com.au" className="flex items-center gap-3 text-gray-400 hover:text-[#f5a623] transition-colors group">
+              <a href="mailto:info@cosmicrenewableenergy.com.au" className="flex items-center gap-3 text-[#b0b0b0] hover:text-[#f5a623] transition-colors group">
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center group-hover:bg-[#f5a623]/10 transition-colors">
                   <EnvelopeIcon className="w-4 h-4" />
                 </div>
                 <span>info@cosmicrenewableenergy.com.au</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-400">
+              <div className="flex items-center gap-3 text-[#b0b0b0]">
                 <div className="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
                   <MapPinIcon className="w-4 h-4" />
                 </div>
@@ -177,7 +177,7 @@ export default function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#f5a623]/20 transition-all duration-300 border border-transparent hover:border-[#f5a623]/30"
+                  className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-[#b0b0b0] hover:text-white hover:bg-[#f5a623]/20 transition-all duration-300 border border-transparent hover:border-[#f5a623]/30"
                   aria-label={social.name}
                 >
                   <social.icon className="h-5 w-5" />
@@ -194,9 +194,9 @@ export default function Footer() {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="group flex items-center gap-3 text-gray-400 hover:text-white transition-colors"
+                    className="group flex items-center gap-3 text-[#b0b0b0] hover:text-white transition-colors"
                   >
-                    <service.icon className="w-4 h-4 text-gray-500 group-hover:text-[#f5a623] transition-colors" />
+                    <service.icon className="w-4 h-4 text-[#9ca3af] group-hover:text-[#f5a623] transition-colors" />
                     <span>{service.name}</span>
                     <ArrowRightIcon className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                   </Link>
@@ -213,7 +213,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="group flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                    className="group flex items-center gap-2 text-[#b0b0b0] hover:text-white transition-colors"
                   >
                     <span>{item.name}</span>
                     <ArrowRightIcon className="w-3 h-3 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
@@ -226,14 +226,14 @@ export default function Footer() {
           {/* Newsletter Column */}
           <div className="lg:col-span-2">
             <h3 className="text-sm font-semibold text-[#f5a623] uppercase tracking-wider mb-6">Stay Updated</h3>
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-[#b0b0b0] text-sm mb-4">
               Get the latest solar news, rebate updates, and exclusive offers.
             </p>
             <form className="space-y-3">
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all text-sm"
+                className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-[#9ca3af] focus:outline-none focus:border-[#f5a623]/50 focus:ring-1 focus:ring-[#f5a623]/50 transition-all text-sm"
               />
               <button
                 type="submit"
@@ -248,32 +248,32 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/5">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm">
+            <p className="text-[#9ca3af] text-sm">
               © {new Date().getFullYear()} Cosmic Renewable Energy. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <Link href="/privacy-policy" className="text-gray-500 hover:text-[#f5a623] text-sm transition-colors">
+              <Link href="/privacy-policy" className="text-[#9ca3af] hover:text-[#f5a623] text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <span className="text-gray-700">|</span>
-              <Link href="/terms-of-service" className="text-gray-500 hover:text-[#f5a623] text-sm transition-colors">
+              <span className="text-[#6b7280]">|</span>
+              <Link href="/terms-of-service" className="text-[#9ca3af] hover:text-[#f5a623] text-sm transition-colors">
                 Terms of Service
               </Link>
             </div>
           </div>
 
           {/* Certifications */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-gray-600 text-xs">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-[#9ca3af] text-xs">
             <span className="flex items-center gap-2">
               <BatteryIcon className="w-4 h-4 text-[#00d4ff]" />
               CEC Approved Installer
             </span>
-            <span className="text-gray-700">•</span>
+            <span className="text-[#6b7280]">•</span>
             <span className="flex items-center gap-2">
               <SunIcon className="w-4 h-4 text-[#f5a623]" />
               Licensed Electrical Contractor
             </span>
-            <span className="text-gray-700">•</span>
+            <span className="text-[#6b7280]">•</span>
             <span>ABN: XX XXX XXX XXX</span>
           </div>
         </div>

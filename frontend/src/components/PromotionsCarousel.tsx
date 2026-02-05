@@ -155,7 +155,7 @@ export default function PromotionsCarousel() {
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-3 sm:mb-6 font-display">
             Hot Deals & <span className="text-gradient-solar">Special Promotions</span>
           </h2>
-          <p className="text-sm sm:text-xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-xl text-[#b0b0b0] max-w-3xl mx-auto">
             Limited time offers on solar panels, battery storage, and air conditioning systems.
             <span className="hidden sm:inline"> Save thousands with government rebates and our exclusive deals!</span>
           </p>
@@ -191,7 +191,7 @@ export default function PromotionsCarousel() {
                 </div>
 
                 {/* Content Section */}
-                <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-12 bg-gradient-to-br from-white/5 to-transparent">
+                <div className="flex flex-col justify-center p-5 sm:p-8 lg:p-12 bg-gradient-to-br from-[#1a1a2e] to-[#0a0a0f]">
                   <div className="space-y-3 sm:space-y-4">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full border border-[#00d4ff]/30 bg-[#00d4ff]/10 text-[#00d4ff] text-xs sm:text-sm font-semibold">
                       <ClockIcon className="w-4 h-4" />
@@ -206,12 +206,12 @@ export default function PromotionsCarousel() {
                       {promotions[currentIndex].subtitle}
                     </p>
 
-                    <p className="text-gray-400 text-sm sm:text-lg hidden sm:block">
+                    <p className="text-[#b0b0b0] text-sm sm:text-lg hidden sm:block">
                       {promotions[currentIndex].description}
                     </p>
 
                     {/* Features List */}
-                    <ul className="space-y-1.5 sm:space-y-2 text-gray-300 text-sm sm:text-base">
+                    <ul className="space-y-1.5 sm:space-y-2 text-[#e0e0e0] text-sm sm:text-base">
                       <li className="flex items-center">
                         <CheckIcon className="w-5 h-5 text-[#00d4ff] mr-2 flex-shrink-0" />
                         Professional Installation
@@ -318,7 +318,7 @@ export default function PromotionsCarousel() {
                   {stat.value}
                   {stat.showStar && <StarIcon className="w-5 h-5 sm:w-6 sm:h-6 text-[#f5a623]" />}
                 </div>
-                <div className="text-gray-400 text-xs sm:text-base mt-1">{stat.label}</div>
+                <div className="text-[#b0b0b0] text-xs sm:text-base mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
