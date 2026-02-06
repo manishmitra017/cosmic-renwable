@@ -37,13 +37,40 @@ const BoltIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const articles = [
   {
+    slug: 'victoria-electricity-prices-record-highs-2026',
+    title: 'Victoria\'s Electricity Prices Hit Record Highs: Why Solar + Battery Is Your Best Defence',
+    description: 'Victorian households are paying more for electricity than ever before, with prices up over 50% since 2021. Find out why acting now saves you thousands in lost savings and declining rebates.',
+    image: '/solarroof10.jpg',
+    date: 'February 2026',
+    category: 'Electricity Costs',
+    featured: true
+  },
+  {
+    slug: 'feed-in-tariffs-collapsing-victoria-battery-essential',
+    title: 'Feed-in Tariffs Are Collapsing in Victoria: Why Every Solar Home Needs a Battery',
+    description: 'Victorian solar feed-in tariffs have plummeted from 60c/kWh to under 5c/kWh. Without a battery, your solar panels are leaving money on the table. Here\'s how to fix that.',
+    image: '/solarroof5.jpg',
+    date: 'February 2026',
+    category: 'Industry News',
+    featured: false
+  },
+  {
+    slug: 'victoria-grid-pressure-blackouts-solar-battery-protection',
+    title: 'Victoria\'s Grid Under Pressure: How Solar + Battery Protects Your Home from Blackouts',
+    description: 'Coal closures, extreme weather, and infrastructure delays are pushing Victoria\'s power grid to the limit. A solar + battery system provides genuine energy independence.',
+    image: '/solarroof3.jpg',
+    date: 'February 2026',
+    category: 'Energy Security',
+    featured: false
+  },
+  {
     slug: 'federal-battery-rebate-changes-2025',
     title: 'Federal Battery Rebate Changes: $7.2 Billion Expansion with New Rules',
     description: 'The Australian Government has expanded the Cheaper Home Batteries Program from $2.3bn to $7.2bn, with new tiered rebates for larger batteries starting May 2026.',
     image: '/batteryImage3.jpg',
     date: 'December 2025',
     category: 'Government Rebates',
-    featured: true
+    featured: false
   },
   {
     slug: 'cheaper-home-batteries-program',
