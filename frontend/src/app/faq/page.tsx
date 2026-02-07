@@ -85,7 +85,7 @@ export default function FAQ() {
     },
     {
       question: "What warranties are included?",
-      answer: "Our installations include comprehensive warranties: 25-year panel performance warranty, 10-15 year equipment warranty, and 5-year workmanship guarantee. We stand behind our work and provide ongoing support throughout the warranty period."
+      answer: "Our installations include comprehensive warranties: 25-year panel performance warranty, 10-15 year equipment warranty, and 10-year workmanship guarantee. We stand behind our work and provide ongoing support throughout the warranty period."
     },
     {
       question: "Can I expand my system later?",

@@ -310,7 +310,7 @@ export default function Contact() {
                 {[
                   { icon: TrophyIcon, title: '2000+ Happy Customers', desc: 'Trusted by families and businesses across Australia', colorClass: 'text-[#0073b9]' },
                   { icon: BoltIcon, title: '10+ Years Experience', desc: 'CEC-accredited professionals with proven expertise', colorClass: 'text-[#0073b9]' },
-                  { icon: ShieldCheckIcon, title: '5-Year Warranty', desc: 'Comprehensive workmanship guarantee included', colorClass: 'text-[#0073b9]' },
+                  { icon: ShieldCheckIcon, title: '10-Year Warranty', desc: 'Comprehensive workmanship guarantee included', colorClass: 'text-[#0073b9]' },
                   { icon: CurrencyIcon, title: 'Government Rebates', desc: 'We handle all paperwork for maximum savings', colorClass: 'text-[#0073b9]' },
                 ].map((item, index) => (
                   <div key={index} className="flex items-start group">
