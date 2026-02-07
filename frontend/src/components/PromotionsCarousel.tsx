@@ -215,7 +215,7 @@ export default function PromotionsCarousel() {
                       </li>
                       <li className="hidden sm:flex items-center">
                         <CheckIcon className="w-5 h-5 text-[#0073b9] mr-2 flex-shrink-0" />
-                        5 Year Warranty
+                        10 Year Warranty
                       </li>
                       <li className="hidden sm:flex items-center">
                         <CheckIcon className="w-5 h-5 text-[#0073b9] mr-2 flex-shrink-0" />

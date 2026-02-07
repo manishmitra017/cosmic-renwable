@@ -124,8 +124,8 @@ export default function About() {
     {
       title: 'Comprehensive Warranty',
       icon: ShieldCheckIcon,
-      description: '5-year workmanship warranty with ongoing support and maintenance services.',
-      features: ['5-Year Workmanship', '25-Year Panel Warranty', '10-Year Battery Warranty']
+      description: '10-year workmanship warranty with ongoing support and maintenance services.',
+      features: ['10-Year Workmanship', '25-Year Panel Warranty', '10-Year Battery Warranty']
     },
     {
       title: 'Transparent Pricing',

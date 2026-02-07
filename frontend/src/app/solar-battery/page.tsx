@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   keywords: "solar battery Australia, solar battery installation, home battery systems, Tesla Powerwall Australia, LG Chem battery, solar energy storage, government rebates solar battery, solar battery cost, battery backup system",
   openGraph: {
     title: "Solar Battery Installation Australia | $8,000 Government Rebates",
-    description: "Professional solar battery installation across Australia. Premium brands, government rebates, 5-year warranty. Free consultation available.",
+    description: "Professional solar battery installation across Australia. Premium brands, government rebates, 10-year warranty. Free consultation available.",
   },
 }
 

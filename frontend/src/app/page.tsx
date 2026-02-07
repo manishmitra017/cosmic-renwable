@@ -340,7 +340,7 @@ export default function Home() {
               {[
                 { value: '10+', label: 'Years Experience' },
                 { value: '5000+', label: 'Homes Powered' },
-                { value: '5 Years', label: 'Warranty' },
+                { value: '10 Years', label: 'Warranty' },
                 { value: '90%', label: 'Bill Reduction' }
               ].map((stat, index) => (
                 <div key={index} className="text-center p-2 sm:p-0">
