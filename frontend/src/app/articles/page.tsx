@@ -37,13 +37,67 @@ const BoltIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const articles = [
   {
+    slug: 'australia-solar-battery-rebate-guide-state-by-state-2026',
+    title: 'The Complete 2026 Australian Solar Battery Rebate Guide: Every State, Every Dollar, Every Deadline',
+    description: 'The definitive state-by-state guide to solar battery rebates across Australia. Federal $7.2B program, state incentives, STC timelines, and exactly how much you can save before rebates drop.',
+    image: '/batteryImage3.jpg',
+    date: 'February 2026',
+    category: 'Guides',
+    featured: true
+  },
+  {
+    slug: 'stc-battery-rebate-countdown-2026',
+    title: 'Your Battery Rebate Is Shrinking Every 6 Months: The STC Countdown Has Begun',
+    description: 'The federal STC factor drops from 8.4 to 6.8 in May 2026 and keeps falling every 6 months. A 13.5kWh battery loses $2,800 in rebates by 2028. The clock is ticking.',
+    image: '/batteryImage2.jpg',
+    date: 'February 2026',
+    category: 'Government Rebates',
+    featured: false
+  },
+  {
+    slug: 'nsw-battery-rebate-guide-2026',
+    title: 'NSW Homeowners: Your Complete 2026 Guide to Battery Rebates and Savings',
+    description: 'NSW households pay up to $2,400/year on electricity with peak rates hitting 55c/kWh. Stack federal STCs with NSW incentives to save $1,500-$2,000/year with solar + battery.',
+    image: '/solarroof8.jpg',
+    date: 'February 2026',
+    category: 'Government Rebates',
+    featured: false
+  },
+  {
+    slug: 'queensland-solar-battery-savings-2026',
+    title: 'Queensland\'s Solar Goldmine: Why the Sunshine State Needs Batteries Now More Than Ever',
+    description: 'QLD has Australia\'s best solar but some of the lowest battery uptake. With feed-in tariffs near zero and federal rebates dropping, every month without a battery is money lost.',
+    image: '/solarroof3.jpg',
+    date: 'February 2026',
+    category: 'Industry News',
+    featured: false
+  },
+  {
+    slug: 'south-australia-battery-vpp-opportunity-2026',
+    title: 'South Australia\'s Battery Revolution: How SA Households Are Earning Money from Their Solar',
+    description: 'SA has the highest electricity prices in Australia and the lowest feed-in tariffs. With battery + VPP, SA households can save up to $3,000/year. Federal rebates dropping from May 2026.',
+    image: '/batteryImage1.jpg',
+    date: 'February 2026',
+    category: 'Industry News',
+    featured: false
+  },
+  {
+    slug: 'western-australia-solar-battery-guide-2026',
+    title: 'Western Australia Solar Battery Guide: Perth Homeowners Are Leaving Thousands on the Table',
+    description: 'WA\'s rock-bottom 2.25c/kWh feed-in tariff and solar curtailment make batteries essential, not optional. Federal rebates of ~$4,500 dropping from May 2026.',
+    image: '/solarroof5.jpg',
+    date: 'February 2026',
+    category: 'Guides',
+    featured: false
+  },
+  {
     slug: 'victoria-electricity-prices-record-highs-2026',
     title: 'Victoria\'s Electricity Prices Hit Record Highs: Why Solar + Battery Is Your Best Defence',
     description: 'Victorian households are paying more for electricity than ever before, with prices up over 50% since 2021. Find out why acting now saves you thousands in lost savings and declining rebates.',
     image: '/solarroof10.jpg',
     date: 'February 2026',
     category: 'Electricity Costs',
-    featured: true
+    featured: false
   },
   {
     slug: 'feed-in-tariffs-collapsing-victoria-battery-essential',
