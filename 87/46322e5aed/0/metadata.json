@@ -1,0 +1,36 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "8746322e5aed",
+  "session_id": "74fe01f6-8231-4f68-abd6-850b2506327f",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-13T00:25:32.43912Z",
+  "branch": "feature/goodwe-foxess-banners-remove-lgchem",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "frontend/src/components/ProductShowcase.tsx",
+    "frontend/src/app/articles/goodwe-esa-three-phase-all-in-one-energy-storage/page.tsx",
+    "frontend/src/app/page.tsx",
+    "frontend/src/app/articles/page.tsx",
+    "frontend/src/app/solar-battery/page.tsx",
+    "frontend/src/app/layout.tsx"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6",
+  "turn_id": "9fd95e3ea65f",
+  "token_usage": {
+    "input_tokens": 7018,
+    "cache_creation_tokens": 77129,
+    "cache_read_tokens": 619764,
+    "output_tokens": 14349,
+    "api_call_count": 10
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-13T00:25:32.078408Z",
+    "agent_lines": 632,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 632,
+    "agent_percentage": 100
+  }
+}

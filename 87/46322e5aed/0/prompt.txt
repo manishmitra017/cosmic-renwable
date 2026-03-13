@@ -1,0 +1,9 @@
+I have got some requirements
+
+1. I have added goodwe image , Please add this banner on to the top and say coming soon , as i want to give this. Also create an article how cosmic can help --> more infor heere: https://www.goodwe.com.au/cec-approval-secured-for-goodwe-s-three-phase-esa-all-in-one-energy-storage-system
+
+2. Add the Foxess.jpg in the top ( This is a top selling for my customers) 
+
+3. Remove LG Chem , I am not supporting or selling them
+
+4. Raise a PR , I will fist see in local and then we we will merge
