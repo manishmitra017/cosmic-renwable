@@ -92,7 +92,7 @@ export default function ProductShowcase() {
                   className="bg-white/10 text-white hover:bg-white/20 px-5 py-2.5 rounded-lg text-sm font-bold text-center transition-all inline-flex items-center justify-center gap-2 border border-white/20"
                 >
                   <PhoneIcon className="w-4 h-4" />
-                  +61 422 786 100
+                  0422 786 100
                 </a>
               </div>
             </div>
