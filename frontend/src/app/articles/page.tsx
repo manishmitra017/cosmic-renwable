@@ -37,6 +37,15 @@ const BoltIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 
 const articles = [
   {
+    slug: 'goodwe-esa-three-phase-all-in-one-energy-storage',
+    title: 'GoodWe ESA All-in-One: How Cosmic Can Help You Get Australia\'s Most Advanced Energy Storage System',
+    description: 'CEC-approved three-phase energy storage with 5-108kWh capacity. Pre-wired, modular design with whole-home backup. Coming soon to Cosmic Renewable Energy.',
+    image: '/banners/goodwe-all-in-one.png',
+    date: 'March 2026',
+    category: 'Product News',
+    featured: false
+  },
+  {
     slug: 'australia-solar-battery-rebate-guide-state-by-state-2026',
     title: 'The Complete 2026 Australian Solar Battery Rebate Guide: Every State, Every Dollar, Every Deadline',
     description: 'The definitive state-by-state guide to solar battery rebates across Australia. Federal $7.2B program, state incentives, STC timelines, and exactly how much you can save before rebates drop.',
