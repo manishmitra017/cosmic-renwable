@@ -1,0 +1,25 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "ccb58a9542aa",
+  "strategy": "manual-commit",
+  "branch": "feature/customer-success-banner",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "frontend/src/app/page.tsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/cc/b58a9542aa/0/metadata.json",
+      "transcript": "/cc/b58a9542aa/0/full.jsonl",
+      "content_hash": "/cc/b58a9542aa/0/content_hash.txt",
+      "prompt": "/cc/b58a9542aa/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 18,
+    "cache_creation_tokens": 4484,
+    "cache_read_tokens": 1911070,
+    "output_tokens": 2051,
+    "api_call_count": 14
+  }
+}
