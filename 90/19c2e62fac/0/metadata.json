@@ -1,0 +1,36 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "9019c2e62fac",
+  "session_id": "74fe01f6-8231-4f68-abd6-850b2506327f",
+  "strategy": "manual-commit",
+  "created_at": "2026-03-13T01:06:54.36838Z",
+  "branch": "feature/goodwe-foxess-banners-remove-lgchem",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "frontend/src/app/page.tsx"
+  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6",
+  "turn_id": "aa85f5aefe45",
+  "checkpoint_transcript_start": 191,
+  "transcript_lines_at_start": 191,
+  "token_usage": {
+    "input_tokens": 25,
+    "cache_creation_tokens": 35199,
+    "cache_read_tokens": 2654084,
+    "output_tokens": 10590,
+    "api_call_count": 23
+  },
+  "session_metrics": {
+    "turn_count": 2
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-03-13T01:06:53.497157Z",
+    "agent_lines": 94,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 94,
+    "agent_percentage": 100
+  }
+}
