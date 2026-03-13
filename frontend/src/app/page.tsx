@@ -601,6 +601,27 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Customer Success Banner */}
+      <section className="py-10 sm:py-14 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <Image
+              src="/banners/customer-success.png"
+              alt="Cosmic Renewable Energy - 1 of Australia's Leading Solar Retailers, 5000+ Happy Customers, 120K+ Panels Installed, 35MW+ Solar & Battery Installed, 250+ Product Reviews, 250+ Google Reviews"
+              width={1400}
+              height={400}
+              className="w-full h-auto rounded-2xl shadow-lg"
+              priority
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* Customer Reviews */}
       <CustomerReviews />
 
