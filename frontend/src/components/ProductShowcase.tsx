@@ -45,13 +45,13 @@ export default function ProductShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
           {/* FoxESS Banner - Top Selling */}
           <motion.div
-            className="relative group rounded-2xl overflow-hidden border-2 border-[#fee000]/40 shadow-2xl bg-white"
+            className="group rounded-2xl overflow-hidden border-2 border-[#fee000]/40 shadow-2xl bg-[#0a2e35] flex flex-col"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative h-[300px] sm:h-[380px]">
+            <div className="relative h-[280px] sm:h-[340px] overflow-hidden">
               <Image
                 src="/banners/foxess.jpeg"
                 alt="FoxESS Battery Storage System - Top Selling Product at Cosmic Renewable Energy"
@@ -66,12 +66,10 @@ export default function ProductShowcase() {
                   TOP SELLING
                 </div>
               </div>
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#083941] via-[#083941]/40 to-transparent"></div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+            <div className="p-5 sm:p-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 font-display">FoxESS Battery Systems</h3>
-              <p className="text-white/80 text-sm sm:text-base mb-4">
+              <p className="text-white/70 text-sm sm:text-base mb-4">
                 Our top-selling battery brand. Trusted by thousands of Australian homeowners for reliable energy storage.
               </p>
               <div className="flex flex-col sm:flex-row gap-2.5">
@@ -84,7 +82,7 @@ export default function ProductShowcase() {
                 </Link>
                 <a
                   href="tel:1300090984"
-                  className="bg-white/20 text-white hover:bg-white/30 px-5 py-2.5 rounded-lg text-sm font-bold text-center transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm"
+                  className="bg-white/10 text-white hover:bg-white/20 px-5 py-2.5 rounded-lg text-sm font-bold text-center transition-all inline-flex items-center justify-center gap-2 border border-white/20"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
@@ -95,18 +93,18 @@ export default function ProductShowcase() {
 
           {/* GoodWe Banner - Coming Soon */}
           <motion.div
-            className="relative group rounded-2xl overflow-hidden border-2 border-[#0073b9]/40 shadow-2xl bg-white"
+            className="group rounded-2xl overflow-hidden border-2 border-[#0073b9]/40 shadow-2xl bg-[#0a2e35] flex flex-col"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative h-[300px] sm:h-[380px]">
+            <div className="relative h-[280px] sm:h-[340px] overflow-hidden bg-white">
               <Image
                 src="/banners/goodwe-all-in-one.png"
                 alt="GoodWe ESA All-in-One Three-Phase Energy Storage System - Coming Soon to Cosmic Renewable Energy"
                 fill
-                className="object-contain bg-white group-hover:scale-105 transition-transform duration-500 p-4"
+                className="object-contain group-hover:scale-105 transition-transform duration-500 p-4"
               />
               {/* Coming Soon Badge */}
               <div className="absolute top-4 left-4 z-10">
@@ -120,12 +118,10 @@ export default function ProductShowcase() {
                   CEC APPROVED
                 </div>
               </div>
-              {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#083941] via-[#083941]/30 to-transparent"></div>
             </div>
-            <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6">
+            <div className="p-5 sm:p-6">
               <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 font-display">GoodWe ESA All-in-One</h3>
-              <p className="text-white/80 text-sm sm:text-base mb-4">
+              <p className="text-white/70 text-sm sm:text-base mb-4">
                 Three-phase energy storage system. 5-108kWh capacity. Whole-home backup with ultra-fast switching.
               </p>
               <div className="flex flex-col sm:flex-row gap-2.5">
@@ -138,7 +134,7 @@ export default function ProductShowcase() {
                 </Link>
                 <a
                   href="tel:1300090984"
-                  className="bg-white/20 text-white hover:bg-white/30 px-5 py-2.5 rounded-lg text-sm font-bold text-center transition-all inline-flex items-center justify-center gap-2 backdrop-blur-sm"
+                  className="bg-white/10 text-white hover:bg-white/20 px-5 py-2.5 rounded-lg text-sm font-bold text-center transition-all inline-flex items-center justify-center gap-2 border border-white/20"
                 >
                   <PhoneIcon className="w-4 h-4" />
                   Register Interest
