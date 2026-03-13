@@ -4,8 +4,8 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: "Solar Battery Installation Australia | Home Battery Systems | $8,000 Rebates",
-  description: "Premium solar battery installation across Australia. Tesla Powerwall, LG Chem, BYD batteries. Government rebates up to $8,000. Free quotes Melbourne, Sydney, Brisbane. CEC approved installers.",
-  keywords: "solar battery Australia, solar battery installation, home battery systems, Tesla Powerwall Australia, LG Chem battery, solar energy storage, government rebates solar battery, solar battery cost, battery backup system",
+  description: "Premium solar battery installation across Australia. Tesla Powerwall, FoxESS, BYD, GoodWe batteries. Government rebates up to $8,000. Free quotes Melbourne, Sydney, Brisbane. CEC approved installers.",
+  keywords: "solar battery Australia, solar battery installation, home battery systems, Tesla Powerwall Australia, FoxESS battery, GoodWe battery, solar energy storage, government rebates solar battery, solar battery cost, battery backup system",
   openGraph: {
     title: "Solar Battery Installation Australia | $8,000 Government Rebates",
     description: "Professional solar battery installation across Australia. Premium brands, government rebates, 10-year warranty. Free consultation available.",
@@ -124,9 +124,14 @@ export default function SolarBattery() {
       features: ['10-year warranty', 'Smartphone app control', 'Backup power capability']
     },
     {
-      name: 'LG Chem Solar Battery',
-      description: 'Reliable Korean-made solar battery systems with excellent performance in Australian climate conditions.',
-      features: ['10-year product warranty', 'High energy density', 'Proven reliability']
+      name: 'FoxESS Battery Systems',
+      description: 'Top-selling battery storage solutions trusted by thousands of Australian homeowners for reliable performance.',
+      features: ['Industry-leading warranty', 'High efficiency', 'Australian approved']
+    },
+    {
+      name: 'GoodWe ESA All-in-One',
+      description: 'CEC-approved three-phase energy storage system combining inverter, battery, and energy management in one unit.',
+      features: ['5-108kWh capacity', 'Whole-home backup', 'Modular & expandable']
     },
     {
       name: 'BYD Battery Box',
@@ -239,7 +244,7 @@ export default function SolarBattery() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {brands.map((brand, index) => (
               <div
                 key={index}

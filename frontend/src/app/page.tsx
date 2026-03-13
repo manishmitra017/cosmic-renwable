@@ -8,6 +8,7 @@ import RebateBanner from '@/components/RebateBanner'
 import CustomerReviews from '@/components/CustomerReviews'
 import PromotionsCarousel from '@/components/PromotionsCarousel'
 import CountdownBanner from '@/components/CountdownBanner'
+import ProductShowcase from '@/components/ProductShowcase'
 import Script from 'next/script'
 
 // SVG Icon Components
@@ -174,6 +175,9 @@ export default function Home() {
       >
         {JSON.stringify(structuredData)}
       </Script>
+
+      {/* Featured Product Banners */}
+      <ProductShowcase />
 
       {/* Countdown Timer Banner */}
       <CountdownBanner />
