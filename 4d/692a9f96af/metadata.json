@@ -1,0 +1,25 @@
+{
+  "cli_version": "0.5.0",
+  "checkpoint_id": "4d692a9f96af",
+  "strategy": "manual-commit",
+  "branch": "feature/goodwe-foxess-banners-remove-lgchem",
+  "checkpoints_count": 0,
+  "files_touched": [
+    "frontend/src/app/page.tsx"
+  ],
+  "sessions": [
+    {
+      "metadata": "/4d/692a9f96af/0/metadata.json",
+      "transcript": "/4d/692a9f96af/0/full.jsonl",
+      "content_hash": "/4d/692a9f96af/0/content_hash.txt",
+      "prompt": "/4d/692a9f96af/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 6,
+    "cache_creation_tokens": 2059,
+    "cache_read_tokens": 520306,
+    "output_tokens": 941,
+    "api_call_count": 4
+  }
+}
