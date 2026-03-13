@@ -87,6 +87,13 @@ export default function ProductShowcase() {
                   <PhoneIcon className="w-4 h-4" />
                   1300 09 09 84
                 </a>
+                <a
+                  href="tel:+610422786100"
+                  className="bg-white/10 text-white hover:bg-white/20 px-5 py-2.5 rounded-lg text-sm font-bold text-center transition-all inline-flex items-center justify-center gap-2 border border-white/20"
+                >
+                  <PhoneIcon className="w-4 h-4" />
+                  +61 422 786 100
+                </a>
               </div>
             </div>
           </motion.div>
