@@ -79,12 +79,6 @@ const HomeIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 )
 
-const GemIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-  </svg>
-)
-
 const CheckIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
@@ -103,12 +97,6 @@ const CurrencyIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   </svg>
 )
 
-const LeafIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-  </svg>
-)
-
 const MapPinIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -119,6 +107,12 @@ const MapPinIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
 const ArrowRightIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
   <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+  </svg>
+)
+
+const ClockIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
+  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
   </svg>
 )
 
@@ -360,107 +354,110 @@ export default function Home() {
       {/* Promotions Carousel */}
       <PromotionsCarousel />
 
-      {/* Special Offer Banner */}
-      <section className="py-12 bg-[#efefef] relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="bg-white rounded-2xl shadow-xl p-4 sm:p-8 max-w-4xl mx-auto border border-gray-200">
-              <div className="mb-4">
-                <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-[#333333] mb-2 flex items-center justify-center gap-3">
-                  <BoltIcon className="w-8 h-8 text-[#0073b9]" />
-                  <span className="text-[#0073b9]">EXCLUSIVE LIMITED TIME OFFER</span>
-                  <BoltIcon className="w-8 h-8 text-[#0073b9]" />
-                </h2>
-                <p className="text-lg text-[#666666]">
-                  Don&apos;t miss out on our latest solar and battery package deals!
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                  <Image
-                    src="/survey1.png"
-                    alt="Cosmic Renewable Energy Offer Survey 1"
-                    width={600}
-                    height={800}
-                    className="w-full h-auto object-contain"
-                    priority
-                  />
-                </div>
-                <div className="relative rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                  <Image
-                    src="/survey2.png"
-                    alt="Cosmic Renewable Energy Offer Survey 2"
-                    width={600}
-                    height={800}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              </div>
-
-              <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/quote"
-                  className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-bold shadow-lg transition-all"
-                >
-                  Claim This Offer Now
-                </Link>
-                <a
-                  href="tel:1300090984"
-                  className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-bold flex items-center justify-center gap-2 shadow-lg transition-all"
-                >
-                  <PhoneIcon className="w-5 h-5" />
-                  Call for Details
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Government Battery Rebate Section */}
+      {/* Government Battery Rebate Section with STC Table */}
       <section className="py-16 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            className="text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-[#333333] mb-6">
-              Solar Battery Rebates Australia - <span className="text-[#0073b9]">Save $8,000</span>
-            </h2>
-            <p className="text-xl text-[#666666] mb-8 max-w-3xl mx-auto">
-              Take advantage of the $2.3 Billion Australian Government Home Battery Program.
-              Save up to $8,000 on premium solar battery systems with professional installation across Australia.
-            </p>
-            <div className="bg-[#efefef] rounded-xl p-8 max-w-2xl mx-auto border border-gray-200">
-              <h3 className="text-2xl font-bold text-[#333333] mb-4">How It Works</h3>
-              <ul className="text-left text-[#444444] space-y-3">
-                <li className="flex items-start">
-                  <span className="text-[#0073b9] font-bold mr-3 text-xl">1.</span>
-                  Choose from approved battery systems
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#0073b9] font-bold mr-3 text-xl">2.</span>
-                  Get up to 30% government discount
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#0073b9] font-bold mr-3 text-xl">3.</span>
-                  Professional installation included
-                </li>
-                <li className="flex items-start">
-                  <span className="text-[#0073b9] font-bold mr-3 text-xl">4.</span>
-                  Start saving on energy bills immediately
-                </li>
-              </ul>
+            <div className="text-center mb-10">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-[#333333] mb-4">
+                Solar Battery Rebates Australia &mdash; <span className="text-[#0073b9]">Save $8,000</span>
+              </h2>
+              <p className="text-lg sm:text-xl text-[#666666] max-w-3xl mx-auto">
+                The $2.3 Billion Government Home Battery Program is live, but rebates are shrinking every 6 months. Act now to lock in the highest savings.
+              </p>
+            </div>
+
+            {/* STC Factor Timeline Table */}
+            <div className="max-w-4xl mx-auto mb-10">
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <div className="bg-[#0073b9] p-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                    <ClockIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+                    STC Factor Timeline &mdash; The Rebate Is Shrinking
+                  </h3>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead className="bg-[#efefef]">
+                      <tr>
+                        <th className="text-left p-3 sm:p-4 font-semibold text-[#333333] text-sm sm:text-base">Period</th>
+                        <th className="text-center p-3 sm:p-4 font-semibold text-[#333333] text-sm sm:text-base">STC Factor</th>
+                        <th className="text-right p-3 sm:p-4 font-semibold text-[#333333] text-sm sm:text-base">Est. Rebate / kWh</th>
+                        <th className="text-center p-3 sm:p-4 font-semibold text-[#333333] text-sm sm:text-base">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-200">
+                      <tr>
+                        <td className="p-3 sm:p-4 text-[#444444] text-sm sm:text-base">2025 (Jul &ndash; Dec)</td>
+                        <td className="p-3 sm:p-4 text-center font-bold text-[#333333]">9.3</td>
+                        <td className="p-3 sm:p-4 text-right font-bold text-[#333333]">~$372</td>
+                        <td className="p-3 sm:p-4 text-center text-[#666666] text-sm">Expired</td>
+                      </tr>
+                      <tr className="bg-[#fee000]/20">
+                        <td className="p-3 sm:p-4 font-semibold text-[#083941] text-sm sm:text-base">Jan &ndash; Apr 2026</td>
+                        <td className="p-3 sm:p-4 text-center font-bold text-[#083941]">8.4</td>
+                        <td className="p-3 sm:p-4 text-right font-bold text-[#083941] text-base sm:text-lg">~$336</td>
+                        <td className="p-3 sm:p-4 text-center"><span className="bg-[#fee000] text-[#083941] px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-semibold">Current</span></td>
+                      </tr>
+                      <tr className="bg-[#fee000]/10">
+                        <td className="p-3 sm:p-4 text-[#444444] text-sm sm:text-base">May &ndash; Dec 2026 *</td>
+                        <td className="p-3 sm:p-4 text-center font-bold text-[#333333]">6.8</td>
+                        <td className="p-3 sm:p-4 text-right font-semibold text-[#333333]">~$272</td>
+                        <td className="p-3 sm:p-4 text-center"><span className="bg-[#fee000]/20 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm text-[#083941] border border-[#083941]/30">New Tiers Apply</span></td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 sm:p-4 text-[#444444] text-sm sm:text-base">Jan &ndash; Jun 2027</td>
+                        <td className="p-3 sm:p-4 text-center font-bold text-[#333333]">5.7</td>
+                        <td className="p-3 sm:p-4 text-right font-semibold text-[#333333]">~$228</td>
+                        <td className="p-3 sm:p-4 text-center text-[#666666]">&ndash;</td>
+                      </tr>
+                      <tr className="bg-[#efefef]">
+                        <td className="p-3 sm:p-4 text-[#444444] text-sm sm:text-base">Jul &ndash; Dec 2027</td>
+                        <td className="p-3 sm:p-4 text-center font-bold text-[#333333]">5.2</td>
+                        <td className="p-3 sm:p-4 text-right font-semibold text-[#333333]">~$208</td>
+                        <td className="p-3 sm:p-4 text-center text-[#666666]">&ndash;</td>
+                      </tr>
+                      <tr>
+                        <td className="p-3 sm:p-4 text-[#444444] text-sm sm:text-base">2028+</td>
+                        <td className="p-3 sm:p-4 text-center font-bold text-[#333333]">Declining</td>
+                        <td className="p-3 sm:p-4 text-right font-semibold text-[#333333]">Declining</td>
+                        <td className="p-3 sm:p-4 text-center text-[#666666]">&ndash;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="p-3 sm:p-4 bg-[#efefef] text-xs sm:text-sm text-[#666666]">
+                  * New tiered rebate system applies from May 2026 onwards. STC factors decline every six months.
+                </div>
+              </div>
+            </div>
+
+            {/* CTA below table */}
+            <div className="text-center">
+              <p className="text-lg text-[#333333] font-semibold mb-4">
+                Lock in the current 8.4 STC factor before it drops in May 2026
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/quote"
+                  className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-bold shadow-lg transition-all inline-flex items-center justify-center gap-2"
+                >
+                  Lock in My Rebate
+                  <ArrowRightIcon className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/articles/stc-battery-rebate-countdown-2026"
+                  className="bg-[#0073b9] text-white hover:bg-[#005a91] px-8 py-4 rounded-lg text-lg font-semibold shadow-lg transition-all inline-flex items-center justify-center gap-2"
+                >
+                  Read Full Breakdown
+                  <ArrowRightIcon className="w-5 h-5" />
+                </Link>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -541,50 +538,6 @@ export default function Home() {
                   <h3 className="text-lg sm:text-xl font-semibold text-[#333333] mb-2">{service.title}</h3>
                   <p className="text-[#666666] text-sm">{service.description}</p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Brand Showcase */}
-      <section className="py-16 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-[#333333] mb-6">
-              Industry Leading <span className="text-[#0073b9]">Battery Brands</span>
-            </h2>
-            <p className="text-xl text-[#666666]">
-              We partner with the world&apos;s most trusted battery manufacturers
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {[
-              { name: 'Tesla', icon: BatteryIcon },
-              { name: 'Eveready', icon: BoltIcon },
-              { name: 'AlphaESS', icon: StarIcon },
-              { name: 'Hive Energy', icon: HomeIcon },
-              { name: 'Ambrion', icon: GemIcon }
-            ].map((brand, index) => (
-              <motion.div
-                key={index}
-                className="bg-[#efefef] rounded-lg p-6 text-center border border-gray-200 hover:border-[#0073b9] hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-              >
-                <div className="w-16 h-16 mx-auto mb-3 bg-[#0073b9] rounded-full flex items-center justify-center">
-                  <brand.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-semibold text-[#333333]">{brand.name}</h3>
               </motion.div>
             ))}
           </div>
@@ -889,94 +842,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Additional Benefits Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-            {[
-              {
-                title: "Environmental Impact",
-                metric: "25 Tons",
-                description: "CO2 reduced per year with average system",
-                image: "/solarroof7.jpg",
-                icon: LeafIcon
-              },
-              {
-                title: "Energy Independence",
-                metric: "100%",
-                description: "Self-sufficient during daylight hours",
-                image: "/batteryImage2.jpg",
-                icon: BoltIcon
-              },
-              {
-                title: "Government Incentives",
-                metric: "$8,000",
-                description: "Average rebates and incentives available",
-                image: "/inverterImage1.jpg",
-                icon: CurrencyIcon
-              }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="group bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-all"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-                  <div className="absolute top-4 right-4">
-                    <div className="w-12 h-12 bg-[#0073b9] rounded-full flex items-center justify-center shadow-lg">
-                      <item.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <div className="text-3xl font-bold text-[#fee000] mb-1">{item.metric}</div>
-                    <h3 className="text-lg font-semibold mb-1">{item.title}</h3>
-                    <p className="text-white/90 text-sm">{item.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Call to Action */}
-          <motion.div
-            className="text-center mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="bg-[#0073b9] rounded-2xl p-8 sm:p-12">
-              <h3 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4">
-                Start Increasing Your Property Value Today
-              </h3>
-              <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Join thousands of homeowners who have increased their property value while saving on energy costs.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/quote"
-                  className="bg-[#fee000] text-[#083941] hover:bg-[#e5ca00] px-8 py-4 rounded-lg text-lg font-semibold inline-block shadow-lg transition-all"
-                >
-                  Get Free Property Assessment
-                </Link>
-                <Link
-                  href="/contact"
-                  className="bg-white text-[#0073b9] hover:bg-gray-100 px-8 py-4 rounded-lg text-lg font-semibold inline-block shadow-lg transition-all"
-                >
-                  Calculate My Savings
-                </Link>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
