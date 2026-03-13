@@ -320,7 +320,7 @@ export default function Home() {
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <a
                   href="tel:1300090984"
-                  className="w-full sm:w-auto bg-white text-[#0073b9] hover:bg-gray-100 px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-bold text-center block sm:inline-block flex items-center justify-center gap-2 shadow-lg transition-all"
+                  className="w-full sm:w-auto bg-white text-[#0073b9] hover:bg-gray-100 px-5 sm:px-8 py-3 sm:py-4 rounded-xl text-sm sm:text-lg font-bold text-center inline-flex items-center justify-center gap-2 shadow-lg transition-all"
                 >
                   <PhoneIcon className="w-5 h-5" />
                   Call Now: 1300 09 09 84
